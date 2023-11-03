@@ -5,9 +5,10 @@ ob_start();
 
 
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
-    <div class="grid md:grid-cols-2 xl:grid-cols-2">
-        <!-- Card -->
+<div class="page-body">.
+    <div class="container-xl">
+
+        <!-- <div class="grid md:grid-cols-2 xl:grid-cols-2">
 
         <h3 class="my-6 font-semibold text-gray-700 dark:text-gray-200">
             Pending User's Approvals
@@ -17,58 +18,67 @@ ob_start();
 
         </div>
 
-    </div>
+    </div> -->
 
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Pending User's Approvals</h3>
 
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-        <div class="w-full ">
+                <div class="w-full ">
 
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-3 py-2">S.No.</th>
-                        <th class="px-3 py-2">User Name</th>
-                        <th class="px-3 py-2">Email ID</th>
-                        <th class="px-3 py-2">Mobile No.</th>
-                        <th class="px-3 py-2">Status</th>
-                        <th class="px-3 py-2">More Details</th>
-                        <th class="px-3 py-2">User Docs</th>
-                        <th class="px-3 py-2">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
+                    <table id="example2" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-3 py-2">S.No.</th>
+                                <th class="px-3 py-2">User Name</th>
+                                <th class="px-3 py-2">Email ID</th>
+                                <th class="px-3 py-2">Mobile No.</th>
+                                <th class="px-3 py-2">Status</th>
+                                <th class="px-3 py-2">More Details</th>
+                                <th class="px-3 py-2">User Docs</th>
+                                <th class="px-3 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
 
+                </div>
+            </div>
+        </div><br>
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Pending Bank Approvals</h3>
+
+            </div>
+
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+
+                <div class="w-full ">
+
+                    <table id="example3" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-3 py-2">S.No.</th>
+                                <th class="px-3 py-2">Customer Name</th>
+                                <th class="px-3 py-2">Bank Name</th>
+                                <th class="px-3 py-2">Account Number</th>
+                                <th class="px-3 py-2">IFSC</th>
+                                <th class="px-3 py-2">Status</th>
+                                <th class="px-3 py-2">Requested On</th>
+                                <th class="px-3 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <h3 class="my-6 text-1xl font-semibold text-gray-700 dark:text-gray-200" style="margin-top: 5%;">
-        Pending Bank Approvals
-    </h3>
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-        <div class="w-full ">
-
-            <table id="example3" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-3 py-2">S.No.</th>
-                        <th class="px-3 py-2">Customer Name</th>
-                        <th class="px-3 py-2">Bank Name</th>
-                        <th class="px-3 py-2">Account Number</th>
-                        <th class="px-3 py-2">IFSC</th>
-                        <th class="px-3 py-2">Status</th>
-                        <th class="px-3 py-2">Requested On</th>
-                        <th class="px-3 py-2">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
-        </div>
-    </div>
-
 </div>
 <?php
 //Assign all Page Specific variables

@@ -5,43 +5,38 @@ ob_start();
 
 
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
-        <!-- Card -->
+<div class="page-body">
+    <div class="container-xl">
 
-        <h3 class="my-6 font-semibold text-gray-700 dark:text-gray-200">
-            Sent Mails
-        </h3>
-        <div>
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Sent Mails</h3>
 
+            </div>
 
-        </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-    </div>
+                <div class="w-full ">
 
+                    <table id="example2" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-4 py-3">S.No.</th>
+                                <th class="px-4 py-3">Date & Time</th>
+                                <th class="px-4 py-3">Sent To</th>
+                                <th class="px-4 py-3">Subject</th>
+                                <th class="px-4 py-3">View Message</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
 
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+                        </tbody>
+                    </table>
 
-        <div class="w-full ">
-
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-4 py-3">S.No.</th>
-                        <th class="px-4 py-3">Date & Time</th>
-                        <th class="px-4 py-3">Sent To</th>
-                        <th class="px-4 py-3">Subject</th>
-                        <th class="px-4 py-3">View Message</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
-
-                </tbody>
-            </table>
-
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
 <?php
 //Assign all Page Specific variables

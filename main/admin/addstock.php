@@ -35,7 +35,7 @@ include "main/session.php";
             <span class="text-gray-700 dark:text-gray-400">Select Client</span>
 
         </label>
-        <select data-bvalidator="required" onchange="search(this.id,'getmargin','../main/admin/fetchmargin.php')" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" name="userid" id="Client Name">
+        <select data-bvalidator="required" onchange="search(this.id,'getmargin','../main/admin/fetchmargin.php')" class="form-control" name="userid" id="Client Name">
             <option value="">Select Client</option>
             <?php
             $role = $obj->selectextrawhereupdate("users", "id,name", "status = 1 and type=2 and id != 26");
@@ -50,7 +50,7 @@ include "main/session.php";
             <span class="text-gray-700 dark:text-gray-400">Trade By</span>
 
         </label>
-        <select data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" name="tradeby">
+        <select data-bvalidator="required" class="form-control" name="tradeby">
             <option value="">Select Type</option>
             <option value="Brocker">Advisor</option>
             <option value="AI">AI Mode</option>
@@ -62,7 +62,7 @@ include "main/session.php";
                 <span class="text-gray-700 dark:text-gray-400">Exchange</span>
 
             </label>
-            <select name="exchange" class="block w-full text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' id="exch">
+            <select name="exchange" class="form-control" data-bvalidator='required' id="exch">
                 <option value="">Select</option>
                 <option value="N">NSE</option>
                 <option value="B">BSE</option>
@@ -75,7 +75,7 @@ include "main/session.php";
                 <span class="text-gray-700 dark:text-gray-400">Exchange Mode</span>
 
             </label>
-            <select name="exchtype" class="block w-full text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' id="exchtype">
+            <select name="exchtype" class="form-control" data-bvalidator='required' id="exchtype">
                 <option value="">Select Type</option>
                 <option value="C">Cash</option>
                 <option value="D">Derivative</option>
@@ -90,7 +90,7 @@ include "main/session.php";
                 <span class="text-gray-700 dark:text-gray-400">Type</span>
 
             </label>
-            <select name="type" class="block w-full text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' id="type">
+            <select name="type" class="form-control" data-bvalidator='required' id="type">
                 <option value="">Select Type</option>
                 <option value="Intraday">Intraday</option>
                 <option value="Holding">Holding</option>
@@ -102,7 +102,7 @@ include "main/session.php";
                 <span class="text-gray-700 dark:text-gray-400">Buy/Sell</span>
 
             </label>
-            <select name="trademethod" class="block w-full text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' id="sell">
+            <select name="trademethod" class="form-control" data-bvalidator='required' id="sell">
                 <option value="">Select Buy/Sell</option>
                 <option value="Buy">Buy</option>
                 <option value="Sell">Sell</option>
@@ -111,34 +111,36 @@ include "main/session.php";
     </div>
 
     <label class="block text-sm" style="margin-bottom: 5px;">
-       <div style="display: inline-flex;"> <span class="text-gray-700 dark:text-gray-400">Stock
-            Name</span> <span class="col-2 profile-tooltip"><i style="color: #057c7c;" class="fa-solid fa-circle-info"></i> <p class="profile-tooltiptext">In case you search for Derivative, write like:<br>
-<b>Option Type-</b> NIFTY 23 May 2023 PE 2345263.00<br>
-[ STOCK Date of Expiry Option Type (PE/CE) Strike Price ]
-<br><br>
-<span><b>For Futures-</b> COPPER 23 May 2023<br>
-[ STOCK Date of Expiry ]</span>
-</p></span> </div>
+        <div style="display: inline-flex;"> <span class="text-gray-700 dark:text-gray-400">Stock
+                Name</span> <span class="col-2 profile-tooltip"><i style="color: #057c7c;" class="fa-solid fa-circle-info"></i>
+                <p class="profile-tooltiptext">In case you search for Derivative, write like:<br>
+                    <b>Option Type-</b> NIFTY 23 May 2023 PE 2345263.00<br>
+                    [ STOCK Date of Expiry Option Type (PE/CE) Strike Price ]
+                    <br><br>
+                    <span><b>For Futures-</b> COPPER 23 May 2023<br>
+                        [ STOCK Date of Expiry ]</span>
+                </p>
+            </span> </div>
 
 
 
-        <input type="text" name="symbol" id="symbol" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Enter Stock Name" data-bvalidator="required" />
+        <input type="text" name="symbol" id="symbol" class="form-control" placeholder="Enter Stock Name" data-bvalidator="required" />
     </label>
 
-    
 
-    
+
+
     <div class="row" id="getmargin">
         <div class="col-6 mb-2">
             <label class="block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400"> Fund</span>
-                <input class="disabled block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' />
+                <input class="disabled form-control" data-bvalidator='required' />
             </label>
         </div>
         <div class="col-6 mb-2">
             <label class="block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400"> Margin</span>
-                <input name="margin" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' />
+                <input name="margin" class="form-control" data-bvalidator='required' />
             </label>
         </div>
     </div>
@@ -146,21 +148,21 @@ include "main/session.php";
 
         <label class=" col-6 block text-sm" for="Quantity">
             <span class="text-gray-700 dark:text-gray-400">Default Lot</span>
-            <input data-bvalidator='required' name="lot" type="number" id="lot" onclick="this.select();" value='1' class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
+            <input data-bvalidator='required' name="lot" type="number" id="lot" onclick="this.select();" value='1' class="form-control">
         </label>
 
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Lot/Quantity</span>
-            <input type="number" id="qty" name="qty" onkeyup="gettotalamt()" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" data-bvalidator='required' placeholder="Enter Lot/Quality" />
+            <input type="number" id="qty" name="qty" onkeyup="gettotalamt()" class="form-control" data-bvalidator='required' placeholder="Enter Lot/Quality" />
         </label>
 
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Buy/Sell Price(each)</span>
-            <input name="price" id="shareprice" onkeyup="gettotalamt()" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Buy/Sell Price" data-bvalidator='required' />
+            <input name="price" id="shareprice" onkeyup="gettotalamt()" class="form-control" placeholder="Buy/Sell Price" data-bvalidator='required' />
         </label>
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Total Amount</span>
-            <input readonly name="totalamount" id="totalamt" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
+            <input readonly name="totalamount" id="totalamt" class="form-control" />
         </label>
     </div>
 
@@ -168,11 +170,11 @@ include "main/session.php";
     <label class="block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Date &
             Time</span>
-        <input id="date" name="datetime" onfocus="datetimepicker(this.id)" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Select Date & Time" data-bvalidator='required' />
+        <input id="date" name="datetime" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Date & Time" data-bvalidator='required' />
     </label>
 
     <div>
-        <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium hidden">
+        <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium d-none">
             Submit
         </button>
     </div>

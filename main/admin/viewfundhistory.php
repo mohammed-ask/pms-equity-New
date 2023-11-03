@@ -5,38 +5,43 @@ ob_start();
 $id = $_GET['hakuna'];
 
 ?>
-<div class="container px-6 mx-auto grid">
+<div class="page-body">
+    <div class="container-xl">
 
-    <div class="flex" style="align-items: center;justify-content:space-between">
-        <h3>Fund History</h3>
-        <button @click="openModal" onclick='dynamicmodal("<?= $id ?>", "addinvestmentamount", "", "Add Fund")' class="my-6 px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-            + Add Fund
-        </button>
+        <div class="flex" style="text-align: right">
+            <buttonv data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("<?= $id ?>", "addinvestmentamount", "", "Add Fund")' class="btn btn-primary py-2">
+                + Add Fund
+                </button>
 
-    </div>
+        </div>
 
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Users List</h3>
 
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-        <div class="w-full ">
+                <div class="w-full ">
 
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-4 py-3">S.No.</th>
-                        <th class="px-4 py-3">User Name</th>
-                        <th class="px-4 py-3">Amount</th>
-                        <th class="px-4 py-3">Mobile</th>
-                        <th class="px-4 py-3">Transaction ID</th>
-                        <th class="px-4 py-3">Payment Method</th>
-                        <th class="px-4 py-3">Date & Time</th>
-                        <!-- <th class="px-4 py-3">Action</th> -->
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
-
+                    <table id="example2" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-4 py-3">S.No.</th>
+                                <th class="px-4 py-3">User Name</th>
+                                <th class="px-4 py-3">Amount</th>
+                                <th class="px-4 py-3">Mobile</th>
+                                <th class="px-4 py-3">Transaction ID</th>
+                                <th class="px-4 py-3">Payment Method</th>
+                                <th class="px-4 py-3">Date & Time</th>
+                                <!-- <th class="px-4 py-3">Action</th> -->
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 

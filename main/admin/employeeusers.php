@@ -6,45 +6,50 @@ if (!in_array(43, $permissions)) {
     header("location:index");
 }
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
+<div class="page-body">
+    <div class="container-xl">
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Users List</h3>
 
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-        <div class="w-full ">
+                <div class="w-full ">
 
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-3 py-2">S.No.</th>
-                        <th class="px-3 py-2">User Name</th>
-                        <th class="px-3 py-2">DOB</th>
-                        <th class="px-3 py-2">Emp ID</th>
-                        <th class="px-3 py-2">Email ID</th>
-                        <th class="px-3 py-2">Mob No.</th>
-                        <th class="px-3 py-2">PAN No.</th>
-                        <th class="px-3 py-2">Addresss</th>
-                        <th class="px-3 py-2">Bank Name</th>
-                        <th class="px-3 py-2">A/c No.</th>
-                        <th class="px-3 py-2">IFSC</th>
-                        <th class="px-3 py-2">Aadhar No.</th>
-                        <!-- <th class="px-3 py-2">Password</th> -->
-                        <th class="px-3 py-2">Cost</th>
-                        <th class="px-3 py-2">Value</th>
-                        <!-- <th class="px-3 py-2">SMS</th> -->
-                        <th class="px-3 py-2">Email</th>
-                        <th class="px-3 py-2">Status</th>
-                        <th class="px-3 py-2">Fund History</th>
-                        <th class="px-3 py-2">View Docs</th>
-                        <th class="px-3 py-2">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
-
+                    <table id="example2" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-3 py-2">S.No.</th>
+                                <th class="px-3 py-2">User Name</th>
+                                <th class="px-3 py-2">DOB</th>
+                                <th class="px-3 py-2">Emp ID</th>
+                                <th class="px-3 py-2">Email ID</th>
+                                <th class="px-3 py-2">Mob No.</th>
+                                <th class="px-3 py-2">PAN No.</th>
+                                <th class="px-3 py-2">Addresss</th>
+                                <th class="px-3 py-2">Bank Name</th>
+                                <th class="px-3 py-2">A/c No.</th>
+                                <th class="px-3 py-2">IFSC</th>
+                                <th class="px-3 py-2">Aadhar No.</th>
+                                <!-- <th class="px-3 py-2">Password</th> -->
+                                <th class="px-3 py-2">Cost</th>
+                                <th class="px-3 py-2">Value</th>
+                                <!-- <th class="px-3 py-2">SMS</th> -->
+                                <th class="px-3 py-2">Email</th>
+                                <th class="px-3 py-2">Status</th>
+                                <th class="px-3 py-2">Fund History</th>
+                                <th class="px-3 py-2">View Docs</th>
+                                <th class="px-3 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
 <?php
 //Assign all Page Specific variables

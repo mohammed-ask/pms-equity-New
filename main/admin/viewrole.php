@@ -3,7 +3,7 @@ include "main/session.php";
 /* @var $obj db */
 ob_start();
 ?>
-<div class="container px-6 mx-auto grid">
+<div class="page-body">
     <div class="card card-default">
         <div class="card-header">
             <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Roles</h3>

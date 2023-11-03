@@ -5,64 +5,70 @@ ob_start();
 
 
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
-    <div class="flex my-4 items-center justify-between">
-        <h3 class="my-0 font-semibold text-gray-700 dark:text-gray-200">Pending Investment</h3>
+<div class="page-body">
+    <div class="container-xl">
 
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Pending Investment</h3>
 
-    </div>
+            </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
+                <div class="w-full ">
 
-        <div class="w-full ">
+                    <table id="example2" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-4 py-3">S.No.</th>
+                                <th class="px-4 py-3">Client Name</th>
+                                <th class="px-4 py-3">Mobile No.</th>
+                                <th class="px-4 py-3">Fund</th>
+                                <th class="px-4 py-3">Transaction Id</th>
+                                <th class="px-4 py-3">Date</th>
+                                <th class="px-4 py-3">Amount</th>
+                                <!-- <th class="px-4 py-3">Remark</th> -->
+                                <th class="px-4 py-3">Payment Method</th>
+                                <th class="px-4 py-3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><br>
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>All Investment</h3>
 
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-4 py-3">S.No.</th>
-                        <th class="px-4 py-3">Client Name</th>
-                        <th class="px-4 py-3">Mobile No.</th>
-                        <th class="px-4 py-3">Fund</th>
-                        <th class="px-4 py-3">Transaction Id</th>
-                        <th class="px-4 py-3">Date</th>
-                        <th class="px-4 py-3">Amount</th>
-                        <!-- <th class="px-4 py-3">Remark</th> -->
-                        <th class="px-4 py-3">Payment Method</th>
-                        <th class="px-4 py-3">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
+            </div>
+            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+
+                <div class="w-full ">
+
+                    <table id="example3" class="table w-full whitespace-no-wrap">
+                        <thead>
+                            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                <th class="px-4 py-3">S.No.</th>
+                                <th class="px-4 py-3">Client Name</th>
+                                <th class="px-4 py-3">Mobile No.</th>
+                                <th class="px-4 py-3">Transaction Id</th>
+                                <th class="px-4 py-3">Date</th>
+                                <th class="px-4 py-3">Amount</th>
+                                <!-- <th class="px-4 py-3">Remark</th> -->
+                                <th class="px-4 py-3">Payment Method</th>
+                                <!-- <th class="px-4 py-3">Action</th> -->
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+        <br>
     </div>
-    <div class="flex my-4 items-center justify-between">
-        <h3 class="my-0 font-semibold text-gray-700 dark:text-gray-200">All Investment</h3>
-    </div>
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-        <div class="w-full ">
-
-            <table id="example3" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-4 py-3">S.No.</th>
-                        <th class="px-4 py-3">Client Name</th>
-                        <th class="px-4 py-3">Mobile No.</th>
-                        <th class="px-4 py-3">Transaction Id</th>
-                        <th class="px-4 py-3">Date</th>
-                        <th class="px-4 py-3">Amount</th>
-                        <!-- <th class="px-4 py-3">Remark</th> -->
-                        <th class="px-4 py-3">Payment Method</th>
-                        <!-- <th class="px-4 py-3">Action</th> -->
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <br>
 </div>
 <?php
 //Assign all Page Specific variables

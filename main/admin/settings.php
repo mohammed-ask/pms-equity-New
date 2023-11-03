@@ -23,16 +23,18 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
         resize: none;
     }
 </style>
-<div class="container px-6 mx-auto grid">
-    <h3 class="my-6 font-semibold text-gray-700 dark:text-gray-200">Settings</h3>
-    <div class="card mobile-bottom-margin">
-        <!-- <div class="card-header with-border">
+<div class="page-body">
+    <div class="container-xl">
+
+        <h3 class="my-6 font-semibold text-gray-700 dark:text-gray-200">Settings</h3>
+        <div class="card mobile-bottom-margin">
+            <!-- <div class="card-header with-border">
         
         <div class="card-tools pull-right">
         </div>
     </div> -->
-        <div class="card-body">
-            <!-- <div class="row">
+            <div class="card-body">
+                <!-- <div class="row">
             <div class="col-md-3">
                 <h4 class="m-4"><?php echo $row["company_name"] ?></h4>
                 <div class="col-8 offset-2">
@@ -42,15 +44,15 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                 </div>
             </div>
         </div> -->
-            <div id="tabs">
-                <ul>
-                    <li><a id="vert-tabs-profile-tab" href="#vert-tabs-profile">Company Info </a></li>
-                    <li> <a id="vert-tabs-home-tab" href="#vert-tabs-home">Payments Details</a></li>
+                <div id="tabs">
+                    <ul>
+                        <li><a id="vert-tabs-profile-tab" href="#vert-tabs-profile">Company Info </a></li>
+                        <li> <a id="vert-tabs-home-tab" href="#vert-tabs-home">Payments Details</a></li>
 
-                </ul>
-                <div class="" id="vert-tabs-profile">
-                    <!-- <div class="card" style="background-color: white;"> -->
-                    <!-- <div class="card-header" style="background-color: #fdfdfd;">
+                    </ul>
+                    <div class="" id="vert-tabs-profile">
+                        <!-- <div class="card" style="background-color: white;"> -->
+                        <!-- <div class="card-header" style="background-color: #fdfdfd;">
                         <h3 class="card-title">General information</h3>
                         <div class="card-tools">
                             <a href="index.php" class="btn btn-default" data-card-widget="">
@@ -60,11 +62,11 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                     </button>
                         </div>
                     </div> -->
-                    <!-- <div class="card-body"> -->
-                    <form data-bvalidator-validate data-bvalidator-theme="gray" id="personaladd" onsubmit="event.preventDefault();sendForm('', '', 'insertpersonalaccount', 'resultid', 'personaladd');return 0;">
-                        <input type="text" name="personal_detail" value="-1" hidden>
-                        <div class="form-row">
-                            <!-- <div class="form-group col-md-6">
+                        <!-- <div class="card-body"> -->
+                        <form data-bvalidator-validate data-bvalidator-theme="gray" id="personaladd" onsubmit="event.preventDefault();sendForm('', '', 'insertpersonalaccount', 'resultid', 'personaladd');return 0;">
+                            <input type="text" name="personal_detail" value="-1" hidden>
+                            <div class="form-row">
+                                <!-- <div class="form-group col-md-6">
                             <label for="inputEmail4">Company Name</label>
                             <input type="text" class="form-control" value="<?php
                                                                             if (isset($row["company_name"])) {
@@ -72,7 +74,7 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                             }
                                                                             ?>" name="company_name" id="inputEmail4" placeholder="Company Name">
                         </div> -->
-                            <!-- <div class="form-group col-md-6">
+                                <!-- <div class="form-group col-md-6">
                             <label for="short_name">Short Name</label>
                             <input type="text" class="form-control" name="short_name" value="<?php
                                                                                                 if (isset($row["short_name"])) {
@@ -80,17 +82,17 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                                 }
                                                                                                 ?>" id="short_name">
                         </div> -->
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="phone">Phone No.</label>
-                                <input type="text" class="form-control" name="phone" value="<?php
-                                                                                            if (isset($row["phone"])) {
-                                                                                                echo $row["phone"];
-                                                                                            }
-                                                                                            ?>" id="phone" pla ceholder="Phone Number">
                             </div>
-                            <!-- <div class="form-group col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="phone">Phone No.</label>
+                                    <input type="text" class="form-control" name="phone" value="<?php
+                                                                                                if (isset($row["phone"])) {
+                                                                                                    echo $row["phone"];
+                                                                                                }
+                                                                                                ?>" id="phone" pla ceholder="Phone Number">
+                                </div>
+                                <!-- <div class="form-group col-md-6">
                             <label for="website">Website</label>
                             <input type="text" class="form-control" name="website" value="<?php
                                                                                             if (isset($row["website"])) {
@@ -98,9 +100,9 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                             }
                                                                                             ?>" id="website" placeholder="www.samplesite.com">
                         </div> -->
-                        </div>
-                        <div class="form-row">
-                            <!-- <div class="form-group col-md-6">
+                            </div>
+                            <div class="form-row">
+                                <!-- <div class="form-group col-md-6">
                             <label for="gst_no">GST No</label>
                             <input type="text" class="form-control" data-bvalidator="checkgst" name="gst_no" value="<?php
                                                                                                                     if (isset($row["gst_no"])) {
@@ -109,25 +111,25 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                                                     ?>" id="gst_no" placeholder="GST Number">
                         </div> -->
 
-                            <div class="form-group col-md-6">
-                                <label for="email">E-Mail</label>
-                                <input type="text" class="form-control" name="email" value="<?php
-                                                                                            if (isset($row["email"])) {
-                                                                                                echo $row["email"];
-                                                                                            }
-                                                                                            ?>" id="email" placeholder="Company E-mail">
+                                <div class="form-group col-md-6">
+                                    <label for="email">E-Mail</label>
+                                    <input type="text" class="form-control" name="email" value="<?php
+                                                                                                if (isset($row["email"])) {
+                                                                                                    echo $row["email"];
+                                                                                                }
+                                                                                                ?>" id="email" placeholder="Company E-mail">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Address</label>
-                            <textarea type="text" style="resize:none" class="form-control" name="address_line_1" value="" id="inputAddress" placeholder="1234 Main St"><?php
-                                                                                                                                                                        if (isset($row["address_1"])) {
-                                                                                                                                                                            echo $row["address_1"];
-                                                                                                                                                                        }
-                                                                                                                                                                        ?></textarea>
-                        </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <textarea type="text" style="resize:none" class="form-control" name="address_line_1" value="" id="inputAddress" placeholder="1234 Main St"><?php
+                                                                                                                                                                            if (isset($row["address_1"])) {
+                                                                                                                                                                                echo $row["address_1"];
+                                                                                                                                                                            }
+                                                                                                                                                                            ?></textarea>
+                            </div>
 
-                        <!-- <div class="form-group">
+                            <!-- <div class="form-group">
                         <label for="inputAddress2">City</label>
                         <input type="text" class="form-control" name="city" value="<?php
                                                                                     if (isset($row["city"])) {
@@ -181,7 +183,7 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                         ?>" class="form-control" id="inputZip">
                         </div>
                     </div> -->
-                        <!-- <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                         <label for="inputEmail4">Company Logo</label>
                         <input type="file" class="form-control" name="logo_upload">
                     </div>
@@ -190,19 +192,19 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                         <input type="file" class="form-control" name="favicon">
                     </div> -->
 
-                        <div class="card-footer pl-0">
-                            <?php if (in_array(33, $permissions)) { ?>
-                                <button type="submit" class="text-white btn btn-primary">Save</button>
-                                <div id="resultid"></div>
-                            <?php } ?>
-                        </div>
-                    </form>
-                    <!-- </div> -->
-                    <!-- </div> -->
-                </div>
-                <div id="vert-tabs-home">
-                    <!-- <div class="card" style="background-color: white;"> -->
-                    <!-- <div class="card-header" style="background-color: #fdfdfd;">
+                            <div class="card-footer pl-0">
+                                <?php if (in_array(33, $permissions)) { ?>
+                                    <button type="submit" class="text-white btn btn-primary">Save</button>
+                                    <div id="resultid"></div>
+                                <?php } ?>
+                            </div>
+                        </form>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div id="vert-tabs-home">
+                        <!-- <div class="card" style="background-color: white;"> -->
+                        <!-- <div class="card-header" style="background-color: #fdfdfd;">
                         <h3 class="card-title">Bank information</h3>
                         <div class="card-tools">
                             <a href="index.php" class="btn btn-default" data-card-widget="">
@@ -212,76 +214,76 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                     </button>
                         </div>
                     </div> -->
-                    <!-- <div class="card-body"> -->
-                    <form data-bvalidator-validate data-bvalidator-theme="gray" id="personalbankadd" onsubmit="event.preventDefault();sendForm('', '', 'insertpersonalaccount', 'resultid1', 'personalbankadd');return 0;">
-                        <div>
-                            <input type="text" name="bank_detail" value="-1" hidden>
-                            <div class="form-group">
-                                <label for="account_name" class="col-sm-12 col-form-label">Bank Name</label>
-                                <div class="col-sm-12 input-group sinput-group">
-                                    <div class="input-group-prepend"></i>
-                                        <span class="input-group-text"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
-                                    </div>
-                                    <input name="bank_name" type="text" class="form-control" value="<?php
-                                                                                                    if (isset($row["bank_name"])) {
-                                                                                                        echo $row["bank_name"];
-                                                                                                    }
-                                                                                                    ?>" id="bank_name" placeholder="Bank Name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="account_name" class="col-sm-12 col-form-label">Account Holder Name</label>
-                                <div class="col-sm-12 input-group sinput-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
-                                    </div>
-                                    <input name="account_name" type="text" class="form-control" value="<?php
-                                                                                                        if (isset($row["account_name"])) {
-                                                                                                            echo $row["account_name"];
+                        <!-- <div class="card-body"> -->
+                        <form data-bvalidator-validate data-bvalidator-theme="gray" id="personalbankadd" onsubmit="event.preventDefault();sendForm('', '', 'insertpersonalaccount', 'resultid1', 'personalbankadd');return 0;">
+                            <div>
+                                <input type="text" name="bank_detail" value="-1" hidden>
+                                <div class="form-group">
+                                    <label for="account_name" class="col-sm-12 col-form-label">Bank Name</label>
+                                    <div class="col-sm-12 input-group sinput-group">
+                                        <div class="input-group-prepend"></i>
+                                            <span class="input-group-text"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                                        </div>
+                                        <input name="bank_name" type="text" class="form-control" value="<?php
+                                                                                                        if (isset($row["bank_name"])) {
+                                                                                                            echo $row["bank_name"];
                                                                                                         }
-                                                                                                        ?>" id="account_name" placeholder="Account Holder Name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="account_no" class="col-sm-12 col-form-label">Account No.</label>
-                                <div class="col-sm-12 input-group sinput-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-file-invoice"></i></span>
+                                                                                                        ?>" id="bank_name" placeholder="Bank Name">
                                     </div>
-                                    <input name="account_no" type="number" class="form-control" value="<?php
-                                                                                                        if (isset($row["account_number"])) {
-                                                                                                            echo $row["account_number"];
+                                </div>
+                                <div class="form-group">
+                                    <label for="account_name" class="col-sm-12 col-form-label">Account Holder Name</label>
+                                    <div class="col-sm-12 input-group sinput-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                        </div>
+                                        <input name="account_name" type="text" class="form-control" value="<?php
+                                                                                                            if (isset($row["account_name"])) {
+                                                                                                                echo $row["account_name"];
+                                                                                                            }
+                                                                                                            ?>" id="account_name" placeholder="Account Holder Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account_no" class="col-sm-12 col-form-label">Account No.</label>
+                                    <div class="col-sm-12 input-group sinput-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-file-invoice"></i></span>
+                                        </div>
+                                        <input name="account_no" type="number" class="form-control" value="<?php
+                                                                                                            if (isset($row["account_number"])) {
+                                                                                                                echo $row["account_number"];
+                                                                                                            }
+                                                                                                            ?>" id="account_no" placeholder="Account Number">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ifsc_code" class="col-sm-12 col-form-label">IFSC Code</label>
+                                    <div class="col-sm-12 input-group sinput-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-hashtag"></i></span>
+                                        </div>
+                                        <input name="ifsc_code" type="text" class="form-control" value="<?php
+                                                                                                        if (isset($row["ifsc_code"])) {
+                                                                                                            echo $row["ifsc_code"];
                                                                                                         }
-                                                                                                        ?>" id="account_no" placeholder="Account Number">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="ifsc_code" class="col-sm-12 col-form-label">IFSC Code</label>
-                                <div class="col-sm-12 input-group sinput-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-hashtag"></i></span>
+                                                                                                        ?>" id="ifsc_code" placeholder="IFSC Code">
                                     </div>
-                                    <input name="ifsc_code" type="text" class="form-control" value="<?php
-                                                                                                    if (isset($row["ifsc_code"])) {
-                                                                                                        echo $row["ifsc_code"];
+                                </div>
+                                <div class="form-group">
+                                    <label for="upiid" class="col-sm-12 col-form-label">UPI Id</label>
+                                    <div class="col-sm-12 input-group sinput-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
+                                        </div>
+                                        <input name="upiid" type="text" class="form-control" value="<?php
+                                                                                                    if (isset($row["upiid"])) {
+                                                                                                        echo $row["upiid"];
                                                                                                     }
-                                                                                                    ?>" id="ifsc_code" placeholder="IFSC Code">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="upiid" class="col-sm-12 col-form-label">UPI Id</label>
-                                <div class="col-sm-12 input-group sinput-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
+                                                                                                    ?>" id="upiid" placeholder="UPI Id">
                                     </div>
-                                    <input name="upiid" type="text" class="form-control" value="<?php
-                                                                                                if (isset($row["upiid"])) {
-                                                                                                    echo $row["upiid"];
-                                                                                                }
-                                                                                                ?>" id="upiid" placeholder="UPI Id">
                                 </div>
-                            </div>
-                            <!-- <div class="form-group">
+                                <!-- <div class="form-group">
                             <label for="branch_name" class="col-sm-12 col-form-label">Branch Name</label>
                             <div class="col-sm-12 input-group sinput-group">
                                 <div class="input-group-prepend">
@@ -294,28 +296,29 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                 ?>" class="form-control" id="branch_name" placeholder="Branch Name">
                             </div>
                         </div> -->
-                            <div class="form-group col-md-6">
-                                <label>Qr Code</label>
-                                <input type="file" class="form-control" name="paymentqr">
+                                <div class="form-group col-md-6">
+                                    <label>Qr Code</label>
+                                    <input type="file" class="form-control" name="paymentqr">
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                            <?php if (in_array(33, $permissions)) { ?>
-                                <button type="submit" class="text-white btn btn-primary">Save</button>
-                                <div id="resultid1"></div>
-                            <?php } ?>
-                        </div>
-                    </form>
-                    <!-- </div> -->
+                            <div class="card-footer">
+                                <?php if (in_array(33, $permissions)) { ?>
+                                    <button type="submit" class="text-white btn btn-primary">Save</button>
+                                    <div id="resultid1"></div>
+                                <?php } ?>
+                            </div>
+                        </form>
+                        <!-- </div> -->
 
-                    <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+
                 </div>
-
             </div>
+            <!-- /.card-body -->
+
+
         </div>
-        <!-- /.card-body -->
-
-
     </div>
 </div>
 
