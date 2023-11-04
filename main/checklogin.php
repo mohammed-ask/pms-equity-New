@@ -1,10 +1,10 @@
 <?php
 session_start();
-$captcha_code = $_SESSION['captcha_code'];
-if ($captcha_code !== (int)$_POST['captcha']) {
-    echo "<div class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative' role='alert'>Invalid Captcha</div>";
-    die;
-}
+// $captcha_code = $_SESSION['captcha_code'];
+// if ($captcha_code !== (int)$_POST['captcha']) {
+//     echo "<div class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative' role='alert'>Invalid Captcha</div>";
+//     die;
+// }
 ob_start();
 include 'function.php';
 include 'conn.php';
