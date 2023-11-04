@@ -128,7 +128,7 @@ if ($portfoliomaintanance) {
     include "maintenance.php";
 ?>
 <?php } else { ?>
-    <div class="row">
+ 
         <div class="row">
 
             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
@@ -211,7 +211,7 @@ if ($portfoliomaintanance) {
 
         </div>
 
-        <div>
+    
             <h6 class="text-muted">Positions</h6>
             <div class="nav-align-top mb-4">
                 <ul class="nav nav-pills mb-3" role="tablist">

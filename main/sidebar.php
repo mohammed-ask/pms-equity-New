@@ -21,35 +21,29 @@
 
   <ul class="menu-inner py-1">
     <!-- Dashboards -->
-    <!-- <li class="menu-item active open">
-    <a href="market" class="menu-link">
-    <i class="menu-icon tf-icons bx bx-home-circle"></i>
-        <div data-i18n="Basic">Live Market</div>
-      </a> -->
-    <li class="menu-item">
-      <a href="dashboard" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
-        <div data-i18n="Dashboards">Dashboards</div>
-        <!-- <div class="badge bg-danger rounded-pill ms-auto"></div> -->
-      </a>
-    </li>
-    <!-- <ul class="menu-sub">
-        <li class="menu-item active">
-          <a href="index.html" class="menu-link">
-            <div data-i18n="Analytics">Overview</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#" target="_blank" class="menu-link">
-            <div data-i18n="eCommerce">AI Trading</div>
-            <div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">New</div>
-          </a>
-        </li>
 
-
-      </ul> -->
-    <!-- </li> -->
-
+    <li class="menu-item active open">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <div data-i18n="Dashboards">Dashboards</div>
+              <!-- <div class="badge bg-danger rounded-pill ms-auto"></div> -->
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item c">
+                <a href="dashboard" class="menu-link">
+                  <div data-i18n="Analytics">Overview</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="portfolio" class="menu-link">
+                  <div data-i18n="eCommerce">AI Trading</div>
+                  <div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">New</div>
+                </a>
+              </li>
+              
+             
+            </ul>
+          </li>
 
 
     <!-- Cards -->

@@ -299,3 +299,25 @@ width: 45%;
     
     }
 
+
+
+
+    /* ----------------------------custom scrollbar--------------- */
+
+
+    /* Style the scrollbar track */
+::-webkit-scrollbar {
+  height: 5px !important; /* You can adjust the width */
+  width: 5px !important;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #696cff; /* Change this to the color you want */
+  border-radius: 6px; /* Adjust the radius to change the shape */
+}
+
+/* Style the scrollbar track on hover */
+::-webkit-scrollbar:hover {
+  background-color: #696cff; /* Change this to the hover color you want */
+}
