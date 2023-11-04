@@ -526,132 +526,153 @@ function removeoverlay() {
     $("#overlay").remove();
 }
 function sendForm(custom, value, target, rid, formid, tiny) {
-    var submitcheck = confirm("Are You Sure You Want To Proceed?");
-    if (submitcheck) {
-        addoverlay();
-        var optionsWarning = {
-            validateTillInvalid: true,
-            template: '<div class="help-block">{message}</div>', // template for messages
-            formGroupInvalidClass: 'has-error',
-            formGroupValidClass: '', // has-success
-            showMessages: true, // you can set this to false for inline forms
+    console.log('hii')
+    let submitcheck;
+    // if (tiny === 'Login') {
+    $('#customConfirmModal').modal('show');
+    // } else {
+    //     submitcheck = confirm("Are You Sure You Want To Proceed?");
+    // }
+    window.handleCustomConfirm = function (proceed) {
+        if (proceed) {
+            //     console.log('proccedd')
+            //     // User clicked "Proceed," perform your actions here
+            //     addoverlay();
+            //     var optionsWarning = {
+            //         // ... (your existing code)
+            //     };
+            // }
 
-            // Selector for element with 'form-group' class.
-            // If selector is not #id, search with .closest() is used.
-            formGroup: '.form-group',
+            // Close the modal
+            // $('#customConfirmModal').modal('hide');
+            console.log('fff')
+            // if (submitcheck) {
+            addoverlay();
+            var optionsWarning = {
+                validateTillInvalid: true,
+                template: '<div class="help-block">{message}</div>', // template for messages
+                formGroupInvalidClass: 'has-error',
+                formGroupValidClass: '', // has-success
+                showMessages: true, // you can set this to false for inline forms
 
-            // Selector for element to append validation message.
-            // If selector is not #id, search with .closest() is used.
-            // If not found 'form-group' element is used.
-            msgParent: '.bvalidator-bs3form-msg',
+                // Selector for element with 'form-group' class.
+                // If selector is not #id, search with .closest() is used.
+                formGroup: '.form-group',
 
-            dataOptionNamespace: 'bvalidatorTheme', // data-bvalidator-theme- attributes
-            presenter: 'Bs3FormPresenter'
+                // Selector for element to append validation message.
+                // If selector is not #id, search with .closest() is used.
+                // If not found 'form-group' element is used.
+                msgParent: '.bvalidator-bs3form-msg',
 
-        }
-        $('#' + formid).bValidator(optionsWarning);
-        //        var overlay = jQuery('<div id="overlay"> </div>');
-        //        overlay.appendTo(document.body);
-        if ($('#' + formid).data('bValidator').validate()) {
-            var str = formid;
-            var nau = str.search("for");
-            if (tiny > 0) {
-                tinymce.triggerSave();
+                dataOptionNamespace: 'bvalidatorTheme', // data-bvalidator-theme- attributes
+                presenter: 'Bs3FormPresenter'
+
             }
-            var oOutput = document.getElementById(rid);
-            oData = new FormData(document.forms.namedItem(formid));
-            oData.append(custom, value);
-            //alert(oData.entries());
-            var resultid = rid;
-            var oReq = new XMLHttpRequest();
-            oReq.open("POST", target, true);
-            oReq.onload = function (oEvent) {
-                oOutput.style.display = "block";
-                if (oReq.status == 200) {
-                    removeoverlay();
-                    var ns = oReq.responseText.indexOf("FillSelect");
-                    if (n >= 0) {
-                        var rs = oReq.responseText.replace('FillSelect :', 'Success :');
-                        var res = rs.split('sdata')
-                        var url = res[1];
-                        alertify.alert('Result', res[0], function () {
-                            oOutput.innerHTML = res[1];
-
-                        });
-                    }
-                    var n = oReq.responseText.indexOf("Reload");
-                    if (n >= 0) {
-                        oOutput.innerHTML = "Successful";
-
-                        var rs = oReq.responseText.replace('Reload :');
-                        $(':text').focus(function () {
-                            current = this;
-                        });
-                        $('textarea').focus(function () {
-                            current = this;
-                        });
-                        alertify.alert('Result', rs, function () {
-
-                            setTimeout(location.reload(), 3000);
-                        });
-                    } else if (oReq.responseText.indexOf("Redirect :") != -1) {
-                        var rs = oReq.responseText.replace('Redirect :', 'Success :');
-                        const urlStartIndex = rs.indexOf("URL") + 3; // Add 3 to exclude "URL" itself
-                        const url2 = rs.substring(urlStartIndex);
-                        var res = rs.split('URL')
-                        var url = res[1];
-
-                        oOutput.innerHTML = '<div  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">' + res[0] + '</div>';
-                        //                        alert(res[0]);
-                        $(':text').focus(function () {
-                            current = this;
-                        });
-                        $('textarea').focus(function () {
-                            current = this;
-                        });
-                        alertify.alert('Result', res[0], function () {
-
-                            window.location.href = url2;
-                        });
-
-                    } else if (oReq.responseText.indexOf("CALLBACK :") != -1) {
-                        var rs = oReq.responseText.replace('CALLBACK :', 'Success :');
-                        var res = rs.split('NEWJS')
-                        var url = res[1];
-
-                        oOutput.innerHTML = '<div  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">' + res[0] + '</div>';
-                        eval(url)();
-                    } else if (oReq.responseText.indexOf("Error :") != -1) {
-                        oOutput.innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">' + oReq.responseText + '</div>';
-                    } else {
-                        if (rid == "reviewtext") {
-                            $("textarea#reviewtext").val(oReq.responseText);
-                        } else {
-                            oOutput.innerHTML = oReq.responseText;
-                            removeoverlay();
-                        }
-                    }
-                    $(':text').focus(function () {
-                        current = this;
-                    });
-                    $('textarea').focus(function () {
-                        current = this;
-                    });
-                    $("select").select2();
-                } else {
-                    oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
-                    removeoverlay();
+            $('#' + formid).bValidator(optionsWarning);
+            //        var overlay = jQuery('<div id="overlay"> </div>');
+            //        overlay.appendTo(document.body);
+            if ($('#' + formid).data('bValidator').validate()) {
+                var str = formid;
+                var nau = str.search("for");
+                if (tiny > 0) {
+                    tinymce.triggerSave();
                 }
-            };
-            oReq.send(oData);
-        } else {
-            removeoverlay();
-            alertify.alert('Validation', "Check For Validation", function () {
+                var oOutput = document.getElementById(rid);
+                oData = new FormData(document.forms.namedItem(formid));
+                oData.append(custom, value);
+                //alert(oData.entries());
+                var resultid = rid;
+                var oReq = new XMLHttpRequest();
+                oReq.open("POST", target, true);
+                oReq.onload = function (oEvent) {
+                    oOutput.style.display = "block";
+                    if (oReq.status == 200) {
+                        removeoverlay();
+                        var ns = oReq.responseText.indexOf("FillSelect");
+                        if (n >= 0) {
+                            var rs = oReq.responseText.replace('FillSelect :', 'Success :');
+                            var res = rs.split('sdata')
+                            var url = res[1];
+                            alertify.alert('Result', res[0], function () {
+                                oOutput.innerHTML = res[1];
 
-                alertify.success('Check For Validation');
-            });
+                            });
+                        }
+                        var n = oReq.responseText.indexOf("Reload");
+                        if (n >= 0) {
+                            oOutput.innerHTML = "Successful";
 
+                            var rs = oReq.responseText.replace('Reload :');
+                            $(':text').focus(function () {
+                                current = this;
+                            });
+                            $('textarea').focus(function () {
+                                current = this;
+                            });
+                            alertify.alert('Result', rs, function () {
+
+                                setTimeout(location.reload(), 3000);
+                            });
+                        } else if (oReq.responseText.indexOf("Redirect :") != -1) {
+                            var rs = oReq.responseText.replace('Redirect :', 'Success :');
+                            const urlStartIndex = rs.indexOf("URL") + 3; // Add 3 to exclude "URL" itself
+                            const url2 = rs.substring(urlStartIndex);
+                            var res = rs.split('URL')
+                            var url = res[1];
+
+                            oOutput.innerHTML = '<div  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">' + res[0] + '</div>';
+                            //                        alert(res[0]);
+                            $(':text').focus(function () {
+                                current = this;
+                            });
+                            $('textarea').focus(function () {
+                                current = this;
+                            });
+                            alertify.alert('Result', res[0], function () {
+
+                                window.location.href = url2;
+                            });
+
+                        } else if (oReq.responseText.indexOf("CALLBACK :") != -1) {
+                            var rs = oReq.responseText.replace('CALLBACK :', 'Success :');
+                            var res = rs.split('NEWJS')
+                            var url = res[1];
+
+                            oOutput.innerHTML = '<div  class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">' + res[0] + '</div>';
+                            eval(url)();
+                        } else if (oReq.responseText.indexOf("Error :") != -1) {
+                            oOutput.innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">' + oReq.responseText + '</div>';
+                        } else {
+                            if (rid == "reviewtext") {
+                                $("textarea#reviewtext").val(oReq.responseText);
+                            } else {
+                                oOutput.innerHTML = oReq.responseText;
+                                removeoverlay();
+                            }
+                        }
+                        $(':text').focus(function () {
+                            current = this;
+                        });
+                        $('textarea').focus(function () {
+                            current = this;
+                        });
+                        $("select").select2();
+                    } else {
+                        oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+                        removeoverlay();
+                    }
+                };
+                oReq.send(oData);
+            } else {
+                removeoverlay();
+                alertify.alert('Validation', "Check For Validation", function () {
+
+                    alertify.success('Check For Validation');
+                });
+
+            }
         }
+        $('#customConfirmModal').modal('hide');
     }
 }
 //checkcalibratuion point is in range or not
