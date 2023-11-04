@@ -33,6 +33,61 @@ $id = $_GET['hakuna'];
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
+    <style>
+        /*  ----------------------------------Browser alert start------------------------------------------ */
+
+        .browser-d-none {
+            display: none !important;
+        }
+
+
+        .browser-model-content {
+            border-radius: 0rem 0rem 0.3rem 0.3rem;
+            border: none;
+
+            text-align: center;
+        }
+
+        .modal-dialog-broswer {
+            max-width: 350px;
+            margin: 0rem auto;
+        }
+
+        .modal-footer-browser {
+            border-top: none !important;
+            padding: 0px 7px 6px 3px;
+            justify-content: center;
+        }
+
+        .browser-btn-primary {
+            color: #231515;
+            background-color: #ffffff;
+            border-color: #070809;
+
+        }
+
+        .browser-btn-secondary {
+            color: #0b0707;
+            background-color: #6c757d00;
+            border-color: #6c757d;
+
+        }
+
+        .browser-btn {
+
+            padding: 0.3rem 1.3rem;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: #048f83;
+            color: white;
+            border: none;
+
+        }
+
+
+        /*  ----------------------------------Browser alert End------------------------------------------ */
+    </style>
 </head>
 
 <body>
@@ -79,6 +134,19 @@ $id = $_GET['hakuna'];
     <script src="main/dist/js/jquery.bvalidator-yc.js"></script>
     <script src="main/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <div class="modal fade" id="customConfirmModal" tabindex="-1" role="dialog" aria-labelledby="customConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-broswer" role="document">
+            <div class="modal-content browser-model-content">
+                <div class="modal-body">
+                    Are you sure you want to proceed?
+                </div>
+                <div class="modal-footer modal-footer-browser">
+                    <button type="button" class="btn btn-secondary browser-btn browser-btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary browser-btn browser-btn-primary" onclick="handleCustomConfirm(true)">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

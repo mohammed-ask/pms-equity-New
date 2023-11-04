@@ -1,100 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="main/dist/userstuff/assets/" data-template="vertical-menu-template-free">
 
 <head>
-    <?php include "headincludes.php"; ?>
+    <?php include 'headincludes.php' ?>
 </head>
-<style>
-    #overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.8) url(main/images/loader.gif) no-repeat center center;
-        z-index: 10000;
-    }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-</style>
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
 
-<body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
-    <script src="main/dist/userjs/demo-theme.min.js.download"></script>
-    <!-- Top Bar Start -->
-    <div class="page">
+            <?php include 'sidebar.php' ?>
+            <!-- / Menu -->
 
-        <?php include "header.php"; ?>
-        <!-- Top Bar End -->
-        <div class="page-wrapper">
-            <!--end row-->
-            <?php echo $pagemaincontent ?>
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
 
-            <!-- Footer Start -->
-            <?php include "footer.php" ?>
-            <!-- end Footer -->
+                <?php include "headerbar.php" ?>
+                <!-- / Navbar -->
 
-        </div>
-        <!-- end page content -->
-    </div>
-    <script src="main/dist/userjs/global-wizard.min.js.download" defer=""></script>
-    <script src="main/dist/userjs/demo.min.js.download" defer=""></script>
-    <!-- <div class="modal fade" id="myModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title m-0 mb-n1" id="modalheading">Add Service Code</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+
+
+
+                    <div class="container-xxl flex-grow-1 container-p-y margin-for-app">
+
+                        <?php echo $pagemaincontent ?>
+
+                    </div>
+                    <!-- / Content -->
+
+
+
+                    <!-- ----------------------------Mobile Navigation-------------------------------- -->
+
+                    <div class="mobile-navbar">
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                    <i class='bx bx-home icon'></i>
+                                    <i class='bx bxs-home activeIcon'></i>
+                                    <div class="app-navbar-name"><span>Home</span></div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bx-folder-open icon'></i>
+                                    <i class='bx bxs-folder-open activeIcon'></i>
+                                    <div class="app-navbar-name"><span>Portfolio</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bx-bar-chart-alt-2' style="border: 1px solid; border-radius: 10px; padding: 5px; background: #7d2ae826;"></i>
+                                    <i class='bx bxs-bar-chart-alt-2 activeIcon'></i>
+                                    <div class="app-navbar-name" style="margin-top: 50px;"><span>Market</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bx-wallet icon'></i>
+                                    <i class='bx bxs-wallet activeIcon'></i>
+                                    <div class="app-navbar-name"><span>Fund</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bx-envelope-open icon'></i>
+                                    <i class='bx bxs-envelope-open activeIcon'></i>
+                                    <div class="app-navbar-name"><span>Email</span></div>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <!-- <div class="mobile-indicator"></div> -->
+                        </ul>
+                    </div>
+
+
+                    <!-- <script>
+                        const navBar = document.querySelector(".mobile-navbar")
+                        allLi = document.querySelectorAll("li");
+
+                        allLi.forEach((li, index) => {
+                            li.addEventListener("click", e => {
+                                e.preventDefault(); //preventing from submitting
+                                navBar.querySelector(".active").classList.remove("active");
+                                li.classList.add("active");
+
+                                const indicator = document.querySelector(".mobile-indicator");
+                                indicator.style.transform = `translateX(calc(${index * 90}px))`;
+                            });
+                        });
+                    </script> -->
+
+
+
+                    <div class="content-backdrop fade"></div>
                 </div>
-                <div class="modal-body" id="modaldata">
-                </div>
-                <div class="p-3">
-                    <button type="button" class="btn btn-success w-10 my-3" id="modalfooterbtn" onclick="$('#modalsubmit').click();">Submit</button>
-                   
-                </div>
+                <!-- Content wrapper -->
             </div>
+            <!-- / Layout page -->
         </div>
-    </div> -->
 
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
 
-    <div class="modal modal-blur fade" id="modal-report" tabindex="-1" aria-hidden="true" style="display: none;" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalheading">Modal Name</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modaldata">
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-                        Cancel
-                    </a>
-                    <button id="modalfooterbtn" onclick="$('#modalsubmit').click();" class="btn btn-primary ms-auto">
-                        Submit
-                    </button>
-                </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-success">Send Payment Details For Approval</button>
-                
-                </div> -->
-            </div>
-        </div>
+    <div class="buy-now" style="display: none;">
+        <a href="#" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
     </div>
 
-    <!-- Javascript  -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <?php include 'footerincludes.php' ?>
 
-    <?php include "footerincludes.php"
-    ?>
-
-
-
-
-</body><!--end body-->
+</body>
 
 </html>

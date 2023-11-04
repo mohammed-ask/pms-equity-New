@@ -48,7 +48,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = " Pending Approval";
+$pagetitle = "Indiastock: Pending Approval";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

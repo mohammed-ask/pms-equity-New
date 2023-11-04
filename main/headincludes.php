@@ -6,26 +6,63 @@
         }
         ?></title>
  <!-- Shubham Template -->
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Global Wizard Pvt Ltd</title>
- <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="main/dist/userjs/script.js.download"></script>
+ <title>PMS Equity- The Real Earning Start Here</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
+ <meta content="" name="author">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
- <link rel="icon" href="main/images/logo/favicon.png" type="image/x-icon">
- <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
 
- <!-- CSS files -->
- <link href="main/dist/usercss/global-wizard.min.css" rel="stylesheet">
- <link href="main/dist/usercss/global-wizard-flags.min.css" rel="stylesheet">
- <link href="main/dist/usercss/global-wizard-payments.min.css" rel="stylesheet">
- <link href="main/dist/usercss/global-wizard-vendors.min.css" rel="stylesheet">
- <link href="main/dist/usercss/demo.min.css" rel="stylesheet">
+
+
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+ <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+
+ <meta name="description" content="" />
+
+ <!-- Favicon -->
+ <link rel="icon" type="image/x-icon" href="main/dist/userstuff/assets/img/favicon/favicon.ico" />
+
+ <!-- Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/fonts/boxicons.css" />
+
+ <!-- Core CSS -->
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/core.css" class="template-customizer-core-css" />
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+ <link rel="stylesheet" href="main/dist/userstuff/assets/css/demo.css" />
+
+ <!-- Vendors CSS -->
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+ <!-- Page CSS -->
+
+ <!-- Helpers -->
+ <script src="main/dist/userstuff/assets/vendor/js/helpers.js"></script>
+ <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+ <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+ <script src="main/dist/userstuff/assets/js/config.js"></script>
+
+ <!-- file upload -->
+
+ <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/file-upload.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+
+
 
  <!-- App favicon -->
- <!-- <link rel="shortcut icon" href="main/images/logo/favicon.svg"> -->
-
+ <link rel="shortcut icon" href="main/images/logo/favicon.svg">
+ <link rel="stylesheet" href="main/dist/userstuff/assets\vendor\css\app-email.css">
 
 
  <!-- <link href="main/dist/usercss/selectr.min.css" rel="stylesheet" type="text/css"> -->
@@ -56,88 +93,28 @@
  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
  <!-- Default theme -->
  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
- <!-- <link rel="stylesheet" href="main/plugins/select2/css/select2.min.css?ver=<?php echo time(); ?>"> -->
- <!-- <link rel="stylesheet" href="main/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> -->
+ <link rel="stylesheet" href="main/plugins/select2/css/select2.min.css?ver=<?php echo time(); ?>">
+ <link rel="stylesheet" href="main/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
  <link rel="stylesheet" href="main/dist/css/bvalidator.css">
  <link rel="stylesheet" href="main/dist/css/jquery-ui-timepicker-addon.css">
  <!-- summernote -->
 
  <!-- summernote -->
  <link rel="stylesheet" href="main/plugins/summernote/summernote-bs4.min.css">
- <style>
-   @import url('https://rsms.me/inter/inter.css');
 
-   :root {
-     --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9108ZJ253"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+
+   function gtag() {
+     dataLayer.push(arguments);
    }
+   gtag('js', new Date());
 
-   body {
-     font-feature-settings: "cv03", "cv04", "cv11";
-   }
+   gtag('config', 'G-P9108ZJ253');
+ </script>
 
-
-   /* --------------------alertify---------------- */
-   .alertify .ajs-header {
-     display: none;
-
-   }
-
-
-   .alertify .ajs-footer {
-     /* padding: 4px; */
-     margin-left: 0px !important;
-     margin-right: 0px !important;
-     min-height: 35px !important;
-     background-color: #cde6ff !important;
-     padding: 0px !important;
-   }
-
-   .alertify .ajs-dialog {
-
-     padding: 15px 0px 0 0px !important;
-     max-width: 400px !important;
-     border-radius: 15px !important;
-   }
-
-   .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
-     margin: 0px !important;
-   }
-
-   .alertify .ajs-commands {
-     margin: -12px 10px 0 0 !important;
-   }
-
-   .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
-     color: #fff !important;
-     border: 1px dotted #fff;
-     border-radius: 5px;
-     /* margin-right: 10px !important; */
-     margin: 5px 6px 5px 10px !important;
-     background-color: #0054a6;
-   }
-
-   .alertify .ajs-dimmer {
-
-     transition-timing-function: ease-in;
-     transition-duration: 500ms !important;
-   }
-
-   .alertify .ajs-modal {
-
-     transition-timing-function: ease-out;
-     transition-duration: 500ms !important;
-   }
-
-
-
-   .form-control[type=file]:not(:disabled):not([readonly]) {
-     cursor: pointer;
-   }
-
-   .alertify .ajs-footer {
-     border-radius: 0 0 15px 15px;
-   }
- </style>
 
  <?php
   if (isset($extracss)) {

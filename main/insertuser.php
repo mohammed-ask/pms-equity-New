@@ -1,16 +1,39 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-// print_r($_SESSION['otp']);
-// print_r($_FILES);
-// die;
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+
 include './function.php';
 include './conn.php';
-if ($_SESSION['otp'] != implode("", $_POST['otp'])) {
+if ($_SESSION['otp'] != $_POST['otp']) {
     echo "Failed";
 } else {
-
+    $defaultstock = array(
+        // array(
+        //     'Symbol' => 'NIFTY',
+        //     'symboltoken' => '999920000',
+        // ),
+        // array(
+        //     'Symbol' => 'SENSEX',
+        //     'symboltoken' => '999901',
+        // ),
+        array(
+            'Symbol' => 'RELIANCE',
+            'symboltoken' => '2885',
+        ),
+        array(
+            'Symbol' => 'HINDALCO',
+            'symboltoken' => '1363',
+        ),
+        array(
+            'Symbol' => 'M&M',
+            'symboltoken' => '2031',
+        ),
+        array(
+            'Symbol' => 'INFY',
+            'symboltoken' => '1594',
+        )
+    );
     $emailcount = $obj->selectfieldwhere('users', "count(id)", "email='" . $_POST['email'] . "' and status != 99");
     $empcode = $obj->selectfieldwhere('users', 'count(id)', 'usercode="' . trim($_POST['employeeref']) . '" and type = 1');
     if ($emailcount > 0) {
@@ -66,14 +89,13 @@ if ($_SESSION['otp'] != implode("", $_POST['otp'])) {
         $x['ifsc'] = $_POST['ifsc'];
         $x['employeeref'] = $_POST['employeeref'];
         $x['password'] = $_POST['password'];
-        // $x['limit'] = 1;
-        // $x['starttime'] = 10;
-        // $x['endtime'] = 22;
+        $x['limit'] = 1;
+        $x['starttime'] = 10;
+        $x['endtime'] = 22;
         // $x['policyread'] = $_POST['policyread'];
         $x['type'] = 2;
         $x['role'] = 2;
-        $x['membershipstatus'] = 'No';
-        // $x['longholding'] = 'No';
+        $x['longholding'] = 'No';
         $userid = $obj->insertnew($tb_name, $x);
         $path = "uploads/userdocs";
         foreach ($_POST["name"] as $key => $value) {
@@ -94,6 +116,23 @@ if ($_SESSION['otp'] != implode("", $_POST['otp'])) {
             $postdata = $y;
             $tb_name = "userdocuments";
             $pradin = $obj->insertnew($tb_name, $postdata);
+        }
+        foreach ($defaultstock as $ds) {
+            $jk['Symbol'] = $ds['Symbol'];
+            $jk['symboltoken'] = $ds['symboltoken'];
+            $jk['ExchType'] = 'C';
+            $jk['Expiry'] = '';
+            $jk['OptionType'] = '';
+            $jk['StrikePrice'] = '0';
+            $jk['mktlot'] = '1';
+            $jk['added_on'] = date("Y-m-d H:i:s");
+            $jk['added_by'] = 0;
+            $jk['updated_on'] = date("Y-m-d H:i:s");
+            $jk['updated_by'] = 0;
+            $jk['status'] = 1;
+            $jk['userid'] = $userid;
+            $jk['Exch'] = 'N';
+            $obj->insertnew('userstocks', $jk);
         }
         $obj->saveactivity("Customer Registered", "", $userid, $userid, "User", "Customer Registered");
         echo "Success";

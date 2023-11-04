@@ -2,7 +2,7 @@
 include "main/session.php";
 ?>
 <div>
-    <h5 class="m-0 text-center font-15 py-3 px-0 font-weight-700">Pay Using Bank Transfer & UPI Options</h5>
+    <h5 class="m-0 text-center font-15 py-3 px-0 font-weight-700">Pay Using Internet Banking, Mobile Banking Apps & UPI Options</h5>
 </div>
 <div class="border rounded">
     <div class="bg-light">

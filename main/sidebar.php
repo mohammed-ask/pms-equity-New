@@ -1,255 +1,103 @@
-<!-- Desktop sidebar -->
-<aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
-  <div class="py-4 text-gray-500 dark:text-gray-400">
-    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-      <img src="main/images/indstock.png" style="margin-left: 25px; margin-top: -45px; margin-bottom: 10px; width:145px" alt="logo">
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+  <div class="app-brand demo">
+    <a href="index.html" class="app-brand-link">
+      <span class="app-brand-logo demo">
+        <svg width="987" height="779" viewBox="0 0 987 779" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M98.9956 547.825C53.3877 479.715 16.6872 397.757 34.1637 317.616C51.0764 239.802 126.676 174.133 203.008 157.219C221.839 153.755 240.99 152.385 260.118 153.132L539.176 153.473L476.317 270.451L289.094 271.472C266.038 271.472 242.359 271.813 220.766 280.043C205.836 285.721 192.519 295.007 181.991 307.085C171.463 319.163 164.046 333.662 160.392 349.305C156.739 364.949 156.962 381.255 161.041 396.792C165.12 412.326 172.931 426.615 183.784 438.398L98.9956 547.825Z" fill="#5A5B5F" />
+          <path d="M164.392 778.886L256.285 662.08H764.117C764.117 662.08 894.683 618.262 822.126 491.806L880.136 379.823C880.136 379.823 1015.44 467.456 962.39 633.019C962.39 633.019 943.108 735.182 784.299 778.83C783.719 778.913 783.13 778.913 782.551 778.83L164.392 778.886Z" fill="#5A5B5F" />
+          <path d="M116.077 779H0L333.688 311.6H440.069L420.731 482.043H435.276L609.365 150.919H735.082L686.713 472.281H701.257L875.345 102.277L831.823 87.6339L967.237 0L986.575 150.919L943.052 126.57L735.082 594.027H580.332L619.004 321.363H609.365L469.102 603.732H333.688L343.384 457.695H324.048L116.077 779Z" fill="#696CFF" />
+        </svg>
+      </span>
+
+      <span class="app-brand-text demo menu-text fw-bold ms-2"> <span class="powered-by">Powered By <br></span>PMS EQuity</span>
     </a>
 
-    <ul>
-      <li class="relative px-6 py-3">
-        <a class="inline-flex items-center w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="<?= $_SESSION['type'] == 1 ? 'administrator' : 'dashboard' ?>">
-          <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-            </path>
-          </svg>
-          <span class="ml-3">Dashboard</span>
-        </a>
-      </li>
-    </ul>
-
-    <?php if (in_array(15, $permissions) || in_array(16, $permissions) || in_array(17, $permissions)) { ?>
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="togglePagesMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-envelope"></i>
-            </span>
-            <span class="ml-3">EMail</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isPagesMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <?php if (in_array(15, $permissions)) { ?>
-              <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                <a class="w-full" href="composemail">Compose Mail</a>
-              </li>
-            <?php } ?>
-            <?php if (in_array(16, $permissions)) { ?>
-              <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                <a class="w-full" href="viewinbox">
-                  Inbox
-                </a>
-              </li>
-            <?php } ?>
-            <?php if (in_array(17, $permissions)) { ?>
-              <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                <a class="w-full" href="sentmails">
-                  Sent Mail
-                </a>
-              </li>
-            <?php } ?>
-          </ul>
-        </template>
-      </li>
-    <?php } ?>
-    <div class="px-6 my-6">
-      <button class="flex items-center justify-between w-full px-4 py-2  font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-        Create account
-        <span class="ml-2" aria-hidden="true">+</span>
-      </button>
-    </div>
-  </div>
-</aside>
-<!-- Mobile sidebar -->
-<div x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
-<aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden" x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150" x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 transform -translate-x-20" @click.away="closeSideMenu" @keydown.escape="closeSideMenu">
-  <div class="py-4 text-gray-500 dark:text-gray-400">
-    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-      <img src="main/images/indstock.png" style="margin-left: 25px; margin-top: -45px; margin-bottom: 10px; width:200px" alt="logo">
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+      <i class="bx bx-chevron-left bx-sm align-middle"></i>
     </a>
-
-    <ul>
-      <li class="relative px-6 py-3">
-        <a class="inline-flex items-center w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="administrator">
-          <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-            </path>
-          </svg>
-          <span class="ml-3">Dashboard</span>
-        </a>
-      </li>
-    </ul>
-    <ul>
-
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="toggleOverviewPagesMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-user"></i>
-            </span>
-            <span class="ml-3">Users Overview</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isOverviewPagesMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="users">Users List</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="userlogindetails">
-                Logins Time Details
-              </a>
-            </li>
-          </ul>
-        </template>
-      </li>
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="toggleRolePagesMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-users-gear"></i>
-            </span>
-            <span class="ml-3">Role Management</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isRolePagesMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="viewrole">Roles</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="permission">Permissions</a>
-            </li>
-          </ul>
-        </template>
-      </li>
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="toggleTransectionMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-money-bill-transfer"></i>
-            </span>
-            <span class="ml-3">Transactions</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isTransectionMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="todaytransactions.html">Today's Transactions</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="alltransactions.html">
-                All Transactions
-              </a>
-            </li>
-          </ul>
-        </template>
-      </li>
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="togglePagesMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-envelope"></i>
-            </span>
-            <span class="ml-3">EMail</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isPagesMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="composemail">Compose Mail</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="viewinbox">
-                Inbox
-              </a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="sentmails">
-                Sent Mail
-              </a>
-            </li>
-          </ul>
-        </template>
-      </li>
-
-      <ul>
-        <li class="relative px-6 py-3">
-          <a class="inline-flex items-center w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="pendingapproval">
-            <i class="fa-solid fa-user-clock"></i>
-            <span class="ml-3">Pending Approvals</span>
-          </a>
-        </li>
-      </ul>
-      <li class="relative px-6 py-3">
-        <button class="inline-flex items-center justify-between w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" @click="toggleInvestmentPageMenu" aria-haspopup="true">
-          <span class="inline-flex items-center">
-            <span class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <i class="fa-solid fa-indian-rupee-sign"></i>
-            </span>
-            <span class="ml-3">Investment</span>
-          </span>
-          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </button>
-        <template x-if="isInvestmentPageMenuOpen">
-          <ul x-transition:enter="transition-all ease-in-out duration-300" x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl" x-transition:leave="transition-all ease-in-out duration-300" x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0" class="p-2 mt-2 space-y-2 overflow-hidden  font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900" aria-label="submenu">
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="allinvestment">All</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="pendinginvestment">Pending</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="approvedinvestment">Approved</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="disapprovedinvestment">Disapproved</a>
-            </li>
-            <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-              <a class="w-full" href="withdrawalrequest">Withdrawal Requests</a>
-            </li>
-          </ul>
-        </template>
-      </li>
-      <ul>
-        <li class="relative px-6 py-3">
-          <a class="inline-flex items-center w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="employeelist">
-            <i class="fa-solid fa-circle-info"></i>
-            <span class="ml-3">Employees Details</span>
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li class="relative px-6 py-3">
-          <a class="inline-flex items-center w-full  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="settings">
-            <i class="fa fa-cog fa-lg"></i>
-            <span class="ml-3">Settings</span>
-          </a>
-        </li>
-      </ul>
-    </ul>
-    <div class="px-6 my-6">
-      <button class="flex items-center justify-between w-full px-4 py-2  font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-        Create account
-        <span class="ml-2" aria-hidden="true">+</span>
-      </button>
-    </div>
   </div>
+
+  <div class="menu-inner-shadow"></div>
+
+  <ul class="menu-inner py-1">
+    <!-- Dashboards -->
+    <!-- <li class="menu-item active open">
+    <a href="market" class="menu-link">
+    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <div data-i18n="Basic">Live Market</div>
+      </a> -->
+    <li class="menu-item">
+      <a href="dashboard" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <div data-i18n="Dashboards">Dashboards</div>
+        <!-- <div class="badge bg-danger rounded-pill ms-auto"></div> -->
+      </a>
+    </li>
+    <!-- <ul class="menu-sub">
+        <li class="menu-item active">
+          <a href="index.html" class="menu-link">
+            <div data-i18n="Analytics">Overview</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" target="_blank" class="menu-link">
+            <div data-i18n="eCommerce">AI Trading</div>
+            <div class="badge bg-label-primary fs-tiny rounded-pill ms-auto">New</div>
+          </a>
+        </li>
+
+
+      </ul> -->
+    <!-- </li> -->
+
+
+
+    <!-- Cards -->
+
+    <li class="menu-item">
+      <a href="market" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-bar-chart-alt"></i>
+        <div data-i18n="Basic">Live Market</div>
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href="portfolio" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-briefcase-alt-2"></i>
+        <div data-i18n="Basic">Portfolio</div>
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href="mail" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-mail-send"></i>
+        <div data-i18n="Basic">Email</div>
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href="fund" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-wallet"></i>
+        <div data-i18n="Basic">Fund</div>
+      </a>
+    </li>
+
+    <!-- Components -->
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Profile Section</span></li>
+
+    <li class="menu-item">
+      <a href="profile" class="menu-link">
+        <i class="menu-icon tf-icons bx bxs-user"></i>
+        <div data-i18n="Basic">Profile</div>
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href="logout" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-log-out-circle"></i>
+        <div data-i18n="Basic">Logout</div>
+      </a>
+    </li>
+
+  </ul>
 </aside>

@@ -5,8 +5,8 @@ $platform = "Production";
 $host = "localhost";
 $database_Username = "root";
 $database_Password = "";
-$database_Name = "pmsequityNew";
-$siteurl = "http://localhost/pmsequityNew/";
+$database_Name = "pmsequitynew";
+$siteurl = "http://localhost/indiastock/";
 $port = 3306;
 $platform = "test";
 if (($_SERVER['HTTP_HOST'] == 'localhost')) {
@@ -16,8 +16,8 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     $host = "localhost";
     $database_Username = "root";
     $database_Password = "";
-    $database_Name = "pmsequityNew";
-    $siteurl = "http://localhost/pmsequityNew/";
+    $database_Name = "pmsequitynew";
+    $siteurl = "http://localhost/indiastock/";
     $port = 3306;
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
