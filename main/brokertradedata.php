@@ -35,13 +35,13 @@ if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][
     $search .= " and stocktransaction.description like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
 $join = "left join closetradedetail on closetradedetail.tradeid =stocktransaction.id ";
-$return['recordsTotal'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and status = 0");
-$return['recordsFiltered'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and status = 0 $search ");
+$return['recordsTotal'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and stocktransaction.status = 0");
+$return['recordsFiltered'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and stocktransaction.status = 0 $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "stocktransaction $join",
     "stocktransaction.id,stocktransaction.symbol,stocktransaction.qty,stocktransaction.price,closetradedetail.price as cprice,stocktransaction.totalamount,stocktransaction.trademethod,stocktransaction.added_on,tradestatus,closetradedetail.closetime as closeon,profitprcnt,totalprofit,mktlot,datetime",
-    "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and status = 0 $search $order limit $start, $limit"
+    "stocktransaction.status in (1,0) and stocktransaction.userid = $id and (stocktransaction.stockid = '' || stocktransaction.stockid is null) and aitrade != 'Yes' and stocktransaction.status = 0 $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();

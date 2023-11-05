@@ -128,694 +128,307 @@ if ($portfoliomaintanance) {
     include "maintenance.php";
 ?>
 <?php } else { ?>
- 
-        <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="card">
-                    <div class="card-body" style="padding: 15px 20px;">
-                        <div class="card-title d-flex align-items-start justify-content-between">
-                            <span class="fw-medium d-block mb-1">Amount Invested</span>
-                            <div>
-                                <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Total funds currently allocated to stock holdings.">
-                                    <i class='bx bx-message-rounded-error'></i>
-                                </button>
-                            </div>
-                        </div>
+    <div class="row">
 
-
-
-                        <h3 class="card-title mb-0">₹14,628 <span> <small class="text-success fw-medium">
-                                    <span style="margin-left: 10px;"> Margin: <span>01</span></span></small></span></h3>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="card">
-                    <div class="card-body" style="padding: 15px 20px;">
-                        <div class="card-title d-flex align-items-start justify-content-between">
-                            <span class="fw-medium d-block mb-1">Current Value</span>
-                            <div>
-                                <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="The net amount, including your profit & loss.">
-                                    <i class='bx bx-message-rounded-error'></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <h3 class="card-title mb-0">₹14,628</h3>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="card">
-                    <div class="card-body" style="padding: 15px 20px;">
-                        <div class="card-title d-flex align-items-start justify-content-between">
-                            <span class="fw-medium d-block mb-1">Today's Profit/Loss</span>
-                            <div>
-                                <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Todays's Profit & Loss">
-                                    <i class='bx bx-message-rounded-error'></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <h3 class="card-title mb-0">₹14,628 <span> <small class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i>
-                                    <span>₹345 (24%)</span></small></span></h3>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="card">
-                    <div class="card-body" style="padding: 15px 20px;">
-                        <div class="card-title d-flex align-items-start justify-content-between">
-                            <span class="fw-medium d-block mb-1">Overall Profit</span>
-                            <div>
-                                <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall financial gain from the start.">
-                                    <i class='bx bx-message-rounded-error'></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <h3 class="card-title mb-0">₹14,628 <span> <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i>
-                                    <span>₹345 (24%)</span></small></span></h3>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-    
-            <h6 class="text-muted">Positions</h6>
-            <div class="nav-align-top mb-4">
-                <ul class="nav nav-pills mb-3" role="tablist">
-
-                    <li class="nav-item">
-                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
-                            AI Trades
-                        </button>
-                    </li>
-
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-intraday" aria-controls="navs-pills-top-home" aria-selected="true">
-                            Indraday
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-holding" aria-controls="navs-pills-top-profile" aria-selected="false">
-                            Holding
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-close" aria-controls="navs-pills-top-messages" aria-selected="false">
-                            Close
-                        </button>
-                    </li>
-
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
-                            Advisor
-                        </button>
-                    </li>
-
-
-
-                </ul>
-
-
-
-                <!-- tab content -->
-
-                <div class="tab-content p-0">
-
-
-                    <!-- ---------------AI Trades Trades-------------- -->
-
-                    <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
-
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Amount Invested</span>
                         <div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Stocks</th>
-                                            <th>Open Time</th>
-                                            <th>Close Time</th>
-                                            <th>Lot</th>
-                                            <th>Quantity</th>
-                                            <th>Buy Price</th>
-                                            <th>Sell Price</th>
-                                            <th>Total</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-danger fw-medium">2%</td>
-                                            <td class="text-danger fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-danger">Closed</span></td>
-
-
-                                        </tr>
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-success fw-medium">2%</td>
-                                            <td class="text-success fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-danger">Closed</span></td>
-
-                                        </tr>
-
-
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-
-                            <div class="demo-inline-spacing">
-                                <!-- Basic Pagination -->
-                                <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                                    <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                        <li class="page-item first">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--/ Basic Pagination -->
-                            </div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Total funds currently allocated to stock holdings.">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
                         </div>
-
-
                     </div>
 
 
 
-                    <!-- ---------------Indraday Trades-------------- -->
-
-                    <div class="tab-pane fade" id="navs-pills-intraday" role="tabpanel">
-                        <!-- table -->
-                        <div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Stocks</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Lot</th>
-                                            <th>Quantity</th>
-                                            <th>Buy Price</th>
-                                            <th>Total</th>
-                                            <th>Current Price</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>12, Nov 2023</td>
-                                            <td>14:12</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹35000</td>
-                                            <td>₹236</td>
-                                            <td>Buy</td>
-                                            <td class="text-danger fw-medium">2%</td>
-                                            <td class="text-danger fw-medium">₹2345</td>
-                                            <td><button type="button" class="btn btn-sm btn-outline-danger py-0">Sell</button></td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>12, Nov 2023</td>
-                                            <td>14:12</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹35000</td>
-                                            <td>₹236</td>
-                                            <td>Buy</td>
-                                            <td class="text-success fw-medium">2%</td>
-                                            <td class="text-success fw-medium">₹2345</td>
-                                            <td><button type="button" class="btn btn-sm btn-outline-success py-0">Buy</button></td>
-                                        </tr>
-
-
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-
-                            <div class="demo-inline-spacing">
-                                <!-- Basic Pagination -->
-                                <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                                    <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                        <li class="page-item first">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--/ Basic Pagination -->
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <!-- ---------------Honding Trades-------------- -->
-
-                    <div class="tab-pane fade" id="navs-pills-holding" role="tabpanel">
-
-
-                        <!-- table -->
-                        <div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Stocks</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Lot</th>
-                                            <th>Quantity</th>
-                                            <th>Buy Price</th>
-                                            <th>Total</th>
-                                            <th>Current Price</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>12, Nov 2023</td>
-                                            <td>14:12</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹35000</td>
-                                            <td>₹236</td>
-                                            <td>Buy</td>
-                                            <td class="text-danger fw-medium">2%</td>
-                                            <td class="text-danger fw-medium">₹2345</td>
-                                            <td><button type="button" class="btn btn-sm btn-outline-danger py-0">Sell</button></td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>12, Nov 2023</td>
-                                            <td>14:12</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹35000</td>
-                                            <td>₹236</td>
-                                            <td>Buy</td>
-                                            <td class="text-success fw-medium">2%</td>
-                                            <td class="text-success fw-medium">₹2345</td>
-                                            <td><button type="button" class="btn btn-sm btn-outline-success py-0">Buy</button></td>
-                                        </tr>
-
-
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-
-                            <div class="demo-inline-spacing">
-                                <!-- Basic Pagination -->
-                                <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                                    <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                        <li class="page-item first">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--/ Basic Pagination -->
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-                    <!-- ---------------Close Trades-------------- -->
-
-                    <div class="tab-pane fade" id="navs-pills-close" role="tabpanel">
-
-
-
-                        <!-- table -->
-                        <div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Stocks</th>
-                                            <th>Open Time</th>
-                                            <th>Close Time</th>
-                                            <th>Lot</th>
-                                            <th>Quantity</th>
-                                            <th>Buy Price</th>
-                                            <th>Sell Price</th>
-                                            <th>Total</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Status</th>
-                                            <th>Added by</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-danger fw-medium">2%</td>
-                                            <td class="text-danger fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-danger">Closed</span></td>
-                                            <td>You</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-success fw-medium">2%</td>
-                                            <td class="text-success fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-danger">Closed</span></td>
-                                            <td>You</td>
-
-                                        </tr>
-
-
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-
-                            <div class="demo-inline-spacing">
-                                <!-- Basic Pagination -->
-                                <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                                    <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                        <li class="page-item first">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--/ Basic Pagination -->
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-                    <!-- ---------------Advisor Trades-------------- -->
-
-
-                    <div class="tab-pane fade" id="navs-pills-advisor" role="tabpanel">
-
-                        <!-- table -->
-                        <div>
-                            <div class="table-responsive text-nowrap">
-                                <table class="table table-hover mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Stocks</th>
-                                            <th>Open Time</th>
-                                            <th>Close Time</th>
-                                            <th>Lot</th>
-                                            <th>Quantity</th>
-                                            <th>Buy Price</th>
-                                            <th>Sell Price</th>
-                                            <th>Total</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-danger fw-medium">2%</td>
-                                            <td class="text-danger fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-success">Open</span></td>
-
-
-                                        </tr>
-                                        <tr>
-
-                                            <td <span class="fw-medium">KOTAK MAHINDRA BANK</span></td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>19 Oct, 2023 15:01</td>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>₹234</td>
-                                            <td>₹236</td>
-                                            <td>₹23690</td>
-                                            <td>Buy</td>
-                                            <td class="text-success fw-medium">2%</td>
-                                            <td class="text-success fw-medium">₹239</td>
-                                            <td><span class="badge bg-label-success">Open</span></td>
-
-                                        </tr>
-
-
-                                    </tbody>
-
-                                </table>
-
-
-                            </div>
-
-                            <div class="demo-inline-spacing">
-                                <!-- Basic Pagination -->
-                                <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                                    <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                        <li class="page-item first">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--/ Basic Pagination -->
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-
-
-
-
-
-
+                    <h3 class="card-title mb-0">₹<?= round($investamt, 2) ?> <span> <small class="text-success fw-medium">
+                                <span style="margin-left: 10px;"> Margin: <span><?= $usermargin ?></span></span></small></span></h3>
 
                 </div>
             </div>
         </div>
 
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Current Value</span>
+                        <div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="The net amount, including your profit & loss.">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="card-title mb-0">₹<?= round($investmentamount) ?></h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Today's Profit/Loss</span>
+                        <div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Todays's Profit & Loss">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="card-title mb-0">₹<?= round($todayprofit, 2) ?> <span> <small <?= $todayprofit >= 0 ? "class='text-danger fw-medium'" : "class='text-success fw-medium'" ?> class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i>
+                                <span> (<?= round($todayprofitpercent, 2) ?>%)</span></small></span></h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Overall Profit</span>
+                        <div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall financial gain from the start.">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="card-title mb-0">₹<?= round($totalprofit) ?> <span> <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i>
+                                <span> (<?= round($totalprofitprcnt, 2) ?>%)</span></small></span></h3>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <h6 class="text-muted">Positions</h6>
+    <div class="nav-align-top mb-4">
+        <ul class="nav nav-pills mb-3" role="tablist">
+
+            <li class="nav-item">
+                <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
+                    AI Trades
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Today" aria-controls="navs-pills-top-home" aria-selected="true">
+                    Indraday
+                </button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Carry_Forward" aria-controls="navs-pills-top-profile" aria-selected="false">
+                    Holding
+                </button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-close" aria-controls="navs-pills-top-messages" aria-selected="false">
+                    Close
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
+                    Advisor
+                </button>
+            </li>
+
+
+
+        </ul>
+
+
+
+        <!-- tab content -->
+
+        <div class="tab-content p-0">
+
+
+            <!-- ---------------AI Trades Trades-------------- -->
+
+            <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
+
+                <div>
+                    <div class="table-responsive text-nowrap">
+                        <table id="example5" class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Stocks</th>
+                                    <th>Open Time</th>
+                                    <th>Close Time</th>
+                                    <th>Lot</th>
+                                    <th>Quantity</th>
+                                    <th>Buy Price</th>
+                                    <th>Sell Price</th>
+                                    <th>Total</th>
+                                    <th>Buy/Sell</th>
+                                    <th>P&L%</th>
+                                    <th>P&L Amt</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ---------------Indraday Trades-------------- -->
+
+            <div class="tab-pane fade" id="Today" role="tabpanel">
+                <!-- table -->
+                <div>
+                    <div class="table-responsive text-nowrap">
+                        <table id="example1" class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Stocks</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Lot</th>
+                                    <th>Quantity</th>
+                                    <th>Buy Price</th>
+                                    <th>Total</th>
+                                    <th>Current Price</th>
+                                    <th>Buy/Sell</th>
+                                    <th>P&L%</th>
+                                    <th>P&L Amt</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- ---------------Honding Trades-------------- -->
+
+            <div class="tab-pane fade" id="Carry_Forward" role="tabpanel">
+
+
+                <!-- table -->
+                <div>
+                    <div class="table-responsive text-nowrap">
+                        <table id="example2" class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Stocks</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Lot</th>
+                                    <th>Quantity</th>
+                                    <th>Buy Price</th>
+                                    <th>Total</th>
+                                    <th>Current Price</th>
+                                    <th>Buy/Sell</th>
+                                    <th>P&L%</th>
+                                    <th>P&L Amt</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- ---------------Close Trades-------------- -->
+
+            <div class="tab-pane fade" id="navs-pills-close" role="tabpanel">
+                <!-- table -->
+                <div>
+                    <div class="table-responsive text-nowrap">
+                        <table id="example3" class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Stocks</th>
+                                    <th>Open Time</th>
+                                    <th>Close Time</th>
+                                    <th>Lot</th>
+                                    <th>Quantity</th>
+                                    <th>Buy Price</th>
+                                    <th>Sell Price</th>
+                                    <th>Total</th>
+                                    <th>Buy/Sell</th>
+                                    <th>P&L%</th>
+                                    <th>P&L Amt</th>
+                                    <th>Status</th>
+                                    <th>Added by</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ---------------Advisor Trades-------------- -->
+
+
+            <div class="tab-pane fade" id="navs-pills-advisor" role="tabpanel">
+
+                <!-- table -->
+                <div>
+                    <div class="table-responsive text-nowrap">
+                        <table id="example4" class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Stocks</th>
+                                    <th>Open Time</th>
+                                    <th>Close Time</th>
+                                    <th>Lot</th>
+                                    <th>Quantity</th>
+                                    <th>Buy Price</th>
+                                    <th>Sell Price</th>
+                                    <th>Total</th>
+                                    <th>Buy/Sell</th>
+                                    <th>P&L%</th>
+                                    <th>P&L Amt</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
 
@@ -965,7 +578,7 @@ include "main/templete.php"; ?>
             [0, "desc"]
         ],
     })
-    var table4 = $('#example5').DataTable({
+    var table5 = $('#example5').DataTable({
         "ajax": "main/aitradedata.php",
         "processing": false,
         "serverSide": true,

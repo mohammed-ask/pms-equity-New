@@ -16,133 +16,75 @@ if ($stockdata === 'Error fetching candle data:') {
 }
 $stockdata = $stockdata[0];
 ?>
-<div class="modal-header" id="stockdetails">
+<div>
     <div>
-        <h6 class="modal-title m-0 mb-n1" id="SellStocksLabel"><?= $stockdata['Symbol'] ?></h6>
-        <span class="font-10 d-block mb-1"><?php $exc = $stockdata['Exch'] == 'B' ? ' BSE' : ' NSE';
-                                            echo  $exc  ?></span>
-        <span class="border border-danger px-1 rounded text-danger">S</span>
-    </div>
-    <div>
-        <h6 class="m-0 text-uppercase font-16 fw-bold">₹<?= $stockdata['LastRate'] ?><?php if ($stockdata['ChgPcnt'] > 0) { ?>
-            <i class="fa-solid fa-arrow-trend-up text-success"></i>
-        <?php } else { ?>
-            <i class="fa-solid fa-arrow-trend-down text-danger"></i>
-        <?php } ?>
-        </h6>
-        <div class="d-inline-block font-10"><span <?= $stockdata['ChgPcnt'] > 0 ? "class='text-success'" : "class='text-danger'" ?>><?= $stockdata['Chg'] ?></span> <span <?= $stockdata['ChgPcnt'] > 0 ? "class='text-success'" : "class='text-danger'" ?>>(<?= round($stockdata['ChgPcnt'], 2) ?>%)</span></div>
-        <div class="text-success">Live <span><i class="fa-regular fa-circle-dot"></i></span></div>
-    </div>
-    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-</div>
+        <div>
+            <div id="stockdetails">
+                <div class="card-title d-flex align-items-start justify-content-between">
+                    <span class="fw-medium d-block mb-1"><?= $stockdata['Symbol'] ?> <small class="text-primary fw-medium"><br><span><?php $exc = $stockdata['Exch'] == 'B' ? ' BSE' : ' NSE';
+                                                                                                                                        echo  $exc  ?></span></small></span>
 
-<div class="modal-body">
-    <!-- <div class="form-check d-inline-block me-2">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="sell_Limit">
-        <label class="form-check-label" for="sell_Limit">
-            Holding
-        </label>
-    </div>
-    <div class="form-check mb-2 d-inline-block">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="sell_SL" checked="">
-        <label class="form-check-label" for="sell_SL">
-            Trade
-        </label>
-    </div> -->
-    <form class="row gy-2 gx-3 align-items-end" id="sellstock">
-        <input type="hidden" name="symbol" value="<?= $stockdata['Symbol'] ?>" id="">
-        <input type="hidden" name="exchange" value="<?= $stockdata['Exch'] ?>" id="">
-        <input type="hidden" name="exchangetype" value="<?= $stockdata['ExchType'] ?>" id="">
-        <input type="hidden" name="stockid" value="<?= $id ?>" id="">
-        <input type="hidden" name="totalamount" id="totalamount" value="<?= $lot * $stockdata['LastRate'] ?>">
-        <div class="col-3">
-            <label class="form-label" for="Quantity">Lot</label>
-            <input data-bvalidator='required' readonly name="lot" type="number" id="lot" onclick="this.select();" value="<?= $lot ?>" class="form-control form-control-sm">
-        </div>
+                    <div>
+                        <span class="text-success fw-bold" style="padding-top: 5px; font-size: 12px;">Live</span>
+                        <div style="width: 10px !important; height: 10px !important;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
 
-        <div class="col-4">
-            <label class="form-label" for="Quantity">Lot/Quantity</label>
-            <input type="text" onkeyup="sumfund()" onclick="this.select();" data-balidator='required' name="qty" value="1" class="form-control form-control-sm" id="qty">
-        </div>
-        <div class="col-5">
-            <label class="form-label" for="Price">Price</label>
-            <input type="text" readonly name="price" value="<?= $stockdata['LastRate'] ?>" class="form-control form-control-sm" id="Price">
-        </div>
-        <div style='display:none'>
-        <label class="form-label" for="Quantity">Stop Loss</label>
-        <div style="margin-left:3px;margin-right:3px" class="row ">
-            <div class="col-5">
-                <input type="text" readonly name="stoploss" value="<?= round(($stockdata['LastRate'] + $stockdata['LastRate'] * 8 / 100),) ?>" class="form-control form-control-sm" id="stoplossPrice">
-            </div>
-            <label class="switch">
-                <input type="checkbox" id="sliderid" name='stoplossenabled' class="setactive" value="Yes">
-                <span class="slider round"></span>
-            </label>
-        </div>
-        <label class="form-label" for="Quantity">Target</label>
-        <div style="margin-left:3px;margin-right:3px" class="row ">
-            <div class="col-5">
-                <input type="text" readonly name="target" value="<?= round(($stockdata['LastRate'] - $stockdata['LastRate'] * 10 / 100), 2) ?>" class="form-control form-control-sm" id="targetPrice">
-            </div>
-            <label class="switch">
-                <input type="checkbox" id="tsliderid" name='targetenabled' class="setactive" value="Yes">
-                <span class="slider round"></span>
-            </label>
-        </div>
-        </div>
-        <!-- <div class="col-auto">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                <label class="form-check-label" for="autoSizingCheck">
-                    Limit
-                </label>
-            </div>
-        </div> -->
-        <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
-            <button <?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open' ? null : 'disabled'; ?> class="btn btn-danger w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertsellstock\', \'resultid\', \'sellstock\')' : ''; ?>">SELL</button>
-        <?php } elseif ($stockdata['Exch'] === 'M') { ?>
-            <button <?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open' ? null : 'disabled'; ?> class="btn btn-danger w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertsellstock\', \'resultid\', \'sellstock\')' : ''; ?>">SELL</button>
-        <?php } ?>
-
-        <div id="resultid"></div>
-    </form>
-    <!-- <div class="mt-3">
-        <a class="" data-bs-toggle="collapse" href="user-index.htmlSL_Option" aria-expanded="false" aria-controls="collapseExample">
-            Stop Loss <i class="fa-regular fa-circle-down"></i>
-        </a>
-        <div class="collapse" id="SL_Option">
-            <form class="row gy-2 gx-3 align-items-center mt-1">
-                <div class="col-auto">
-                    <label class="form-label" for="Trigger_Price">Trigger Price</label>
-                    <input type="text" class="form-control form-control-sm" id="Trigger_Price">
-                </div>
-                <div class="col-auto align-self-end">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="buy_SL">
-                        <label class="form-check-label" for="buy_SL">
-                            Stop Loss
-                        </label>
                     </div>
                 </div>
-            </form>
-        </div> 
-    </div>  -->
-    <div class="row">
-        <div class="col-6">
-            <small class="text-muted d-block">Require Fund</small>
-            <small id="reqfund">₹<?= number_format($lot * $stockdata['LastRate'], 2)  ?></small>
 
-        </div><!--end col-->
+                <h3 class="card-title mb-0">₹<?= $stockdata['LastRate'] ?> <span> <small <?= $stockdata['ChgPcnt'] > 0 ? "class='text-success fw-medium'" : "class='text-danger fw-medium'" ?>><i class="bx bx-down-arrow-alt"></i>
+                            <span>₹<?= $stockdata['Chg'] ?> (<?= round($stockdata['ChgPcnt'], 2) ?>%)</span></small></span></h3>
 
-        <div class="col-6" style="text-align: right;">
-            <div id="profile-tooltip-id">
-                <small class="text-muted d-block">Available Fund</small>
             </div>
-            <small>₹<?= round($investmentamount) ?></small>
-            <br> <small style="color:green">Margin/Limit: <?= $usermargin ?>x</small>
-        </div><!--end col-->
-    </div><!--end row-->
-</div><!--end modal-body-->
+            <div class="mt-3" style="font-size: 14px;"> <span style="font-weight: 700; margin-right: 5px;">Default Lot:</span> <?= $lot ?> </div>
+            <form class="row gy-2 gx-3 align-items-end" id="buystock">
+                <input type="hidden" name="symbol" value="<?= $stockdata['Symbol'] ?>" id="">
+                <input type="hidden" name="exchange" value="<?= $stockdata['Exch'] ?>" id="">
+                <input type="hidden" name="exchangetype" value="<?= $stockdata['ExchType'] ?>" id="">
+                <input type="hidden" name="stockid" value="<?= $id ?>" id="">
+                <input type="hidden" name="totalamount" id="totalamount" value="<?= $lot * $stockdata['LastRate'] ?>">
+                <input type="hidden" data-bvalidator='required' readonly name="lot" type="number" id="lot" onclick="this.select();" value="<?= $lot ?>" class="form-control form-control-sm">
+                <div class="row g-2 mt-2">
+                    <div class="col-4 mb-0">
+                        <label for="stock" class="form-label mb-0">Lot/Qty</label>
+                        <input type="text" data-bvalidator='required' name="qty" type="number" id="qty" onkeyup="sumfund()" onclick="this.select();" value="1" class="form-control p-1" />
+                    </div>
+                    <div class="col-6 mb-0">
+                        <label for="stock" class="form-label mb-0">Buying Price <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Selling price per Quantity/Lot">
+                                    <i class='bx bx-message-rounded-error'></i>
+                                </button></span></label>
+                        <input type="text" type="text" readonly name="price" value="<?= $stockdata['LastRate'] ?>" id="Price" class="form-control p-1" placeholder="" />
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div class="row mt-3">
+                    <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
+                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open' ? null : 'disabled'; ?> class="btn btn-danger w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertsellstock\', \'resultid\', \'sellstock\')' : ''; ?>">SELL</button>
+                    <?php } elseif ($stockdata['Exch'] === 'M') { ?>
+                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open' ? null : 'disabled'; ?> class="btn btn-danger w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertsellstock\', \'resultid\', \'sellstock\')' : ''; ?>">SELL</button>
+                    <?php } ?>
+                    <div id="resultid"></div>
+                    <!-- <div class="col"> <button type="submit" class="btn btn-primary" style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);">Sell</button>
+                    </div> -->
+                </div>
+
+                <div class="row mt-3 mb-1">
+
+                    <div class="col-4 high-low"><span>Req. Fund<br></span> <span id="reqfund" style="color: rgb(54, 53, 53);">₹<?= number_format($lot * $stockdata['LastRate'], 2)  ?></span></div>
+                    <div class="col-4 high-low" style="text-align: center;"><span>Margin<br></span> <span style="color: rgb(54, 53, 53);"><?= $usermargin ?>x</span></div>
+                    <div class="col-4 high-low" style="text-align: right;"><span>Avail. Fund<br></span> <span style="color: rgb(54, 53, 53);">₹<?= round($investmentamount) ?></span></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script>
     $("#modalfooterbtn").css('display', 'none')
     // check if current day is a weekday (Monday to Friday)
