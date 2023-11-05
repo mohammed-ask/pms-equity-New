@@ -30,69 +30,68 @@ include "main/session.php";
     }
 </style>
 <form class="row gy-2 gx-3 align-items-end" id="addtax2">
-    <span><span style="font-size: small;">In case you search for Derivative, write like: </span><span style="font-size: 12px;"><br>Eg: NIFTY 23 May 2023 PE 2345263.00<br><b>[</b> <span style="text-decoration-line: underline; margin-right: 3px;">STOCK</span><span style="text-decoration-line: underline;">Date of Expiry</span> <span style="text-decoration-line: underline; margin-left: 3px; margin-right: 3px;">Option Type (PE/CE)</span> <span style="text-decoration-line: underline;">Strike Price</span><b> ]</b> <br><div style="margin-top:5px;"><span style="font-size: small;">Explore Option chain and strike price: </span><br>For MCX Market <a target="_blank" style="color: #e75c5c; text-decoration-line: underline; " href="https://www.mcxindia.com/market-data/option-chain">click here</a> , <span style="margin-left: 10px;">For Equity / NIFTY <a target="_blank" style="color: #e75c5c; text-decoration-line: underline; " href="https://www.nseindia.com/option-chain">click here</a></div> </span></span> 
-        <hr style="margin: 0; margin-top: 8px;">
-    <div class="row -auto g-2 align-items-center">
-        <div class="col-sm-9">
-            <h6 style="margin-top: 0;">Search & Add Stocks</h6>
-            <input class="form-control" data-bvalidator='required' id="symbol" type="text" placeholder="Enter Any Stock Symbol">
-        </div>
-        <div class="col-sm-9">
-            <h5 class=" font-13">Exchange</h5>
-            <div class="form-check d-inline-block me-2">
-                <input class="form-check-input" checked value="N" type="radio" name="exch" id="exch1">
-                <label class="form-check-label" for="exch1">
-                    NSE
-                </label>
-            </div>
-            <div class="form-check mb-2 d-inline-block ">
-                <input class="form-check-input" value="B" type="radio" name="exch" id="exch2">
-                <label class="form-check-label" for="exch2">
-                    BSE
-                </label>
-            </div>
-            <div class="form-check mb-2 d-inline-block">
-                <input class="form-check-input" value="M" type="radio" name="exch" id="exch3">
-                <label class="form-check-label" for="exch2">
-                    MCX
-                </label>
-            </div>
-        </div>
-        <div class="col-sm-9">
-            <h5 class=" font-13">Trade Mode</h5>
-            <div class="form-check d-inline-block me-2">
-                <input class="form-check-input" checked value="C" type="radio" name="trademode" id="trademode1">
-                <label class="form-check-label" for="trademode1">
-                    Cash
-                </label>
-            </div>
-            <div class="form-check mb-2 d-inline-block ">
-                <input class="form-check-input" value="D" type="radio" name="trademode" id="trademode2">
-                <label class="form-check-label" for="trademode2">
-                    Derivative
-                </label>
-            </div>
-            <div class="form-check mb-2 d-inline-block d-none">
-                <input class="form-check-input" value="U" type="radio" name="trademode" id="trademode3">
-                <label class="form-check-label" for="trademode2">
-                    Currency
-                </label>
-            </div>
-        </div>
-        <!-- <div class="col-sm-9">
-            <input id="expiry" data-bvalidator="required" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Expiry" />
-        </div>
-        <div class="col-sm-9">
-            <input class="form-control" data-bvalidator='required' id="strikerate" value="0" type="text" placeholder="Enter Strike Rate">
-        </div> -->
-        <div class="col-sm-12">
-            <button type="submit" onclick="searchsymbol()" class="btn btn-primary">Search</button>
-        </div>
-        <div id="returndata">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <a class=" fw-medium" data-bs-toggle="collapse" href="#addStockHelp" role="button" aria-expanded="false" aria-controls="collapseExample">Need help in How to Search? <span class="fw-bold">Just click here</span></a>
 
-        </div>
-        <div id="addstatus">
+                </div>
+                <div class="collapse mt-2" id="addStockHelp" style="font-size: 12px;">Eg: NIFTY 23 May 2023 PE 2345263.00<br><b>[</b> <span style="text-decoration-line: underline; margin-right: 3px;">STOCK</span><span style="text-decoration-line: underline;">Date of Expiry</span> <span style="text-decoration-line: underline; margin-left: 3px; margin-right: 3px;">Option Type (PE/CE)</span> <span style="text-decoration-line: underline;">Strike Price</span><b> ]</b> <br>
+                    <div style="margin-top:5px;"><span style="font-size: small;">Explore Option chain and strike price: </span><br>For MCX Market <a target="_blank" style="color: #e75c5c; text-decoration-line: underline; " href="https://www.mcxindia.com/market-data/option-chain">click here</a> , <span style="margin-left: 10px;">For Equity / NIFTY <a target="_blank" style="color: #e75c5c; text-decoration-line: underline; " href="https://www.nseindia.com/option-chain">click here</a></span></div>
+                    <hr>
+                </div>
+                <div class="row mb-4 mt-4">
+                    <div class="col-6">
+                        <small class="text-light fw-medium d-block mb-2" style="color: #435971 !important;">EXCHANGE</small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" checked value="N" type="radio" name="exch" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">NSE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" value="B" type="radio" name="exch" id="inlineRadio2" value="option3">
+                            <label class="form-check-label" for="inlineRadio2">BSE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" value="M" type="radio" name="exch" id="inlineRadio3" value="option2">
+                            <label class="form-check-label" for="inlineRadio3">MCX</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-light fw-medium d-block mb-2" style="color: #435971 !important;">TRADE MODE</small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" checked value="C" type="radio" name="trademode" id="trademode1" value="option4">
+                            <label class="form-check-label" for="inlineRadio4">Cash</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" value="D" type="radio" name="trademode" id="trademode2" value="option5">
+                            <label class="form-check-label" for="inlineRadio5">Derivative</label>
+                        </div>
+                    </div>
+                </div>
 
+
+                <div class="row g-2 mb-2">
+                    <div class="col-10 mb-0 mt-0">
+                        <label for="stock" class="form-label mb-0">Search & Add Stock</label>
+                        <div class="input-group input-group-merge speech-to-text">
+
+                            <input type="text" class="form-control" id="symbol" placeholder="Enter or Say it" aria-describedby="text-to-speech-addon">
+                            <span class="input-group-text" id="text-to-speech-addon">
+                                <i class="bx bx-microphone cursor-pointer text-to-speech-toggle"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-2 mb-0 mt-0"> <label for="stock" class="form-label mb-0">Srch.</label><button onclick="searchsymbol()" type="button" class="btn btn-outline-primary" style="width: 100%;"><i class='bx bx-search-alt'></i></button></div>
+
+                </div>
+                <div id="returndata">
+
+                </div>
+                <div id="addstatus">
+
+                </div>
+            </div>
         </div>
     </div>
 </form>

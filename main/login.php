@@ -45,12 +45,12 @@ include './main/conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - PMS Equity</title>
 
-    
+
 
     <!-- Google Font: Source Sans Pro -->
 
-  
-   
+
+
 
     <!-- <link rel="stylesheet" href="main/dist/css/select2.min.css"> -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
@@ -237,7 +237,7 @@ include './main/conn.php';
                             <div class="mb-3 form-password-toggle" style="position:relative">
                                 <div class="d-flex justify-content-between">
                                     <label class="form-label" for="password">Password</label>
-                                    <a href="auth-forgot-password-basic.html">
+                                    <a href="forgotpassword">
                                         <small>Forgot Password?</small>
                                     </a>
                                 </div>
@@ -259,7 +259,7 @@ include './main/conn.php';
 
                         <p class="text-center">
                             <span>New on our platform?</span>
-                            <a href="auth-register-basic.html">
+                            <a href="register">
                                 <span>Create an account</span>
                             </a>
                         </p>

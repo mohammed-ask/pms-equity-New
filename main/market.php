@@ -55,9 +55,8 @@ if ($marketmaintanance) {
                 <div class="col-6">
                     <div class="card">
                         <div class="card-body" style="padding: 10px 25px;">
-                            <span class="fw-medium d-block mb-1">Nifty</span>
-                            <h3 class="card-title mb-0">₹12,628 <span> <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i>
-                                        ₹456 (23%)</small></span></h3>
+                            <span class="fw-medium d-block mb-1"><?= $mdata['Symbol'] ?></span>
+                            <h3 class="card-title mb-0">₹<?= $mdata['LastRate'] ?> <span> <small <?= $mdata['ChgPcnt'] > 0 ? "class='text-success fw-medium'" : "class='text-danger fw-medium'" ?>><i class="bx bx-up-arrow-alt"></i> ₹<?= $mdata['Chg'] ?> (<?= round($mdata['ChgPcnt'], 2) ?>%)</small></span></h3>
                         </div>
                     </div>
 
@@ -74,32 +73,37 @@ if ($marketmaintanance) {
                 <div class="card">
                     <div class="card-body" style="padding: 15px 20px;">
                         <div class="card-title d-flex align-items-start justify-content-between">
-                            <span class="fw-medium d-block mb-1">Banknifty</span>
+                            <span class="fw-medium d-block mb-1"><?= $obj->selectfieldwhere("userstocks", "Symbol", "symboltoken='" . $data['Token'] . "' and userid = '" . $employeeid . "'") ?></span>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
                                     <a class="dropdown-item" href="javascript:void(0);">View Chart</a>
-                                    <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                    <a class="dropdown-item" onclick="removestock('<?= $data['Token'] ?>','<?= $data['Exch']  ?>')" href="javascript:void(0);">Delete</a>
                                 </div>
                             </div>
                         </div>
 
-                        <h3 class="card-title mb-0">₹14,628 <span> <small class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i>
-                                    <span>₹345 (24%)</span></small></span></h3>
+                        <h3 class="card-title mb-0">₹<?= $data['LastRate'] ?> <span> <small <?= $data['ChgPcnt'] > 0 ? "class='text-success fw-medium'" : "class='text-danger fw-medium'" ?>>
+                                    <?php if ($data['ChgPcnt'] > 0) { ?>
+                                        <i class="bx bx-up-arrow-alt"></i>
+                                    <?php } else { ?>
+                                        <i class="bx bx-down-arrow-alt"></i>
+                                    <?php } ?>
+                                    <span>₹<?= $data['Chg'] ?> (<?= round($data['ChgPcnt'], 2) ?>%)</span></small></span></h3>
 
                         <div class="row mt-2">
 
-                            <div class="col-4 high-low"><span>High<br></span> <span style="color: rgb(54, 53, 53);">₹206.99</span></div>
-                            <div class="col-4 high-low"><span>Low<br></span> <span style="color: rgb(54, 53, 53);">₹206.99</span></div>
-                            <div class="col-4 high-low"><span>Close<br></span> <span style="color: rgb(54, 53, 53);">₹206.99</span></div>
+                            <div class="col-4 high-low"><span>High<br></span> <span style="color: rgb(54, 53, 53);"><?= $currencysymbol ?><?= $data['High'] ?></span></div>
+                            <div class="col-4 high-low"><span>Low<br></span> <span style="color: rgb(54, 53, 53);"><?= $currencysymbol ?><?= $data['Low'] ?></span></div>
+                            <div class="col-4 high-low"><span>Close<br></span> <span style="color: rgb(54, 53, 53);"><?= $currencysymbol ?><?= $data['PClose'] ?></span></div>
 
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-6"> <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCenterBuy" style="width: 100%; background-color: #55bc1d; border-color: #55bc1d;">Buy</button></div>
-                            <div class="col-6"> <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCenterSell" style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);">Sell</button>
+                            <div class="col-6"> <button type="submit" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("<?= $data["Token"] ?>", "buystock","", "Buy Stock")' style="width: 100%; background-color: #55bc1d; border-color: #55bc1d;">Buy</button></div>
+                            <div class="col-6"> <button type="submit" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("<?= $data["Token"] ?>", "sellstock","", "Sell Stock")' style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);">Sell</button>
                             </div>
                         </div>
 
@@ -108,6 +112,8 @@ if ($marketmaintanance) {
             </div>
         <?php } ?>
     </div><!--end row-->
+    <div class="search-stock"> <button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "searchstock","", "Search Stock by Symbol")'><i class='bx bxs-file-find'></i>Add Stocks</button>
+    </div>
 <?php
 }
 $pagemaincontent = ob_get_contents();

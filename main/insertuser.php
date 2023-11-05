@@ -2,7 +2,9 @@
 session_start();
 // ini_set('display_errors', 1);
 // error_reporting(E_ALL);
-
+print_r($_POST);
+print_r($_FILES);
+die;
 include './function.php';
 include './conn.php';
 if ($_SESSION['otp'] != $_POST['otp']) {
@@ -77,7 +79,9 @@ if ($_SESSION['otp'] != $_POST['otp']) {
         $x['updated_on'] = date('Y-m-d H:i:s');
         // $x['updated_by'] = 0;
         $x['status'] = 0;
-        $x['name'] = ucwords($_POST['username']);
+        $x['name'] = ucwords($_POST['firstname']) . ' ' . $_POST['lastnme'];
+        $x['firstname'] = ucwords($_POST['firstname']);
+        $x['lastname'] = ucwords($_POST['lastnme']);
         $x['email'] = $_POST['email'];
         $x['mobile'] = $_POST['mobileno'];
         $x['address'] = $_POST['address'];

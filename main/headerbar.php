@@ -20,7 +20,7 @@
         <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- Place this tag where you want the button to render. -->
             <li class="nav-item lh-1 me-3">
-                <p class="mb-0">Shubham Kumar</p>
+                <p class="mb-0"><?= $username ?></p>
             </li>
 
             <!-- User -->
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-medium d-block">John Doe</span>
+                                    <span class="fw-medium d-block"><?= $username ?></span>
                                     <small class="text-muted">Mumbai</small>
                                 </div>
                             </div>
@@ -50,23 +50,23 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="profile">
                             <i class="bx bx-user me-2"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="dropdown-item" href="#">
                             <i class="bx bx-cog me-2"></i>
                             <span class="align-middle">Settings</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="javascript:void(0);">
+                        <a class="dropdown-item" href="logout">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>

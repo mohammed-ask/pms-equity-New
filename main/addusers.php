@@ -5,21 +5,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create account - PMS Equity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="main/dist/css/tailwind.output.css" />
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script src="main/dist/js/init-alpine.js"></script>
-    <link rel="stylesheet" href="main/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="main/plugins/jquery-ui/jquery-ui.css">
+    <meta name="description" content="" />
 
-    <link rel="stylesheet" href="main/dist/css/bvalidator.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="main/dist/userstuff/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="main/dist/userstuff/assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="main/dist/userstuff/assets/vendor/js/helpers.js"></script>
+
+    <script src="main/dist/userstuff/assets/js/config.js"></script>
+
+    <!-- file upload -->
+
+    <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/file-upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <!-- ------------------------Additional only for signup------------------------- -->
+
+    <link rel="stylesheet" href="main/dist/userstuff/assets\signup/page-auth.css">
+    <link rel="stylesheet" href="main/dist/userstuff/assets\signup/typeahead.css">
+    <link rel="stylesheet" href="main/dist/userstuff/assets\signup/bs-stepper.css">
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="main/dist/css/tailwind.output.css" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+    <!-- <script src="main/dist/js/init-alpine.js"></script> -->
+    <link rel="stylesheet" href="main/plugins/fontawesome-free/css/all.min.css">
+    <!-- <link rel="stylesheet" href="main/plugins/jquery-ui/jquery-ui.css"> -->
+
+    <!-- <link rel="stylesheet" href="main/dist/css/bvalidator.css"> -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
     <link rel="shortcut icon" href="main/images/logo/favicon.svg">
 
-    <link rel="stylesheet" href="main/dist/css/adminlte.min.css">
+    <!-- <link rel="stylesheet" href="main/dist/css/adminlte.min.css"> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -771,285 +816,407 @@
 
         /*  ----------------------------------Browser alert End------------------------------------------ */
     </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P9108ZJ253"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9108ZJ253"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-P9108ZJ253');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P9108ZJ253');
+    </script>
 
 </head>
 
 <body>
     <form id="fdata">
 
-        <div class="container-dabba">
-            <div class="card">
-                <div class="form">
-                    <div class="left-side">
-                        <div class="left-heading">
-                            <h3 style="font-size:18px;"><b>WELCOME TO PMS EQUITY</b></h3>
-                        </div>
-                        <div class="steps-content">
-                            <h3 style="font-size: 18px; font-weight: 600;">Step <span class="step-number">1</span></h3>
-                            <p class="step-number-content active">Enter your personal information to create your account.</p>
-                            <p class="step-number-content d-none">Enter required documents details and press next.</p>
-                            <p class="step-number-content d-none">Enter your bank details and press next.</p>
-                            <p class="step-number-content d-none">Enter employee ID & password and click on submit. </p>
-                        </div>
-                        <ul class="progress-bar">
-                            <li class="active">Personal Information</li>
-                            <li>Required Documents</li>
-                            <li>Bank Details</li>
-                            <li>Upload Documents</li>
-                            <li>Password</li>
-                        </ul>
+        <div class="authentication-wrapper authentication-cover">
+            <div class="authentication-inner row m-0">
 
-
-
+                <!-- Left Text -->
+                <div class="d-none d-lg-flex col-lg-4 align-items-center justify-content-end p-5 pe-0">
+                    <div class="w-px-400">
+                        <img src="main/dist/userstuff/assets\signup/create-account-light.png" class="img-fluid" alt="multi-steps" width="600" data-app-dark-img="illustrations/create-account-dark.png" data-app-light-img="illustrations/create-account-light.png">
                     </div>
-                    <div class="right-side">
-                        <div class="main active">
-                            <div><img width="170px" src="main/images/logo/PMS Equity logo with black text svg.svg" alt=""></div>
-                            <div class="text">
-                                <h2 style="font-size:20px;">Your Personal Information</h2>
-                                <p>Enter your personal information and click on next step</p>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" required require name="username" id="username">
-                                    <span>Full Name</span>
+                </div>
+                <div class="d-flex col-lg-8 align-items-center justify-content-center authentication-bg p-sm-5 p-3" style="
+    background: white;
+">
+                    <div class="w-px-700">
+                        <div id="multiStepsValidation" class="bs-stepper shadow-none linear">
+                            <div class="bs-stepper-header border-bottom-0">
+                                <span class="step-number d-none">1</span>
+                                <div class="step active" data-target="#accountDetailsValidation">
+                                    <button type="button" class="step-trigger" aria-selected="true">
+                                        <span class="bs-stepper-circle"><i class="bx bx-home-alt"></i></span>
+                                        <span class="bs-stepper-label mt-1">
+                                            <span class="bs-stepper-title">Personal</span>
+                                            <span class="bs-stepper-subtitle">Personal Details</span>
+                                        </span>
+                                    </button>
                                 </div>
-                            </div>
+                                <div class="line">
+                                    <i class="bx bx-chevron-right"></i>
+                                </div>
 
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="email" id="email" name="email" required require>
-                                    <span>Email ID</span>
+                                <div class="step" data-target="#personalInfoValidation">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-circle"><i class="bx bx-user"></i></span>
+                                        <span class="bs-stepper-label mt-1">
+                                            <span class="bs-stepper-title">Account</span>
+                                            <span class="bs-stepper-subtitle">Enter Information</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <i class="bx bx-chevron-right"></i>
+                                </div>
+                                <div class="step" data-target="#billingLinksValidation">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-circle"><i class="bx bx-detail"></i></span>
+                                        <span class="bs-stepper-label mt-1">
+                                            <span class="bs-stepper-title">Documents</span>
+                                            <span class="bs-stepper-subtitle">Upload Documents</span>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
+                            <div class="bs-stepper-content">
+                                <div class="main active">
+                                    <div class="content-header mb-3">
+                                        <h3 class="mb-1">Personal Information</h3>
+                                        <span>Enter Your Personal Details</span>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-sm-6 fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsFirstName">First Name</label>
+                                            <input type="text" name="firstname" require id="firstname" class="form-control" placeholder="Rakesh">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form-label" for="multiStepsLastName">Last Name</label>
+                                            <input type="text" name="lastname" require id="lastname" class="form-control" placeholder="Sharma">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form-label" for="multiStepsMobile">Mobile</label>
+                                            <div class="input-group input-group-merge">
+                                                <span class="input-group-text">IN (+91)</span>
+                                                <input type="text" id="mobileno" name="mobileno" class="form-control multi-steps-mobile" placeholder="909 555 0111">
+                                            </div>
+                                        </div>
 
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="mobileno" name="mobileno" required require>
-                                    <span>Mobile Number</span>
+                                        <div class="col-sm-6 fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsEmail">Email</label>
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="rakesh.sharma@email.com" aria-label="john.doe">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-sm-6 form-password-toggle fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsPass">Password</label>
+                                            <div class="input-group input-group-merge has-validation">
+                                                <input type="password" id="password" name="password" class="form-control" placeholder="············" aria-describedby="multiStepsPass2">
+                                                <span class="input-group-text cursor-pointer" id="multiStepsPass2"><i class="bx bx-hide"></i></span>
+                                            </div>
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-sm-6 form-password-toggle fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsConfirmPass">Confirm Password</label>
+                                            <div class="input-group input-group-merge has-validation">
+                                                <input type="password" id="comfirmpass" name="confirmpass" class="form-control" placeholder="············" aria-describedby="multiStepsConfirmPass2">
+                                                <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"><i class="bx bx-hide"></i></span>
+                                            </div>
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+
+
+
+
+                                        <div class="col-12 d-flex justify-content-between">
+                                            <button class="btn btn-label-secondary btn-prev" disabled=""> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                            </button>
+                                            <button class="next_button btn btn-primary"> <span class="align-middle d-sm-inline-block d-none me-sm-1 me-0">Next</span> <i class="bx bx-chevron-right bx-sm me-sm-n2"></i></button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="buttons">
-                                <button class="next_button">Next Step</button>
+
+
+
+
+
+
+
+                                <div class="main">
+                                    <div class="content-header mb-3">
+                                        <h3 class="mb-1">Account Information</h3>
+                                        <span>Enter Your Account Information</span>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsNumber">Aadhar No.</label>
+                                            <input type="number" id="adharno" name="adharno" class="form-control" placeholder="8989 2267 2345">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label" for="multiSteps">Pan No.</label>
+                                            <input type="text" id="panno" require name="panno" class="form-control" placeholder="YJKUK9877UN">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label" for="multiStepsExDate">DOB</label>
+                                            <div class="input-group input-group-merge">
+                                                <input type="date" name="dob" require id="dob" class="form-control multi-steps-exp-date">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsNumber">Bank Name</label>
+                                            <input type="text" id="bankname" require name="bankname" class="form-control" placeholder="">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label" for="multiSteps">Account No</label>
+                                            <input type="text" id="accountno" require name="accountno" class="form-control" placeholder="">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label" for="multiStepsIfsc">IFSC</label>
+                                            <div class="input-group input-group-merge">
+                                                <input type="text" name="ifsc" require id="ifsc" class="form-control multi-steps">
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-md-12 fv-plugins-icon-container">
+                                            <label class="form-label" for="multiStepsAddress">Full Address</label>
+                                            <input type="text" id="address" require name="address" class="form-control" placeholder="Address">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+
+
+
+                                        <div class="col-12 d-flex justify-content-between">
+                                            <button class="btn btn-primary back_button"> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                            </button>
+                                            <button class="next_button btn btn-primary"> <span class="align-middle d-sm-inline-block d-none me-sm-1 me-0">Next</span> <i class="bx bx-chevron-right bx-sm me-sm-n2"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="main">
+                                    <div class="content-header mb-3">
+                                        <h3 class="mb-1">Upload Documents</h3>
+                                        <span>Upload Required Documents</span>
+                                    </div>
+                                    <div class="row g-3">
+
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Aadhar Front</label>
+                                            <input hidden value="Aadhar Card Front" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Aadhar Front</label>
+                                            <input hidden value="Aadhar Card Back" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+
+
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Pan</label>
+                                            <input hidden value="PAN card" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Passbook/Cancel Cheque</label>
+                                            <input hidden value="Passbook" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Passport Size Photo</label>
+                                            <input hidden value="Passport Size Photo" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="col-sm-4 fv-plugins-icon-container">
+                                            <label class="form-label" for="formFile">Signature</label>
+                                            <input hidden value="Signature" name="name[]">
+                                            <input class="form-control" type="file" name="path[]" id="formFile">
+                                            <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="form-label" for="multiStepss">Advisor ID</label>
+                                            <input type="text" id="employeeref" name="employeeref" class="form-control" placeholder="(Optional)">
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="col-12 d-flex justify-content-between">
+                                            <button class="btn btn-primary back_button"> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                            </button>
+                                            <button id="otp_button" class="next_button btn btn-success">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="main">
+                                    <div class="content-header mb-3">
+                                        <h3 class="mb-1">Two Step Verification 💬</h3>
+                                        <span>We sent a verification code to your given mail ID. Enter the code in the field below.</span>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="auth-input-wrapper d-flex align-items-center justify-content-sm-between numeral-mask-wrapper">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1" autofocus="">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                            <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                        </div>
+                                        <div class="col-12 justify-content-between">
+                                            <button id="subotp" class="submit_button btn btn-primary d-grid w-100 mb-3">
+                                                Verify my account
+                                            </button>
+                                            <div class="text-center">Didn't get the code?
+                                                <a href="javascript:void(0);">
+                                                    Resend
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-
-
-
-
-
-
-                        <div class="main">
-                            <div><img width="170px" src="main/images/logo/PMS Equity logo with black text svg.svg" alt=""></div>
-                            <div class="text">
-                                <h2 style="font-size:20px;">Required Documents Details</h2>
-                                <p>Please enter your documents details for next step .</p>
-                            </div>
-
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="address" name="address" required require>
-                                    <span>Address</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="number" id="adharno" name="adharno" required require>
-                                    <span>Aadhar Number</span>
-                                </div>
-
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="panno" name="panno" required require>
-                                    <span>PAN Number</span>
-                                </div>
-
-                                <div class="input-div">
-                                    <input type="date" name="dob" id="dob" required require>
-                                    <span>Date Of Birth</span>
-                                </div>
-                            </div>
-                            <div class="buttons button_space">
-                                <button class="back_button">Back</button>
-                                <button class="next_button">Next Step</button>
-                            </div>
-                        </div>
-                        <div class="main">
-                            <div><img width="170px" src="main/images/logo/PMS Equity logo with black text svg.svg" alt=""></div>
-                            <div class="text">
-                                <h2 style="font-size:20px;">Bank Details</h2>
-                                <p>Please enter your bank details & press next</p>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="bankname" name="bankname" required require>
-                                    <span>Bank Name</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="number" id="accountno" name="accountno" required require>
-                                    <span>Account Number</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" name="ifsc" id="ifsc" required require>
-                                    <span>IFSC</span>
-                                </div>
-                            </div>
-                            <div class="buttons button_space">
-                                <button class="back_button">Back</button>
-                                <button class="next_button">Next Step</button>
-                            </div>
-                        </div>
-
-
-                        <div class="main">
-                            <div><img width="170px" src="main/images/logo/PMS Equity logo with black text svg.svg" alt=""></div>
-                            <div class="text">
-                                <h2 style="font-size:20px;">Upload Documents</h2>
-                                <p>Please Upload your documents & press next</p>
-                            </div>
-
-
-                            <div class="input-text m-input-text">
-                                <div class='file-input'>
-                                    <p>Aadhar Front Side</p>
-                                    <input hidden value="Aadhar Card Front" name="name[]">
-                                    <input class="fileInput" type='file' name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-
-
-                                <div class='file-input'>
-                                    <p>Aadhar Back Side</p>
-                                    <input hidden value="Aadhar Card Back" name="name[]">
-                                    <input type='file' class="fileInput" name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-                            </div>
-
-
-                            <div class="input-text m-input-text">
-                                <div class='file-input'>
-                                    <p>Pan Card</p>
-                                    <input hidden value="PAN card" name="name[]">
-                                    <input type='file' class="fileInput" name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-
-
-                                <div class='file-input'>
-                                    <p>Passbook / Cancel Cheque</p>
-                                    <input hidden value="Passbook" name="name[]">
-                                    <input type='file' class="fileInput" name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text m-input-text m2-input-text">
-                                <div class='file-input'>
-                                    <p>Passport Size Photo</p>
-                                    <input hidden value="Passport Size Photo" name="name[]">
-                                    <input type='file' class="fileInput" name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-
-
-                                <div class='file-input'>
-                                    <p>Signature on Blank page</p>
-                                    <input hidden value="Signature" name="name[]">
-                                    <input type='file' class="fileInput" name="path[]" data-bvalidator="required" require>
-                                    <span class='button'>Choose</span>
-                                    <span class='label' data-js-label>No file selected</span>
-                                </div>
-                            </div>
-
-
-                            <div class="buttons button_space">
-                                <button class="back_button">Back</button>
-                                <button class="next_button">Next Step</button>
-                            </div>
-                        </div>
-
-
-                        <div class="main">
-                            <div><img width="170px" src="main/images/logo/PMS Equity logo with black text svg.svg" alt=""></div>
-                            <div class="text">
-                                <h2>Broker ID & Password</h2>
-                                <p>Please enter Broker ID(if available) & password.</p>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="employeeref" name="employeeref">
-                                    <span>Broker ID (if available)</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="password" name="password" required require>
-                                    <span>Password</span>
-                                </div>
-                            </div>
-
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" id="comfirmpass" name="confirmpass" required require>
-                                    <span>Confirm Password</span>
-                                </div>
-                            </div>
-                            <div class="buttons button_space">
-                                <button class="back_button">Back</button>
-                                <button class="next_button" id="otp_button">Submit</button>
-                            </div>
-                        </div>
-                        <div class="main">
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" name="otp" id="otp" required require>
-                                    <span>Enter OTP (Sent on your Email)</span>
-                                </div>
-                                <div id="timer"></div>
-
-                            </div>
-                            <div class="buttons button_space">
-                                <!-- <button class="back_button">Back</button> -->
-                                <button id="subotp" class="submit_button">Submit now</button>
-                            </div>
-                        </div>
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- <div class="modal fade" id="modalCenterSubmit" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCenterTitle">Verification</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <div class="card-body">
+
+                            <h4 class="mb-2">Two Step Verification 💬</h4>
+                            <p class="text-start mb-4">
+                                We sent a verification code to your given mail ID. Enter the code in the field below.
+                                <span class="fw-medium d-block mt-2">******@email.com</span>
+                            </p>
+                            <p class="mb-0 fw-medium">Type your 6 digit security code</p>
+
+                            <div class="mb-3 fv-plugins-icon-container">
+                                <div class="auth-input-wrapper d-flex align-items-center justify-content-sm-between numeral-mask-wrapper">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1" autofocus="">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                    <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
+                                </div>
+                                <input type="hidden" name="otp" value="">
+                                <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                            </div>
+                            <button id="subotp" class="submit_button btn btn-primary d-grid w-100 mb-3">
+                                Verify my account
+                            </button>
+                            <div class="text-center">Didn't get the code?
+                                <a href="javascript:void(0);">
+                                    Resend
+                                </a>
+                            </div>
+                            <input type="hidden">
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
     </form>
-    </div>
+
+    <!-- <script>
+        // Check selected custom option
+        window.Helpers.initCustomOptionCheck();
+    </script> -->
+    <script src="main/dist/userstuff/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="main/dist/userstuff/assets/vendor/libs/popper/popper.js"></script>
+    <script src="main/dist/userstuff/assets/vendor/js/bootstrap.js"></script>
+    <script src="main/dist/userstuff/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="main/dist/userstuff/assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="main/dist/userstuff/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <!-- <script src="main/dist/userstuff/assets/js/main.js"></script> -->
+
+    <!-- Page JS -->
+    <script src="main/dist/userstuff/assets/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+    <!-- file upload -->
+
+    <script src="main/dist/userstuff/assets/vendor/js/file-upload.js"> </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <!-- Additional  only for two-step-->
+
+    <script src="main/dist/userstuff/assets/signup/two-step.js"> </script>
+
+
+
+    <!-- Vendors JS -->
+    <script src="main/dist/userstuff/assets\signup/cleave.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/cleave-phone.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/bs-stepper.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/select2.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/popular.min.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/index.min.js.download"></script>
+    <script src="main/dist/userstuff/assets\signup/index.min.js(1).download"></script>
+    <script src="main/dist/userstuff/assets\signup/pages-auth-multisteps.js.download"></script>
+
     <script src="main/plugins/jquery/jquery.min.js"></script>
     <!-- <script src="main/plugins/jquery-ui/jquery-ui.min.js"></script> -->
 
@@ -1062,9 +1229,28 @@
     <script src="main/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var inputs = document.querySelectorAll('[data-code-input]');
+            // Attach an event listener to each input element
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('input', function(e) {
+                    // If the input field has a character, and there is a next input field, focus it
+                    if (e.target.value.length === e.target.maxLength && i + 1 < inputs.length) {
+                        inputs[i + 1].focus();
+                    }
+                });
+                inputs[i].addEventListener('keydown', function(e) {
+                    // If the input field is empty and the keyCode for Backspace (8) is detected, and there is a previous input field, focus it
+                    if (e.target.value.length === 0 && e.keyCode === 8 && i > 0) {
+                        inputs[i - 1].focus();
+                    }
+                });
+            }
+        });
+
         function startTimer() {
             var timerElement = $("#timer");
-            var totalTime = 90; // Total time in seconds
+            var totalTime = 75; // Total time in seconds
             var minutes, seconds;
 
             var timer = setInterval(function() {
@@ -1082,7 +1268,7 @@
                     clearInterval(timer); // Stop the timer
                     // Perform any desired actions when the timer finishes
                     $("#subotp").removeAttr("disabled");
-                    timerElement.html("<strong style='color:green'>OTP Send</strong>");
+                    timerElement.html("<strong style='color:green'>OTP Sent Successfully!</strong>");
                 } else {
                     totalTime--; // Decrease the total time by 1 second
                 }
@@ -1095,7 +1281,8 @@
         let formnumber = 0;
 
         next_click.forEach(function(next_click_form) {
-            next_click_form.addEventListener('click', function() {
+            next_click_form.addEventListener('click', function(event) {
+                event.preventDefault()
                 if (!validateform()) {
                     return false
                 }
@@ -1108,11 +1295,13 @@
 
         var back_click = document.querySelectorAll(".back_button");
         back_click.forEach(function(back_click_form) {
+            back_click_form.preventDefault()
             back_click_form.addEventListener('click', function() {
                 formnumber--;
-                updateform();
-                progress_backward();
-                contentchange();
+                alert('hii')
+                // updateform();
+                // progress_backward();
+                // contentchange();
             });
         });
 
@@ -1122,6 +1311,10 @@
         otpclick.forEach(function(otpclick_form) {
 
             otpclick_form.addEventListener('click', function() {
+                if (!validateform()) {
+                    alertify.alert('All Images are required')
+                    return false
+                }
                 var email = $("#email").val()
                 var username = $("#username").val()
                 if ($("#password").val() === '' || $("#password").val() !== $("#comfirmpass").val()) {
@@ -1265,12 +1458,12 @@
                 }
                 if (vaildate_input.id === 'mobileno' && vaildate_input.value.length != 10) {
                     validate = false
-                    alertify.alert('Mobile number must be 10 digits')
+                    alert('Mobile number must be 10 digits')
                     vaildate_input.classList.add('warning');
                 }
                 if (vaildate_input.id === 'adharno' && vaildate_input.value.length != 12) {
                     validate = false
-                    alertify.alert('Aadhar number must be 12 digits')
+                    alert('Aadhar number must be 12 digits')
                     vaildate_input.classList.add('warning');
                 }
                 if (vaildate_input.id === 'dob') {
@@ -1278,7 +1471,7 @@
                     inputDate.setFullYear(inputDate.getFullYear() + 18);
                     if (currentDate < inputDate) {
                         validate = false
-                        alertify.alert('Age must be 18 years or above')
+                        alert('Age must be 18 years or above')
                         vaildate_input.classList.add('warning');
                     }
                 }
@@ -1289,7 +1482,7 @@
                 if (vaildate_input.files) {
                     var file = vaildate_input.files[0];
                     if (file.size > 1024 * 1024) {
-                        alertify.alert('Please select an image file smaller than 1 MB.');
+                        alert('Please select an image file smaller than 1 MB.');
                         validate = false
                     }
                     // console.log('vvp', JSON.stringify(file.size))

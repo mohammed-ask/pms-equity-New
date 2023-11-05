@@ -50,25 +50,18 @@ if ($dashboardmaintanance) {
         <?php } ?>
     </style>
     <div class="row mb-4">
-
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body" style="padding: 10px 25px;">
-                    <span class="fw-medium d-block mb-1">Nifty</span>
-                    <h3 class="card-title mb-0">₹12,628 <span> <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> ₹456 (23%)</small></span></h3>
+        <?php foreach ($marketdata as $mdata) {  ?>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body" style="padding: 10px 25px;">
+                        <span class="fw-medium d-block mb-1"><?= $mdata['Symbol'] ?></span>
+                        <h3 class="card-title mb-0">₹<?= $mdata['LastRate'] ?> <span> <small <?= $mdata['ChgPcnt'] > 0 ? "class='text-success fw-medium'" : "class='text-danger fw-medium'" ?>><i class="bx bx-up-arrow-alt"></i> ₹<?= $mdata['Chg'] ?> (<?= round($mdata['ChgPcnt'], 2) ?>%)</small></span></h3>
+                    </div>
                 </div>
-            </div>
 
 
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body" style="padding: 10px 25px;">
-                    <span class="fw-medium d-block mb-1">Sensex</span>
-                    <h3 class="card-title mb-0">₹14,628 <span> <small class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i> <span>₹345 (24%)</span></small></span></h3>
-                </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 
 
@@ -79,7 +72,7 @@ if ($dashboardmaintanance) {
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Welcome back Shubham! 🎉</h5>
+                            <h5 class="card-title text-primary">Welcome back <?= $username ?>! 🎉</h5>
                             <p class="mb-4">
                                 Welcome back! to <span class="fw-bold">PMS Equity,</span> Let's grow those investments together."
                             </p>
