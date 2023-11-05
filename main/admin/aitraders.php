@@ -24,13 +24,13 @@ ob_start();
                     <table id="example2" class="table w-full whitespace-no-wrap">
                         <thead>
                             <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                                <th class="px-4 py-3">Name</th>
-                                <th class="px-4 py-3">Trade Status</th>
-                                <th class="px-4 py-3">Mobile</th>
-                                <th class="px-4 py-3">Email Id</th>
-                                <th class="px-4 py-3">AI Fund</th>
-                                <th class="px-4 py-3">Risk Percent</th>
-                                <th class="px-4 py-3">Date & Time</th>
+                                <th class="px-3 py-3">Name</th>
+                                <th class="px-3 py-3">Trade Status</th>
+                                <th class="px-3 py-3">Mobile</th>
+                                <th class="px-3 py-3">Email Id</th>
+                                <th class="px-3 py-3">AI Fund</th>
+                                <th class="px-3 py-3">Risk Percent</th>
+                                <th class="px-3 py-3">Date & Time</th>
 
                             </tr>
                         </thead>

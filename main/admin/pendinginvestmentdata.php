@@ -57,25 +57,19 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  $row['paymentmethod'];
     $appdata = "";
     if (in_array(37, $permissions)) {
-        $appdata =  "<div class='tr'><div style='text-align:center;cursor:pointer'  class='showbox'>
-    <img class='object-cover w-5 h-5' style='height:30px;width:30px;;margin:auto' src='../main/images/menu.png' alt='' aria-hidden='true' /></div>
-        <div class='showbtn' style='display:none'>
-        <ul >
-                <li style='background-color:rgb(115, 214, 115) ; border-radius: 5px;margin-bottom:5px' class='flex'>
-                    <a class='inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200' onclick='fun1(\"" . $row['id'] . " \", \"approveinvestment\", \"resultid\",\"Approve\")'>
-
-                        <span class='w-4 h-4 mr-3' aria-hidden='true' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' stroke='currentColor'><i style='color:black;' class='fa-solid fa-circle-check'></i></span>
-                        <button style='color: black;'>Approve</button>
-                    </a>
-                </li>
-
-                <li style='background-color:#eb8a88 ; border-radius: 5px;' class='flex'>
-                    <a class='inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200' onclick='fun1(\"" . $row['id'] . " \", \"approveinvestment\", \"resultid\",\"Reject\")'>
-                        <span class='w-4 h-4 mr-3' aria-hidden='true' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' stroke='currentColor'><i style='color:black;' class='fa-solid fa-circle-xmark'></i></span>
-                        <button style='color: black;'>Disapprove</button>
-                    </a>
-                </li>
-        </ul></div></div>";
+        $appdata =  " <div class='dropdown'>
+        <button class='btn dropdown-toggle align-text-top' data-bs-toggle='dropdown' fdprocessedid='eigo2i' aria-expanded='false'>
+          Actions
+        </button>
+        <div class='dropdown-menu dropdown-menu-end'>
+          <a class='dropdown-item'  onclick='fun1(\"" . $row['id'] . " \", \"approveinvestment\", \"resultid\",\"Approve\")'>
+            Approve
+          </a>
+          <a class='dropdown-item' onclick='fun1(\"" . $row['id'] . " \", \"approveinvestment\", \"resultid\",\"Reject\")'>
+            Disapprove
+          </a>
+        </div>
+      </div>";
     }
     $n[] = $appdata;
     $data[] = $n;
@@ -83,3 +77,4 @@ while ($row = $obj->fetch_assoc($result)) {
 }
 $return['data'] = $data;
 echo json_encode($return);
+

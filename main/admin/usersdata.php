@@ -90,7 +90,7 @@ while ($row = $obj->fetch_assoc($result)) {
     } else {
         $n[] = "";
     }
-    $a = "<div class='flex items-center space-x-4 text-sm'>";
+    $a = "<div class='flex items-center space-x-2 text-sm'>";
     if (in_array(2, $permissions)) {
         $a .= "<button class='btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"edituser\", \"\", \"Edit Customer\")' aria-label='Edit'>
              <svg class='w-3 h-3' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>

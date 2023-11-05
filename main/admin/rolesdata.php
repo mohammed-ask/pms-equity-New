@@ -50,11 +50,11 @@ while ($row = $obj->fetch_assoc($result)) {
     // $n[] = $row['description'];
     $a = "";
     if (in_array(26, $permissions)) {
-        $a = '<a class="px-4 py-2 ml-1 text-sm font-medium leading-5 text-white  bg-blue  rounded-lg " href="editrole?hakuna=' . $row['id'] . '" >Edit</a>';
+        $a = '<a style="margin-right: 10px !important;" class="btn font-medium leading-5 text-white  bg-blue  rounded-lg " href="editrole?hakuna=' . $row['id'] . '" >Edit</a>';
     }
     if (in_array(27, $permissions)) {
         // $a .= "<input type='button' class='px-4 py-2 ml-1 text-sm font-medium leading-5 text-white  bg-red  rounded-lg ' value='delete' onclick='del(\"" . $row['id'] . "\", \"deleterole\", \"Delete Role \")'/>";
-        $a .= "<a style='cursor: pointer;' class='px-4 py-2 ml-1 text-sm font-medium leading-5 text-white  bg-red  rounded-lg '  onclick='del(\"" . $row['id'] . "\", \"deleterole\", \"Delete Role \")' >Delete</a>";
+        $a .= "<a style='cursor: pointer;' class='btn font-medium leading-5 text-white  bg-red  rounded-lg '  onclick='del(\"" . $row['id'] . "\", \"deleterole\", \"Delete Role \")' >Delete</a>";
     }
     $n[] = $a;
     $data[] = $n;

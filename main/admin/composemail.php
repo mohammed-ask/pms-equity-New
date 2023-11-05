@@ -28,7 +28,7 @@ if (isset($_POST['hakuna'])) {
                 </div>
                 <form id="addtax" enctype="multipart/form-data">
                     <div class="card-body">
-                        <label class="block text-md" style="margin-bottom: 5px;">
+                        <label class="form-label" style="margin-bottom: 5px;">
                             <span class="text-gray-700 dark:text-gray-400">Send To</span>
                             <select data-bvalidator="required" class="form-control select2" name="userid" id="userid">
                                 <option value="">Select User</option>
@@ -44,15 +44,15 @@ if (isset($_POST['hakuna'])) {
                                 } ?>
                             </select>
                         </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
+                        <label class="form-label" style="margin-bottom: 5px;">
                             <span class="text-gray-700 dark:text-gray-400">Subject</span>
                             <input name="subject" data-bvalidator="required" class="form-control" placeholder="Subject" />
                         </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
+                        <label class="form-label" style="margin-bottom: 5px;">
                             <span class="text-gray-700 dark:text-gray-400">Message</span>
                             <textarea data-bvalidator="" id="content" style="width: 100%;font-family:Century Gothic;font-size: 12px;" rows="10" name="message" class="form-control" placeholder="Message"></textarea>
                         </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
+                        <label class="form-label" style="margin-bottom: 5px;">
                             <span class="text-gray-700 dark:text-gray-400">Attach File</span>
                             <input type="file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" class="form-control" placeholder="Subject" />
                         </label><br>

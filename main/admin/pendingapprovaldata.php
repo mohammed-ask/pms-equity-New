@@ -49,37 +49,31 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = $row['name'];
     $n[] = $row['email'];
     $n[] =  $row['mobile'];
-    $n[] =  "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700' aria-label='view'>
-    <span class='w-5 h-5' fill='currentColor'>Pending</span>
-</button>";
-    $n[] =  "<button class='flex items-center justify-between px-3 py-1 bg-purple text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
+    $n[] =  "<p class='m-0' style='font-weight: 500; color: #e89f12;' aria-label='view'>
+    <span>Pending</span>
+</p>";
+    $n[] =  "<button class='btn' @click=''  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='px-3 py-1  text-sm  bg-blue  rounded-sm ' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button class='btn' @click=''  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
     }
     $appdata = "";
     if (in_array(36, $permissions)) {
-        $appdata = "<div class='tr'><div style='text-align:center;cursor:pointer'  class='showbox'>
-    <img class='object-cover w-5 h-5' style='height:30px;width:30px;;margin:auto' src='../main/images/menu.png' alt='' aria-hidden='true' /></div>
-        <div class='showbtn' style='display:none'>
-        <ul >
-                <li style='background-color:rgb(115, 214, 115) ; border-radius: 5px;margin-bottom:5px' class='flex'>
-                    <a class='inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200' onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Approve\")'>
-
-                        <span class='w-4 h-4 mr-3' aria-hidden='true' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' stroke='currentColor'><i style='color:black;' class='fa-solid fa-circle-check'></i></span>
-                        <button style='color: black;'>Approve</button>
-                    </a>
-                </li>
-
-                <li style='background-color:#eb8a88 ; border-radius: 5px;' class='flex'>
-                    <a class='inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200' onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Reject\")'>
-                        <span class='w-4 h-4 mr-3' aria-hidden='true' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' stroke='currentColor'><i style='color:black;' class='fa-solid fa-circle-xmark'></i></span>
-                        <button style='color: black;'>Disapprove</button>
-                    </a>
-                </li>
-        </ul></div></div>";
+        $appdata = "<div class='dropdown'>
+        <button class='btn dropdown-toggle align-text-top' data-bs-toggle='dropdown' fdprocessedid='eigo2i' aria-expanded='false'>
+          Actions
+        </button>
+        <div class='dropdown-menu dropdown-menu-end'>
+          <a class='dropdown-item' data-bs-toggle='modal' data-bs-target='#'  onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Approve\")'>
+            Approve
+          </a>
+          <a class='dropdown-item' onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Reject\")'>
+            Disapprove
+          </a>
+        </div>
+      </div>";
     }
     $n[] = $appdata;
     $data[] = $n;
@@ -87,3 +81,4 @@ while ($row = $obj->fetch_assoc($result)) {
 }
 $return['data'] = $data;
 echo json_encode($return);
+
