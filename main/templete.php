@@ -71,7 +71,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="profile">
+                                <a href="mail">
                                     <i class='bx bx-envelope-open icon'></i>
                                     <i class='bx bxs-envelope-open activeIcon'></i>
                                     <div class="app-navbar-name"><span>Email</span></div>

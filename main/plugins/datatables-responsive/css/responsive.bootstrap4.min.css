@@ -41,7 +41,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
     font-family: "Courier New", Courier, monospace;
     line-height: 1em;
     content: "+";
-    background-color: #0054a6
+    background-color: #696cff
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before,

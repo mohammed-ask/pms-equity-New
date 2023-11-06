@@ -79,7 +79,7 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
 
                                                 <div class="email-list-item-meta ms-auto d-flex align-items-center">
 
-                                                    <small class="email-list-item-time text-muted"> <span>12, Nov 23</span></small>
+                                                    <small class="email-list-item-time text-muted"> </span><span>12, Nov 23</span></small>
 
 
                                                 </div>
