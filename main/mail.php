@@ -198,7 +198,7 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
                                                 <button type="reset" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Send</button>
 
                                             </div>
-                                            <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachment</label>
+                                            <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i>Attachment</label>
                                             <input type="file" name="file-input" class="d-none" id="attach-file">
                                         </div>
                                     </div>

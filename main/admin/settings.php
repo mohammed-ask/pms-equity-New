@@ -192,7 +192,7 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                         <input type="file" class="form-control" name="favicon">
                     </div> -->
 
-                            <div class="card-footer pl-0">
+                            <div style="padding-left: 0px;" class="card-footer">
                                 <?php if (in_array(33, $permissions)) { ?>
                                     <button type="submit" class="text-white btn btn-primary">Save</button>
                                     <div id="resultid"></div>
@@ -287,14 +287,14 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                 ?>" class="form-control" id="branch_name" placeholder="Branch Name">
                             </div>
                         </div> -->
-                                <div class="form-group col-md-6 mt-2">
+                                <div class="form-group col-md-6 mt-2 mb-5">
                                     <label>Qr Code</label>
                                     <input type="file" class="form-control" name="paymentqr">
                                 </div>
                             </div>
-                            <div class="card-footer">
+                            <div style="padding-left: 0px;" class="card-footer">
                                 <?php if (in_array(33, $permissions)) { ?>
-                                    <button type="submit" class="text-white btn btn-primary">Save</button>
+                                    <button  type="submit" class="text-white btn btn-primary">Save</button>
                                     <div id="resultid1"></div>
                                 <?php } ?>
                             </div>

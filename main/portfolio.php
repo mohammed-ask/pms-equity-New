@@ -133,7 +133,7 @@ if ($portfoliomaintanance) {
 
         <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
             <div class="card">
-                <div class="card-body" style="padding: 15px 20px;">
+                <div class="card-body" style="padding: 16.7px 20px;">
                     <div class="card-title d-flex align-items-start justify-content-between">
                         <span class="fw-medium d-block mb-1">Amount Invested</span>
                         <div>
@@ -154,7 +154,7 @@ if ($portfoliomaintanance) {
 
         <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
             <div class="card">
-                <div class="card-body" style="padding: 15px 20px;">
+                <div class="card-body" style="padding:16.7px 20px">
                     <div class="card-title d-flex align-items-start justify-content-between">
                         <span class="fw-medium d-block mb-1">Current Value</span>
                         <div>

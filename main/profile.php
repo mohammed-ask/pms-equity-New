@@ -3,7 +3,7 @@ include "main/session.php";
 $rowprofile = $obj->selectextrawhere("users", "id=" . $employeeid . "")->fetch_assoc();
 ob_start();
 ?>
-<h4 class="py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4>
+<!-- <h4 class="py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4> -->
 
 <div class="row">
     <div class="col-md-12">

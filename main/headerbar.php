@@ -32,7 +32,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <span class="dropdown-item">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
@@ -44,7 +44,7 @@
                                     <small class="text-muted">Mumbai</small>
                                 </div>
                             </div>
-                        </a>
+</span>
                     </li>
                     <li>
                         <div class="dropdown-divider"></div>
