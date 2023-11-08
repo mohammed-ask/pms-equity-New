@@ -14731,8 +14731,8 @@ body {
 .menu-inner-shadow {
   display: none;
   position: absolute;
-  top: 4.225rem;
-  height: 3rem;
+  top: 6rem;
+  height: 2rem;
   width: 100%;
   pointer-events: none;
   z-index: 2;
