@@ -47,12 +47,12 @@ $data = array();
 while ($row = $obj->fetch_assoc($result)) {
     $n = array();
     // $n[] = $i;
-    $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y");
-    $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i");
+    $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
+    // $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i");
     $n[] = $row['amount'];
-    $n[] = $row['transactionid'];
-    $n[] = $row['paymentmethod'];
-   
+    // $n[] = $row['transactionid'];
+    // $n[] = $row['paymentmethod'];
+
     $n[] = $row['status'] === '0' ? '<strong class="text-warning">Pending</strong>' : '<strong class="text-success">Successful</strong>';
     $data[] = $n;
 

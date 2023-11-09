@@ -18,10 +18,10 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
 
                     <div class="col-7" style="text-align: center;
             border-left: 1px solid lightgray; display: flex; align-items: center; justify-content: center;">
-                        <button style="font-size: 12px; margin-right: 5px;" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalCenterAddFund">Add</button>
-                        <button style="font-size: 12px;" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalCenterWithdrawal">Withdraw</button>
+                        <button style="font-size: 12px; margin-right: 5px;" type="button" class="btn btn-outline-success" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addfund","", "")'>Add</button>
+                        <button style="font-size: 12px;" type="button" class="btn btn-outline-danger" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "requestwithdrawalamount", "", "Request Amount Withdrawal")'>Withdraw</button>
                     </div>
-                    <h3 class="card-title mb-0">₹14,628</h3>
+                    <h3 class="card-title mb-0">₹<?= round($investmentamount) ?></h3>
 
 
 
@@ -44,7 +44,7 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                     </div>
                 </div>
 
-                <h3 class="card-title mb-0">₹14,628</h3>
+                <h3 class="card-title mb-0">₹<?= round($fundadded) ?></h3>
 
             </div>
         </div>
@@ -62,16 +62,11 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                     </div>
                 </div>
 
-                <h3 class="card-title mb-0">₹14,628</h3>
+                <h3 class="card-title mb-0">₹<?= round($fundwithdraw) ?></h3>
 
             </div>
         </div>
     </div>
-
-
-
-
-
 </div>
 
 
@@ -93,16 +88,16 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
 
                 <div>
                     <div class="table-responsive text-nowrap">
-                        <table class="table table-hover table-borderless mb-0">
-                            <!-- <thead>
-                      <tr>
-                        <th>Date & Time</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead> -->
-                            <tbody class="table-border-bottom-0">
+                        <table id="example1" class="table table-hover table-borderless mb-0">
+                            <thead class="d-none">
                                 <tr>
+                                    <th>Date & Time</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                <!-- <tr>
 
                                     <td>19 Oct, 2023 15:01</span></td>
                                     <td>₹ 5000</td>
@@ -118,48 +113,14 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                                     <td><button type="button" class="btn py-0 btn-sm btn-outline-success">Success</button></td>
                                 </tr>
 
-                                </tr>
+                                </tr> -->
 
 
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="demo-inline-spacing">
-                        <!-- Basic Pagination -->
-                        <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                            <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                <li class="page-item first">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                </li>
-                                <li class="page-item prev">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">2</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="javascript:void(0);">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">5</a>
-                                </li>
-                                <li class="page-item next">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                </li>
-                                <li class="page-item last">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!--/ Basic Pagination -->
-                    </div>
+
                 </div>
 
 
@@ -177,16 +138,16 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                 <h3 class="card-title">Withdrawals</h3>
                 <div>
                     <div class="table-responsive text-nowrap">
-                        <table class="table table-hover mb-0 table-borderless">
-                            <!-- <thead>
-                      <tr>
-                        <th>Date & Time</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead> -->
-                            <tbody class="table-border-bottom-0">
+                        <table id="example2" class="table table-hover mb-0 table-borderless">
+                            <thead class="d-none">
                                 <tr>
+                                    <th>Date & Time</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                <!-- <tr>
 
                                     <td>19 Oct, 2023 15:01</span></td>
                                     <td>₹ 5000</td>
@@ -202,48 +163,14 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                                     <td><button type="button" class="btn-sm btn btn-outline-success py-0">Success</button></td>
                                 </tr>
 
-                                </tr>
+                                </tr> -->
 
 
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="demo-inline-spacing">
-                        <!-- Basic Pagination -->
-                        <nav aria-label="Page navigation" style="float: right; margin-top: 5px !important;">
-                            <ul class="pagination pagination-sm" style="margin-bottom: 5px !important;">
-                                <li class="page-item first">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
-                                </li>
-                                <li class="page-item prev">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">2</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="javascript:void(0);">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="javascript:void(0);">5</a>
-                                </li>
-                                <li class="page-item next">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
-                                </li>
-                                <li class="page-item last">
-                                    <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!--/ Basic Pagination -->
-                    </div>
+
                 </div>
 
             </div>

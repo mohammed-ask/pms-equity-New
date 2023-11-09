@@ -6,6 +6,8 @@ if (isset($_POST['hakuna'])) {
     $sid = $_POST['hakuna'];
 }
 $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
+$resultinbox = $obj->selectextrawhereupdate("mail", "*", "status = 1 and receiverid = $employeeid");
+$resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and senderid = $employeeid ");
 
 ?>
 <div class="app-email card">
@@ -66,28 +68,30 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
                             <div class="tab-pane fade show active" id="navs-pills-justified-inbox" role="tabpanel">
 
                                 <div class="email-list pt-0 ps ps--active-y">
-                                    <ul class="list-unstyled m-0">
-                                        <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
+                                    <?php
+                                    while ($rowinbox = $obj->fetch_assoc($resultinbox)) { ?>
+                                        <ul class="list-unstyled m-0">
+                                            <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
 
-                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex align-items-center">
 
 
-                                                <div class="email-list-item-content ms-2 ms-sm-0 me-2">
-                                                    <span class="email-list-item-username me-2 h6">Chandler Bing</span>
-                                                    <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
+                                                    <div class="email-list-item-content ms-2 ms-sm-0 me-2">
+                                                        <span class="email-list-item-username me-2 h6"><?= $obj->selectfieldwhere('users', 'name', 'id=' . $rowinbox['senderid'] . '') ?></span>
+                                                        <span class="email-list-item-subject d-xl-inline-block d-block"> <?= $rowinbox['message'] ?></span>
+                                                    </div>
+
+                                                    <div class="email-list-item-meta ms-auto d-flex align-items-center">
+
+                                                        <small class="email-list-item-time text-muted"> <span><?= changedateformatespecito($rowinbox['added_on'], "Y-m-d H:i:s", "d,M y") ?></span></small>
+
+
+                                                    </div>
                                                 </div>
-
-                                                <div class="email-list-item-meta ms-auto d-flex align-items-center">
-
-                                                    <small class="email-list-item-time text-muted"> </span><span>12, Nov 23</span></small>
-
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                    <ul class="list-unstyled m-0">
+                                            </li>
+                                        </ul>
+                                    <?php } ?>
+                                    <!-- <ul class="list-unstyled m-0">
                                         <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
 
                                             <div class="d-flex align-items-center">
@@ -127,7 +131,7 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul> -->
 
 
                                 </div>
@@ -143,7 +147,23 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
 
                                 <div>
                                     <div class="email-list pt-0 ps ps--active-y">
-                                        <ul class="list-unstyled m-0">
+                                        <?php
+                                        while ($rowsent = $obj->fetch_assoc($resultsentmail)) { ?>
+                                            <ul class="list-unstyled m-0">
+                                                <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="email-list-item-content ms-2 ms-sm-0 me-2">
+                                                            <span class="email-list-item-username me-2 h6"><?= $obj->selectfieldwhere('users', 'name', 'id=' . $rowsent['senderid'] . '') ?></span>
+                                                            <span class="email-list-item-subject d-xl-inline-block d-block"> <?= $rowsent['message'] ?></span>
+                                                        </div>
+                                                        <div class="email-list-item-meta ms-auto d-flex align-items-center">
+                                                            <small class="email-list-item-time text-muted"> <span><?= changedateformatespecito($rowsent['added_on'], "Y-m-d H:i:s", "d,M y") ?></span></small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        <?php } ?>
+                                        <!-- <ul class="list-unstyled m-0">
                                             <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
 
                                                 <div class="d-flex align-items-center">
@@ -162,7 +182,7 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
                                                     </div>
                                                 </div>
                                             </li>
-                                        </ul>
+                                        </ul> -->
 
                                     </div>
 
@@ -172,37 +192,42 @@ $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
                             </div>
 
                             <div class="tab-pane fade" id="navs-pills-justified-compose" role="tabpanel">
+                                <form id="addtax" enctype="multipart/form-data">
+                                    <div class="px-3">
+                                        <input name="userid" data-bvalidator="required" class="d-none" value='1' placeholder="Subject" />
+                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                            <label for="email-subject" class="form-label mb-0 py-2">To: <span style="margin-left: 7px;"> PMS EQuity Team </span></label>
 
-                                <div class="px-3">
+                                        </div>
 
-                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                        <label for="email-subject" class="form-label mb-0 py-2">To: <span style="margin-left: 7px;"> PMS EQuity Team </span></label>
-
-                                    </div>
-
-                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                        <label for="email-subject" class="form-label mb-0">Subject:</label>
-                                        <input type="text" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0" id="email-subject">
-                                    </div>
-
-
-                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                        <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" placeholder="Message..." rows="8"></textarea>
-                                    </div>
+                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                            <label for="email-subject" class="form-label mb-0">Subject:</label>
+                                            <input type="text" data-bvalidator="required" name="subject" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0">
+                                        </div>
 
 
+                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                            <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" data-bvalidator="" name="message" placeholder="Message..." rows="8"></textarea>
+                                        </div>
 
-                                    <div class="email-compose-actions d-flex justify-content-between align-items-center my-2 py-1">
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-group">
-                                                <button type="reset" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Send</button>
 
+
+                                        <div class="email-compose-actions d-flex justify-content-between align-items-center my-2 py-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-primary" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send</a>
+
+                                                </div>
+                                                <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachment</label>
+                                                <input type="file" name="file-input" class="d-none" id="attach-file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed">
                                             </div>
-                                            <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i>Attachment</label>
-                                            <input type="file" name="file-input" class="d-none" id="attach-file">
+                                            <<<<<<< Updated upstream <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i>Attachment</label>
+                                                <input type="file" name="file-input" class="d-none" id="attach-file">
+                                                =======
+                                                >>>>>>> Stashed changes
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
 
                         </div>
