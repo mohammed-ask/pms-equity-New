@@ -4,7 +4,7 @@
             <i class="bx bx-menu bx-sm"></i>
         </a>
     </div>
-    <div class="d-xl-none"><img width="40px" src="main/dist/userstuff/assets\img\logo\pms-2-logo.svg" alt=""></div>
+    <div class="d-xl-none"><img style="margin-top: 2px;" width="40px" src="main/dist/userstuff/assets\img\logo\eagle-eye-icon.svg" alt=""></div>
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <!-- Search -->
