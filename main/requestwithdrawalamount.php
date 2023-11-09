@@ -2,6 +2,36 @@
 include "main/session.php";
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertrequestwithdrawal', 'resultid', 'adduser');return 0;">
+    <div>
+        <label for="defaultFormControlInput" class="form-label">Enter Amount</label>
+        <input type="number" class="form-control" name="amount" data-bvalidator="required" id="defaultFormControlInput" placeholder="₹10000" aria-describedby="defaultFormControlHelp">
+    </div>
+
+    <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Remarks</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="remark" rows="3" placeholder="(Optional)"></textarea>
+    </div>
+
+    <div class="mt-3">
+
+        <span style="font-size: 13px; font-weight: 600; color: #e10000;">Important!</span>
+        <ul class="mb-0 font-12" style="padding-left: 15px !important; font-size: 12px;">
+            <li>Your withdrawal request will be rewiew by our team.</li>
+            <li>Withdrawal amount will credited in your saved bank acount within 24hrs after reviewed.</li>
+            <li>Please don't change your Bank details when you requested to withdrewal amount.</li>
+
+        </ul>
+
+    </div>
+    <div id="resultid"></div>
+
+
+    </div>
+    <div class="modal-footer" style="    justify-content: center;">
+        <button class="btn btn-primary">Send Withdrawal Request</button>
+    </div>
+</form>
+<!-- <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertrequestwithdrawal', 'resultid', 'adduser');return 0;">
 
     <div>
         <h5 class="m-0 font-14 py-1 px-0 mt-2 font-weight-700">Enter Amount</h5>
@@ -27,7 +57,7 @@ include "main/session.php";
         <button style="background-color: #057c7c; color: #fff;" class="btn w-100 ">Send Withdrawal Request</button>
     </div>
     <div id="resultid"></div>
-</form>
+</form> -->
 <script>
     $("#modalfooterbtn").css('display', 'none')
 </script>

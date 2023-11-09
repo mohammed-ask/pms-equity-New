@@ -140,8 +140,8 @@ include "main/templete.php"; ?>
 
                     function(data) {
                         $('#userstock').html(data)
-                        let sidedata = $('#sidebarcolumn').html()
-                        $("#watchlist_2").html(sidedata)
+                        // let sidedata = $('#sidebarcolumn').html()
+                        // $("#watchlist_2").html(sidedata)
                     },
                 );
             }, <?= $apiinterval ?>)

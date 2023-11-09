@@ -15,7 +15,7 @@ ob_start();
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="d-flex align-items-start align-items-sm-center gap-4">
-                            <img src="../assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
+                            <img src="<?= empty($avatarpath) ? 'main/images/user.png' : $avatarpath ?>" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
                             <div class="button-wrapper">
                                 <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
                                     <span class="d-none d-sm-block">Upload new photo</span>
@@ -33,13 +33,13 @@ ob_start();
                     <div class="col-lg-6 col-md-12 mt-3">
 
                         <div>
-                            <h3 class="card-title" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);"> <span><i class='bx bx-user'></i></span> Name: </span><span style="margin-left: 5px;">Shubham Kumar</span></h3>
+                            <h3 class="card-title" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);"> <span><i class='bx bx-user'></i></span> Name: </span><span style="margin-left: 5px;"><?= $username ?></span></h3>
                         </div>
                         <div>
-                            <h3 class="card-title" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);"> <span><i class='bx bx-phone-call'></i></span> Phone no: </span><span style="margin-left: 5px;">08756234768</span></h3>
+                            <h3 class="card-title" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);"> <span><i class='bx bx-phone-call'></i></span> Phone no: </span><span style="margin-left: 5px;"><?= $rowprofile['mobile'] ?></span></h3>
                         </div>
                         <div>
-                            <h3 class="card-title mb-0" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);;"> <span><i class='bx bx-envelope'></i></span> Email: </span><span style="margin-left: 8px;">shubhamkumar087@gmail.com</span></h3>
+                            <h3 class="card-title mb-0" style="font-size: 14px !important;"><span style="color: rgb(59, 51, 51);;"> <span><i class='bx bx-envelope'></i></span> Email: </span><span style="margin-left: 8px;"><?= $rowprofile['email'] ?></span></h3>
                         </div>
 
                     </div>
@@ -65,7 +65,7 @@ ob_start();
 
                             <h6>Bank Details</h6>
                             <div class="dropdown">
-                                <button class="btn p-0" type="button" data-bs-toggle="modal" data-bs-target="#modalCenterEditBank">
+                                <button class="btn p-0" type="button" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "bankaccountchange","", "Change Bank Details")'>
                                     <i class='bx bxs-edit'></i>
                                 </button>
 
@@ -93,7 +93,7 @@ ob_start();
                                 </div>
                                 <div class="col-3 text-end">
                                     <div class="form-check form-switch">
-                                        <input class="form-check-input float-end" type="checkbox" role="switch">
+                                        <input class="form-check-input float-end" <?= $rowprofile['carryforward'] === 'Yes' ? 'checked' : '' ?> id="carrycheck" type="checkbox" role="switch">
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@ ob_start();
                                 </div>
                                 <div class="col-3 text-end">
                                     <div class="form-check form-switch">
-                                        <input class="form-check-input float-end" type="checkbox" role="switch">
+                                        <input class="form-check-input float-end" <?= $rowprofile['longholding'] === 'Yes' ? 'checked' : '' ?> id="longtermcheck" type="checkbox" role="switch">
                                     </div>
                                 </div>
                             </div>
@@ -127,30 +127,33 @@ ob_start();
             <h5 class="card-header">Change Password</h5>
             <div class="card-body">
 
-                <form id="formAccountDeactivation" onsubmit="return false">
+                <form id="addtax" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 form-password-toggle mt-2 mb-3">
                             <label class="form-label" for="basic-default-password32">Current Password</label>
                             <div class="input-group input-group-merge">
-                                <input type="password" class="form-control" id="basic-default-password32" placeholder="············" aria-describedby="basic-default-password">
+                                <input type="password" class="form-control" name="oldpassword" id="basic-default-password32" placeholder="············" aria-describedby="basic-default-password">
                                 <span class="input-group-text cursor-pointer" id="basic-default-password"><i class="bx bx-hide"></i></span>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 form-password-toggle mt-2 mb-3">
                             <label class="form-label" for="basic-default-password32">New Password</label>
                             <div class="input-group input-group-merge">
-                                <input type="password" class="form-control" id="basic-default-password32" placeholder="············" aria-describedby="basic-default-password">
+                                <input type="password" class="form-control" name="password" id="basic-default-password32" placeholder="············" aria-describedby="basic-default-password">
                                 <span class="input-group-text cursor-pointer" id="basic-default-password"><i class="bx bx-hide"></i></span>
                             </div>
                         </div>
                     </div>
-
+                    <div id="otpinput"></div>
                     <div class="mb-3 col-12 mb-0">
                         <div class="alert alert-warning">
                             <h6 class="alert-heading mb-1">OTP verification is required to change your current password.</h6>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success">Change Password</button>
+                    <button type="button" class="btn btn-success" id="otp" onclick="requestotp()">Send OTP</button>
+                    <button type="button" class="btn btn-primary" id="formsubmit" style="display: none;" onclick="sendForm('', '', 'updateprofile', 'resultid', 'addtax')">Change Password</button>
+                    <!-- <button type="submit" class="btn btn-success">Change Password</button> -->
+                    <div id="resultid"></div>
                 </form>
             </div>
         </div>
@@ -195,4 +198,69 @@ include "main/templete.php"; ?>
             },
         );
     }
+
+    $('#carrycheck').on('change', function() {
+        if (this.checked) {
+            // Checkbox is checked, send AJAX request with value = 1
+            $.ajax({
+                type: 'POST',
+                url: 'main/carryforwardchange.php', // Replace with your actual endpoint
+                data: {
+                    value: 'Yes',
+                    type: 'Carryforward'
+                }, // Send the value in the data object
+                success: function(response) {
+                    // Handle the response from the server
+                    $('#result').html(response);
+                }
+            });
+        } else {
+            // Checkbox is unchecked, send AJAX request with value = 0
+            $.ajax({
+                type: 'POST',
+                url: 'main/carryforwardchange.php', // Replace with your actual endpoint
+                data: {
+                    value: 'No',
+                    type: 'Carryforward'
+
+                }, // Send the value in the data object
+                success: function(response) {
+                    // Handle the response from the server
+                    $('#result').html(response);
+                }
+            });
+        }
+    });
+
+    $('#longtermcheck').on('change', function() {
+        if (this.checked) {
+            // Checkbox is checked, send AJAX request with value = 1
+            $.ajax({
+                type: 'POST',
+                url: 'main/carryforwardchange.php', // Replace with your actual endpoint
+                data: {
+                    value: 'Yes',
+                    type: 'Longterm'
+                }, // Send the value in the data object
+                success: function(response) {
+                    // Handle the response from the server
+                    $('#result').html(response);
+                }
+            });
+        } else {
+            // Checkbox is unchecked, send AJAX request with value = 0
+            $.ajax({
+                type: 'POST',
+                url: 'main/carryforwardchange.php', // Replace with your actual endpoint
+                data: {
+                    value: 'No',
+                    type: 'Longterm'
+                }, // Send the value in the data object
+                success: function(response) {
+                    // Handle the response from the server
+                    $('#result').html(response);
+                }
+            });
+        }
+    });
 </script>

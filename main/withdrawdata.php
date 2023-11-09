@@ -46,10 +46,10 @@ $num = $obj->total_rows($result);
 $data = array();
 while ($row = $obj->fetch_assoc($result)) {
     $n = array();
-    $n[] = $i;
+    // $n[] = $i;
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
-    $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
-    $n[] = 'TR ID';
+    // $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
+    // $n[] = 'TR ID';
     $n[] = $row['amount'];
     $n[] = $row['status'] === '0' ? '<strong class="text-warning">Processing</strong>' : '<strong class="text-success">Settled</strong>';
     $data[] = $n;
