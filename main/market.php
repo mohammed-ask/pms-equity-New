@@ -79,7 +79,7 @@ if ($marketmaintanance) {
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-                                    <a class="dropdown-item" href="javascript:void(0);">View Chart</a>
+                                    <a class="dropdown-item" href="viewchart?token=<?= $data['Token'] ?>&exchangetype=<?= $data['ExchType'] ?>&exchange=<?= $data['Exch'] ?>">View Chart</a>
                                     <a class="dropdown-item" onclick="removestock('<?= $data['Token'] ?>','<?= $data['Exch']  ?>')" href="javascript:void(0);">Delete</a>
                                 </div>
                             </div>
