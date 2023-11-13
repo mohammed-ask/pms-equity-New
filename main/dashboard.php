@@ -135,7 +135,7 @@ if ($dashboardmaintanance) {
             <div class="card">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-lg-6 col-md-12">
                             <div class="row">
                             <div class="col-6" style="padding-left: 30px;">
