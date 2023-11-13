@@ -230,300 +230,7 @@
             display: block;
         }
 
-        .main {
-            padding: 40px;
-        }
 
-        .main small {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2px;
-            height: 30px;
-            width: 30px;
-            background-color: #ccc;
-            border-radius: 50%;
-            color: yellow;
-            font-size: 19px;
-        }
-
-        .text {
-            margin-top: 20px;
-        }
-
-        .congrats {
-            text-align: center;
-        }
-
-        .text p {
-            margin-top: 10px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #cbced4;
-        }
-
-        .input-text {
-            margin: 30px 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .input-text .input-div {
-            width: 100%;
-            position: relative;
-
-        }
-
-
-
-        input[type="text"] {
-            width: 100%;
-            height: 40px;
-            border: none;
-            outline: 0;
-            border-radius: 5px;
-            border: 1px solid #057c7c;
-            gap: 20px;
-            box-sizing: border-box;
-            padding: 0px 10px;
-        }
-
-        input[type="number"] {
-            width: 100%;
-            height: 40px;
-            border: none;
-            outline: 0;
-            border-radius: 5px;
-            border: 1px solid #057c7c;
-            gap: 20px;
-            box-sizing: border-box;
-            padding: 0px 10px;
-        }
-
-        input[type="email"] {
-            width: 100%;
-            height: 40px;
-            border: none;
-            outline: 0;
-            border-radius: 5px;
-            border: 1px solid #057c7c;
-            gap: 20px;
-            box-sizing: border-box;
-            padding: 0px 10px;
-        }
-
-        input[type="date"] {
-            width: 100%;
-            height: 40px;
-            border: none;
-            outline: 0;
-            border-radius: 5px;
-            border: 1px solid #057c7c;
-            gap: 20px;
-            box-sizing: border-box;
-            padding: 0px 10px;
-        }
-
-        select {
-            width: 100%;
-            height: 40px;
-            border: none;
-            outline: 0;
-            border-radius: 5px;
-            border: 1px solid #057c7c;
-            gap: 20px;
-            box-sizing: border-box;
-            padding: 0px 10px;
-        }
-
-        .input-text .input-div span {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 13px;
-            transition: all 0.5s;
-        }
-
-        .input-div input:focus~span,
-        .input-div input:valid~span {
-            top: -20px;
-            left: 6px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .input-div span {
-            top: -15px;
-            left: 6px;
-            font-size: 10px;
-        }
-
-        .buttons button {
-            height: 40px;
-            width: 100px;
-            border: none;
-            border-radius: 5px;
-            background-color: #057c7c;
-            font-size: 12px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .button_space {
-            display: flex;
-            gap: 20px;
-
-        }
-
-        .button_space button:nth-child(1) {
-            background-color: #fff;
-            color: #057c7c;
-            border: 1px solid #057c7c;
-        }
-
-        .user_card {
-            margin-top: 20px;
-            margin-bottom: 40px;
-            height: 200px;
-            width: 100%;
-            border: 1px solid #c7d3d9;
-            border-radius: 10px;
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        .user_card span {
-            height: 80px;
-            width: 100%;
-            background-color: #dfeeff;
-        }
-
-        .circle {
-            position: absolute;
-            top: 40px;
-            left: 60px;
-        }
-
-        .circle span {
-            height: 70px;
-            width: 70px;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #fff;
-            border-radius: 50%;
-        }
-
-        .circle span img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .social {
-            display: flex;
-            position: absolute;
-            top: 100px;
-            right: 10px;
-        }
-
-        .social span {
-            height: 30px;
-            width: 30px;
-            border-radius: 7px;
-            background-color: #fff;
-            border: 1px solid #cbd6dc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 10px;
-            color: #cbd6dc;
-
-        }
-
-        .social span i {
-            cursor: pointer;
-        }
-
-        .heart {
-            color: red !important;
-        }
-
-        .share {
-            color: red !important;
-        }
-
-        .user_name {
-            position: absolute;
-            top: 110px;
-            margin: 10px;
-            padding: 0 30px;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-        }
-
-        .user_name h3 {
-            color: #4c5b68;
-        }
-
-        .detail {
-            /*margin-top:10px;*/
-            display: flex;
-            justify-content: space-between;
-            margin-right: 50px;
-        }
-
-        .detail p {
-            font-size: 12px;
-            font-weight: 700;
-
-        }
-
-        .detail p a {
-            text-decoration: none;
-            color: blue;
-        }
-
-
-
-
-
-
-        .checkmark__circle {
-            stroke-dasharray: 166;
-            stroke-dashoffset: 166;
-            stroke-width: 2;
-            stroke-miterlimit: 10;
-            stroke: #7ac142;
-            fill: none;
-            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-        }
-
-        .checkmark {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: block;
-            stroke-width: 2;
-            stroke: #fff;
-            stroke-miterlimit: 10;
-            margin: 10% auto;
-            box-shadow: inset 0px 0px 0px #7ac142;
-            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-        }
-
-        .checkmark__check {
-            transform-origin: 50% 50%;
-            stroke-dasharray: 48;
-            stroke-dashoffset: 48;
-            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-        }
 
         @keyframes stroke {
             100% {
@@ -892,15 +599,25 @@
                                         <span>Enter Your Personal Details</span>
                                     </div>
                                     <div class="row g-3">
-                                        <div class="col-sm-6 fv-plugins-icon-container">
+                                        <div class="col-sm-4 fv-plugins-icon-container">
                                             <label class="form-label" for="multiStepsFirstName">First Name</label>
                                             <input type="text" name="firstname" require id="firstname" class="form-control" placeholder="Rakesh">
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <label class="form-label" for="multiStepsLastName">Last Name</label>
                                             <input type="text" name="lastname" require id="lastname" class="form-control" placeholder="Sharma">
                                         </div>
+
+ <div class="col-sm-4">
+                        <label class="form-label" for="select">Gender</label>
+                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                            <option selected="">Select</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                          </select>
+                      </div>
+
                                         <div class="col-sm-6">
                                             <label class="form-label" for="multiStepsMobile">Mobile</label>
                                             <div class="input-group input-group-merge">
@@ -911,7 +628,7 @@
 
                                         <div class="col-sm-6 fv-plugins-icon-container">
                                             <label class="form-label" for="multiStepsEmail">Email</label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="rakesh.sharma@email.com" aria-label="john.doe">
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="rakesh.sharma@email.com" aria-label="@email.com">
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                                         </div>
                                         <div class="col-sm-6 form-password-toggle fv-plugins-icon-container">

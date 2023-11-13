@@ -53,7 +53,7 @@ while ($row = $obj->fetch_assoc($result)) {
     // $n[] = $row['transactionid'];
     // $n[] = $row['paymentmethod'];
 
-    $n[] = $row['status'] === '0' ? '<strong class="text-warning">Pending</strong>' : '<strong class="text-success">Successful</strong>';
+    $n[] = $row['status'] === '0' ? '<strong class="btn-sm py-0 btn btn-outline-warning">Pending</strong>' : '<strong class="btn-sm py-0 btn btn-outline-success">Success</strong>';
     $data[] = $n;
 
     $i++;

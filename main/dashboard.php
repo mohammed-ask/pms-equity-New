@@ -77,7 +77,7 @@ if ($dashboardmaintanance) {
                                 Welcome back! to <span class="fw-bold">PMS Equity,</span> Let's grow those investments together."
                             </p>
 
-                            <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            <a href="profile" class="btn btn-sm btn-outline-primary">View Profile</a>
                         </div>
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
@@ -247,7 +247,7 @@ if ($dashboardmaintanance) {
 <div class="row"> -->
                 <div class="col-12 mb-4">
                     <div class="card">
-                        <a href="#">
+                        <a href="portfolio">
                             <img width="100%" src="main/dist/userstuff/assets\img\dashboard\ai-trading-dashboard.gif" alt="Credit Card" class="rounded" /></a>
 
                     </div>

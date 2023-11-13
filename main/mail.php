@@ -196,7 +196,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                     <div class="px-3">
                                         <input name="userid" data-bvalidator="required" class="d-none" value='1' placeholder="Subject" />
                                         <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                            <label for="email-subject" class="form-label mb-0 py-2">To: <span style="margin-left: 7px;"> PMS EQuity Team </span></label>
+                                            <label for="email-subject" class="form-label mb-0 py-2">To: <span style="margin-left: 7px;"> Eagle Eye Tradings Team </span></label>
 
                                         </div>
 
@@ -207,7 +207,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
 
 
                                         <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                            <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" data-bvalidator="" name="message" placeholder="Message..." rows="8"></textarea>
+                                            <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" data-bvalidator="" name="message" placeholder="Message..." rows="10"></textarea>
                                         </div>
 
 

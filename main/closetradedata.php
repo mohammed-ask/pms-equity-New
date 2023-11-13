@@ -66,7 +66,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $profitloss =  empty($row['totalprofit']) ? 0 : round($row['totalprofit'], 2);
     $row['borrowedprcnt'] = empty($row['borrowedprcnt']) ? 0 : $row['borrowedprcnt'];
     $n[] = "<strong class='$color'>" . $currencysymbol . $profitloss . "</strong>";
-    $n[] = '<strong class="text-warning">Closed</strong>';
+    $n[] = '<strong class="badge bg-label-danger">Closed</strong>';
     $tradername = '';
     if (empty($row['datetime'])) {
         $tradername =  'You';

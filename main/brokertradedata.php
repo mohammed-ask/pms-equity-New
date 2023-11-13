@@ -64,7 +64,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = $row['trademethod'];
     // $n[] = round(($row['cprice'] - $row['price']) * 100 / $row['price'], 2);
     // $n[] = round($row['cprice'] - $row['price'], 2);
-    $n[] = $row['tradestatus'] === 'Close' ? '<strong class="text-warning">Closed<strong>' : '<strong class="text-success">Open<strong>';
+    $n[] = $row['tradestatus'] === 'Close' ? '<strong class="badge bg-label-danger">Closed<strong>' : '<strong class="badge bg-label-success">Open<strong>';
     $data[] = $n;
     $i++;
 }

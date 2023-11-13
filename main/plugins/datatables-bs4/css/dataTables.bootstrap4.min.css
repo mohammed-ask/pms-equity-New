@@ -167,7 +167,8 @@ div.dataTables_wrapper div.dataTables_info {
     padding-top: 1px;
     padding-bottom: 0px;
     padding-left: 17px;
-    font-size: 11px;
+    font-size: 9px;
+    padding-right: 0px !important;
 }
 
 div.dataTables_wrapper div.dataTables_paginate {

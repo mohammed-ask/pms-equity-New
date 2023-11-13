@@ -208,7 +208,7 @@
 }
 
 .bs-stepper .bs-stepper-header {
-    padding: 1.185rem 1.125rem
+    padding: 1.185rem 0.3rem
 }
 
 .bs-stepper .bs-stepper-header .step .step-trigger {

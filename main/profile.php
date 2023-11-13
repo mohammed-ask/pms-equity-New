@@ -150,7 +150,7 @@ ob_start();
                             <h6 class="alert-heading mb-1">OTP verification is required to change your current password.</h6>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" id="otp" onclick="requestotp()">Send OTP</button>
+                    <button type="button" class="btn btn-success" id="otp" onclick="requestotp()">Change Password</button>
                     <button type="button" class="btn btn-primary" id="formsubmit" style="display: none;" onclick="sendForm('', '', 'updateprofile', 'resultid', 'addtax')">Change Password</button>
                     <!-- <button type="submit" class="btn btn-success">Change Password</button> -->
                     <div id="resultid"></div>
