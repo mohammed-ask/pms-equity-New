@@ -1,6 +1,10 @@
 <?php
 include '../session.php';
 /* @var $obj db */
+$onlyemp = '';
+if ($employeeid != $adminid) {
+    $onlyemp = "and added_by = $employeeid";
+}
 $limit = $_GET['length'];
 $start = $_GET['start'];
 $i = 1;
@@ -33,13 +37,13 @@ if ((isset($_GET['columns'][0]["search"]["value"])) && (!empty($_GET['columns'][
 if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][1]["search"]["value"]))) {
     $search .= " and roles.description like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
-$return['recordsTotal'] = $obj->selectfieldwhere("roles  ", "count(roles.id)", "status=1 and id != 1 ");
-$return['recordsFiltered'] = $obj->selectfieldwhere("roles ", "count(roles.id)", "status=1 and id != 1 $search ");
+$return['recordsTotal'] = $obj->selectfieldwhere("roles  ", "count(roles.id)", "status=1 and id != 1 $onlyemp ");
+$return['recordsFiltered'] = $obj->selectfieldwhere("roles ", "count(roles.id)", "status=1 and id != 1 $onlyemp $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "roles ",
     "`roles`.`name`, `roles`.`description`,`roles`.`id` ",
-    "status=1 and id != 1 $search $order limit $start, $limit"
+    "status=1 and id != 1 $onlyemp $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();

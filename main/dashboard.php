@@ -144,33 +144,41 @@ if ($dashboardmaintanance) {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-4" style="padding-right: 0px; padding-left: 30px;">
+                            <div class="col-3" style="padding-right: 0px; padding-left: 30px;">
 
                                 <div>
-                                    <label for="html5-date-input" class="col-form-label">From</label>
+                                    <label class="col-form-label">From</label>
                                     <div>
-                                        <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                                        <input class="form-control" type="date" id="startdatee" name="startdate" value="<?php echo date('Y-m-d'); ?>" />
                                     </div>
                                 </div>
 
 
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
                                 <div>
-                                    <label for="html5-date-input" class="col-form-label">To</label>
+                                    <label class="col-form-label">To</label>
                                     <div>
-                                        <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                                        <input class="form-control" type="date" id="enddate" name="enddate" value="<?php echo date('Y-m-d'); ?>" />
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col-4">
+                            <div class="col-5">
                                 <div>
 
                                     <div class="text-center">
                                         <label for="html5-date-input" class="col-form-label">Interval</label>
-
-                                        <div class="dropdown">
+                                        <div class="offset-md-1 mt-2 col-auto">
+                                            <div class="toolbar">
+                                                <button class="btn btn-sm btn-outline-light" style="color: lightgray;" onclick="getactive(this.id)" id="one_month">1m</button>
+                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light active" onclick="getactive(this.id)" id="six_months">5m</button>
+                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light " onclick="getactive(this.id)" id="one_year">15m</button>
+                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="ytd">60m</button>
+                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="all">1d</button>
+                                            </div>
+                                        </div><!--end col-->
+                                        <!-- <div class="dropdown">
 
                                             <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="growthReportId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 8px;padding-bottom: 8px;">
                                                 One Day
@@ -182,13 +190,14 @@ if ($dashboardmaintanance) {
                                                 <a class="dropdown-item" href="javascript:void(0);">One Year</a>
                                                 <a class="dropdown-item" href="javascript:void(0);">Five Year</a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div id="incomeChart" style="min-height: 215px; height: 295px; padding-top: 60px;" class="px-0"></div>
+                        <div id="container"></div>
+                        <!-- <div id="incomeChart" style="min-height: 215px; height: 295px; padding-top: 60px;" class="px-0"></div> -->
                     </div>
 
                 </div>
@@ -306,7 +315,7 @@ include "main/templete.php"; ?>
         }]
     });
 
-    $("#startdate").change(function() {
+    $("#startdatee").change(function() {
         $("#tradehighchart").text("")
         startdate = $(this).val();
         enddate = $('#enddate').val();

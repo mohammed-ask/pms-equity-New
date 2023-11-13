@@ -2,6 +2,14 @@
 include "main/session.php";
 /* @var $obj db */
 ob_start();
+// print_r($permissions);
+if ($employeeid != $adminid) {
+    $moduleid = $obj->selectfieldwhere('permissions', "group_concat(DISTINCT module)", 'id IN (' . implode(",", $permissions) . ') and module != 5');
+} else {
+    $moduleid = $obj->selectfieldwhere('permissions', "group_concat(DISTINCT module)", 'id IN (' . implode(",", $permissions) . ')');
+}
+// echo $moduleid;
+// die;
 ?>
 <div class="row">
     <div class="col-12 mobile-bottom-margin">
@@ -24,7 +32,7 @@ ob_start();
                     </div>
                     <div class="row">
                         <?php
-                        $resultmodule = $obj->selectextrawhere("modules", "status=1 order by department  ");
+                        $resultmodule = $obj->selectextrawhere("modules", "status=1 and id in ($moduleid) order by department  ");
                         while ($rowmodule = $obj->fetch_assoc($resultmodule)) {
                         ?>
                             <div class="col-md-6">
@@ -43,7 +51,7 @@ ob_start();
                                     <div class="card-body">
                                         <div class="row">
                                             <?php
-                                            $resultpermission = $obj->selectextrawhere("permissions", "status=1 and module='" . $rowmodule['id'] . "'");
+                                            $resultpermission = $obj->selectextrawhere("permissions", "status=1 and module='" . $rowmodule['id'] . "' and id IN ( " . implode(", ", $permissions) . " )");
                                             while ($rowpermission = $obj->fetch_assoc($resultpermission)) {
                                             ?>
                                                 <div class="col-sm-6 mb-2">
@@ -65,7 +73,7 @@ ob_start();
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    <button type="submit" class="px-4 py-2  text-sm  bg-blue  rounded-lg ">Save</button>
+                    <button type="submit" class="btn btn-success ">Save</button>
                     <div id="resultid" class="form-result"></div>
                 </div>
             </form>

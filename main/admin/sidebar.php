@@ -301,7 +301,7 @@
             </a>
           </li>
         <?php } ?>
-        <?php if (in_array(12, $permissions)) {
+        <?php if (in_array(30, $permissions)) {
         ?>
           <li class="nav-item">
             <a class="nav-link" href="settings">
