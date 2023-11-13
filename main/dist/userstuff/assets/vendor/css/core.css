@@ -7212,8 +7212,8 @@ label.btn {
 }
 
 .btn-outline-light {
-  color: #fcfdfd;
-  border-color: #fcfdfd;
+  color: #878787 !important;
+  border-color: #e6e6e6;
   background: transparent;
 }
 .btn-outline-light:hover {
@@ -7232,7 +7232,7 @@ label.btn {
 }
 .btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
   color: #435971 !important;
-  background-color: #fcfdfd !important;
+  background-color: #dcdcdc61 !important;
   border-color: #fcfdfd !important;
 }
 .btn-check:checked + .btn-outline-light:focus, .btn-check:active + .btn-outline-light:focus, .btn-outline-light:active:focus, .btn-outline-light.active:focus, .btn-outline-light.dropdown-toggle.show:focus {

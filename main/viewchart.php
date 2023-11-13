@@ -65,7 +65,7 @@ foreach ($data as $row) {
         </div>
         <div id="container"></div>
         <?php if ($chartdata == 'Error fetching candle data:') { ?>
-            <div class='alert alert-danger'>Due to a technical issue with the NSE server, the chart is currently unavailable</div>
+            <div class='alert alert-danger'>The chart is currently unavailable</div>
         <?php } ?>
     </div>
 </div>

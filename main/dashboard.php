@@ -91,13 +91,13 @@ if ($dashboardmaintanance) {
         <div class="col-lg-4 col-md-4 order-1">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-6 mb-4">
-                    <div class="card">
+                <a href="portfolio"> <div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
                                 <div class="avatar flex-shrink-0">
                                     <img src="main/dist/userstuff/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
                                 </div>
-                                <div class="dropdown">
+                                <!-- <div class="dropdown">
                                     <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
@@ -105,36 +105,28 @@ if ($dashboardmaintanance) {
                                         <a class="dropdown-item" href="javascript:void(0);">View More</a>
 
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <span class="fw-medium d-block mb-1">Profit</span>
+                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Profit</span>
                             <h3 class="card-title mb-2">₹12,628</h3>
-                            <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> AMT</small>
+                            <small class="text-success fw-medium"><i style="background-color: #eefbe7;     color: #76d344;" class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div class="col-lg-6 col-md-12 col-6 mb-4">
-                    <div class="card">
+                    <a href="fund"><div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
                                 <div class="avatar flex-shrink-0">
                                     <img src="main/dist/userstuff/assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded" />
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                        <a class="dropdown-item" href="javascript:void(0);">View More</a>
-
-                                    </div>
-                                </div>
+                              
                             </div>
-                            <span class="fw-medium d-block mb-1">Fund</span>
+                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Fund</span>
                             <h3 class="card-title text-nowrap mb-2">₹4,679</h3>
-                            <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> AMT</small>
+                            <small class="text-success fw-medium"><i style="background-color: #e0f7fc;     color: #11c6ed;" class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
             </div>
         </div>
@@ -144,7 +136,9 @@ if ($dashboardmaintanance) {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-3" style="padding-right: 0px; padding-left: 30px;">
+                            <div class="col-lg-6 col-md-12">
+                            <div class="row">
+                            <div class="col-6" style="padding-left: 30px;">
 
                                 <div>
                                     <label class="col-form-label">From</label>
@@ -155,7 +149,7 @@ if ($dashboardmaintanance) {
 
 
                             </div>
-                            <div class="col-3">
+                            <div class="col-6" style="padding-right: 30px;">
                                 <div>
                                     <label class="col-form-label">To</label>
                                     <div>
@@ -163,13 +157,13 @@ if ($dashboardmaintanance) {
                                     </div>
                                 </div>
 
-                            </div>
-                            <div class="col-5">
+                            </div></div></div>
+                           <div class="col-lg-6 col-md-12"> <div>
                                 <div>
 
                                     <div class="text-center">
                                         <label for="html5-date-input" class="col-form-label">Interval</label>
-                                        <div class="offset-md-1 mt-2 col-auto">
+                                        <div class="offset-md-1 col-auto">
                                             <div class="toolbar">
                                                 <button class="btn btn-sm btn-outline-light" style="color: lightgray;" onclick="getactive(this.id)" id="one_month">1m</button>
                                                 <button style="color: lightgray;" class="btn btn-sm btn-outline-light active" onclick="getactive(this.id)" id="six_months">5m</button>
@@ -193,7 +187,7 @@ if ($dashboardmaintanance) {
                                         </div> -->
                                     </div>
                                 </div>
-                            </div>
+                            </div></div>
 
                         </div>
                         <div id="container"></div>
@@ -207,50 +201,35 @@ if ($dashboardmaintanance) {
         <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
             <div class="row">
                 <div class="col-6 mb-4">
-                    <div class="card">
+                <a href="portfolio">  <div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
                                 <div class="avatar flex-shrink-0">
                                     <img src="main/dist/userstuff/assets/img/icons/unicons/loss.png" alt="Credit Card" class="rounded" />
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn p-0" type="button" id="cardOpt4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                                        <a class="dropdown-item" href="javascript:void(0);">View More</a>
-
-                                    </div>
-                                </div>
+                               
                             </div>
-                            <span class="d-block mb-1">Loss</span>
-                            <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                            <small class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i> AMT</small>
+                            <span style="color:#697A8D;" class="d-block mb-1">Loss</span>
+                            <h3 class="card-title text-nowrap mb-2">₹2,456</h3>
+                            <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
+" class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div class="col-6 mb-4">
-                    <div class="card">
+                <a href="portfolio">  <div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
                                 <div class="avatar flex-shrink-0">
                                     <img src="main/dist/userstuff/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn p-0" type="button" id="cardOpt1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="cardOpt1">
-                                        <a class="dropdown-item" href="javascript:void(0);">View More</a>
-
-                                    </div>
-                                </div>
+                               
                             </div>
-                            <span class="fw-medium d-block mb-1">Invested</span>
-                            <h3 class="card-title mb-2">$14,857</h3>
-                            <small class="text-success fw-medium"><i class="bx bx-up-arrow-alt"></i> AMT</small>
+                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Invested</span>
+                            <h3 class="card-title mb-2">₹14,857</h3>
+                            <small class="text-success fw-medium"><i class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <!-- </div>
 <div class="row"> -->
@@ -288,8 +267,18 @@ include "main/templete.php"; ?>
     var chartData = <?php echo json_encode($chart_data); ?>;
     Highcharts.chart('container', {
         title: {
-            text: 'Nifty Index'
-        },
+        text: 'Nifty Index',
+        style: {
+            color: '#4b4b4b',
+            fill: '#4b4b4b',       // Change the text color
+            fontSize: '16px',    // Change the font size
+            fontWeight: '600',
+            fontFamily:'Public Sans'   // Make the text bold
+            // You can add more CSS properties as needed
+        }
+    },
+    // Your other chart configuration options go here
+
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: {

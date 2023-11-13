@@ -322,3 +322,24 @@ width: 45%;
 ::-webkit-scrollbar:hover {
   background-color: #696cff; /* Change this to the hover color you want */
 }
+
+
+
+
+
+/* ----------------------------------- */
+
+.dash-arrow{
+  padding: 2px;
+  background-color: #ededff;
+  border-radius: 50%;
+  color: #696cff;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+
+.dash-arrow:hover{
+
+  transform: translateX(30%);
+}
