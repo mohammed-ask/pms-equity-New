@@ -63,8 +63,8 @@
  <!-- summernote -->
 
  <!-- App favicon -->
- <link rel="icon" href="../main/images/logo/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../main/images/logo/favicon.png" type="image/x-icon">
+ <link rel="icon" href="../main\dist\userstuff\assets\img\logo\eagle-eye-icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../main\dist\userstuff\assets\img\logo\eagle-eye-icon.svg" type="image/x-icon">
 
  <!-- summernote -->
  <link rel="stylesheet" href="../main/plugins/summernote/summernote-bs4.min.css">

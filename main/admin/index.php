@@ -38,7 +38,7 @@ if (in_array(34, $permissions)) {
                                 <path d="M12 5l0 14"></path>
                                 <path d="M5 12l14 0"></path>
                             </svg>
-                            Create New Plan
+                            Add Position
                         </a>
 
 
@@ -71,9 +71,14 @@ if (in_array(34, $permissions)) {
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <span style="font-weight: 600;"><?= $activeclient ?></span> <a style="color: #182433;" href="users">Active Client</a>
+                                            <span style="font-weight: 600;"><?= $activeclient ?></span>
+                                            </div>
+                                            <div class="" style="font-weight: 500;">
+                                            <a style="color: #182433;" href="users">Active Client</a>
                                             </div>
                                         </div>
+
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +99,7 @@ if (in_array(34, $permissions)) {
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <span style="font-weight: 600;"><?= $totalinv ?></span> Users
+                                                <span style="font-weight: 600;"><?= $totalinv ?></span>
                                             </div>
                                             <div class="" style="font-weight: 500;">
                                                 Total Investment
@@ -117,9 +122,15 @@ if (in_array(34, $permissions)) {
                                             </span>
                                         </div>
                                         <div class="col">
-                                            <div>
-                                                <span style="font-weight: 600;"><?= $pendinguser ?></span> <a style="color: #182433;" href="pendingplan">Pending approval</a>
+                                        <div class="col">
+                                            <div class="font-weight-medium">
+                                            <span style="font-weight: 600;"><?= $pendinguser ?></span> 
                                             </div>
+                                            <div class="" style="font-weight: 500;">
+                                            <a style="color: #182433;" href="pendingapproval">Pending Users</a>
+                                            </div>
+                                        </div>
+                                          
                                         </div>
                                     </div>
                                 </div>

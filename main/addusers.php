@@ -8,7 +8,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="main/dist/userstuff/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="main\dist\userstuff\assets\img\logo\eagle-eye-icon.svg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -623,7 +623,7 @@
                                             <label class="form-label" for="multiStepsMobile">Mobile</label>
                                             <div class="input-group input-group-merge">
                                                 <span class="input-group-text">IN (+91)</span>
-                                                <input type="text" id="mobileno" name="mobileno" class="form-control multi-steps-mobile" placeholder="909 555 0111">
+                                                <input type="text" id="mobileno" name="mobileno" class="form-control multi-steps-mobile" placeholder="9095550111">
                                             </div>
                                         </div>
 

@@ -25,7 +25,7 @@
  <meta name="description" content="" />
 
  <!-- Favicon -->
- <link rel="icon" type="image/x-icon" href="main/dist/userstuff/assets/img/favicon/favicon.ico" />
+ <link rel="icon" type="image/x-icon" href="main\dist\userstuff\assets\img\logo\eagle-eye-icon.svg" />
 
  <!-- Fonts -->
  <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,7 +61,7 @@
 
 
  <!-- App favicon -->
- <link rel="shortcut icon" href="main/images/logo/favicon.svg">
+ <link rel="shortcut icon" href="main\dist\userstuff\assets\img\logo\eagle-eye-icon.svg">
  <link rel="stylesheet" href="main/dist/userstuff/assets\vendor\css\app-email.css">
 
 

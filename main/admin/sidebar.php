@@ -6,7 +6,7 @@
     </button>
     <h1 class="navbar-brand navbar-brand-autodark mt-3">
       <a href="#">
-        <img src="../main\images\pmslogo.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+        <img src="../main\dist\userstuff\assets\img\logo\eagle-eye.svg" width="110" height="32" alt="Eagle Eye" class="navbar-brand-image">
       </a>
     </h1>
     <div class="navbar-nav flex-row d-lg-none">
