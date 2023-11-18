@@ -13,8 +13,8 @@ require './main/PHPMailer/src/PHPMailer.php';
 require './main/PHPMailer/src/SMTP.php';
 
 $xx['name'] = $_POST['name'];
-$xx['surname'] = $_POST['surname'];
-$xx['phone'] = $_POST['number'];
+// $xx['surname'] = $_POST['surname'];
+// $xx['phone'] = $_POST['number'];
 $xx['email'] = $_POST['email'];
 $xx['message'] = $_POST['message'];
 $xx['added_on'] = date('Y-m-d H:i:s');

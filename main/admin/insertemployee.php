@@ -13,10 +13,11 @@ if ($emailcount > 0) {
         $codegeneratorid = $row4['id'];
         $codenumber = $row4['number'] + 1;
         $generatedcode = sprintf('%04d', $codenumber);
+        $row4['prefix'] = $employeeid === $adminid ? "EET" : "EETE";
         // $month = strtoupper(date("M", strtotime($date)));
         $uniqueid = str_replace(array("{prefix}", "{number}"), array($row4['prefix'], $generatedcode), $row4['pattern']);
     } else {
-        $cg['prefix'] = "PMSE";
+        $cg['prefix'] = $employeeid === $adminid ? "EET" : "EETE";
         $cg['number'] = 0;
         $cg['pattern'] = "{prefix}{number}";
         $cg['category'] = "employeecode";

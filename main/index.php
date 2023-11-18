@@ -46,710 +46,955 @@ if ($mainpagemaintanance) { ?>
         </div>
     </article>
 <?php } else { ?>
-    <style>
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8) url(main/images/loader.gif) no-repeat center center;
-            z-index: 10000;
-        }
-    </style>
     <!DOCTYPE html>
-    <html lang="en">
+
+    <html lang="en" class="light-style layout-navbar-fixed layout-wide" dir="ltr" data-theme="theme-default" data-assets-path="main/dist/landingmain/dist/landingassets/" data-template="front-pages">
 
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-        <title>Investment Planning and Management Made Simple with PMS Equity</title>
+        <title>Eagle Eye Tradings</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="main/dist/indexcss/bootstrap.min.css" rel="stylesheet">
 
-        <!-- fontawesome icon -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Additional CSS Files -->
-        <link rel="stylesheet" href="main/dist/indexcss/fontawesome.css">
-        <link rel="stylesheet" href="main/dist/indexcss/home-page.css">
 
-        <!-- Veriables css -->
-        <link href="main/dist/indexcss/variables.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="dist/css/bvalidator.css">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-        <!-- Default theme -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
-        <!-- ----------------favicoin-------------------->
-        <link rel="icon" href="main/images/logo/favicon.svg" type="image/svg+xml">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P9108ZJ253"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="#">
 
-  gtag('config', 'G-P9108ZJ253');
-</script>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link href="main/dist/landingassets/css/css2" rel="stylesheet">
 
+
+        <link rel="stylesheet" href="main/dist/landingassets/css/boxicons.css">
+
+
+        <!-- Core CSS -->
+
+
+        <link rel="stylesheet" href="main/dist/landingassets/css/demo.css">
+        <link rel="stylesheet" href="main/dist/landingassets/css/front-page.css">
+        <!-- Vendors CSS -->
+
+        <link rel="stylesheet" href="main/dist/landingassets/css/nouislider.css">
+        <link rel="stylesheet" href="main/dist/landingassets/css/swiper.css">
+
+        <!-- Page CSS -->
+
+        <link rel="stylesheet" href="main/dist/landingassets/css/front-page-landing.css">
+
+        <!-- Helpers -->
+        <script src="main/dist/landingassets/js/helpers.js.download"></script>
+        <style type="text/css">
+            .layout-menu-fixed .layout-navbar-full .layout-menu,
+            .layout-menu-fixed-offcanvas .layout-navbar-full .layout-menu {
+                top: 85.1875px !important;
+            }
+
+            .layout-page {
+                padding-top: 85.1875px !important;
+            }
+
+            .content-wrapper {
+                padding-bottom: 0px !important;
+            }
+        </style>
+
+        <script src="main/dist/landingassets/js/front-config.js.download"></script>
+        <link rel="stylesheet" type="text/css" href="main/dist/landingassets/css/core.css" class="template-customizer-core-css">
+        <link rel="stylesheet" type="text/css" href="main/dist/landingassets/css/theme-default.css" class="template-customizer-theme-css">
+
+        <script type="text/javascript" src="main/dist/landingassets/js/api.min.js.download" async="" data-user="252882" data-account="269977"></script>
+        <script async="" src="main/dist/landingassets/js/modules.de67af192337ace6bbe5.js.download" charset="utf-8"></script>
+        <link rel="stylesheet" href="main/dist/landingassets/css/api.min.css" id="omapi-css" media="all">
     </head>
-    <style>
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    </style>
 
     <body>
 
-        <!-- ***** Preloader Start ***** -->
 
-        <div class="loading-container">
-            <div class="loading">
-                <div class="loading-rect"></div>
-                <div class="loading-rect"></div>
-                <div class="loading-rect"></div>
-                <div class="loading-rect"></div>
+        <script src="main/dist/landingassets/js/dropdown-hover.js.download"></script>
+        <script src="main/dist/landingassets/js/mega-dropdown.js.download"></script>
+
+        <!-- Navbar: Start -->
+        <nav class="layout-navbar shadow-none py-0 navbar-active">
+            <div class="container">
+                <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-4 ">
+                    <!-- Menu logo wrapper: Start -->
+                    <div class="navbar-brand app-brand demo d-flex py-0 m-0">
+                        <!-- Mobile menu toggle: Start-->
+                        <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
+                        </button>
+                        <!-- Mobile menu toggle: End-->
+                        <a href="#" class="app-brand-link">
+                            <span class="app-brand-logo demo">
+
+                                <img width="150px" src="main/dist/landingassets/img/eagle-eye.svg" alt="">
+
+                            </span>
+
+                    </div>
+                    <!-- Menu logo wrapper: End -->
+                    <!-- Menu wrapper: Start -->
+                    <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+                        <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="tf-icons bx bx-x bx-sm"></i>
+                        </button>
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" aria-current="page" href="#landingHero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium active" href="#landingTeam">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="#landingFAQ">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="#landingContact">Contact
+                                    us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="landing-menu-overlay d-lg-none"></div>
+                    <!-- Menu wrapper: End -->
+                    <!-- Toolbar: Start -->
+                    <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+                        <!-- navbar button: Start -->
+
+
+
+                        <li>
+                            <a href="#" class="btn btn-primary" target="_blank"><span class="tf-icons bx bx-user me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+                        </li>
+                        <!-- navbar button: End -->
+                    </ul>
+                    <!-- Toolbar: End -->
+                </div>
             </div>
+        </nav>
+        <!-- Navbar: End -->
+
+
+        <!-- Sections:Start -->
+
+
+        <div data-bs-spy="scroll" class="scrollspy-example">
+            <!-- Hero: Start -->
+            <section id="hero-animation">
+                <div id="landingHero" class="section-py landing-hero position-relative">
+                    <div class="container">
+                        <div class="hero-text-box text-center">
+                            <h1 class="text-primary hero-title display-4 fw-bold">Eagle Eye Tradings – Smart Trading Platform <br> Where AI Meets Trading Excellence!</h1>
+                            <h2 class="hero-sub-title h6 mb-4 pb-1">
+                                Ready to elevate your trading experience? <br class="d-none d-lg-block">
+                                Sign up now and experience the future of share market trading!
+                            </h2>
+                            <div class="landing-hero-btn d-inline-block position-relative">
+                                <span class="hero-btn-item position-absolute d-none d-md-flex text-heading">Join our platform
+                                    <img src="main/dist/landingassets/img/Join-community-arrow.png" alt="Join community arrow" class="scaleX-n1-rtl"></span>
+                                <a href="#landingPricing" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                        <div id="heroDashboardAnimation" class="hero-animation-img">
+                            <a href="#" target="_blank">
+                                <div id="heroAnimationImg" class="position-relative hero-dashboard-img" style="transform: perspective(1200px) scale(1) rotateX(0deg) rotateY(0deg);">
+                                    <img src="main/dist/landingassets/img/hero-dashboard-light.png" alt="hero dashboard" class="animation-img">
+                                    <img src="main/dist/landingassets/img/hero-elements-light.png" alt="hero elements" class="position-absolute hero-elements-img animation-img top-0 start-0" style="transform: translateZ(0px);">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing-hero-blank"></div>
+            </section>
+            <!-- Hero: End -->
+
+            <!-- Useful features: Start -->
+            <section id="landingFeatures" class="section-py landing-features">
+                <div class="container">
+                    <div class="text-center mb-3 pb-1">
+                        <span class="badge bg-label-primary">Platform Features</span>
+                    </div>
+                    <h3 class="text-center mb-1">
+                        <span class="section-title">Embark on your trading journey with confidence.
+                    </h3>
+                    <p class="text-center mb-3 mb-md-5 pb-3">
+                        Eagle Eye Tradings is not just a trading platform; it's your partner in financial success.
+                    </p>
+                    <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/laptop.png" alt="laptop charging">
+                            </div>
+                            <h5 class="mb-3">User-Friendly Interface</h5>
+                            <p class="features-icon-description">
+                                Our intuitive interface is designed to make trading easy for everyone.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/rocket.png" alt="transition up">
+                            </div>
+                            <h5 class="mb-3">Real-Time Market Data</h5>
+                            <p class="features-icon-description">
+                                Stay ahead of the curve with up-to-the-minute market data at your fingertips.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/paper.png" alt="edit">
+                            </div>
+                            <h5 class="mb-3">Security & Reliability</h5>
+                            <p class="features-icon-description">
+                                Your security is our top priority and ensure a safe trading environment.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/check.png" alt="3d select solid">
+                            </div>
+                            <h5 class="mb-3">Smart Algorithms</h5>
+                            <p class="features-icon-description">
+                                Dip your toes into AI trading with a simplified interface.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/user.png" alt="lifebelt">
+                            </div>
+                            <h5 class="mb-3">Automated Trading</h5>
+                            <p class="features-icon-description">Save time and reduce human error with our automated trading features.</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                            <div class="text-center mb-3">
+                                <img src="main/dist/landingassets/img/keyboard.png" alt="google docs">
+                            </div>
+                            <h5 class="mb-3">Risk Management</h5>
+                            <p class="features-icon-description">AI is not just about profit; it's about managing risks effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Useful features: End -->
+
+            <!-- Real customers reviews: Start -->
+            <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
+                <!-- What people say slider: Start -->
+                <div class="container">
+                    <div class="row align-items-center gx-0 gy-4 g-lg-5">
+                        <div class="col-md-6 col-lg-5 col-xl-3">
+                            <div class="mb-3 pb-1">
+                                <span class="badge bg-label-primary">Real Customers Reviews</span>
+                            </div>
+                            <h3 class="mb-1"><span class="section-title">What people say</span></h3>
+                            <p class="mb-3 mb-md-5">
+                                See what our customers have to<br class="d-none d-xl-block">
+                                say about their experience.
+                            </p>
+                            <div class="landing-reviews-btns d-flex align-items-center gap-3">
+                                <button id="reviews-previous-btn" class="btn btn-label-primary reviews-btn" type="button">
+                                    <i class="bx bx-chevron-left bx-sm"></i>
+                                </button>
+                                <button id="reviews-next-btn" class="btn btn-label-primary reviews-btn" type="button">
+                                    <i class="bx bx-chevron-right bx-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-7 col-xl-9">
+                            <div class="swiper-reviews-carousel overflow-hidden mb-5 pb-md-2 pb-md-3">
+                                <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" id="swiper-reviews">
+                                    <div class="swiper-wrapper" id="swiper-wrapper-83cbd5dac2cc6d18" aria-live="off" style="cursor: grab; transition-duration: 0ms; transform: translate3d(-276.667px, 0px, 0px);">
+
+
+
+
+
+
+                                        <div class="swiper-slide swiper-slide-prev" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        Eagle Eye Trading Platform is a game-changer! The user interface is sleek, and I love the real-time market analytics. The platform has significantly improved my trading experience. Highly recommended!
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bx-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Shanti Sishodhiya</h6>
+                                                            <p class="small text-muted mb-0">Jaipur, Rajeshthan</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        “Impressed with the wide range of investment options. The platform is user-friendly, and the educational resources are excellent for both beginners and experienced traders. A solid choice for anyone serious about investing.”
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Dhramendra Patel</h6>
+                                                            <p class="small text-muted mb-0">Surat, Gujrat</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        "Eagle Eye is my go-to for trading. The platform's security features are top-notch, and the responsive customer support team ensures a smooth experience. Their diverse offerings set them apart from others."
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bx-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Gourav Patidar</h6>
+                                                            <p class="small text-muted mb-0">Delhi, India</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        “I appreciate Eagle Eye's advanced trading tools. The algorithmic trading features are robust, making it easy to execute complex strategies. Definitely a platform for those who enjoy diving deep into analytics.”
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Rachit Ojha</h6>
+                                                            <p class="small text-muted mb-0">Pune, India</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        “Eagle Eye offers a comprehensive suite of options trading tools. The platform's options analytics are detailed, helping me make informed decisions. If you're into options trading, this is the platform for you.”
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Ruchi Jain</h6>
+                                                            <p class="small text-muted mb-0">Mumbai, India</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 250.667px; margin-right: 26px;">
+                                            <div class="card h-100">
+                                                <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+
+                                                    <p>
+                                                        "For day traders like myself, speed and accuracy matter. Eagle Eye delivers on both fronts. The fast execution of trades and real-time market data make it an ideal platform for active traders. Thumbs up!"
+                                                    </p>
+                                                    <div class="text-warning mb-3">
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                        <i class="bx bxs-star bx-sm"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar me-2 avatar-sm">
+                                                            <img src="main/dist/landingassets/img/user-review.png" alt="Avatar" class="rounded-circle">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Venu Srinivasan</h6>
+                                                            <p class="small text-muted mb-0">Chennai, India</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-83cbd5dac2cc6d18"></div>
+                                    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-83cbd5dac2cc6d18"></div>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- What people say slider: End -->
+                <hr class="m-0">
+                <!-- Logo slider: Start -->
+
+                <!-- Logo slider: End -->
+            </section>
+            <!-- Real customers reviews: End -->
+
+            <!-- Our great team: Start -->
+            <!-- <section id="landingTeam" class="section-py landing-team">
+      <div class="container">
+        <div class="text-center mb-3 pb-1">
+          <span class="badge bg-label-primary">Our Great Team</span>
+        </div>
+        <h3 class="text-center mb-1"><span class="section-title">Supported</span> by Real People</h3>
+        <p class="text-center mb-md-5 pb-3">Who is behind these great-looking interfaces?</p>
+        <div class="row gy-5 mt-2">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-primary position-relative team-image-box">
+                <img
+                  src="main/dist/landingassets/img/team-member-1.png"
+                  class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl img-fluid"
+                  alt="human image">
+              </div>
+              <div class="card-body border border-label-primary border-top-0 text-center">
+                <h5 class="card-title mb-0">Sophie Gilbert</h5>
+                <p class="text-muted mb-0">Project Manager</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-info position-relative team-image-box">
+                <img
+                  src="main/dist/landingassets/img/team-member-2.png"
+                  class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl img-fluid"
+                  alt="human image">
+              </div>
+              <div class="card-body border border-label-info border-top-0 text-center">
+                <h5 class="card-title mb-0">Paul Miles</h5>
+                <p class="text-muted mb-0">UI Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-danger position-relative team-image-box">
+                <img
+                  src="main/dist/landingassets/img/team-member-3.png"
+                  class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl img-fluid"
+                  alt="human image">
+              </div>
+              <div class="card-body border border-label-danger border-top-0 text-center">
+                <h5 class="card-title mb-0">Nannie Ford</h5>
+                <p class="text-muted mb-0">Development Lead</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-success position-relative team-image-box">
+                <img
+                  src="main/dist/landingassets/img/team-member-4.png"
+                  class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl img-fluid"
+                  alt="human image">
+              </div>
+              <div class="card-body border border-label-success border-top-0 text-center">
+                <h5 class="card-title mb-0">Chris Watkins</h5>
+                <p class="text-muted mb-0">Marketing Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+            <!-- Our great team: End -->
+
+            <!-- Pricing plans: Start -->
+            <section id="landingPricing" class="section-py bg-body landing-pricing">
+                <div class="container">
+                    <div class="text-center mb-3 pb-1">
+                        <span class="badge bg-label-primary">Platform Deals in</span>
+                    </div>
+                    <h3 class="text-center mb-1"><span class="section-title">Diversified Trading Hub:</span> Navigating the Markets with Confidence</h3>
+                    <p class="text-center mb-4 pb-3">
+                        Unlock Opportunities Across Equity, Commodity, and Derivative Markets on Our Advanced Trading Platform
+                    </p>
+
+                    <div class="row gy-4 pt-lg-3">
+                        <!-- Basic Plan: Start -->
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="text-center">
+                                        <img src="main/dist/landingassets/img/paper-airplane.png" alt="paper airplane icon" class="mb-4 pb-2 scaleX-n1-rtl">
+                                        <h4 class="mb-3">Equity</h4>
+                                        <span class="h6">Equity trading involves buying and selling company stocks or shares on stock exchanges.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Basic Plan: End -->
+
+                        <!-- Favourite Plan: Start -->
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="text-center">
+                                        <img src="main/dist/landingassets/img/paper-airplane.png" alt="paper airplane icon" class="mb-4 pb-2 scaleX-n1-rtl">
+                                        <h4 class="mb-3">Commodity</h4>
+                                        <span class="h6">Commodity trading involves the buying and selling of physical goods like gold, oil, agricultural products, etc.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Favourite Plan: End -->
+
+                        <!-- Standard Plan: Start -->
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="text-center">
+                                        <img src="main/dist/landingassets/img/paper-airplane.png" alt="paper airplane icon" class="mb-4 pb-2 scaleX-n1-rtl">
+                                        <h4 class="mb-3">Derivative</h4>
+                                        <span class="h6">Derivatives are financial contracts whose value is derived from an underlying asset, include futures and options.</span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Standard Plan: End -->
+                    </div>
+                </div>
+            </section>
+            <!-- Pricing plans: End -->
+
+            <!-- Fun facts: Start -->
+            <section id="landingFunFacts" class="section-py landing-fun-facts">
+                <div class="container">
+                    <div class="row gy-3">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card border border-label-primary shadow-none">
+                                <div class="card-body text-center">
+                                    <img src="main/dist/landingassets/img/laptop.png" alt="laptop" class="mb-2">
+                                    <h5 class="h2 mb-1">35k+</h5>
+                                    <p class="fw-medium mb-0">
+                                        Cliets
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card border border-label-success shadow-none">
+                                <div class="card-body text-center">
+                                    <img src="main/dist/landingassets/img/user-success.png" alt="laptop" class="mb-2">
+                                    <h5 class="h2 mb-1">6.5k+</h5>
+                                    <p class="fw-medium mb-0">
+                                        Active Clients
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card border border-label-info shadow-none">
+                                <div class="card-body text-center">
+                                    <img src="main/dist/landingassets/img/diamond-info.png" alt="laptop" class="mb-2">
+                                    <h5 class="h2 mb-1">4.8/5</h5>
+                                    <p class="fw-medium mb-0">
+                                        Google Ratings
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card border border-label-warning shadow-none">
+                                <div class="card-body text-center">
+                                    <img src="main/dist/landingassets/img/check-warning.png" alt="laptop" class="mb-2">
+                                    <h5 class="h2 mb-1">100%</h5>
+                                    <p class="fw-medium mb-0">
+                                        Secure & Reliable
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fun facts: End -->
+
+            <!-- FAQ: Start -->
+            <section id="landingFAQ" class="section-py bg-body landing-faq">
+                <div class="container">
+                    <div class="text-center mb-3 pb-1">
+                        <span class="badge bg-label-primary">FAQ</span>
+                    </div>
+                    <h3 class="text-center mb-1">Frequently asked <span class="section-title">questions</span></h3>
+                    <p class="text-center mb-5 pb-3">Browse through these FAQs to find answers to commonly asked questions.</p>
+                    <div class="row gy-5">
+                        <div class="col-lg-5">
+                            <div class="text-center">
+                                <img src="main/dist/landingassets/img/faq-boy-with-logos.png" alt="faq boy with logos" class="faq-image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card accordion-item active">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                                            What is Eagle Eye Trading Platform?
+                                        </button>
+                                    </h2>
+
+                                    <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            The Eagle Eye Trading Platform is an advanced online trading platform designed for traders and investors. It provides a user-friendly interface for buying and selling various financial instruments. The platform also offers real-time market data, AI Trading Mode, technical analysis tools, and other features to assist users in making informed trading decisions.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                                            What markets can I trade on Eagle Eye Trading Platform?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Eagle Eye Trading Platform typically supports a wide range of financial markets, including equities, commodities, and derivatives. Users can trade on major stock exchanges and access NSE & BSE markets through the platform.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                                            How secure is Eagle Eye Trading Platform?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Security is a top priority for Eagle Eye Trading Platform. The platform employs robust security measures such as encryption protocols to protect user data and transactions. Additionally, it may offer two-factor authentication for added account security. Users are encouraged to follow best practices, such as using strong passwords and keeping their login credentials confidential, to enhance their account security.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionFour">
+                                            How do I fund my account and withdraw funds on Eagle Eye Trading Platform?
+                                        </button>
+                                    </h2>
+                                    <div id="accordionFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Funding and withdrawing funds on Eagle Eye Trading Platform can usually be done through website & app in Fund section. Common options include bank transfers, internet banking, UPI, and electronic payment systems. Users can access the funding and withdrawal features through the platform's interface, where they can securely manage their financial transactions.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ: End -->
+
+            <!-- CTA: Start -->
+            <section id="landingCTA" class="section-py landing-cta p-lg-0 pb-0">
+                <div class="container">
+                    <div class="row align-items-center gy-5 gy-lg-0">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h6 class="h2 text-primary fw-bold mb-1">Ready to Get Started?</h6>
+                            <p class="fw-medium mb-4">Seamless Beginnings Await: Dive into Easy Prosperity. Ready to Get Started with Effortless Wealth Building?</p>
+                            <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/payment-page.html" class="btn btn-primary">Get Started</a>
+                        </div>
+                        <div class="col-lg-6 pt-lg-5 text-center text-lg-end">
+                            <img src="main/dist/landingassets/img/cta-dashboard.png" alt="cta dashboard" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CTA: End -->
+
+            <!-- Contact Us: Start -->
+            <section id="landingContact" class="section-py bg-body landing-contact">
+                <div class="container">
+                    <div class="text-center mb-3 pb-1">
+                        <span class="badge bg-label-primary">Contact US</span>
+                    </div>
+                    <h3 class="text-center mb-1"><span class="section-title">Get in Touch with Us</h3>
+                    <p class="text-center mb-4 mb-lg-5 pb-md-3">We're here to assist you. just write us a message</p>
+                    <div class="row gy-4">
+                        <div class="col-lg-5">
+                            <div class="contact-img-box position-relative border p-2 h-100">
+                                <img src="main/dist/landingassets/img/contact-customer-service.png" alt="contact customer service" class="contact-img w-100 scaleX-n1-rtl img-fluid">
+                                <div class="pt-3 px-4 pb-1">
+                                    <div class="row gy-3 gx-md-4">
+                                        <div class="col-12 mt-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge bg-label-primary rounded p-2 me-2"><i class="bx bx-envelope bx-sm"></i></div>
+                                                <div>
+                                                    <p class="mb-0">Email</p>
+                                                    <h5 class="mb-0">
+                                                        <a href="mailto:example@gmail.com" class="text-heading"><?= $rowinfo['email'] ?></a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 my-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge bg-label-success rounded p-2 me-2">
+                                                    <i class="bx bx-phone-call bx-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="mb-0">Phone</p>
+                                                    <h5 class="mb-0"><a href="tel:+1234-568-963" class="text-heading"><?= $rowinfo['phone'] ?></a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mb-1">Send a message</h4>
+                                    <p class="mb-4">
+                                        Ready to build wealth? Your investment in our platform is promising.<br class="d-none d-lg-block">
+                                        Start now for a prosperous financial journey with confidence and assurance.
+                                    </p>
+                                    <form id="contact" onsubmit="event.preventDefault();sendForm('', '', 'insertmessage', 'resultid', 'contact');return 0;">
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="contact-form-fullname">Full Name</label>
+                                                <input data-bvalidator='required' name="name" type="text" class="form-control" id="contact-form-fullname" placeholder="enter your name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="contact-form-email">Email</label>
+                                                <input data-bvalidator='required' type="text" name="email" id="contact-form-email" class="form-control" placeholder="your email">
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label" for="contact-form-message">Message</label>
+                                                <textarea data-bvalidator='required' name="message" id="contact-form-message" class="form-control" rows="9" placeholder="Write a message..."></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Send inquiry</button>
+                                            </div>
+                                        </div>
+                                        <div id="resultid"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Us: End -->
         </div>
 
-        <!-- ***** Preloader End ***** -->
+        <!-- / Sections:End -->
 
-        <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="index" class="logo">
-                                <img src="main/images/logo/PMS Equity white logo svg.svg" style="width:200px" />
+
+
+        <!-- Footer: Start -->
+        <footer class="landing-footer bg-body footer-text">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gx-0 gy-4 g-md-5">
+                        <div class="col-lg-5">
+                            <a href="#" class="app-brand-link mb-4">
+                                <span class="app-brand-logo demo">
+
+                                    <img width="250px" src="main/dist/landingassets/img/eagle-eye.svg" alt="">
+
+                                </span>
 
                             </a>
-                            <!-- ***** Logo End ***** -->
-                            <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <?php
-                                if (isset($_POST['postData'])) {
-                                    // $postData = json_decode($_POST['postData'], true);
-                                    // Display the button
-                                    echo '<button class="btn btn-sm"> Button</button>';
-                                }
-                                ?>
-                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="#about">About Us</a></li>
-                                <li class="scroll-to-section"><a href="#services">Services</a></li>
-                                <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-                                <li class="scroll-to-section">
-                                    <div class="head-button"><a href="login">Login</a></div>
+                            <p class="footer-text footer-logo-description mb-4">
+                                Eagle Eye Tradings, your gateway to Smart Trading! Our cutting-edge platform seamlessly blends artificial intelligence with trading excellence, empowering you with intelligent insights and precision. Elevate your trading experience with Eagle Eye Tradings.
+                            </p>
+                            <!-- <form class="footer-form">
+              <label for="footer-email" class="small">Subscribe to newsletter</label>
+              <div class="d-flex mt-1">
+                <input type="email" class="form-control rounded-0 rounded-start-bottom rounded-start-top"
+                  id="footer-email" placeholder="Your email">
+                <button type="submit" class="btn btn-primary shadow-none rounded-0 rounded-end-bottom rounded-end-top">
+                  Subscribe
+                </button>
+              </div>
+            </form> -->
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <h6 class="footer-title mb-4">Features</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a class="footer-link">User-friendly</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="footer-link">Real-Time Data</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="footer-link">AI Trading <span class="badge rounded bg-primary ms-2 px-2">New</span></a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="footer-link">Risk Management</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="footer-link">Automated Trading</a>
                                 </li>
                             </ul>
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ***** Header Area End ***** -->
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <h6 class="footer-title mb-4">Quick Links</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a href="#landingHero" class="footer-link">Home</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-link">Login</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-link">Register</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#landingContact" class="footer-link">Contact us</a>
+                                </li>
 
-        <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-lg-6 align-self-center">
-                                <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                                    <!-- <h6>Welcome to Space Dynamic</h6> -->
-                                    <h2>Making Your <br>Life Easy & <br>Wealthy</h2>
-                                    <p style="font-size: 20px; font-weight: 500;">We help you invest, manage and grow your money! <br>Get smart planning and investment all<br> at single click.</p>
-
-                                    <div><span class="banner-create-button"><a href="register">Create Account</a></span> <span class="main-red-button"><a href="login">Login <i class="fa-solid fa-right-to-bracket"></i></a></span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 p-0">
-                                <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <img src="main/dist/indeximage/home-page-image.gif" width="100%" alt="team meeting">
-                                </div>
-                            </div>
+                                <li class="mb-3">
+                                    <a href="#landingFAQ" class="footer-link">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <h6 class="footer-title mb-4">Download our app</h6>
+                            <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"><img src="main/dist/landingassets/img/apple-icon.png" alt="apple icon"></a>
+                            <a href="javascript:void(0);" class="d-block footer-link"><img src="main/dist/landingassets/img/google-play-icon.png" alt="google play icon"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- ----------------------app Section -->
- 
- <section id="cta" class="mt-5">
-            <div class="container" data-aos="zoom-out" style="border: 1px solid lightblue; border-radius: 10px; padding: 20px 35px;">
-
-                <div class="row g-5">
-
-                <div class="col-lg-4 col-md-6 order-first d-flex align-items-center">
-                        <div class="img">
-                            <img src="main\dist\indeximage\mobile-app-mockup.png" alt="" class="img-fluid" style="width: 55%; margin-left:80px;">
-                        </div>
+            <div class="footer-bottom py-3">
+                <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+                    <div class="mb-2 mb-md-0">
+                        <span class="footer-text">©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                        </span>
+                        <a class="fw-medium text-white footer-link">Eagle Eye Tradings,</a>
+                        <span class="footer-text"> India's Leading Trading Platform</span>
                     </div>
 
-                    <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3 style="font-weight:800;">Trade Smarter with  <br> PMS EQuity Mobile App</h3>
-
-                        <h5 class="d-flex align-items-center mt-4" style="font-weight:700;">Convenience on the Go</h5>
-                        <p>Our trading app allows you to access your investments and make trades anytime, anywhere, putting the power of the market in your pocket.</p>
-
-                        <h5 class="d-flex align-items-center mt-4" style="font-weight:700;">AI Trade Mode</h5>
-                        <p>Unlock the future of trading with our AI Trade Mode, which provides you with intelligent, data-driven trading suggestions and strategies, enhancing your decision-making and boosting your trading success..</p>
-<div class="row mt-3">
-    <div class="col-6"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.pmsequity"><img class="download-img" src="main\dist\indeximage\playstore-coming-soon.png" alt="Download From Playstore"></a></div>
-    <div class="col-6"><a class="margin-for-deshboard" href="main/dist/download-app/PMS-EQuity.apk" Download="PMS EQuity"><img class="download-img" src="main\dist\indeximage\direct-download.png" alt=""></a></div>
-</div>
-
-                        
-                    </div>
-
-                    
-                </div>
-
-            </div>
-        </section><!-- End Call To Action Section -->
-
-
-
-
-        <!-- ======= Featured Services Section ======= -->
-        <section id="featured-services" class="featured-services" style="margin-top: 5%;">
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
-                        <div class="service-item position-relative">
-                            <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
-                            <h4>Advanced Trading</h4>
-                            <p>Trade with lightening fast and advanced funding options.</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
-                        <div class="service-item position-relative">
-                            <div class="icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
-                            <h4>Long-term Gains</h4>
-                            <p>Explore your funds or let us help pick the right ones for you</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-                        <div class="service-item position-relative">
-                            <div class="icon"> <i class="fa-solid fa-chart-line"></i></div>
-                            <h4>Worry-Free Future</h4>
-                            <p>Insure your uncertainties. We've got you covered!</p>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
-                        <div class="service-item position-relative">
-                            <div class="icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
-                            <h4>Smart Investment</h4>
-                            <p>Power of investing in your hand, wherever you are.</p>
-                        </div>
-                    </div>
-
-                    <!-- End Service Item -->
-
-                </div>
-
-            </div>
-        </section>
-        <span id="about"></span>
-        <!-- End Featured Services Section -->
-
-        <!-- ======= About Section ======= -->
-        <section class="about">
-            <div class="container" data-aos="fade-up">
-
-                <div class="ari-section-header" style="margin-top: 8%; margin-bottom: 3%;">
-                    <h2 class="">About <b>Us</b></h2>
-                    <p style="text-align:center">We want to help our clients meet their financial goals with passion and integrity.</p>
-                </div>
-
-                <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-5">
-                        <div class="about-img">
-                            <img src="main/dist/indeximage/about-pms-quity.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <h3 class="pt-0 pt-lg-5 mview">Generating wealth for you is at the heart of everything we do</h3>
-
-                        <!-- Tabs -->
-                        <ul class="nav nav-pills mb-3">
-                            <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Our Values</a></li>
-                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Our Vision</a></li>
-                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Our Mission</a></li>
-                        </ul><!-- End Tabs -->
-
-                        <!-- Tab Content -->
-                        <div class="tab-content">
-
-                            <div class="tab-pane fade show active" id="tab1">
-
-                                <p class="fst-italic">Our mission is to become the most preferred financial solution provider in financial service arena. Our business idea and values supports our mission by offering a wide range of well designed and affordable financial products to benefit majority of day traders and investors.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="fa-solid fa-check"></i>
-                                    <h4>We Value Innovation</h4>
-                                </div>
-                                <p>We are constantly seeking new ways to improve the experience of our clients and our people.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="fa-solid fa-check"></i>
-                                    <h4>We Value Trust</h4>
-                                </div>
-                                <p>We build long-term personal relationships with our clients by living our values every day.</p>
-
-                            </div>
-                            <!-- End Tab 1 Content -->
-
-                            <div class="tab-pane fade show" id="tab2">
-
-                                <p class="fst-italic">PMS Equity Research Investment Advisor firm following regulatory norms prescribed by Government bodies.</p>
-
-                                <p>A comprehensive, client-focused approach to financial planning ensures that the recommended program encompasses each client's financial goals, timeframes and risk tolerance. Research of Investelite specializes in investment analysis. We work closely with clients to develop customized financial strategies that incorporate asset allocation, financial management and succession planning.
-                                </p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="fa-solid fa-check"></i>
-                                    <h4>Our Vision</h4>
-                                </div>
-                                <p>To be recognized on global platform by providing a tactful knowledge to our customer so we can grow hand by hand.”Our growth depends on our costumer's growth.</p>
-
-
-
-                            </div><!-- End Tab 2 Content -->
-
-                            <div class="tab-pane fade show" id="tab3">
-
-                                <p class="fst-italic">PMS Equity is a pure play financial market research and consulting company. We are differentiated by the stature of our diverse team. Our 15 years of legacy and values, shape our future, helping to strengthen our business and bring value to our clients.</p>
-
-                                <p> The company was founded in 2006 with an objective of offering unbiased technical analysis & solutions for the trading community, by experienced professionals to create a conducive environment.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="fa-solid fa-check"></i>
-                                    <h4>Our Mission</h4>
-                                </div>
-                                <p>We view our mission in reliable-efficient responsible delivery of financial research to our consumers and help them create wealth out of their savings.</p>
-
-                            </div>
-                            <!-- End Tab 3 Content -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End About Section -->
-
-        <section class="ari-invest-simple-sc">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-once="false" data-aos-duration="1000">
-                        <div class="ari-section-header">
-                            <h2>Investments <span>Made Simple</span></h2>
-                        </div>
-                        <div class="ari-invest-simple-desc">
-                            <p>Catering to all kinds of investors and traders, beginners or seasoned, with <br> the sole
-                                motive of making the investment experience easy.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 invest-simple-width">
-                        <div class="ari-invest-simple-pnl">
-                            <div class="ari-invest-simple-img" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1500">
-                                <img src="main/dist/indeximage/bulb-3d.png" alt="bulb-3d" class="img-responsive">
-                            </div>
-                            <div class="ari-invest-simple-content" data-aos="fade-up" data-aos-once="false" data-aos-duration="1500">
-                                <p>Guided Investing</p>
-                                <h3>Learn with us, <br>Earn with us!</h3>
-                                <h6>Platform that is easy & intuitive. Assistance that is systematic and helpful.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 invest-simple-width">
-                        <div class="ari-invest-simple-pnl">
-                            <div class="ari-invest-simple-img" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1500">
-                                <img src="main/dist/indeximage/rocket.png" alt="rocket" class="img-responsive">
-                            </div>
-                            <div class="ari-invest-simple-content" data-aos="fade-up" data-aos-once="false" data-aos-duration="1500">
-                                <p>Do-it-Yourselfer</p>
-                                <h3>Know the Market, <br> Grow with the Market</h3>
-                                <h6>We do In-depth research to help you make the right decisions.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="ari-invest-simple-pnl">
-                            <div class="ari-invest-simple-img" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1500">
-                                <img src="main/dist/indeximage/coin.png" alt="coin" class="img-responsive">
-                            </div>
-                            <div class="ari-invest-simple-content" data-aos="fade-up" data-aos-once="false" data-aos-duration="1500">
-                                <p>Traders</p>
-                                <h3>The Right Tools <br> of Trade</h3>
-                                <h6>Advanced tools for Trade and higher leverage for daily needs.</h6>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-
-
-        <!-- ======= Call To Action Section ======= -->
-        <section id="cta" class="cta">
-            <div class="container" data-aos="zoom-out">
-
-                <div class="row g-5">
-
-                    <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3>More Than 15+ Years, We <br>Provide Business Solutions.</h3>
-
-                        <h5 class="d-flex align-items-center mt-4">24/7 Customer support!</h5>
-                        <p>We provide excellent after sales services & our customer support department is working rigorously (day and night) to help you out.</p>
-
-                        <h5 class="d-flex align-items-center mt-4"> Minimum Risk-More Profit</h5>
-                        <p>We follow the strategies having low risk-reward ratio and highest percentage success rate to assure client's profitability.</p>
-
-
-                        <span> <a href="#calltoday" class="cta-btn align-self-start">Call Today</a> </span>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-                        <div class="img">
-                            <img src="main/dist/indeximage/Stockbuy.png" alt="" class="img-fluid" style="border: 2px solid #1d6c8d;">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Call To Action Section -->
-        <span id="services"></span>
-
-        <!-- ======= Services Section ======= -->
-        <section class="services">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header mview-services" style="margin-top: 10%;">
-                    <h2>Our <b>Services</b></h2>
-                    <p>Tech that matters, Research that wins, Service you deserve.</p>
-                </div>
-
-                <div class="row gy-5" style="margin-top: 10%;">
-
-                    <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="service-item servicemview">
-
-                            <div class="details position-relative">
-                                <div class="icon">
-                                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                                </div>
-                                <span class="stretched-link">
-                                    <h3>Equity</h3>
-                                </span>
-                                <p>PMS Equity offers a wide range of services in the equity market that are appropriate.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="service-item servicemview">
-
-                            <div class="details position-relative">
-                                <div class="icon">
-                                    <i class="fa-solid fa-coins"></i>
-                                </div>
-                                <span class="stretched-link">
-                                    <h3>Commodity</h3>
-                                </span>
-                                <p> PMS Equity offers a comprehensive range of commodity market services for investors.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="service-item servicemview">
-
-                            <div class="details position-relative">
-                                <div class="icon">
-                                    <i class="fa-solid fa-diagram-project"></i>
-                                </div>
-                                <span class="stretched-link">
-                                    <h3>Derivative</h3>
-                                </span>
-                                <p>PMS Equity offers a wide range of Derivative Market services that are ideal for investors.</p>
-                            </div>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="service-item servicemview" style="margin-bottom: 0%;">
-
-                            <div class="details position-relative">
-                                <div class="icon">
-                                    <i class="fa-solid fa-sack-dollar"></i>
-                                </div>
-                                <span class="stretched-link">
-                                    <h3>Forex</h3>
-                                </span>
-                                <p>PMS Equity offers a wide range of Forex Market services that are ideal for investors. </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Service Item -- -->
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Services Section -->
-
-
-        <!-- counter-area -->
-        <div class="container" style="margin-top: 50px;">
-            <div class="row">
-                <br />
-                <div class="col text-center ari-section-header">
-                    <h2>Superior Trading <b>Experience</b></h2>
-                    <p>Get started today to really enjoy your trading experience with PMS Equity.</p>
-                </div>
-
-
-
-            </div>
-            <div style="margin-top: 60px;" class="row text-center">
-                <div class="col-lg-3">
-                    <div class="counter">
-                        <i class="fa-solid fa-users fa-2x"></i>
-                        <h2 class="timer count-title count-number" data-to="35000" data-speed="1500"></h2>
-                        <p class="count-text ">Our Clients</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="counter">
-                        <i class="fa-solid fa-building-user fa-2x"></i>
-                        <h2 class="count-title">15+</h2>
-                        <p class="count-text ">Years of Experience</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="counter">
-                        <i class="fa-solid fa-user-gear fa-2x"></i>
-                        <h2 class="timer count-title count-number" data-to="4500" data-speed="1500"></h2>
-                        <p class="count-text ">Active Monthly Clients</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="counter">
-                        <i class="fa-solid fa-star fa-2x"></i>
-                        <h2 class="count-title">4.5</h2>
-                        <p class="count-text ">Google Ratings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- counter-area-End -->
-
-        <!-- Testimonials -->
-        <section style="margin-top: 8%;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12" style="text-align: center;">
-                        <div class="section-heading" style="margin-bottom: 35px;">
-                            <h6>Testimonials</h6>
-                            <h4 style="font-size: 28px; font-weight: 700; margin-top: 10px;">What Our Investors <b><em>Says</em></b></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="testimonials" id="testimonials">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12" style="text-align: left;">
-                        <div>
-
-                            <div class="item">
-                                <p>“My experience with PMS Equity has been great. I tried multiple brokers, but I found the research and service at the best.”</p>
-                                <h4>Gaurav Patidar</h4>
-                                <span>Delhi, India</span>
-                                <img src="main/dist/indeximage/quote-icon.png" alt="">
-                            </div>
-                            <div class="item">
-                                <p>“I have been associated with PMS Equity for eight years. They are very investor friendly brokerage house and its research adds lots of value to client.”</p>
-                                <h4>Venu Srinivasan</h4>
-                                <span>Chennai, India</span>
-                                <img src="main/dist/indeximage/quote-icon.png" alt="">
-                            </div>
-                            <div class="item">
-                                <p>“I am really happy with my portfolio and service at PMS Equity. The team is very responsive and understands the client's requirement before recommending anything.”</p>
-                                <h4>Ruchi Jain</h4>
-                                <span>Mumbai, India</span>
-                                <img src="main/dist/indeximage/quote-icon.png" alt="">
-                            </div>
-                            <div class="item">
-                                <p>“Been an PMS Equity client for over 6yrs and happy with the service. I have been using their service and it keeps getting better.”</p>
-                                <h4>Rachit Gupta</h4>
-                                <span>Bangalore, India</span>
-                                <img src="main/dist/indeximage/quote-icon.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials-End -->
-
-        <!-- ======= Contact Section ======= -->
-        <!-- <span id="contact"></span> -->
-        <span id="calltoday"></span>
-        <section class="contact  contact-us">
-
-            <div class="container">
-
-                <div class="row gy-5 gx-lg-5">
-
-                    <div class="col-lg-5">
-
-                        <div class="info">
-                            <h3>Get in touch</h3>
-                            <p>Ready to start building wealth? It'll be worth your investment. We promise!</p>
-
-                            <div class="info-item d-flex">
-                                <i class="fa-solid fa-location-dot flex-shrink-0"></i>
-                                <div>
-                                    <h4>Location:</h4>
-                                    <p><?= $rowinfo['address_1'] ?></p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="info-item d-flex">
-                                <i class="fa-solid fa-envelope flex-shrink-0"></i>
-                                <div>
-                                    <h4>Email:</h4>
-                                    <p><?= $rowinfo['email'] ?></p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="info-item d-flex">
-                                <i class="fa-solid fa-phone flex-shrink-0"></i>
-
-                                <div>
-                                    <h4>Call:</h4>
-                                    <p><?= $rowinfo['phone'] ?></p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-                    <div class="col-lg-2 mhidden">
-                    </div>
-
-                    <div class="col-lg-5 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                        <form id="contact" method="post" onsubmit="event.preventDefault();sendForm('', '', 'insertmessage', 'resultid', 'contact');return 0;">
-                            <div class="row">
-                            <h3 style="font-size: 24px; margin-bottom: 20px;">Fill the form</h3>
-                                <div class="col-lg-6">
-                                    <fieldset>
-                                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-6">
-                                    <fieldset>
-                                        <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-5">
-                                    <fieldset>
-                                        <input data-bvalidator="required,minlength[10],maxlength[10]" type="number" name="number" id="number" placeholder="Your Mobile No." required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-7">
-                                    <fieldset>
-                                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                                    </fieldset>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                                    </fieldset>
-                                </div>
-                                <div id="resultid"></div>
-                            </div>
-                            <div class="contact-dec">
-                                <img src="main/dist/indeximage/contact-decoration.png" alt="">
-                            </div>
-                        </form>
-                    </div>
-                    <!-- End Contact Form -->
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Contact Section -->
-
-
-
-
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-                        <p>© Copyright 2008-<script>
-                                document.write(new Date().getFullYear())
-                            </script> PMS Equity Co. | All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-
         </footer>
-        <!-- Scripts -->
-        <script src="main/dist/indexjs/jquery.min.js"></script>
-        <script src="main/dist/indexjs/bootstrap.bundle.min.js"></script>
-        <script src="main/dist/indexjs/owl-carousel.js"></script>
-        <script src="main/dist/indexjs/animation.js"></script>
-        <script src="main/dist/indexjs/imagesloaded.js"></script>
-        <script src="main/dist/indexjs/templatemo-custom.js"></script>
+        <!-- Footer: End -->
+
+
+
+        <!-- Core JS -->
+        <!-- build:js main/dist/landingassets/vendor/js/core.js -->
+        <script src="main/dist/landingassets/js/popper.js.download"></script>
+        <script src="main/dist/landingassets/js/bootstrap.js.download"></script>
+
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+        <script src="main/dist/landingassets/js/nouislider.js.download"></script>
+        <script src="main/dist/landingassets/js/swiper.js.download"></script>
+
+        <!-- Main JS -->
+        <script src="main/dist/landingassets/js/front-main.js.download"></script>
+
+
+        <!-- Page JS -->
+        <script src="main/dist/landingassets/js/front-page-landing.js.download"></script>
+        <script src="main/dist/js/jquery.min.js"></script>
         <script src="main/dist/js/customfunction.js"></script>
         <script src="main/dist/js/jquery.bvalidator-yc.js"></script>
         <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+        <script type="text/javascript" id="">
+            console.log("TS:GTM Worked!");
+        </script>
+        <script type="text/javascript" id="">
+            (function(b, c, d) {
+                var a = b.createElement("script");
+                a.type = "text/javascript";
+                a.src = "https://a.omappapi.com/app/js/api.min.js";
+                a.async = !0;
+                a.dataset.user = c;
+                a.dataset.account = d;
+                b.getElementsByTagName("head")[0].appendChild(a)
+            })(document, 252882, 269977);
+        </script>
+        <div class="modal fade" id="customConfirmModal" tabindex="-1" role="dialog" aria-labelledby="customConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-broswer" role="document">
+                <div class="modal-content browser-model-content">
+                    <div class="modal-body">
+                        Are you sure you want to proceed?
+                    </div>
+                    <div class="modal-footer modal-footer-browser">
+                        <button type="button" class="btn btn-secondary browser-btn browser-btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary browser-btn browser-btn-primary" onclick="handleCustomConfirm(true)">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </body>
 

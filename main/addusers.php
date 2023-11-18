@@ -56,7 +56,8 @@
     <!-- <script src="main/dist/js/init-alpine.js"></script> -->
     <link rel="stylesheet" href="main/plugins/fontawesome-free/css/all.min.css">
     <!-- <link rel="stylesheet" href="main/plugins/jquery-ui/jquery-ui.css"> -->
-
+    <link rel="stylesheet" href="main/plugins/select2/css/select2.min.css?ver=<?php echo time(); ?>">
+    <link rel="stylesheet" href="main/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- <link rel="stylesheet" href="main/dist/css/bvalidator.css"> -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <!-- Default theme -->
@@ -609,14 +610,14 @@
                                             <input type="text" name="lastname" require id="lastname" class="form-control" placeholder="Sharma">
                                         </div>
 
- <div class="col-sm-4">
-                        <label class="form-label" for="select">Gender</label>
-                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                            <option selected="">Select</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                          </select>
-                      </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label" for="select">Gender</label>
+                                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                                                <option selected="">Select</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
 
                                         <div class="col-sm-6">
                                             <label class="form-label" for="multiStepsMobile">Mobile</label>
