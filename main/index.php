@@ -175,7 +175,7 @@ if ($mainpagemaintanance) { ?>
 
 
                         <li>
-                            <a href="#" class="btn btn-primary" target="_blank"><span class="tf-icons bx bx-user me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+                            <a href="login" class="btn btn-primary"><span class="tf-icons bx bx-user me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
                         </li>
                         <!-- navbar button: End -->
                     </ul>
