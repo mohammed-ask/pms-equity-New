@@ -41,7 +41,7 @@
 
                     <div class="mobile-navbar">
                         <ul>
-                            <li class="active">
+                            <li class="<?= $_SERVER['REQUEST_URI'] === '/dashboard' ? 'active' : '' ?>">
                                 <a href="dashboard">
                                     <i class='bx bx-home icon'></i>
                                     <i class='bx bxs-home activeIcon'></i>
@@ -49,28 +49,28 @@
                                 </a>
 
                             </li>
-                            <li>
+                            <li class="<?= $_SERVER['REQUEST_URI'] === '/portfolio' ? 'active' : '' ?>">
                                 <a href="portfolio">
                                     <i class='bx bx-folder-open icon'></i>
                                     <i class='bx bxs-folder-open activeIcon'></i>
                                     <div class="app-navbar-name"><span>Portfolio</span></div>
                                 </a>
                             </li>
-                            <li>
+                            <li class="<?= $_SERVER['REQUEST_URI'] === '/market' ? 'active' : '' ?>">
                                 <a href="market">
                                     <i class='bx bx-bar-chart-alt-2' style="border: 1px solid; border-radius: 10px; padding: 5px; background: #7d2ae826;"></i>
                                     <i class='bx bxs-bar-chart-alt-2 activeIcon'></i>
                                     <div class="app-navbar-name" style="margin-top: 50px;"><span>Market</span></div>
                                 </a>
                             </li>
-                            <li>
+                            <li class="<?= $_SERVER['REQUEST_URI'] === '/fund' ? 'active' : '' ?>">
                                 <a href="fund">
                                     <i class='bx bx-wallet icon'></i>
                                     <i class='bx bxs-wallet activeIcon'></i>
                                     <div class="app-navbar-name"><span>Fund</span></div>
                                 </a>
                             </li>
-                            <li>
+                            <li class="<?= $_SERVER['REQUEST_URI'] === '/mail' ? 'active' : '' ?>">
                                 <a href="mail">
                                     <i class='bx bx-envelope-open icon'></i>
                                     <i class='bx bxs-envelope-open activeIcon'></i>

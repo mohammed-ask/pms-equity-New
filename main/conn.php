@@ -33,29 +33,15 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     $siteurl = "https://" . $_SERVER['HTTP_HOST'] . "/";
     $port = 3306;
     $platform = "test";
-} elseif ($_SERVER['HTTP_HOST'] == 'pms-equity.com' || $_SERVER['HTTP_HOST'] == 'pmsequity.com') {
+} elseif ($_SERVER['HTTP_HOST'] == 'eagleeyetradings.com') {
     if (!defined("BASE_URL")) {
-        define("BASE_URL", "https://pms-equity.com/");
+        define("BASE_URL", "https://eagleeyetradings.com/");
     }
     $host = "localhost";
-    $database_Username = "hc020wtvnu2k";
-    $database_Password = "PMSEquity@1998";
-    $database_Name = "pmsequity";
-    $siteurl = "https://pms-equity.com/";
-    $port = 3306;
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
-
-    $platform = "Production";
-} elseif ($_SERVER['HTTP_HOST'] == 'pmsequity.online') {
-    if (!defined("BASE_URL")) {
-        define("BASE_URL", "https://pms-equity.com/");
-    }
-    $host = "localhost";
-    $database_Username = "u477898878_root";
-    $database_Password = "c3BCQO8P#";
-    $database_Name = "u477898878_pmsequity";
-    $siteurl = "https://pms-equity.com/";
+    $database_Username = "u477898878_eagleeye";
+    $database_Password = "3oD|BvKe*Z[j";
+    $database_Name = "u477898878_eagleeye";
+    $siteurl = "https://eagleeyetradings.com/";
     $port = 3306;
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
@@ -126,17 +112,17 @@ $marketmaintanance = false;
 $portfoliomaintanance = false;
 $adminid = 1;
 define("REQUEST_TOKEN", $requesttoken); //right
-define("APP_NAME", "5P51842644"); //right
-define("CLIENT_CODE", "51842644"); //right
+define("APP_NAME", "5P50442723"); //right
+define("CLIENT_CODE", "50442723"); //right
 define("APP_VERSION", "1.0"); //right
-define("KEY", "GN26BJxQ3LnyNJ5vCi8cJobynsIdMgSp"); //right
+define("KEY", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN"); //right
 define("OS_NAME", "WEB"); //right
-define("USER_ID", "E1k4ZqoZzfz"); //right
-define("PASSWORD", "BYcnrCZnKPV"); //right
+define("USER_ID", "wuxNCXWR30t"); //right
+define("PASSWORD", "fSBMTdpZPWA"); //right
 
 // Market API Details
-define("APP_NAME2", "5P50439284"); //right
-define("CLIENT_CODE2", "50439284"); //right
-define("KEY2", "51uZHJivBrXpGMo3t8ECLW11GbyOlEsK"); //right
-define("USER_ID2", "AZQ6KXRzw5A"); //right
-define("PASSWORD2", "UNfA3hnLH4u"); //right
+define("APP_NAME2", "5P50442723"); //right
+define("CLIENT_CODE2", "50442723"); //right
+define("KEY2", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN"); //right
+define("USER_ID2", "wuxNCXWR30t"); //right
+define("PASSWORD2", "fSBMTdpZPWA"); //right
