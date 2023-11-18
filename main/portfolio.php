@@ -237,32 +237,32 @@ if ($portfoliomaintanance) {
 
     <h6 class="text-muted">Positions</h6>
     <div class="nav-align-top mb-4">
-        <ul class="nav nav-pills mb-3" role="tablist">
+        <ul class="nav nav-pills mb-3" role="tablist" style="gap:10px;">
 
             <li class="nav-item">
-                <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
+                <button style="border: 1px solid #696cff;" type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
                     AI Trades
                 </button>
             </li>
 
             <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Today" aria-controls="navs-pills-top-home" aria-selected="true">
+                <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Today" aria-controls="navs-pills-top-home" aria-selected="true">
                     Indraday
                 </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Carry_Forward" aria-controls="navs-pills-top-profile" aria-selected="false">
+                <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Carry_Forward" aria-controls="navs-pills-top-profile" aria-selected="false">
                     Holding
                 </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-close" aria-controls="navs-pills-top-messages" aria-selected="false">
+                <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-close" aria-controls="navs-pills-top-messages" aria-selected="false">
                     Close
                 </button>
             </li>
 
             <li class="nav-item">
-                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
+                <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
                     Advisor
                 </button>
             </li>
@@ -283,10 +283,10 @@ if ($portfoliomaintanance) {
             <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
 
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
                         <table id="example5" class="table table-hover mb-0">
                             <thead>
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Stocks</th>
                                     <th>Open Time</th>
                                     <th>Close Time</th>
@@ -315,10 +315,10 @@ if ($portfoliomaintanance) {
             <div class="tab-pane fade" id="Today" role="tabpanel">
                 <!-- table -->
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
                         <table id="example1" class="table table-hover mb-0">
                             <thead>
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Stocks</th>
                                     <th>Date</th>
                                     <th>Time</th>
@@ -351,10 +351,10 @@ if ($portfoliomaintanance) {
 
                 <!-- table -->
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
                         <table id="example2" class="table table-hover mb-0">
                             <thead>
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Stocks</th>
                                     <th>Date</th>
                                     <th>Time</th>
@@ -390,10 +390,10 @@ if ($portfoliomaintanance) {
             <div class="tab-pane fade" id="navs-pills-close" role="tabpanel">
                 <!-- table -->
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
                         <table id="example3" class="table table-hover mb-0">
                             <thead>
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Stocks</th>
                                     <th>Open Time</th>
                                     <th>Close Time</th>
@@ -425,10 +425,10 @@ if ($portfoliomaintanance) {
 
                 <!-- table -->
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
                         <table id="example4" class="table table-hover mb-0">
                             <thead>
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Stocks</th>
                                     <th>Open Time</th>
                                     <th>Close Time</th>
@@ -472,11 +472,11 @@ include "main/templete.php"; ?>
         "processing": false,
         "serverSide": true,
         "pageLength": 15,
-        "paging": true,
+        "paging": false,
         "lengthChange": false,
         "searching": false,
         "ordering": true,
-        "info": true,
+        "info": false,
         "autoWidth": false,
         "responsive": true,
         "order": [
@@ -489,11 +489,11 @@ include "main/templete.php"; ?>
         "processing": false,
         "serverSide": true,
         "pageLength": 15,
-        "paging": true,
+        "paging": false,
         "lengthChange": false,
         "searching": false,
         "ordering": true,
-        "info": true,
+        "info": false,
         "autoWidth": false,
         "responsive": true,
         "order": [
@@ -574,11 +574,11 @@ include "main/templete.php"; ?>
         "processing": false,
         "serverSide": true,
         "pageLength": 15,
-        "paging": true,
+        "paging": false,
         "lengthChange": false,
         "searching": false,
         "ordering": true,
-        "info": true,
+        "info": false,
         "autoWidth": false,
         "responsive": true,
         "order": [
@@ -590,11 +590,11 @@ include "main/templete.php"; ?>
         "processing": false,
         "serverSide": true,
         "pageLength": 15,
-        "paging": true,
+        "paging": false,
         "lengthChange": false,
         "searching": false,
         "ordering": true,
-        "info": true,
+        "info": false,
         "autoWidth": false,
         "responsive": true,
         "order": [
@@ -606,11 +606,11 @@ include "main/templete.php"; ?>
         "processing": false,
         "serverSide": true,
         "pageLength": 15,
-        "paging": true,
+        "paging": false,
         "lengthChange": false,
         "searching": false,
         "ordering": true,
-        "info": true,
+        "info": false,
         "autoWidth": false,
         "responsive": true,
         "order": [

@@ -87,10 +87,10 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                 <h3 class="card-title">Deposits</h3>
 
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:350px;">
                         <table id="example1" class="table table-hover table-borderless mb-0">
                             <thead class="d-none">
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Date & Time</th>
                                     <th>Amount</th>
                                     <th>Status</th>
@@ -137,10 +137,10 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
             <div class="card-body" style="padding: 15px 20px;">
                 <h3 class="card-title">Withdrawals</h3>
                 <div>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive text-nowrap" style="height:350px;">
                         <table id="example2" class="table table-hover mb-0 table-borderless">
                             <thead class="d-none">
-                                <tr>
+                                <tr class="sticky-table-header">
                                     <th>Date & Time</th>
                                     <th>Amount</th>
                                     <th>Status</th>
@@ -196,11 +196,11 @@ include "main/templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [
@@ -213,11 +213,11 @@ include "main/templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

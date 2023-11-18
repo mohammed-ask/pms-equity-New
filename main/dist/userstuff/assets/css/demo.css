@@ -352,3 +352,15 @@ width: 45%;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+
+
+/* ------------------------------table header--------------- */
+
+.sticky-table-header{
+  position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+

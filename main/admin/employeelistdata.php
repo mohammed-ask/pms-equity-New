@@ -53,8 +53,8 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  $obj->selectfieldwhere("roles", "name", "id=" . $row['role'] . "");
     $activation = $row['activate'] === 'Yes' ? 'checked' : '';
     if (in_array(41, $permissions)) {
-        $n[] = '<label class="switch">
-    <input type="checkbox" ' . $activation . ' class="setactive" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
+        $n[] = '<label class="form-check form-switch">
+    <input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
     <span class="slider round"></span>
 </label>';
     } else {

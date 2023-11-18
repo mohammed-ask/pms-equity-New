@@ -40,7 +40,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "withdrawalrequests",
     "*",
-    "status in (0,1) and userid = $employeeid $search $order limit $start, $limit"
+    "status in (0,1) and userid = $employeeid $search $order"
 );
 $num = $obj->total_rows($result);
 $data = array();

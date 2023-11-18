@@ -50,7 +50,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "stocktransaction",
     "*",
-    "status = 0 and userid = $id and tradestatus='Open' and type='Holding' and stockid != '' and stockid is not null $search $order limit $start, $limit"
+    "status = 0 and userid = $id and tradestatus='Open' and type='Holding' and stockid != '' and stockid is not null $search $order "
 );
 $num = $obj->total_rows($result);
 $data = array();

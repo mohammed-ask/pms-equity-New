@@ -41,7 +41,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "stocktransaction $join",
     "stocktransaction.id,stocktransaction.symbol,stocktransaction.qty,stocktransaction.price,closetradedetail.price as cprice,stocktransaction.totalamount,stocktransaction.trademethod,stocktransaction.added_on,stocktransaction.mktlot,borrowedprcnt,profitprcnt,totalprofit,profitamount,closetradedetail.added_on as closeon,datetime,closetime,stoplossamt,stoplosstriggred,targettriggred,aitrade",
-    "stocktransaction.status = 1 and stocktransaction.userid = $id and tradestatus='Close' $search $order limit $start, $limit"
+    "stocktransaction.status = 1 and stocktransaction.userid = $id and tradestatus='Close' $search $order "
 );
 $num = $obj->total_rows($result);
 $data = array();
