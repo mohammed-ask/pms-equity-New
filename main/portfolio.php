@@ -212,6 +212,29 @@ if ($portfoliomaintanance) {
     </div>
 
 
+    <div class="card-body card col-lg-5 col-md-6 d-flex my-4 ai-bg-img">
+    
+                          
+                            <div class="flex-grow-1 row">
+                            <div class="col-2" style="padding-right: 3px;"> <img style="width: 110%;" src="main\dist\userstuff\assets\img\AI\ai-robot-5.png" alt="AI"></div>
+                                <div class="col-7 mb-sm-0 mb-0">
+                                
+                                    <h6 class="mb-0" style="color: white; font-weight: 800;">AI Trading Mode <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="You can activate AI Trade Mode between 9:15 AM to 3:00 PM, and once it's on, it will automatically close at 11:30 PM.">
+                                                <i style="color: aliceblue;" class='bx bx-message-rounded-error'></i>
+                                            </button></span></h6>
+                                    <small style="    color: white;
+    font-weight: 700;">Turn On AI Trading Mode</small>
+                                </div>
+                                <div class="col-3 text-end">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input float-end" type="checkbox" role="switch">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
     <h6 class="text-muted">Positions</h6>
     <div class="nav-align-top mb-4">
         <ul class="nav nav-pills mb-3" role="tablist">

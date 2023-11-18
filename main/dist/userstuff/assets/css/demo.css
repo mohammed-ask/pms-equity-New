@@ -208,7 +208,7 @@ display: none !important;}
   .mobile-navbar ul{
     position: relative;
     display: flex;
-    margin-bottom: 0px;
+    margin-bottom: 11px;
     padding-left: 0px;
   }
   .mobile-navbar ul li{
@@ -342,4 +342,13 @@ width: 45%;
 .dash-arrow:hover{
 
   transform: translateX(30%);
+}
+
+
+
+
+.ai-bg-img{
+  background-image: url(../img/backgrounds/ai-bg4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
