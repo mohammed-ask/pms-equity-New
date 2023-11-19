@@ -759,7 +759,7 @@ if ($mainpagemaintanance) { ?>
                         <div class="col-lg-6 text-center text-lg-start">
                             <h6 class="h2 text-primary fw-bold mb-1">Ready to Get Started?</h6>
                             <p class="fw-medium mb-4">Seamless Beginnings Await: Dive into Easy Prosperity. Ready to Get Started with Effortless Wealth Building?</p>
-                            <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/payment-page.html" class="btn btn-primary">Get Started</a>
+                            <a href="register" class="btn btn-primary">Get Started</a>
                         </div>
                         <div class="col-lg-6 pt-lg-5 text-center text-lg-end">
                             <img src="main/dist/landingassets/img/cta-dashboard.png" alt="cta dashboard" class="img-fluid">
@@ -905,10 +905,10 @@ if ($mainpagemaintanance) { ?>
                                     <a href="#landingHero" class="footer-link">Home</a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-link">Login</a>
+                                    <a href="login" class="footer-link">Login</a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-link">Register</a>
+                                    <a href="register" class="footer-link">Register</a>
                                 </li>
                                 <li class="mb-3">
                                     <a href="#landingContact" class="footer-link">Contact us</a>
