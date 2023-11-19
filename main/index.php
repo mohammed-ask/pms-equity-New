@@ -203,7 +203,7 @@ if ($mainpagemaintanance) { ?>
                             <div class="landing-hero-btn d-inline-block position-relative">
                                 <span class="hero-btn-item position-absolute d-none d-md-flex text-heading">Join our platform
                                     <img src="main/dist/landingassets/img/Join-community-arrow.png" alt="Join community arrow" class="scaleX-n1-rtl"></span>
-                                <a href="#landingPricing" class="btn btn-primary">Get Started</a>
+                                <a href="register" class="btn btn-primary">Get Started</a>
                             </div>
                         </div>
                         <div id="heroDashboardAnimation" class="hero-animation-img">
