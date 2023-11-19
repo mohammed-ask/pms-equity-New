@@ -100,6 +100,7 @@ if ($_SESSION['otp'] != $_POST['otp']) {
         $x['type'] = 2;
         $x['role'] = 2;
         $x['longholding'] = 'No';
+        $x['gender'] = $_POST['gender'];
         $userid = $obj->insertnew($tb_name, $x);
         $path = "uploads/userdocs";
         foreach ($_POST["name"] as $key => $value) {

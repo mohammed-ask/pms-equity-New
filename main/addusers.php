@@ -612,10 +612,9 @@
 
                                         <div class="col-sm-4">
                                             <label class="form-label" for="select">Gender</label>
-                                            <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                                <option selected="">Select</option>
-                                                <option value="1">Male</option>
-                                                <option value="2">Female</option>
+                                            <select class="form-select" name="gender" required id="gender" aria-label="Default select example">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
                                             </select>
                                         </div>
 
