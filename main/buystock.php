@@ -1,6 +1,18 @@
 <?php
 include "main/session.php";
 $mrkt = $obj->marketstatus();
+$nsemarket = array_filter($mrkt, function ($data) {
+    if ($data['Exch'] === 'N' && $data['ExchType'] === 'C') {
+        return $data;
+    }
+});
+$commoditymrkt = array_filter($mrkt, function ($data) {
+    if ($data['Exch'] === 'M' && $data['ExchType'] === 'D') {
+        return $data;
+    }
+});
+$nsemarket = array_values($nsemarket);
+$commoditymrkt = array_values($commoditymrkt);
 // $mrkt[0]['MarketStatus'] = 'Open';
 // $mrkt[5]['MarketStatus'] = 'Open';
 $token = $_GET['hakuna'];
@@ -64,9 +76,9 @@ $stockdata = $stockdata[0];
 
                 <div class="row mt-3">
                     <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
-                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
+                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
                     <?php } elseif ($stockdata['Exch'] === 'M') { ?>
-                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $mrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
+                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
                     <?php } ?>
                     <div id="resultid"></div>
                     <!-- <div class="col"> <button type="submit" class="btn btn-primary" style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);">Sell</button>
