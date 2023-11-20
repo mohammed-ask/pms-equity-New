@@ -154,7 +154,7 @@ if ($mainpagemaintanance) { ?>
                                 <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fw-medium active" href="#landingTeam">Team</a>
+                                <a class="nav-link fw-medium active" href="#landingReviews">Reviews</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fw-medium" href="#landingFAQ">FAQ</a>
