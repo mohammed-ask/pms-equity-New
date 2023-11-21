@@ -74,8 +74,8 @@ $stockdata = $stockdata[0];
 
 
 
-                <div class="row mt-3">
-                <div class="col">
+                <div class="row mt-3" style="padding-right: 0px;">
+                <div class="col" style="padding-right: 0px;">
                     <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
                         <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
                     <?php } elseif ($stockdata['Exch'] === 'M') { ?>
@@ -87,11 +87,11 @@ $stockdata = $stockdata[0];
                     </div> -->
                 </div></div>
 
-                <div class="row mt-3 mb-1">
+                <div class="row mt-3 mb-1" style="padding-right: 0px;">
 
                     <div class="col-4 high-low"><span>Req. Fund<br></span> <span id="reqfund" style="color: rgb(54, 53, 53);">₹<?= number_format($lot * $stockdata['LastRate'], 2)  ?></span></div>
                     <div class="col-4 high-low" style="text-align: center;"><span>Margin<br></span> <span style="color: rgb(54, 53, 53);"><?= $usermargin ?>x</span></div>
-                    <div class="col-4 high-low" style="text-align: right;"><span>Avail. Fund<br></span> <span style="color: rgb(54, 53, 53);">₹<?= round($investmentamount) ?></span></div>
+                    <div class="col-4 high-low" style="text-align: right; padding-right:0px;"><span>Avail. Fund<br></span> <span style="color: rgb(54, 53, 53);">₹<?= round($investmentamount) ?></span></div>
                 </div>
             </form>
         </div>
