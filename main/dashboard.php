@@ -236,7 +236,7 @@ if ($dashboardmaintanance) {
                 <div class="col-12 mb-4">
                     <div class="card">
                         <a href="portfolio">
-                            <img width="100%" src="main/dist/userstuff/assets\img\dashboard\ai-trading-dashboard.gif" alt="Credit Card" class="rounded" /></a>
+                            <img width="100%" src="main/dist/userstuff/assets\img\dashboard\ai-trading-dashboard.gif" alt="AI Trade" class="rounded" /></a>
 
                     </div>
                 </div>

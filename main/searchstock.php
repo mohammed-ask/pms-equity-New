@@ -42,8 +42,8 @@ include "main/session.php";
                     <hr>
                 </div>
                 <div class="row mb-4 mt-4">
-                    <div class="col-6">
-                        <small class="text-light fw-medium d-block mb-2" style="color: #435971 !important;">EXCHANGE</small>
+                    <div class="col-lg-6 col-sm-12">
+                        <small class="text-light fw-medium d-block mb-1" style="color: #435971 !important;">EXCHANGE</small>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" checked value="N" type="radio" name="exch" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">NSE</label>
@@ -57,8 +57,8 @@ include "main/session.php";
                             <label class="form-check-label" for="inlineRadio3">MCX</label>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <small class="text-light fw-medium d-block mb-2" style="color: #435971 !important;">TRADE MODE</small>
+                    <div class="col-lg-6 col-sm-12 margin-for-mob">
+                        <small class="text-light fw-medium d-block mb-1" style="color: #435971 !important;">TRADE MODE</small>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" checked value="C" type="radio" name="trademode" id="trademode1" value="option4">
                             <label class="form-check-label" for="inlineRadio4">Cash</label>

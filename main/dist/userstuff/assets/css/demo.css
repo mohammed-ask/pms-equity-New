@@ -324,15 +324,6 @@ width: 45%;
 }
 
 
-@media screen and (min-width: 600px){
-
-  ::-webkit-scrollbar {
-    height: 2px !important; /* You can adjust the width */
-    width: 2px !important;
-  }
-      
-      }
-
 
 
 
@@ -374,3 +365,11 @@ width: 45%;
     z-index: 1;
 }
 
+@media screen and (max-width: 991px){
+
+  .margin-for-mob{
+
+    margin-top: 15px;
+  }
+      
+      }
