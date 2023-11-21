@@ -232,7 +232,7 @@ if ($portfoliomaintanance) {
                     <?php } else { ?>
                         <div class="form-check form-switch" onclick="givealert('<?= $aistat ?>')">
                         <?php } ?>
-                        <input class="form-check-input float-end" type="checkbox" role="switch" disabled <?= $aistat === 'Yes' ? '' : '' ?> name='aitrading' <?= $aistat === 'Yes' ? 'checked' : '' ?> value="<?= $aistat ?>">
+                        <input style="opacity: 1;" class="form-check-input float-end" type="checkbox" role="switch" disabled <?= $aistat === 'Yes' ? '' : '' ?> name='aitrading' <?= $aistat === 'Yes' ? 'checked' : '' ?> value="<?= $aistat ?>">
                         </div>
                     </div>
             </div>
