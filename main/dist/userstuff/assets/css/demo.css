@@ -308,8 +308,8 @@ width: 45%;
 
     /* Style the scrollbar track */
 ::-webkit-scrollbar {
-  height: 5px !important; /* You can adjust the width */
-  width: 5px !important;
+  height: 2px !important; /* You can adjust the width */
+  width: 2px !important;
 }
 
 /* Style the scrollbar thumb (the draggable part) */
@@ -323,6 +323,15 @@ width: 45%;
   background-color: #696cff; /* Change this to the hover color you want */
 }
 
+
+@media screen and (min-width: 600px){
+
+  ::-webkit-scrollbar {
+    height: 2px !important; /* You can adjust the width */
+    width: 2px !important;
+  }
+      
+      }
 
 
 
@@ -362,5 +371,6 @@ width: 45%;
   position: sticky;
     top: 0;
     background-color: #efefff;
+    z-index: 1;
 }
 

@@ -296,7 +296,7 @@ if ($portfoliomaintanance) {
                                         <th>Open Time</th>
                                         <th>Close Time</th>
                                         <th>Lot</th>
-                                        <th>Quantity</th>
+                                        <th>Qty.</th>
                                         <th>Buy Price</th>
                                         <th>Sell Price</th>
                                         <th>Total</th>
@@ -328,7 +328,7 @@ if ($portfoliomaintanance) {
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>Lot</th>
-                                        <th>Quantity</th>
+                                        <th>Qty.</th>
                                         <th>Buy Price</th>
                                         <th>Total</th>
                                         <th>Current Price</th>
@@ -364,7 +364,7 @@ if ($portfoliomaintanance) {
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>Lot</th>
-                                        <th>Quantity</th>
+                                        <th>Qty.</th>
                                         <th>Buy Price</th>
                                         <th>Total</th>
                                         <th>Current Price</th>
@@ -403,7 +403,7 @@ if ($portfoliomaintanance) {
                                         <th>Open Time</th>
                                         <th>Close Time</th>
                                         <th>Lot</th>
-                                        <th>Quantity</th>
+                                        <th>Qty.</th>
                                         <th>Buy Price</th>
                                         <th>Sell Price</th>
                                         <th>Total</th>
@@ -438,7 +438,7 @@ if ($portfoliomaintanance) {
                                         <th>Open Time</th>
                                         <th>Close Time</th>
                                         <th>Lot</th>
-                                        <th>Quantity</th>
+                                        <th>Qty.</th>
                                         <th>Buy Price</th>
                                         <th>Sell Price</th>
                                         <th>Total</th>

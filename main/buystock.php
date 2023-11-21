@@ -49,14 +49,14 @@ $stockdata = $stockdata[0];
 
             </div>
             <div class="mt-3" style="font-size: 14px;"> <span style="font-weight: 700; margin-right: 5px;">Default Lot:</span> <?= $lot ?> </div>
-            <form class="row gy-2 gx-3 align-items-end" id="buystock">
+            <form class="row" id="buystock">
                 <input type="hidden" name="symbol" value="<?= $stockdata['Symbol'] ?>" id="">
                 <input type="hidden" name="exchange" value="<?= $stockdata['Exch'] ?>" id="">
                 <input type="hidden" name="exchangetype" value="<?= $stockdata['ExchType'] ?>" id="">
                 <input type="hidden" name="stockid" value="<?= $id ?>" id="">
                 <input type="hidden" name="totalamount" id="totalamount" value="<?= $lot * $stockdata['LastRate'] ?>">
                 <input type="hidden" data-bvalidator='required' readonly name="lot" type="number" id="lot" onclick="this.select();" value="<?= $lot ?>" class="form-control form-control-sm">
-                <div class="row g-2 mt-2">
+                <div class="row mt-2">
                     <div class="col-4 mb-0">
                         <label for="stock" class="form-label mb-0">Lot/Qty</label>
                         <input type="text" data-bvalidator='required' name="qty" type="number" id="qty" onkeyup="sumfund()" onclick="this.select();" value="1" class="form-control p-1" />
@@ -78,7 +78,7 @@ $stockdata = $stockdata[0];
                     <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
                         <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
                     <?php } elseif ($stockdata['Exch'] === 'M') { ?>
-                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
+                        <div class="col"><button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button></div>
                     <?php } ?>
                     <div id="resultid"></div>
                     <!-- <div class="col"> <button type="submit" class="btn btn-primary" style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);">Sell</button>
