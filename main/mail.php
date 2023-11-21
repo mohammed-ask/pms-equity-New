@@ -221,10 +221,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                                 <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachment</label>
                                                 <input type="file" name="file-input" class="d-none" id="attach-file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed">
                                             </div>
-                                            <<<<<<< Updated upstream <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i>Attachment</label>
-                                                <input type="file" name="file-input" class="d-none" id="attach-file">
-                                                =======
-                                                >>>>>>> Stashed changes
+
                                         </div>
                                     </div>
                                 </form>
