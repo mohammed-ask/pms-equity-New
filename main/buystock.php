@@ -77,7 +77,7 @@ $stockdata = $stockdata[0];
                 <div class="row mt-3" style="padding-right: 0px;">
                 <div class="col" style="padding-right: 0px;">
                     <?php if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
-                        <button style="width: 100%; background-color: rgb(213, 9, 9); border-color: rgb(213, 9, 9);" <?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
+                        <button style="width: 100%; background-color: #55bc1d; border-color: #55bc1d;" <?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
                     <?php } elseif ($stockdata['Exch'] === 'M') { ?>
                         
                             <button style="width: 100%; background-color: #55bc1d; border-color: #55bc1d;" <?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $investmentamount > 0 && $commoditymrkt[5]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertbuystock\', \'resultid\', \'buystock\')' : ''; ?>">BUY</button>
