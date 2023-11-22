@@ -288,28 +288,34 @@ if ($portfoliomaintanance) {
                 <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
 
                     <div>
-                        <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
-                            <table id="example5" class="table table-hover mb-0">
-                                <thead>
-                                    <tr class="sticky-table-header">
-                                        <th>Stocks</th>
-                                        <th>Open Time</th>
-                                        <th>Close Time</th>
-                                        <th>Lot</th>
-                                        <th>Qty.</th>
-                                        <th>Buy Price</th>
-                                        <th>Sell Price</th>
-                                        <th>Total</th>
-                                        <th>Buy/Sell</th>
-                                        <th>P&L%</th>
-                                        <th>P&L Amt</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-border-bottom-0">
-                                </tbody>
-                            </table>
-                        </div>
+                        <?php
+                        if ($aistat === 'Yes') { ?>
+                            <img src="main/images/AI-is-Trading.gif" style="width: 100%;width: 100%;border-radius: 5px; margin-top: 10px;" />
+                        <?php } else { ?>
+                            <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
+
+                                <table id="example5" class="table table-hover mb-0">
+                                    <thead>
+                                        <tr class="sticky-table-header">
+                                            <th>Stocks</th>
+                                            <th>Open Time</th>
+                                            <th>Close Time</th>
+                                            <th>Lot</th>
+                                            <th>Qty.</th>
+                                            <th>Buy Price</th>
+                                            <th>Sell Price</th>
+                                            <th>Total</th>
+                                            <th>Buy/Sell</th>
+                                            <th>P&L%</th>
+                                            <th>P&L Amt</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-border-bottom-0">
+                                    </tbody>
+                                </table>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
 

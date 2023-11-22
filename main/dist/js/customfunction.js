@@ -628,10 +628,10 @@ function sendForm(custom, value, target, rid, formid, tiny) {
                             $('textarea').focus(function () {
                                 current = this;
                             });
-                            alertify.alert('Result', res[0], function () {
+                            // alertify.alert('Result', res[0], function () {
 
-                                window.location.href = url2;
-                            });
+                            window.location.href = url2;
+                            // });
 
                         } else if (oReq.responseText.indexOf("CALLBACK :") != -1) {
                             var rs = oReq.responseText.replace('CALLBACK :', 'Success :');

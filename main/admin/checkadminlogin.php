@@ -36,6 +36,17 @@ if ($num) {
                 $log['userid'] = $_SESSION['userid'];
                 $log['datetime'] = date('Y-m-d H:i:s');
                 $log['status'] = 1;
+                $userData = array(
+                    'username' => $row['name'],
+                    'useremail' => $row['email'],
+                    'userid' => $row['id'],
+                    'role' => $row['role'],
+                    'type' => $row['type'],
+                    'name' => $row['name'],
+                );
+
+                $cookieData = json_encode($userData);
+                setcookie('userData', $cookieData, time() + (86400 * 30), '/');
                 $obj->insertnew('loginlog', $log);
                 echo "Redirect : Logged in SuccessfullyURLindex";
             }

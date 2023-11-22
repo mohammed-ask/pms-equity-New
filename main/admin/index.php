@@ -31,7 +31,7 @@ if (in_array(34, $permissions)) {
                             New view
                         </a>
                     </span> -->
-                        <a href="#" class="btn btn-primary d-none d-sm-inline-block py-2" data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")'>
+                        <a href="#" class="btn btn-primary d-none d-sm-inline-block py-2" data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("", "addstock", "", "Add New Stock")'>
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg style="display: inline; " xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -71,14 +71,14 @@ if (in_array(34, $permissions)) {
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                            <span style="font-weight: 600;"><?= $activeclient ?></span>
+                                                <span style="font-weight: 600;"><?= $activeclient ?></span>
                                             </div>
                                             <div class="" style="font-weight: 500;">
-                                            <a style="color: #182433;" href="users">Active Client</a>
+                                                <a style="color: #182433;" href="users">Active Client</a>
                                             </div>
                                         </div>
 
-                                       
+
                                     </div>
                                 </div>
                             </div>
@@ -122,15 +122,15 @@ if (in_array(34, $permissions)) {
                                             </span>
                                         </div>
                                         <div class="col">
-                                        <div class="col">
-                                            <div class="font-weight-medium">
-                                            <span style="font-weight: 600;"><?= $pendinguser ?></span> 
+                                            <div class="col">
+                                                <div class="font-weight-medium">
+                                                    <span style="font-weight: 600;"><?= $pendinguser ?></span>
+                                                </div>
+                                                <div class="" style="font-weight: 500;">
+                                                    <a style="color: #182433;" href="pendingapproval">Pending Users</a>
+                                                </div>
                                             </div>
-                                            <div class="" style="font-weight: 500;">
-                                            <a style="color: #182433;" href="pendingapproval">Pending Users</a>
-                                            </div>
-                                        </div>
-                                          
+
                                         </div>
                                     </div>
                                 </div>
