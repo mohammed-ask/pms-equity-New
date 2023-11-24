@@ -3,6 +3,8 @@ include "main/session.php";
 if (isset($_GET['RequestToken']) && !empty($_GET['RequestToken'])) {
     $obj->getaccesstoken();
 }
+$investamt = $obj->selectfieldwhere("stocktransaction", "sum(totalamount)", "userid=$employeeid and status = 0 and tradestatus = 'Open'");
+$investamt = empty($investamt) ? 0 : $investamt;
 $fetchshare = $obj->selectextrawhereupdate('userstocks inner join watchliststock on watchliststock.userstockid = userstocks.id', "Exch,ExchType,userstocks.Symbol,Expiry,StrikePrice,OptionType", "userstocks.userid='" . $employeeid . "' and userstocks.status = 1 and watchliststock.status = 1");
 $rowfetch = mysqli_fetch_all($fetchshare, 1);
 array_push($rowfetch, ["Exch" => "N", "ExchType" => "C", "Symbol" => "NIFTY", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""], ["Exch" => "B", "ExchType" => "C", "Symbol" => "SENSEX", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""], ["Exch" => "N", "ExchType" => "C", "Symbol" => "ZOMATO", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""], ["Exch" => "N", "ExchType" => "C", "Symbol" => "INFY", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""], ["Exch" => "N", "ExchType" => "C", "Symbol" => "M&M", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""], ["Exch" => "N", "ExchType" => "C", "Symbol" => "RELIANCE", "Expiry" => "", "StrikePrice" => "0", "OptionType" => ""]);
@@ -91,13 +93,14 @@ if ($dashboardmaintanance) {
         <div class="col-lg-4 col-md-4 order-1">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-6 mb-4">
-                <a href="portfolio"> <div class="card">
-                        <div class="card-body">
-                            <div class="card-title d-flex align-items-start justify-content-between">
-                                <div class="avatar flex-shrink-0">
-                                    <img src="main/dist/userstuff/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
-                                </div>
-                                <!-- <div class="dropdown">
+                    <a href="portfolio">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-start justify-content-between">
+                                    <div class="avatar flex-shrink-0">
+                                        <img src="main/dist/userstuff/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
+                                    </div>
+                                    <!-- <div class="dropdown">
                                     <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
@@ -106,27 +109,30 @@ if ($dashboardmaintanance) {
 
                                     </div>
                                 </div> -->
+                                </div>
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Profit</span>
+                                <h3 class="card-title mb-2">₹0</h3>
+                                <small class="text-success fw-medium"><i style="background-color: #eefbe7;     color: #76d344;" class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>
-                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Profit</span>
-                            <h3 class="card-title mb-2">₹12,628</h3>
-                            <small class="text-success fw-medium"><i style="background-color: #eefbe7;     color: #76d344;" class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
                 <div class="col-lg-6 col-md-12 col-6 mb-4">
-                    <a href="fund"><div class="card">
-                        <div class="card-body">
-                            <div class="card-title d-flex align-items-start justify-content-between">
-                                <div class="avatar flex-shrink-0">
-                                    <img src="main/dist/userstuff/assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded" />
+                    <a href="fund">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-start justify-content-between">
+                                    <div class="avatar flex-shrink-0">
+                                        <img src="main/dist/userstuff/assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded" />
+                                    </div>
+
                                 </div>
-                              
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Fund</span>
+                                <h3 class="card-title text-nowrap mb-2">₹<?= round($investmentamount) ?></h3>
+                                <small class="text-success fw-medium"><i style="background-color: #e0f7fc;     color: #11c6ed;" class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>
-                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Fund</span>
-                            <h3 class="card-title text-nowrap mb-2">₹4,679</h3>
-                            <small class="text-success fw-medium"><i style="background-color: #e0f7fc;     color: #11c6ed;" class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -137,42 +143,45 @@ if ($dashboardmaintanance) {
                     <div class="col-md-12">
                         <div class="row mb-3">
                             <div class="col-lg-6 col-md-12">
-                            <div class="row">
-                            <div class="col-6" style="padding-left: 30px;">
+                                <div class="row">
+                                    <div class="col-6" style="padding-left: 30px;">
 
-                                <div>
-                                    <label class="col-form-label">From</label>
-                                    <div>
-                                        <input class="form-control" type="date" id="startdatee" name="startdate" value="<?php echo date('Y-m-d'); ?>" />
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-6" style="padding-right: 30px;">
-                                <div>
-                                    <label class="col-form-label">To</label>
-                                    <div>
-                                        <input class="form-control" type="date" id="enddate" name="enddate" value="<?php echo date('Y-m-d'); ?>" />
-                                    </div>
-                                </div>
-
-                            </div></div></div>
-                           <div class="col-lg-6 col-md-12"> <div>
-                                <div>
-
-                                    <div class="text-center">
-                                        <label for="html5-date-input" class="col-form-label">Interval</label>
-                                        <div class="offset-md-1 col-auto">
-                                            <div class="toolbar">
-                                                <button class="btn btn-sm btn-outline-light" style="color: lightgray;" onclick="getactive(this.id)" id="one_month">1m</button>
-                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light active" onclick="getactive(this.id)" id="six_months">5m</button>
-                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light " onclick="getactive(this.id)" id="one_year">15m</button>
-                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="ytd">60m</button>
-                                                <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="all">1d</button>
+                                        <div>
+                                            <label class="col-form-label">From</label>
+                                            <div>
+                                                <input class="form-control" type="date" id="startdatee" name="startdate" value="<?php echo date('Y-m-d'); ?>" />
                                             </div>
-                                        </div><!--end col-->
-                                        <!-- <div class="dropdown">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-6" style="padding-right: 30px;">
+                                        <div>
+                                            <label class="col-form-label">To</label>
+                                            <div>
+                                                <input class="form-control" type="date" id="enddate" name="enddate" value="<?php echo date('Y-m-d'); ?>" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div>
+                                    <div>
+
+                                        <div class="text-center">
+                                            <label for="html5-date-input" class="col-form-label">Interval</label>
+                                            <div class="offset-md-1 col-auto">
+                                                <div class="toolbar">
+                                                    <button class="btn btn-sm btn-outline-light" style="color: lightgray;" onclick="getactive(this.id)" id="one_month">1m</button>
+                                                    <button style="color: lightgray;" class="btn btn-sm btn-outline-light active" onclick="getactive(this.id)" id="six_months">5m</button>
+                                                    <button style="color: lightgray;" class="btn btn-sm btn-outline-light " onclick="getactive(this.id)" id="one_year">15m</button>
+                                                    <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="ytd">60m</button>
+                                                    <button style="color: lightgray;" class="btn btn-sm btn-outline-light" onclick="getactive(this.id)" id="all">1d</button>
+                                                </div>
+                                            </div><!--end col-->
+                                            <!-- <div class="dropdown">
 
                                             <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="growthReportId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 8px;padding-bottom: 8px;">
                                                 One Day
@@ -185,9 +194,10 @@ if ($dashboardmaintanance) {
                                                 <a class="dropdown-item" href="javascript:void(0);">Five Year</a>
                                             </div>
                                         </div> -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div></div>
+                            </div>
 
                         </div>
                         <div id="container"></div>
@@ -201,35 +211,39 @@ if ($dashboardmaintanance) {
         <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
             <div class="row">
                 <div class="col-6 mb-4">
-                <a href="portfolio">  <div class="card">
-                        <div class="card-body">
-                            <div class="card-title d-flex align-items-start justify-content-between">
-                                <div class="avatar flex-shrink-0">
-                                    <img src="main/dist/userstuff/assets/img/icons/unicons/loss.png" alt="Credit Card" class="rounded" />
+                    <a href="portfolio">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-start justify-content-between">
+                                    <div class="avatar flex-shrink-0">
+                                        <img src="main/dist/userstuff/assets/img/icons/unicons/loss.png" alt="Credit Card" class="rounded" />
+                                    </div>
+
                                 </div>
-                               
-                            </div>
-                            <span style="color:#697A8D;" class="d-block mb-1">Loss</span>
-                            <h3 class="card-title text-nowrap mb-2">₹2,456</h3>
-                            <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
+                                <span style="color:#697A8D;" class="d-block mb-1">Loss</span>
+                                <h3 class="card-title text-nowrap mb-2">₹0</h3>
+                                <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
 " class='dash-arrow bx bx-chevron-right'></i></small>
+                            </div>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
                 <div class="col-6 mb-4">
-                <a href="portfolio">  <div class="card">
-                        <div class="card-body">
-                            <div class="card-title d-flex align-items-start justify-content-between">
-                                <div class="avatar flex-shrink-0">
-                                    <img src="main/dist/userstuff/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                    <a href="portfolio">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-start justify-content-between">
+                                    <div class="avatar flex-shrink-0">
+                                        <img src="main/dist/userstuff/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                                    </div>
+
                                 </div>
-                               
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Invested</span>
+                                <h3 class="card-title mb-2">₹<?= round($investamt) ?></h3>
+                                <small class="text-success fw-medium"><i class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>
-                            <span style="color:#697A8D;" class="fw-medium d-block mb-1">Invested</span>
-                            <h3 class="card-title mb-2">₹14,857</h3>
-                            <small class="text-success fw-medium"><i class='dash-arrow bx bx-chevron-right'></i></small>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
                 <!-- </div>
 <div class="row"> -->
@@ -267,17 +281,17 @@ include "main/templete.php"; ?>
     var chartData = <?php echo json_encode($chart_data); ?>;
     Highcharts.chart('container', {
         title: {
-        text: 'Nifty Index',
-        style: {
-            color: '#4b4b4b',
-            fill: '#4b4b4b',       // Change the text color
-            fontSize: '16px',    // Change the font size
-            fontWeight: '600',
-            fontFamily:'Public Sans'   // Make the text bold
-            // You can add more CSS properties as needed
-        }
-    },
-    // Your other chart configuration options go here
+            text: 'Nifty Index',
+            style: {
+                color: '#4b4b4b',
+                fill: '#4b4b4b', // Change the text color
+                fontSize: '16px', // Change the font size
+                fontWeight: '600',
+                fontFamily: 'Public Sans' // Make the text bold
+                // You can add more CSS properties as needed
+            }
+        },
+        // Your other chart configuration options go here
 
         xAxis: {
             type: 'datetime',

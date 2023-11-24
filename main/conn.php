@@ -105,7 +105,7 @@ if ($dayOfWeek >= 1 && $dayOfWeek <= 5) {
     }
 }
 $timeskip = ($platform == "test") ?  '+00:00' : '+5:30';
-$apiinterval = 20000;
+$apiinterval = 6000;
 $mainpagemaintanance = false;
 $dashboardmaintanance = false;
 $marketmaintanance = false;

@@ -46,13 +46,13 @@ $stockdata = $price[0];
     <label class="block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Date &
             Time</span>
-        <input id="date" name="closetime" onfocus="datetimepicker(this.id)" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Select Date & Time" data-bvalidator='required' />
+        <input id="date" name="closetime" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Date & Time" data-bvalidator='required' />
     </label>
     <label class="block text-sm mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Buy/Sell Price</span>
-        <input name="qty" class="hidden" value="<?= $rowtran['qty'] ?>" />
-        <input name="userid" class="hidden" value="<?= $rowtran['userid'] ?>" />
-        <input name="cprice" data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="<?= $stockdata['LastTradedPrice'] ?>" />
+        <input name="qty" hidden value="<?= $rowtran['qty'] ?>" />
+        <input name="userid" hidden value="<?= $rowtran['userid'] ?>" />
+        <input name="cprice" data-bvalidator="required" class="form-control" value="<?= $stockdata['LastTradedPrice'] ?>" />
     </label>
     <br>
     <div>
