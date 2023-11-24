@@ -58,8 +58,10 @@ include "main/session.php";
 }
 
 </style>
-<form style="overflow-x: hidden;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertaddstock', 'resultid', 'adduser');return 0;">
-    <div class="mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
+<form style="overflow-x: hidden; padding:10px;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertaddstock', 'resultid', 'adduser');return 0;">
+
+<div class="row">
+    <div class=" col-6 mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Select Client</span>
 
         </label>
@@ -74,7 +76,7 @@ include "main/session.php";
             } ?>
         </select>
     </div>
-    <div class="mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
+    <div class=" col-6 mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Trade By</span>
 
         </label>
@@ -83,7 +85,9 @@ include "main/session.php";
             <option value="Brocker">Advisor</option>
             <option value="AI">AI Mode</option>
         </select>
-    </div>
+    </div></div>
+
+
     <div class="row">
         <div class="col-6 mb-2">
             <label for="buy" class="block text-sm" data-toggle="dropdown" style="margin-bottom: 5px;">
@@ -138,35 +142,32 @@ include "main/session.php";
         </div>
     </div>
 
-    <label class="block text-sm" style="margin-bottom: 5px;">
-        <div style="display: inline-flex;"> <span class="text-gray-700 dark:text-gray-400">Stock
-                Name</span> <span class="col-2 tooltip"><i style="color: #057c7c;" class="fa-solid fa-circle-info"></i>
-                <span class="tooltiptext">In case you search for Derivative, write like:<br>
-                    <b>Option Type-</b> NIFTY 23 May 2023 PE 2345263.00<br>
-                    [ STOCK Date of Expiry Option Type (PE/CE) Strike Price ]
-                    <br><br>
-                    <span><b>For Futures-</b> COPPER 23 May 2023<br>
-                        [ STOCK Date of Expiry ]</span>
-        </span>
-            </span> </div>
-
-
-
+    <div class="row">
+    <div class="col-lg-6 col-md-6 mb-2">
+    <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
+    <span class="text-gray-700 dark:text-gray-400">Stock Name</span>
         <input type="text" name="symbol" id="symbol" class="form-control" placeholder="Enter Stock Name" data-bvalidator="required" />
+    </label></div>
+
+   <div class="col-lg-6 col-md-6 mb-2"> <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
+        <span class="text-gray-700 dark:text-gray-400"> Buy/Sell Date &
+            Time</span>
+        <input id="date" name="datetime" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Date & Time" data-bvalidator='required' />
     </label>
 
+    </div></div>
 
 
 
     <div class="row" id="getmargin">
         <div class="col-6 mb-2">
-            <label class="block text-sm" style="margin-bottom: 5px;">
+            <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
                 <span class="text-gray-700 dark:text-gray-400"> Fund</span>
                 <input class="disabled form-control" data-bvalidator='required' />
             </label>
         </div>
         <div class="col-6 mb-2">
-            <label class="block text-sm" style="margin-bottom: 5px;">
+            <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
                 <span class="text-gray-700 dark:text-gray-400"> Margin</span>
                 <input name="margin" class="form-control" data-bvalidator='required' />
             </label>
@@ -185,7 +186,7 @@ include "main/session.php";
         </label>
 
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-            <span class="text-gray-700 dark:text-gray-400">Buy/Sell Price(each)</span>
+            <span class="text-gray-700 dark:text-gray-400">Price(each)</span>
             <input name="price" id="shareprice" onkeyup="gettotalamt()" class="form-control" placeholder="Buy/Sell Price" data-bvalidator='required' />
         </label>
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
@@ -195,11 +196,7 @@ include "main/session.php";
     </div>
 
 
-    <label class="block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Date &
-            Time</span>
-        <input id="date" name="datetime" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Date & Time" data-bvalidator='required' />
-    </label>
+   
 
     <div>
         <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium d-none">
