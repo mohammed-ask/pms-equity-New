@@ -29,6 +29,34 @@ include "main/session.php";
         background-color: #ddd;
         color: #333;
     }
+
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 </style>
 <form style="overflow-x: hidden;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertaddstock', 'resultid', 'adduser');return 0;">
     <div class="mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
@@ -112,14 +140,14 @@ include "main/session.php";
 
     <label class="block text-sm" style="margin-bottom: 5px;">
         <div style="display: inline-flex;"> <span class="text-gray-700 dark:text-gray-400">Stock
-                Name</span> <span class="col-2 profile-tooltip"><i style="color: #057c7c;" class="fa-solid fa-circle-info"></i>
-                <p class="profile-tooltiptext">In case you search for Derivative, write like:<br>
+                Name</span> <span class="col-2 tooltip"><i style="color: #057c7c;" class="fa-solid fa-circle-info"></i>
+                <span class="tooltiptext">In case you search for Derivative, write like:<br>
                     <b>Option Type-</b> NIFTY 23 May 2023 PE 2345263.00<br>
                     [ STOCK Date of Expiry Option Type (PE/CE) Strike Price ]
                     <br><br>
                     <span><b>For Futures-</b> COPPER 23 May 2023<br>
                         [ STOCK Date of Expiry ]</span>
-                </p>
+        </span>
             </span> </div>
 
 
