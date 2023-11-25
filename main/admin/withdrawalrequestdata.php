@@ -58,7 +58,7 @@ while ($row = $obj->fetch_assoc($result)) {
         '1' => 'Approved',
         default => 'Rejected',
     };
-    $n[] = "<div class='flex items-center space-x-4 text-sm'><button  class='btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['userid'] . "\", \"viewbankdetails\", \"\", \"Client Bank Details\")'  aria-label='Go'>
+    $n[] = "<div class='flex items-center space-x-4 text-sm'><button  class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['userid'] . "\", \"viewbankdetails\", \"\", \"Client Bank Details\")'  aria-label='Go'>
     <span >Bank Detail</span>
 </button></div>";
     $adddata = "";
@@ -84,9 +84,3 @@ while ($row = $obj->fetch_assoc($result)) {
 }
 $return['data'] = $data;
 echo json_encode($return);
-
-
-
-
-
-

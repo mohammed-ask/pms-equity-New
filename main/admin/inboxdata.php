@@ -50,7 +50,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
     $n[] = $obj->selectfieldwhere("users", "email", "id=" . $row['senderid'] . "");
     $n[] =  $row['subject'];
-    $n[] =  "<button class='btn' aria-label='view' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewmaildetail\", \"\", \"View Mail\")'>
+    $n[] =  "<button class='btn' aria-label='view' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewmaildetail\", \"\", \"View Mail\")'>
     view
 </button>";
     $n[] = $row['readstatus'];
