@@ -102,7 +102,7 @@ if (in_array(34, $permissions)) {
                                                 <span style="font-weight: 600;"><?= $totalinv ?></span>
                                             </div>
                                             <div class="" style="font-weight: 500;">
-                                                Total Investment
+                                                Total Investments
                                             </div>
                                         </div>
                                     </div>
