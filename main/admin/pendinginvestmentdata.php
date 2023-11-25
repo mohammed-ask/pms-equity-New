@@ -54,7 +54,7 @@ while ($row = $obj->fetch_assoc($result)) {
   $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M,Y H:i");
   $n[] =  "<strong>" . $currencysymbol . $row['amount'] . "</strong>";
   // $n[] =  $row['remark'];
-  $n[] =  $n[] =  ' <a target="_blank"  href="../' . $obj->fetchattachment($row["paymentmethod"]) . '"><img style="height:200px;width:200px" src="../' . $obj->fetchattachment($row["paymentmethod"]) . '" /></a ';
+  $n[]  =  ' <a target="_blank"  href="../' . $obj->fetchattachment($row["paymentmethod"]) . '"><img style="height:200px;width:200px" src="../' . $obj->fetchattachment($row["paymentmethod"]) . '" /></a ';
   $appdata = "";
   if (in_array(37, $permissions)) {
     $appdata =  " <div class='dropdown'>
