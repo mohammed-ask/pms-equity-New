@@ -180,7 +180,7 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
         <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
     </label>
 
-    <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium btn btn-primary ">
+    <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium btn btn-primary d-none">
         Submit
     </button>
     </div>

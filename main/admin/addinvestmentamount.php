@@ -23,7 +23,7 @@ $id = $_GET['hakuna'];
         <input name="paymentmethod" type="file" data-bvalidator="required" step="any" class="form-control" placeholder="Payment Method" />
     </label>
     <div>
-        <button type="submit" id="modalsubmit" class="btn btn-primary w-full px-3 py-1 mt-6 text-sm font-medium">
+        <button type="submit" id="modalsubmit" class="btn btn-primary w-full px-3 py-1 mt-6 text-sm font-medium d-none">
             Submit
         </button>
     </div>
