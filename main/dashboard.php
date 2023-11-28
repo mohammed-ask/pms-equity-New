@@ -3,6 +3,15 @@ include "main/session.php";
 if (isset($_GET['RequestToken']) && !empty($_GET['RequestToken'])) {
     $obj->getaccesstoken();
 }
+//Total fund deposited
+$fundadded = $obj->selectfieldwhere("fundrequest", 'sum(amount)', "userid=" . $employeeid . " and status = 1");
+$fundadded = empty($fundadded) ? 0 : $fundadded;
+
+//Total Fund withdrawal
+$fundwithdraw = $obj->selectfieldwhere("withdrawalrequests", 'sum(amount)', "userid=" . $employeeid . " and status = 1");
+$fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
+
+// Amount Invested in stock
 $investamt = $obj->selectfieldwhere("stocktransaction", "sum(totalamount)", "userid=$employeeid and status = 0 and tradestatus = 'Open'");
 $investamt = empty($investamt) ? 0 : $investamt;
 $fetchshare = $obj->selectextrawhereupdate('userstocks inner join watchliststock on watchliststock.userstockid = userstocks.id', "Exch,ExchType,userstocks.Symbol,Expiry,StrikePrice,OptionType", "userstocks.userid='" . $employeeid . "' and userstocks.status = 1 and watchliststock.status = 1");
@@ -110,8 +119,8 @@ if ($dashboardmaintanance) {
                                     </div>
                                 </div> -->
                                 </div>
-                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Profit</span>
-                                <h3 class="card-title mb-2">₹0</h3>
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Total Deposited</span>
+                                <h3 class="card-title mb-2">₹<?= $fundadded ?></h3>
                                 <small class="text-success fw-medium"><i style="background-color: #eefbe7;     color: #76d344;" class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>
                         </div>
@@ -220,8 +229,8 @@ if ($dashboardmaintanance) {
                                     </div>
 
                                 </div>
-                                <span style="color:#697A8D;" class="d-block mb-1">Loss</span>
-                                <h3 class="card-title text-nowrap mb-2">₹0</h3>
+                                <span style="color:#697A8D;" class="d-block mb-1">Total Widthrawal</span>
+                                <h3 class="card-title text-nowrap mb-2">₹<?= $fundwithdraw ?></h3>
                                 <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
 " class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>

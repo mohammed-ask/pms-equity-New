@@ -160,10 +160,15 @@
                     </a>
                   <?php } ?>
                   <?php if (in_array(23, $permissions)) { ?>
+                    <a class="dropdown-item" href="holdingtransactions">
+                      Holding Positions
+                    </a>
+                  <?php } ?>
+                  <!-- <?php if (in_array(23, $permissions)) { ?>
                     <a class="dropdown-item" href="alltransactions">
                       All Positions
                     </a>
-                  <?php } ?>
+                  <?php } ?> -->
                   <?php if (in_array(23, $permissions)) { ?>
                     <a class="dropdown-item" href="closetrades">
                       Close Positions

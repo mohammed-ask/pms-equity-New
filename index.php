@@ -222,6 +222,9 @@ switch ($request['path']) {
     case "$head/admin/userdocs";
         require __DIR__ . '/main/admin/userdocs.php';
         break;
+    case "$head/admin/holdingtransactions";
+        require __DIR__ . '/main/admin/holdingtransactions.php';
+        break;
     case "$head/admin/logout";
         require __DIR__ . '/main/logout.php';
         break;

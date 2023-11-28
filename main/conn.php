@@ -54,8 +54,8 @@ date_default_timezone_set('Asia/Kolkata');
 $obj = new db($host, $database_Username, $database_Password, $database_Name, $port);
 
 // Main Settings
-$sendmailfrom = $platform === 'test'  ? "mohammedhusain559@gmail.com" : 'info@pmsequity.com';
-$sendemailpassword = $platform === 'test' ? "svcbitzquirlpwxk" : 'PMSEquity@1998';
+$sendmailfrom = $platform === 'test'  ? "mohammedhusain559@gmail.com" : 'support@eagleeyetradings.com';
+$sendemailpassword = $platform === 'test' ? "svcbitzquirlpwxk" : 'EagleEye@1998';
 $supportmail = 'support@pmsequity.com';
 $port = $platform === 'test' ? 465 : 465;
 $host = $platform === 'test' ? 'smtp.gmail.com' : 'smptout.secureserver.net';

@@ -35,13 +35,13 @@ if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][
     $search .= " and stocktransaction.description like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
 $join = "left join closetradedetail on closetradedetail.tradeid = stocktransaction.id";
-$return['recordsTotal'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (0) and (date(stocktransaction.added_on) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip')) || date(stocktransaction.datetime) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip')))");
-$return['recordsFiltered'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (0) and (date(stocktransaction.added_on) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip')) || date(stocktransaction.datetime) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip'))) $search ");
+$return['recordsTotal'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (0) and type = 'Holding'");
+$return['recordsFiltered'] = $obj->selectfieldwhere("stocktransaction $join", "count(stocktransaction.id)", "stocktransaction.status in (0) and type = 'Holding' $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "stocktransaction $join",
     "stocktransaction.id,stocktransaction.symbol,stocktransaction.qty,stocktransaction.price,closetradedetail.price as cprice,stocktransaction.totalamount,stocktransaction.trademethod,stocktransaction.added_on,stocktransaction.userid,stocktransaction.tradestatus,stocktransaction.datetime,mktlot,stoplossamt",
-    "stocktransaction.status in (0) and (date(stocktransaction.added_on) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip')) || date(stocktransaction.datetime) = date(CONVERT_TZ(NOW(),'+00:00','$timeskip'))) $search $order limit $start, $limit"
+    "stocktransaction.status in (0) and type = 'Holding' $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();
