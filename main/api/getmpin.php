@@ -259,10 +259,10 @@ function changedateformatespecito($dateString, $speci, $to)
 // echo "dasda";
 // die;
 $data = json_decode(file_get_contents("php://input"), true);
-$userid = $data['userid'];
-var_dump($data);
-die;
-$data['mpin'] = $obj->selectfieldwhere("users", "mpin", "id = '" . 47 . "'");
+$userid = $_GET['userid'];
+var_dump($_GET['userid']);
+
+$data['mpin'] = $obj->selectfieldwhere("users", "mpin", "id = '" . $userid . "'");
 // run SQL statement
 
 // die if SQL statement failed
