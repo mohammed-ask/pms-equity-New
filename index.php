@@ -375,6 +375,9 @@ switch ($request['path']) {
     case "$head/cron/turnoffaitrading";
         require __DIR__ . '/main/cron/turnoffaitrading.php';
         break;
+    case "$head/api/getmpin";
+        require __DIR__ . '/main/api/getmpin.php';
+        break;
     case "$head/gitpull";
         require __DIR__ . '/main/guthubpull.php';
         break;
