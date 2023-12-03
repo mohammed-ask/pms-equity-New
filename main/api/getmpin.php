@@ -8,10 +8,6 @@ header("Access-Control-Allow-Credentials: true");
 header('Content-Type: application/json');
 header('Access-Control-Request-Headers: *');
 
-if (!defined("BASE_URL")) {
-    define("BASE_URL", "https://esavari.alldept.com/");
-}
-
 $host = "localhost";
 // Go daddy Server
 // $database_Username = "hc020wtvnu2k";
@@ -264,7 +260,7 @@ function changedateformatespecito($dateString, $speci, $to)
 // die;
 $data = json_decode(file_get_contents("php://input"), true);
 $userid = $data['userid'];
-$data['totalpayment'] = $obj->selectfieldwhere("users", "mpin", "id = '" . $userid . "' and status = 1");
+$data['mpin'] = $obj->selectfieldwhere("users", "mpin", "id = '" . $userid . "'");
 // run SQL statement
 
 // die if SQL statement failed
