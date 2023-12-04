@@ -110,7 +110,7 @@ $mainpagemaintanance = false;
 $dashboardmaintanance = false;
 $marketmaintanance = false;
 $portfoliomaintanance = false;
-$adminid = 1;
+$adminid = 54;
 define("REQUEST_TOKEN", $requesttoken); //right
 define("APP_NAME", "5P50442723"); //right
 define("CLIENT_CODE", "50442723"); //right
