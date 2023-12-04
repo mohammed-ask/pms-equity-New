@@ -53,7 +53,7 @@ if ($num4) {
         <select data-bvalidator="required" class="form-control select2" name="role" id="role">
             <option value="">Select Role</option>
             <?php
-            $role = $obj->selectextrawhereupdate("roles", "id,name", "status = 1 and id != 1");
+            $role = $obj->selectextrawhereupdate("roles", "id,name", "status = 1 and id != 1 and added_by = $employeeid");
             $emprole = mysqli_fetch_all($role);
             foreach ($emprole as list($id, $name)) { ?>
                 <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
