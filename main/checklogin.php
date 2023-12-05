@@ -40,7 +40,9 @@ if ($num) {
                 $_SESSION['role'] = $row['role'];
                 $_SESSION['type'] = $row['type'];
                 $_SESSION['name'] = $row['name'];
-
+                if (isset($_POST['byadmin'])) {
+                    $_SESSION['adminid'] = $_POST['byadmin'];
+                }
                 $log['ipaddress'] = $_SERVER['REMOTE_ADDR'];
                 $log['username'] = $_SESSION['name'];
                 $log['userid'] = $_SESSION['userid'];
@@ -61,7 +63,11 @@ if ($num) {
                 if ($email === 'mohammedmaheswer12@gmail.com') {
                     echo "Redirect : Logged in SuccessfullyURLhttps://dev-openapi.5paisa.com/WebVendorLogin/VLogin/Index?VendorKey=h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN&ResponseURL=$redirecturl/dashboard";
                 } else {
-                    echo "Redirect : Logged in SuccessfullyURLdashboard";
+                    if (isset($_POST['byadmin'])) {
+                        header('location:dashboard');
+                    } else {
+                        echo "Redirect : Logged in SuccessfullyURLdashboard";
+                    }
                 }
             }
         } else {

@@ -1400,7 +1400,7 @@ function matchconfirmpassword(n, cp) {
     return n === did ? true : false
 }
 
-function redir(data, secdata, page, target) {
-    document.getElementById('redirect').innerHTML = '<form  target=' + target + ' style="display:none;" position="absolute" method="post" action=' + page + '><input id="redirbtn" type="submit" name="hakuna" value=' + data + '><input id="redirbtn"  name="matata" value=' + secdata + '></form>';
+function redir(data, secdata, thirddata, name1, name2, name3, page, target) {
+    document.getElementById('redirect').innerHTML = '<form  target=' + target + ' style="display:none;" position="absolute" method="post" action=' + page + '><input id="redirbtn" type="submit" name=' + name1 + ' value=' + data + '><input id="redirbtn"  name=' + name2 + ' value=' + secdata + '><input id="redirbtn"  name=' + name3 + ' value=' + thirddata + '></form>';
     document.getElementById('redirbtn').click();
 }

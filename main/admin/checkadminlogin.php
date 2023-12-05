@@ -48,7 +48,11 @@ if ($num) {
                 $cookieData = json_encode($userData);
                 setcookie('userData', $cookieData, time() + (86400 * 30), '/');
                 $obj->insertnew('loginlog', $log);
-                echo "Redirect : Logged in SuccessfullyURLindex";
+                if (isset($_POST['byuser'])) {
+                    header('location:index');
+                } else {
+                    echo "Redirect : Logged in SuccessfullyURLindex";
+                }
             }
         } else {
             echo "Error : Password is incorrect.";
