@@ -1010,17 +1010,24 @@
             });
         });
 
-        var back_click = document.querySelectorAll(".back_button");
-        back_click.forEach(function(back_click_form) {
-            back_click_form.preventDefault()
-            back_click_form.addEventListener('click', function() {
-                formnumber--;
-                alert('hii')
-                // updateform();
-                // progress_backward();
-                // contentchange();
-            });
-        });
+        $('.back_button').click((e) => {
+            event.preventDefault()
+            formnumber--;
+            updateform();
+            progress_backward();
+            contentchange();
+        })
+        // var back_click = document.querySelectorAll(".back_button");
+        // back_click.forEach(function(back_click_form) {
+        //     back_click_form.preventDefault()
+        //     back_click_form.addEventListener('click', function() {
+        //         formnumber--;
+        //         alert('hii')
+        //         // updateform();
+        //         // progress_backward();
+        //         // contentchange();
+        //     });
+        // });
 
         var username = document.querySelector("#username");
 
