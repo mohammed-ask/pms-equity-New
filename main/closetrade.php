@@ -1,6 +1,7 @@
 <?php
 include "main/session.php";
 $mrkt = $obj->marketstatus();
+$mrkt = $mrkt === 'Error fetching:' ? [] : $mrkt;
 $nsemarket = array_filter($mrkt, function ($data) {
     if ($data['Exch'] === 'N' && $data['ExchType'] === 'C') {
         return $data;
@@ -82,13 +83,13 @@ $stockdata = $stockdata[0];
         <input type="text" readonly name="price" value="<?= $stockdata['LastRate'] ?>" class="form-control form-control-sm" id="Price">
     </div> -->
     <?php
-    if ($_GET['what'] === 'Sell') {
+    if ($_GET['what'] === 'Sell' && !empty($mrkt)) {
         if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
             <button <?php echo  $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertclosetrade\', \'resultid\', \'close\')' : ''; ?>">BUY</button>
         <?php } elseif ($stockdata['Exch'] === 'M') { ?>
             <button <?php echo  $commoditymrkt[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-success w-100 my-3" onclick="<?php echo $commoditymrkt[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertclosetrade\', \'resultid\', \'close\')' : ''; ?>">BUY</button>
         <?php }
-    } else if ($_GET['what'] === 'Buy') {
+    } else if ($_GET['what'] === 'Buy' && !empty($mrkt)) {
         if ($stockdata['Exch'] === 'N' || $stockdata['Exch'] === 'B') { ?>
             <button <?php echo  $nsemarket[0]['MarketStatus'] === 'Open'  ? null : 'disabled'; ?> class="btn btn-danger w-100 my-3" onclick="<?php echo $nsemarket[0]['MarketStatus'] === 'Open' ? 'event.preventDefault();sendForm(\'\', \'\', \'insertclosetrade\', \'resultid\', \'close\')' : ''; ?>">SELL</button>
         <?php } elseif ($stockdata['Exch'] === 'M') {  ?>
