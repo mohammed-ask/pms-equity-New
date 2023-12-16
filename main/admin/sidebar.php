@@ -174,6 +174,11 @@
                       Close Positions
                     </a>
                   <?php } ?>
+                  <?php if (in_array(45, $permissions)) { ?>
+                    <a class="dropdown-item" href="stocklist">
+                      Stock List
+                    </a>
+                  <?php } ?>
                 </div>
               </div>
             </div>

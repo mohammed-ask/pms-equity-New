@@ -195,6 +195,18 @@ switch ($request['path']) {
     case "$head/admin/stockdata";
         require __DIR__ . '/main/admin/stockdata.php';
         break;
+    case "$head/admin/stocklist";
+        require __DIR__ . '/main/admin/stocklist.php';
+        break;
+    case "$head/admin/addstocklist";
+        require __DIR__ . '/main/admin/addstocklist.php';
+        break;
+    case "$head/admin/insertstocklist";
+        require __DIR__ . '/main/admin/insertstocklist.php';
+        break;
+    case "$head/admin/deletestock";
+        require __DIR__ . '/main/admin/deletestock.php';
+        break;
     case "$head/admin/updateprofile";
         require __DIR__ . '/main/admin/updateprofile.php';    //admin Route close
         break;
@@ -362,6 +374,9 @@ switch ($request['path']) {
         break;
     case "$head/insertaifund";
         require __DIR__ . '/main/insertaifund.php';
+        break;
+    case "$head/forgotmpin";
+        require __DIR__ . '/main/forgotmpin.php';
         break;
     case "$head/cron/settletradethursday";
         require __DIR__ . '/main/cron/settletradethursday.php';

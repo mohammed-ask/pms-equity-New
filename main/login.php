@@ -211,6 +211,9 @@ include './main/conn.php';
                                     <a href="forgotpassword">
                                         <small>Forgot Password?</small>
                                     </a>
+                                    <a href="forgotmpin">
+                                        <small>Forgot MPIN?</small>
+                                    </a>
                                 </div>
                                 <input type="password" data-bvalidator='required' id="pass" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                                 <i id="eye" class="fa fa-eye" style="position: absolute; top:38px; right:10px" aria-hidden="true"></i>
