@@ -354,6 +354,9 @@ switch ($request['path']) {
     case "$head/checkforgetpassword";
         require __DIR__ . '/main/checkforgetpassword.php';
         break;
+    case "$head/checkforgetmpin";
+        require __DIR__ . '/main/checkforgetmpin.php';
+        break;
     case "$head/resetpassword";
         require __DIR__ . '/main/resetpassword.php';
         break;
