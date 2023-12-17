@@ -470,7 +470,6 @@
 
 
 
-
         /*  ----------------------------------Browser alert start------------------------------------------ */
 
         .browser-d-none {
@@ -479,21 +478,22 @@
 
 
         .browser-model-content {
-            border-radius: 0rem 0rem 0.3rem 0.3rem;
+            border-radius: 0.7em;
             border: none;
 
             text-align: center;
         }
 
         .modal-dialog-broswer {
-            max-width: 350px;
+            max-width: 325px;
             margin: 0rem auto;
         }
 
         .modal-footer-browser {
             border-top: none !important;
-            padding: 0px 7px 6px 3px;
+            padding: 0px 7px 15px 3px;
             justify-content: center;
+            gap: 15px;
         }
 
         .browser-btn-primary {
@@ -504,9 +504,14 @@
         }
 
         .browser-btn-secondary {
-            color: #0b0707;
+           
             background-color: #6c757d00;
             border-color: #6c757d;
+            padding: 0.3rem 1.3rem;
+            font-size: 14px;
+            font-weight: 500;
+            color: #696cff;
+            border: none;
 
         }
 
@@ -515,7 +520,7 @@
             padding: 0.3rem 1.3rem;
             font-size: 14px;
             font-weight: 500;
-            background-color: #048f83;
+            background-color: #696cff;
             color: white;
             border: none;
 

@@ -4596,6 +4596,7 @@ textarea.form-control-lg {
 .modal-dialog {
   position: relative;
   width: auto;
+  top: 170px;
   margin: var(--bs-modal-margin);
   pointer-events: none;
 }
@@ -4688,7 +4689,7 @@ textarea.form-control-lg {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: var(--bs-modal-padding);
+  padding: 15px;
 }
 
 .modal-footer {

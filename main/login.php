@@ -131,21 +131,22 @@ include './main/conn.php';
 
 
         .browser-model-content {
-            border-radius: 0rem 0rem 0.3rem 0.3rem;
+            border-radius: 0.7em;
             border: none;
 
             text-align: center;
         }
 
         .modal-dialog-broswer {
-            max-width: 350px;
+            max-width: 325px;
             margin: 0rem auto;
         }
 
         .modal-footer-browser {
             border-top: none !important;
-            padding: 0px 7px 6px 3px;
+            padding: 0px 7px 15px 3px;
             justify-content: center;
+            gap: 15px;
         }
 
         .browser-btn-primary {
@@ -156,9 +157,14 @@ include './main/conn.php';
         }
 
         .browser-btn-secondary {
-            color: #0b0707;
+           
             background-color: #6c757d00;
             border-color: #6c757d;
+            padding: 0.3rem 1.3rem;
+            font-size: 14px;
+            font-weight: 500;
+            color: #696cff;
+            border: none;
 
         }
 
@@ -167,7 +173,7 @@ include './main/conn.php';
             padding: 0.3rem 1.3rem;
             font-size: 14px;
             font-weight: 500;
-            background-color: #048f83;
+            background-color: #696cff;
             color: white;
             border: none;
 
@@ -210,9 +216,6 @@ include './main/conn.php';
                                     <label class="form-label" for="password">Password</label>
                                     <a href="forgotpassword">
                                         <small>Forgot Password?</small>
-                                    </a>
-                                    <a href="forgotmpin">
-                                        <small>Forgot MPIN?</small>
                                     </a>
                                 </div>
                                 <input type="password" data-bvalidator='required' id="pass" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
@@ -285,7 +288,7 @@ include './main/conn.php';
                     Are you sure you want to proceed?
                 </div>
                 <div class="modal-footer modal-footer-browser">
-                    <button type="button" class="btn btn-secondary browser-btn browser-btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary browser-btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary browser-btn browser-btn-primary" onclick="handleCustomConfirm(true)">Proceed</button>
                 </div>
             </div>
