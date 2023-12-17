@@ -26,6 +26,7 @@ include './main/conn.php';
     <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="main/dist/userstuff/assets/css/demo.css" />
+    <link rel="stylesheet" href="main/plugins/fontawesome-free/css/all.min.css">
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="main/dist/userstuff/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -157,7 +158,7 @@ include './main/conn.php';
         }
 
         .browser-btn-secondary {
-           
+
             background-color: #6c757d00;
             border-color: #6c757d;
             padding: 0.3rem 1.3rem;
@@ -193,14 +194,14 @@ include './main/conn.php';
                     <div class="card-body">
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
-                            
-                               
-                                <div style="padding-left: 55px;">
-        <img width="70%" src="main\dist\userstuff\assets\img\logo\eagle-eye.svg" alt="">
-    </div>
-                                
-                               
-                           
+
+
+                            <div style="padding-left: 55px;">
+                                <img width="70%" src="main\dist\userstuff\assets\img\logo\eagle-eye.svg" alt="">
+                            </div>
+
+
+
                         </div>
                         <!-- /Logo -->
                         <h4 class="mb-2">Welcome to Eagle Eye! 👋</h4>
