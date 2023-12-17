@@ -288,7 +288,7 @@ include './main/conn.php';
                     Are you sure you want to proceed?
                 </div>
                 <div class="modal-footer modal-footer-browser">
-                    <button type="button" class="btn btn-secondary browser-btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary browser-btn-secondary" data-dismiss="modal" onclick="cancel">Cancel</button>
                     <button type="button" class="btn btn-primary browser-btn browser-btn-primary" onclick="handleCustomConfirm(true)">Proceed</button>
                 </div>
             </div>
