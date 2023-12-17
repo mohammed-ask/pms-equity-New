@@ -119,7 +119,7 @@ if ($dashboardmaintanance) {
                                     </div>
                                 </div> -->
                                 </div>
-                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Total Deposited</span>
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Deposits</span>
                                 <h3 class="card-title mb-2">₹<?= $fundadded ?></h3>
                                 <small class="text-success fw-medium"><i style="background-color: #eefbe7;     color: #76d344;" class='dash-arrow bx bx-chevron-right'></i></small>
                             </div>
@@ -229,7 +229,7 @@ if ($dashboardmaintanance) {
                                     </div>
 
                                 </div>
-                                <span style="color:#697A8D;" class="d-block mb-1">Total Widthrawal</span>
+                                <span style="color:#697A8D;" class="d-block mb-1">Widthrawals</span>
                                 <h3 class="card-title text-nowrap mb-2">₹<?= $fundwithdraw ?></h3>
                                 <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
 " class='dash-arrow bx bx-chevron-right'></i></small>
