@@ -48,7 +48,7 @@ if ($marketmaintanance) {
 <?php } else { ?>
 
 
-    <div class="row" id="userstock">
+    <div class="" id="userstock">
 
         <div class="row mb-4">
             <?php foreach ($marketdata as $mdata) {  ?>
