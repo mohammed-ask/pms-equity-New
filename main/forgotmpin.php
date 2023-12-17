@@ -223,10 +223,10 @@ include './main/conn.php';
             </form>
 
             <div class="text-center">
-              <a href="login" class="d-flex align-items-center justify-content-center">
+              <!-- <a href="login" class="d-flex align-items-center justify-content-center">
                 <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
                 Back to login
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
