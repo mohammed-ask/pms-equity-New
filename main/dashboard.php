@@ -93,7 +93,7 @@ if ($dashboardmaintanance) {
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
-                            <img src="main/dist/userstuff/assets/img/illustrations/man-with-laptop-light.png" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png" />
+                            <img src=<?= $gender === 'Male' ? "main/dist/userstuff/assets/img/illustrations/man-with-laptop-light.png" : 'main/dist/userstuff/assets/img/illustrations/women-with-laptop-light.png' ?> height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png" />
                         </div>
                     </div>
                 </div>

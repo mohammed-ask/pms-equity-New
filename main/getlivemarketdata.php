@@ -22,9 +22,9 @@ $wstocks = array_filter($stockdata, function ($data) use ($watchlistsym, $sexcha
         return $data;
 });
 ?>
-<div class="row mb-4">
+<div class="row mb-4" style="padding-right:0px;">
     <?php foreach ($marketdata as $mdata) {  ?>
-        <div class="col-6">
+        <div class="col-6" style="padding-right:0px;">
             <div class="card">
                 <div class="card-body" style="padding: 10px 25px;">
                     <span class="fw-medium d-block mb-1"><?= $mdata['Symbol'] ?></span>

@@ -21,6 +21,7 @@ $investmentamount = empty($rowuserdata['investmentamount']) ? 0 : $rowuserdata['
 $trademode = $rowuserdata['carryforward'] === 'Yes' ? 'Holding' : 'Intraday';
 $usermargin = $rowuserdata['limit'];
 $username = $rowuserdata['name'];
+$gender = $rowuserdata['gender'];
 $permissions = array();
 if (isset($_SESSION['permissions']) && (!empty($_SESSION['permissions']))) {
     $permissions = explode(",", $_SESSION['permissions']);
