@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['userid']) && $_SESSION['type'] == 2) {
-  $employeeid = $_SESSION['userid'];
-  header("location:dashboard");
-}
+// if (isset($_SESSION['userid']) && $_SESSION['type'] == 2) {
+//   $employeeid = $_SESSION['userid'];
+//   header("location:dashboard");
+// }
 include './main/function.php';
 include './main/conn.php';
 ?>
@@ -203,9 +203,9 @@ include './main/conn.php';
           <div class="card-body">
             <!-- Logo -->
             <div class="app-brand justify-content-center">
-            <div style="padding-left: 55px;">
-        <img width="70%" src="main\dist\userstuff\assets\img\logo\eagle-eye.svg" alt="">
-    </div>
+              <div style="padding-left: 55px;">
+                <img width="70%" src="main\dist\userstuff\assets\img\logo\eagle-eye.svg" alt="">
+              </div>
             </div>
             <!-- /Logo -->
             <h4 class="mb-2">Forgot MPIN ?</h4>
