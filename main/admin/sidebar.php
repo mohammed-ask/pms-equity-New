@@ -35,7 +35,7 @@
       </div>
       <div class="nav-item dropdown">
         <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown">
-          <span class="avatar avatar-sm" style="background-image: url(../main/images/user.jpeg)"></span>
+          <span class="avatar avatar-sm" style="background-image: url(..\main\images\user.png)"></span>
         </a>
         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
           <a data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "adminprofile", "", "Admin Profile")' class="dropdown-item">Profile</a>

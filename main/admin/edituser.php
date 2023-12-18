@@ -4,14 +4,16 @@ $id = $_GET['hakuna'];
 $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'updateuser', 'resultid', 'adduser');return 0;">
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    
+<div class="row">
+<label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Name</span>
         <input name="username" data-bvalidator="required" class="form-control" value="<?= $rowuser['name'] ?>" placeholder="Client's Name" />
     </label>
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Email</span>
         <input name="email" data-bvalidator="required,email" class="form-control" value="<?= $rowuser['email'] ?>" placeholder="Client's Email ID" />
-    </label>
+    </label></div>
 
     <div class="row">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
@@ -22,7 +24,7 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
             <span class="text-gray-700 dark:text-gray-400">DOB</span>
             <input id="date" data-bvalidator="required,gap18year" onfocus="setcalenderlimit(this.id,'')" data-bvalidator-msg-gap18year="Customer Should be minimum 18 year Old" name="dob" class="form-control" value="<?= changedateformatespecito($rowuser['dob'], "Y-m-d", "d/m/Y") ?>" placeholder="Date of Birth" /></label>
     </div>
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <label class=" col-12 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Address</span>
         <input data-bvalidator="required" name="address" class="form-control" value="<?= $rowuser['address'] ?>" placeholder="Client's Address" />
     </label>
@@ -67,32 +69,33 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
         </label>
     </div>
     <div class="row">
-        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Carry Forward</span>
             <select data-bvalidator="required" name="carryforward" class="form-control">
                 <option value="No" <?= $rowuser['carryforward'] === 'No' ? 'selected' : null ?>>No</option>
                 <option value="Yes" <?= $rowuser['carryforward'] === 'Yes' ? 'selected' : null ?>>Yes</option>
             </select>
         </label>
-        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Long Holding</span>
             <select data-bvalidator="required" name="longholding" class="select2 form-control">
                 <option value="No" <?= $rowuser['longholding'] === 'No' ? 'selected' : null ?>>No</option>
                 <option value="Yes" <?= $rowuser['longholding'] === 'Yes' ? 'selected' : null ?>>Yes</option>
             </select>
         </label>
-    </div>
-    <div class="row">
-        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Withdraw Limit</span>
             <input type="number" name="withdrawlimit" data-bvalidator="required" step="any" onfocus="this.select()" class="form-control" value="<?= $rowuser['withdrawlimit'] ?>" placeholder="Withdrawal Limit" /></label>
         </label>
     </div>
+   
+        
+   
     <div>
-        <label class="block text-sm" style="margin-bottom: 5px;">
+        <label class="col-12 block text-sm" style="margin-bottom: 5px;">
             <div class="row my-1"> <span class="col-6 text-gray-700 dark:text-gray-400"> Withdrawal Message</span>
-                <span id="switchtype" class="col-6 text-right text-gray-700 dark:text-gray-400" style="color:green">Custom Message</span>
-            </div>
+                <span id="switchtype" class="col-6 text-right text-gray-700 dark:text-gray-400" style="color:green;   text-align: right;">Custom Message</span>
+            </div></label>
             <div id="stype">
 
                 <select data-bvalidator="required" name="message" class="select2 form-control">
@@ -131,7 +134,7 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
         </select>
     </label><br> -->
 
-    <div class="row">
+    <div class="row my-2">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;position:relative">
             <span class="text-gray-700 dark:text-gray-400">Change Password</span>
             <input type="password" id="password" value="<?= $rowuser['password'] ?>" name="password" class="form-control" placeholder="Please Give Strong Password!" />
@@ -142,43 +145,43 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
             <span class="text-gray-700 dark:text-gray-400">Employee ID</span>
             <input xdata-bvalidator="required" name="employeeref" class="form-control" value="<?= $rowuser['employeeref'] === '' ? '' : $rowuser['employeeref'] ?>" placeholder="Employee ID For Further Reference" /></label>
     </div>
-    <strong>Documents</strong><br>
-
-    <label class="block text-sm mt-3 " style="margin-bottom: 5px;">
+    <p><strong>Documents</strong></p>
+<div class="row">
+    <label class="col-6 block text-sm " style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Aadhar Front Side</span>
         <input hidden value="Aadhar Card Front" name="name[]">
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
     </label>
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <input hidden value="Aadhar Card Back" name="name[]">
         <span class="text-gray-700 dark:text-gray-400">Aadhar Back Side</span>
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+    </label></div>
 
-
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <div class="row">
+    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Pan Card</span>
         <input hidden value="PAN card" name="name[]">
 
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
     </label>
-    <label class="block text-sm" sty le="margin-bottom: 5px;">
+    <label class="col-6 block text-sm" sty le="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Signature</span>
         <input hidden value="Signature" name="name[]">
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+    </label></div>
 
-
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <div class="row">
+    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Passport Size Photo</span>
         <input hidden value="Passport Size Photo" name="name[]">
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
     </label>
-    <label class="block text-sm" style="margin-bottom: 5px;">
+    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Passbook</span>
         <input hidden value="Passbook" name="name[]">
-        <input style="padding: 0px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
+        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+    </label></div>
 
     <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium btn btn-primary d-none">
         Submit

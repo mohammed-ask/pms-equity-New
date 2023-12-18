@@ -87,7 +87,6 @@ include "main/session.php";
         </select>
     </div></div>
 
-
     <div class="row">
         <div class="col-6 mb-2">
             <label for="buy" class="block text-sm" data-toggle="dropdown" style="margin-bottom: 5px;">
