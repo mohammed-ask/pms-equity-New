@@ -115,7 +115,11 @@
    gtag('config', 'G-P9108ZJ253');
  </script>
 
-
+ <style>
+   .modal {
+     --bs-modal-margin: 0 !important
+   }
+ </style>
  <?php
   if (isset($extracss)) {
     echo $extracss;
