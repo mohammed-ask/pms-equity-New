@@ -59,7 +59,7 @@ if (isset($_POST['hakuna'])) {
                     </div>
                 </form>
                 <div class="card-footer">
-                    <button class="px-4 py-2  text-sm  bg-theme-color  rounded-lg border border-gray" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
+                    <button class="px-4 py-2" style="border: none; border-radius: 10px; background-color: #696cff;color: white; font-weight: 600;" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
                     <div class="col-md-12" id="resultid"></div>
 
                 </div>

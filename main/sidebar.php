@@ -46,7 +46,9 @@
     <li class="<?= $_SERVER['REQUEST_URI'] === '/market' ? 'menu-item active' : 'menu-item' ?>">
       <a href="market" class="menu-link">
         <i class="menu-icon tf-icons bx bx-bar-chart-alt"></i>
-        <div data-i18n="Basic">Live Market</div>
+        <div data-i18n="Basic">Live Market</div><div style="width: 10px !important; height: 10px !important;margin-left:10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
       </a>
     </li>
 

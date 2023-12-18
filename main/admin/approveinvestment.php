@@ -41,11 +41,11 @@ $mail->Password = "$sendemailpassword";
 $mail->isSendmail();
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
-$mail->setFrom("$sendmailfrom", 'PMS Equity Team');
+$mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');
 $mail->addAddress($email);
 $mail->isHTML(true);
-$mail->addReplyTo("$sendmailfrom", 'PMS Equity Team');
-$mail->Subject = 'PMS Equity Fund Request';
+$mail->addReplyTo("$sendmailfrom", 'Eagle Eye Tradings');
+$mail->Subject = 'Eagle Eye Tradings Fund Request';
 ob_start();
 ?>
 <!DOCTYPE html>
@@ -177,7 +177,7 @@ ob_start();
                         <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
 
                             <h2 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; word-spacing: 2px;">
-                                Your Transaction of ₹ <?= $rowfund['amount'] ?> in PMS Equity Wallet is <?= $_GET['what'] === 'Approve' ? "Successful" : 'Failed' ?>. </h2>
+                                Your Transaction of ₹ <?= $rowfund['amount'] ?> in Eagle Eye Tradings Wallet is <?= $_GET['what'] === 'Approve' ? "Successful" : 'Failed' ?>. </h2>
                         </td>
                     </tr>
                 </table>
@@ -239,12 +239,12 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:info@pmsequity.com">info@pmsequity.com</a>
+                            <p style="margin: 0;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:support@eagleeyetradings.com">support@eagleeyetradings.com</a>
 
 
                             </p>
                             <p>
-                                Thank you for choosing PMS Equity. We look forward to helping you achieve your
+                                Thank you for choosing Eagle Eye Tradings. We look forward to helping you achieve your
                                 investment goals.
                             </p>
                         </td>
@@ -254,7 +254,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                         </td>
                     </tr>
                     <!-- end copy -->

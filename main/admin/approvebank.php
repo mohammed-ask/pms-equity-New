@@ -33,10 +33,10 @@ if ($_GET['what'] === 'Approve') {
     $mail->isSendmail();
     $mail->SMTPSecure = 'ssl';
     $mail->Port = $port;
-    $mail->setFrom("$sendmailfrom", 'PMS Equity Team');;
+    $mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');;
     $mail->addAddress($email);
     $mail->isHTML(true);
-    $mail->Subject = 'PMS Equity bank account has been approved';
+    $mail->Subject = 'Eagle Eye Tradings bank account has been approved';
     ob_start();
 ?>
     <!DOCTYPE html>
@@ -46,7 +46,7 @@ if ($_GET['what'] === 'Approve') {
 
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>PMS Equity</title>
+        <title>Eagle Eye Tradings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style type="text/css">
             /**
@@ -221,12 +221,12 @@ if ($_GET['what'] === 'Approve') {
                         <!-- start copy -->
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                                <p style="margin: 0;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:info@pmsequity.com">info@pmsequity.com</a>
+                                <p style="margin: 0;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:support@eagleeyetradings.com">support@eagleeyetradings.com</a>
 
 
                                 </p>
                                 <p>
-                                    Thank you for choosing PMS Equity. We look forward to helping you achieve your
+                                    Thank you for choosing Eagle Eye Tradings. We look forward to helping you achieve your
                                     investment goals.
                                 </p>
                             </td>
@@ -236,7 +236,7 @@ if ($_GET['what'] === 'Approve') {
                         <!-- start copy -->
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                                <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                                <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                             </td>
                         </tr>
                         <!-- end copy -->
