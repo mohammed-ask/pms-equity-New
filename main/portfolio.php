@@ -290,7 +290,7 @@ if ($portfoliomaintanance) {
                     <div>
                         <?php
                         if ($aistat === 'Yes') { ?>
-                            <img src="main/images/AI-is-Trading.gif" style="width: 100%;width: 100%;border-radius: 5px; margin-top: 10px;" />
+                            <img src="main/images/AI-is-Trading.gif" style="width: 100%;width: 100%;border-radius: 5px;" />
                         <?php } else { ?>
                             <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
 

@@ -151,11 +151,11 @@ if ($emailcount > 0) {
     $mail->isSendmail();
     $mail->SMTPSecure = 'ssl';
     $mail->Port = $port;
-    $mail->setFrom("$sendmailfrom", 'PMS Equity Team');;
+    $mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');;
     $mail->addAddress($_POST['email']);
     $mail->isHTML(true);
     $mail->Subject = "Account has been approved";
-    $mail->Subject = 'PMS Equity account has been approved & Login Id & Password is here';
+    $mail->Subject = 'Eagle Eye Tradings account has been approved & Login Id & Password is here';
 ?>
     <!DOCTYPE html>
     <html>
@@ -271,7 +271,7 @@ if ($emailcount > 0) {
 
         <!-- start preheader -->
         <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-            Welcome to PMS Equity- Access Your Account with Your New Login and Password...
+            Welcome to Eagle Eye Tradings- Access Your Account with Your New Login and Password...
         </div>
         <!-- end preheader -->
 
@@ -290,7 +290,7 @@ if ($emailcount > 0) {
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                                <h1 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; line-height: 30px; word-spacing: 2px;">Welcome to PMS Equity,</h1><br>
+                                <h1 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; line-height: 30px; word-spacing: 2px;">Welcome to Eagle Eye Tradings,</h1><br>
                                 <h2 style="margin: 0; line-height: 30px; font-size: 17px; font-weight: 700; letter-spacing: -1px; word-spacing: 2px;">Your Account has been approved: Your Login ID & Password is here </h2>
                             </td>
                         </tr>
@@ -318,7 +318,7 @@ if ($emailcount > 0) {
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px 24px 5px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
                                 <p>Congratulations! Your account has been created successfully.</p>
-                                <p style="margin: 0;">Welcome to <a href="https://pms-equity.com/">PMS Equity</a> ! We are excited to have you as a new member of our community.</p>
+                                <p style="margin: 0;">Welcome to <b>Eagle Eye Tradings!</b> We are excited to have you as a new member of our community.</p>
                                 <p>Your login information is given below:
                                     <br><br>
                                     <b>Email:</b><?= $x['email'] ?>
@@ -335,7 +335,7 @@ if ($emailcount > 0) {
                                     <p style="margin-top:0; margin-right: 15px;">Click button to login </p>
                                     <tr>
                                         <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                                            <a href="https://pms-equity.com/login" style="display: block; padding: 7px 10px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight:bold; letter-spacing:2px; margin:0; background-color: #00aaaa;">Login</a>
+                                            <a href="https://www.eagleeyetradings.com/login" style="display: block; padding: 7px 10px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight:bold; letter-spacing:2px; margin:0; background-color: #696cff;">Login</a>
                                         </td>
                                     </tr>
                                 </table>
@@ -346,12 +346,12 @@ if ($emailcount > 0) {
                         <!-- start copy -->
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                                <p style="margin: 0;">We encourage you to explore our platform and take advantage of all the features we have to offer. If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:info@pmsequity.com">info@pmsequity.com</a>
+                                <p style="margin: 0;">We encourage you to explore our platform and take advantage of all the features we have to offer. If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:support@eagleeyetradings.com">support@eagleeyetradings.com</a>
 
 
                                 </p>
                                 <p>
-                                    Thank you for choosing PMS Equity. We look forward to helping you achieve your investment goals.
+                                    Thank you for choosing Eagle Eye Tradings. We look forward to helping you achieve your investment goals.
                                 </p>
                             </td>
                         </tr>
@@ -360,7 +360,7 @@ if ($emailcount > 0) {
                         <!-- start copy -->
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                                <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                                <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                             </td>
                         </tr>
                         <!-- end copy -->

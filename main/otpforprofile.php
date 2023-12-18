@@ -25,7 +25,7 @@ $mail->isSendmail();
 
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
-$mail->setFrom("$sendmailfrom", 'PMS Equity Team');;
+$mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');;
 $mail->addAddress($email);
 $mail->isHTML(true);
 $mail->Subject = "OTP Verification for Changing Setting";
@@ -152,7 +152,7 @@ ob_start();
 
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
 
-        Verification Code Confirmation for Changing Setting- PMS Equity...
+        Verification Code Confirmation for Changing Setting- Eagle Eye Tradings...
     </div>
     <!-- end preheader -->
 
@@ -228,7 +228,7 @@ ob_start();
                             <p style="margin: 0;">Please note that this code is only valid for a limited time.
                             </p>
                             <p>
-                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:info@pmsequity.com" target="_blank">info@pmsequity.com</a>.
+                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:support@eagleeyetradings.com" target="_blank">support@eagleeyetradings.com</a>.
                             </p>
                         </td>
                     </tr>
@@ -237,7 +237,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                         </td>
                     </tr>
                     <!-- end copy -->

@@ -24,7 +24,7 @@ $mail->Password = "$sendemailpassword";
 $mail->isSendmail();
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
-$mail->setFrom("$sendmailfrom", 'PMS Equity Team');;
+$mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');;
 $mail->addAddress($email);
 $mail->isHTML(true);
 $mail->Subject = "Registration OTP";
@@ -148,7 +148,7 @@ ob_start();
 
     <!-- start preheader -->
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Please confirm your Account with PMS Equity, your Account Confirmation Code is...
+        Please confirm your Account with Eagle Eye Tradings, your Account Confirmation Code is...
     </div>
     <!-- end preheader -->
 
@@ -167,7 +167,7 @@ ob_start();
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                            <h1 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; line-height: 34px;  word-spacing: 2px;">Verification Code for Your Account Opening with PMS Equity</h1>
+                            <h1 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; line-height: 34px;  word-spacing: 2px;">Verification Code for Your Account Opening with Eagle Eye Tradings</h1>
                         </td>
                     </tr>
                 </table>
@@ -193,7 +193,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px 24px 5px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0;">Thank you for registering with <a href="https://pms-equity.com/">PMS Equity</a>. Please confirm your account.</p>
+                            <p style="margin: 0;">Thank you for registering with <b>Eagle Eye Tradings</b>. Please confirm your account.</p>
                             <p>
 
                                 To complete your registration, please enter the OTP / Confirmation code to the website:</p>
@@ -227,7 +227,7 @@ ob_start();
                             <p style="margin: 0;">Please note that this code is only valid for a limited time, so we encourage you to activate your account as soon as possible.
                             </p>
                             <p>
-                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:info@pmsequity.com" target="_blank">info@pmsequity.com</a>.
+                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:support@eagleeyetradings.com" target="_blank">support@eagleeyetradings.com</a>.
                             </p>
                         </td>
                     </tr>
@@ -236,7 +236,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br> Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                         </td>
                     </tr>
                     <!-- end copy -->

@@ -58,10 +58,10 @@ $mail->Password = "$sendemailpassword";
 $mail->isSendmail();
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
-$mail->setFrom("$sendmailfrom", 'PMS Equity Team');
+$mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings');
 $mail->addAddress($receivermail);
 $mail->isHTML(true);
-$mail->addReplyTo("$sendmailfrom", 'PMS Equity Team');
+$mail->addReplyTo("$sendmailfrom", 'Eagle Eye Tradings');
 $mail->Subject = $_POST['subject'];
 ?>
 <!DOCTYPE html>
@@ -181,7 +181,7 @@ $mail->Subject = $_POST['subject'];
 
     <!-- start preheader -->
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Important nortification from PMS Equity, View message...
+        Important nortification from Eagle Eye, View message...
     </div>
     <!-- end preheader -->
 
@@ -236,9 +236,9 @@ $mail->Subject = $_POST['subject'];
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0;margin-top: 15px;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:info@pmsequity.com">info@pmsequity.com</a></p>
+                            <p style="margin: 0;margin-top: 15px;">If you have any questions or need assistance, our support team is available 24/7 to help at <a href="mailto:support@eagleeyetradings.com">support@eagleeyetradings.com</a></p>
                             <p>
-                                Thank you for choosing PMS Equity. We look forward to helping you achieve your investment goals.
+                                Thank you for choosing Eagle Eye Tradings. We look forward to helping you achieve your investment goals.
                             </p>
                         </td>
                     </tr>
@@ -247,7 +247,7 @@ $mail->Subject = $_POST['subject'];
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                         </td>
                     </tr>
                     <!-- end copy -->

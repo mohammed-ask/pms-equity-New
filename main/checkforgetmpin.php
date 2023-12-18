@@ -27,7 +27,7 @@ $mail->isSendmail();
 
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
-$mail->setFrom("$sendmailfrom", 'PMS Equity Team');;
+$mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings Team');;
 $mail->addAddress($_POST['email']);
 $mail->isHTML(true);
 $mail->Subject = "Password Reset";
@@ -152,7 +152,7 @@ ob_start();
 
     <!-- start preheader -->
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Please confirm your Account with PMS Equity, your Account Confirmation Code is...
+        Please confirm your Account with Eagle Eye Tradings, your Account Confirmation Code is...
     </div>
     <!-- end preheader -->
 
@@ -171,7 +171,7 @@ ob_start();
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                            <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -1px; line-height: 34px; word-spacing: 2px;">Reset Your Account Password- PMS Equity Account</h1>
+                            <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -1px; line-height: 34px; word-spacing: 2px;">Reset Your Account Password- Eagle Eye Tradings Account</h1>
                         </td>
                     </tr>
                 </table>
@@ -197,7 +197,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px 24px 5px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0;">We have received a request to reset the password for your PMS Equity account. </p>
+                            <p style="margin: 0;">We have received a request to reset the password for your Eagle Eye Tradings account. </p>
                             <p>
                                 To reset your password, click on the button below</p>
                         </td>
@@ -213,7 +213,7 @@ ob_start();
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                                                    <a href='<?= $redirecturl ?>/resetmpin?hakuna=<?= $id ?>' style="display: inline-block; padding: 10px 15px; font-family: 'Poppins', sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight:bold; letter-spacing:2px; margin:0; background-color: #00aaaa;">Reset Password</a>
+                                                    <a href='<?= $redirecturl ?>/resetmpin?hakuna=<?= $id ?>' style="display: inline-block; padding: 10px 15px; font-family: 'Poppins', sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight:bold; letter-spacing:2px; margin:0; background-color: #696cff;">Reset Password</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -229,12 +229,12 @@ ob_start();
 
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Poppins', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; margin:0;">
                             <p>
-                                Or click on the link: <a href='<?= $redirecturl ?>/resetpassword?hakuna=<?= $id ?>'>https://www.pmsequity.com/resetpassword</a></p>
+                                Or click on the link: <a href='<?= $redirecturl ?>/resetpassword?hakuna=<?= $id ?>'>https://www.eagleeyetradings.com/resetpassword</a></p>
                             <p style="margin: 0;">
                                 If you did not initiate this request, please contact our support team immediately to investigate.
                             </p>
                             <p>
-                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:info@pmsequity.com" target="_blank">info@pmsequity.com</a>.
+                                If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg" target="_blank">https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg</a>.
                             </p>
                         </td>
                     </tr>
@@ -243,7 +243,7 @@ ob_start();
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br> Eagle Eye Tradings</p><img width="145px" style=" margin-top: 20px;" src="https://eagleeyetradings.com/main/dist/landingassets/img/eagle-eye.svg">
                         </td>
                     </tr>
                     <!-- end copy -->
