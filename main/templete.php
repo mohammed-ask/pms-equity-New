@@ -116,7 +116,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalCenterTitle"></h5>
+                        <!-- <h5 class="modal-title" id="modalCenterTitle"></h5> -->
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body" id="modaldata">
@@ -137,9 +137,6 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <div class="buy-now" style="display: none;">
-        <a href="#" target="_blank" class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-    </div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
