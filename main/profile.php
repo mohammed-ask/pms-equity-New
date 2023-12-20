@@ -17,9 +17,15 @@ ob_start();
                         <div class="d-flex align-items-start align-items-sm-center gap-4">
                             <img src="<?= empty($avatarpath) ? 'main/images/user.png' : "main/" . $avatarpath ?>" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
                             <div class="button-wrapper">
-                                <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                                    <span class="d-none d-sm-block">Upload new photo</span>
-                                    <i class="bx bx-upload d-block d-sm-none"></i>
+                                <label for="upload" class="btn btn-primary me-2 mb-4 p-1" tabindex="0">
+                                    <!-- <span class="d-none d-sm-block">Upload new photo</span> -->
+                                    <i class="bx bx-upload d-block"></i>
+                                    <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                                </label>
+
+                                <label for="upload" class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
+                                    <span class=" d-sm-block">Add Nominee</span>
+                                    <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
                                     <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
                                 </label>
 
@@ -61,7 +67,7 @@ ob_start();
             <div class="col-lg-6 col-md-12 mb-4">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-0">
 
                             <h6>Bank Details</h6>
                             <div class="dropdown">
@@ -77,6 +83,8 @@ ob_start();
                     </div>
                 </div>
             </div>
+       
+
             <div class="col-lg-6 col-md-12 mb-4">
                 <div class="card">
                     <div class="card-body">
@@ -99,7 +107,7 @@ ob_start();
                             </div>
                         </div>
 
-                        <div class="d-flex mb-3">
+                        <div class="d-flex" style="margin-bottom: 9px;">
                             <div class="flex-shrink-0">
                                 <i style="font-size: 33px; margin-right: 14px; color: #696cff;" class='bx bxs-paper-plane'></i>
                             </div>
@@ -121,6 +129,27 @@ ob_start();
                     </div>
                 </div>
             </div>
+            <!-- <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-0">
+
+                            <h6 style=" font-size: 16px; margin-bottom: 12px;"><span style="font-weight:700;">Nominee:</span> <span class="fw-medium" style="margin-left: 5px;">Sharma ji Ka Ladka</span> </h6>
+                            <div class="dropdown">
+                                <button class="btn p-0" type="button" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "bankaccountchange","", "Change Bank Details")'>
+                                    <i class='bx bxs-edit'></i>
+                                </button>
+
+                            </div>
+                        </div>
+                       
+                        <span class="fw-bold d-block mb-1">Relation:<span class="fw-medium" style="margin-left: 10px;">Mother</span> </span>
+                        <span class="fw-bold d-block mb-1">Date of Birth: <span class="fw-medium" style="margin-left: 8px;">12 Oct 1970</span> </span>
+                        <span class="fw-bold d-block mb-1">Aadhar No. <span class="fw-medium" style="margin-left: 8px;">673846526899</span> </span>
+                    </div>
+                </div>
+            </div> -->
+
         </div>
 
         <div class="card">
