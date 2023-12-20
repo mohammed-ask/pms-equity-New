@@ -141,6 +141,7 @@ include './main/conn.php';
         .modal-dialog-broswer {
             max-width: 325px;
             margin: 0rem auto;
+            top: 40%;
         }
 
         .modal-footer-browser {

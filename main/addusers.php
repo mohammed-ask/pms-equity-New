@@ -470,9 +470,9 @@
 
 
 
-        /*  ----------------------------------Browser alert start------------------------------------------ */
+         /*  ----------------------------------Browser alert start------------------------------------------ */
 
-        .browser-d-none {
+         .browser-d-none {
             display: none !important;
         }
 
@@ -487,6 +487,7 @@
         .modal-dialog-broswer {
             max-width: 325px;
             margin: 0rem auto;
+            top: 40%;
         }
 
         .modal-footer-browser {
@@ -504,7 +505,7 @@
         }
 
         .browser-btn-secondary {
-           
+
             background-color: #6c757d00;
             border-color: #6c757d;
             padding: 0.3rem 1.3rem;
