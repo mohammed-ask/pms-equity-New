@@ -107,7 +107,7 @@ ob_start();
                             </div>
                         </div>
 
-                        <div class="d-flex" style="margin-bottom: 9px;">
+                        <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <i style="font-size: 33px; margin-right: 14px; color: #696cff;" class='bx bxs-paper-plane'></i>
                             </div>
