@@ -2,12 +2,12 @@
 include "main/session.php";
 ?>
 <form class="row gy-2 gx-3 align-items-end" id="addtax2">
-    <div class="col-lg-3 col-md-12">
+    <div class="col-lg-4 col-md-12">
         <label for="defaultFormControlInput" class="form-label">Bank Name</label>
         <input type="text" data-bvalidator="required" name="bankname" class="form-control" id="defaultFormControlInput" placeholder="bank name" aria-describedby="defaultFormControlHelp">
     </div>
 
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-5 col-md-12">
         <label for="defaultFormControlInput" class="form-label">Account No.</label>
         <input type="number" data-bvalidator="required" name="accountno" class="form-control" id="defaultFormControlInput" placeholder="new account no" aria-describedby="defaultFormControlHelp">
     </div>
