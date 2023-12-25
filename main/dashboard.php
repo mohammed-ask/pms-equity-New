@@ -229,7 +229,7 @@ if ($dashboardmaintanance) {
                                     </div>
 
                                 </div>
-                                <span style="color:#697A8D;" class="d-block mb-1">Widthrawals</span>
+                                <span style="color:#697A8D;" class="fw-medium d-block mb-1">Widthrawals</span>
                                 <h3 class="card-title text-nowrap mb-2">₹<?= $fundwithdraw ?></h3>
                                 <small class="text-success fw-medium"><i style="background-color: #f6deda;     color: #ff3f1e;
 " class='dash-arrow bx bx-chevron-right'></i></small>

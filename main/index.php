@@ -613,7 +613,7 @@ if ($mainpagemaintanance) { ?>
                                     <div class="text-center">
                                         <img src="main/dist/landingassets/img/paper-airplane.png" alt="paper airplane icon" class="mb-4 pb-2 scaleX-n1-rtl">
                                         <h4 class="mb-3">Derivative</h4>
-                                        <span class="h6">Derivatives are financial contracts whose value is derived from an underlying asset, include futures and options.</span>
+                                        <span class="h6">Derivatives are financial contracts, derived from an underlying asset, include futures and options.</span>
 
                                     </div>
                                 </div>
@@ -789,7 +789,7 @@ if ($mainpagemaintanance) { ?>
                                                 <div>
                                                     <p class="mb-0">Email</p>
                                                     <h5 class="mb-0">
-                                                        <a href="mailto:example@gmail.com" class="text-heading"><?= $rowinfo['email'] ?></a>
+                                                        <a href="mailto:<?= $rowinfo['email'] ?>" class="text-heading"><?= $rowinfo['email'] ?></a>
                                                     </h5>
                                                 </div>
                                             </div>
@@ -801,7 +801,7 @@ if ($mainpagemaintanance) { ?>
                                                 </div>
                                                 <div>
                                                     <p class="mb-0">Phone</p>
-                                                    <h5 class="mb-0"><a href="tel:+1234-568-963" class="text-heading"><?= $rowinfo['phone'] ?></a></h5>
+                                                    <h5 class="mb-0"><a href="tel:<?= $rowinfo['phone'] ?>" class="text-heading"><?= $rowinfo['phone'] ?></a></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -856,7 +856,7 @@ if ($mainpagemaintanance) { ?>
                 <div class="container">
                     <div class="row gx-0 gy-4 g-md-5">
                         <div class="col-lg-5">
-                            <a href="#" class="app-brand-link mb-4">
+                            <a href="#" class="app-brand-link mb-3">
                                 <span class="app-brand-logo demo">
 
                                     <img width="250px" src="main/dist/landingassets/img/eagle-eye.svg" alt="">
@@ -865,7 +865,9 @@ if ($mainpagemaintanance) { ?>
 
                             </a>
                             <p class="footer-text footer-logo-description mb-4">
-                                Eagle Eye Tradings, your gateway to Smart Trading! Our cutting-edge platform seamlessly blends artificial intelligence with trading excellence, empowering you with intelligent insights and precision. Elevate your trading experience with Eagle Eye Tradings.
+                                Eagle Eye Tradings, your gateway to Smart Trading! Elevate your trading experience with Eagle Eye Tradings.<br>
+                                <div style="color:#fff;"><span style="font-weight:800;     text-decoration: underline;
+">Address:</span> <span>BS-955, C 1A, Sector 4, Greater Noida, Galaxy Diamond Plaza, uttar pradesh india post- 201009</span> </div>
                             </p>
                             <!-- <form class="footer-form">
               <label for="footer-email" class="small">Subscribe to newsletter</label>

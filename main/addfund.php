@@ -52,7 +52,7 @@ include "main/session.php";
         </div>
 
 
-        <div class="tab-pane fade py-3 pl-1" id="navs-pills-justified-bank" role="tabpanel" style="padding-left: 5px;">
+        <div class="tab-pane fade py-1 pl-1" id="navs-pills-justified-bank" role="tabpanel" style="padding-left: 5px;">
 
             <div>
                 <div class="row">
@@ -66,6 +66,10 @@ include "main/session.php";
                     <div class="col-6 high-low mt-2"><span>Account no.<br></span> <span style="color: rgb(54, 53, 53);">784537392736492</span></div>
 
 
+                </div>
+                <hr style="margin: 0.5rem 0;">
+                <div class="row">
+                <div class="high-low"><span>UPI ID: </span> <span style="color: rgb(54, 53, 53);">testupi@ybl</span></div>
                 </div>
 
 
