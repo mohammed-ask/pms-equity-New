@@ -77,9 +77,9 @@ ob_start();
 
                             </div>
                         </div>
-                        <span class="fw-bold d-block mb-1">Bank Name: <span class="fw-medium" style="margin-left: 5px;">HDFC Bank</span> </span>
-                        <span class="fw-bold d-block mb-1">IFS Code: <span class="fw-medium" style="margin-left: 23px;">HDFC00087767</span> </span>
-                        <span class="fw-bold d-block mb-1">Account no. <span class="fw-medium" style="margin-left: 8px;">67384652689986</span> </span>
+                        <span class="fw-bold d-block mb-1">Bank Name: <span class="fw-medium" style="margin-left: 5px;"><?= $rowprofile['bankname'] ?></span> </span>
+                        <span class="fw-bold d-block mb-1">IFS Code: <span class="fw-medium" style="margin-left: 23px;"><?= $rowprofile['ifsc'] ?></span> </span>
+                        <span class="fw-bold d-block mb-1">Account no. <span class="fw-medium" style="margin-left: 8px;"><?= $rowprofile['accountno'] ?></span> </span>
                     </div>
                 </div>
             </div>

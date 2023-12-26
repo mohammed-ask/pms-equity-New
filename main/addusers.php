@@ -470,9 +470,9 @@
 
 
 
-         /*  ----------------------------------Browser alert start------------------------------------------ */
+        /*  ----------------------------------Browser alert start------------------------------------------ */
 
-         .browser-d-none {
+        .browser-d-none {
             display: none !important;
         }
 
@@ -646,9 +646,9 @@
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                                         </div>
                                         <div class="col-sm-6 form-password-toggle fv-plugins-icon-container">
-                                            <label class="form-label" for="multiStepsConfirmPass">Confirm Password</label>
+                                            <label class="form-label" for="multiStepsConfirmPass">Set MPIN</label>
                                             <div class="input-group input-group-merge has-validation">
-                                                <input type="password" id="comfirmpass" name="confirmpass" class="form-control" placeholder="············" aria-describedby="multiStepsConfirmPass2">
+                                                <input type="password" id="mpin" name="mpin" class="form-control" placeholder="············" aria-describedby="multiStepsConfirmPass2">
                                                 <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"><i class="bx bx-hide"></i></span>
                                             </div>
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
@@ -1188,12 +1188,12 @@
                 }
                 if (vaildate_input.id === 'mobileno' && vaildate_input.value.length != 10) {
                     validate = false
-                    alert('Mobile number must be 10 digits')
+                    alertify.alert('Mobile number must be 10 digits')
                     vaildate_input.classList.add('warning');
                 }
                 if (vaildate_input.id === 'adharno' && vaildate_input.value.length != 12) {
                     validate = false
-                    alert('Aadhar number must be 12 digits')
+                    alertify.alert('Aadhar number must be 12 digits')
                     vaildate_input.classList.add('warning');
                 }
                 if (vaildate_input.id === 'dob') {
@@ -1201,18 +1201,20 @@
                     inputDate.setFullYear(inputDate.getFullYear() + 18);
                     if (currentDate < inputDate) {
                         validate = false
-                        alert('Age must be 18 years or above')
+                        alertify.alert('Age must be 18 years or above')
                         vaildate_input.classList.add('warning');
                     }
                 }
-                if (vaildate_input.id === 'comfirmpass' && vaildate_input.value !== password) {
+                if (vaildate_input.id === 'mpin' && vaildate_input.value.length != 6) {
+                    console.log(vaildate_input.id, vaildate_input.value.length, 'mpin')
                     validate = false
+                    alertify.alert('MPIN must be of 6 digits')
                     vaildate_input.classList.add('warning');
                 }
                 if (vaildate_input.files) {
                     var file = vaildate_input.files[0];
                     if (file.size > 1024 * 1024) {
-                        alert('Please select an image file smaller than 1 MB.');
+                        alertify.alert('Please select an image file smaller than 1 MB.');
                         validate = false
                     }
                     // console.log('vvp', JSON.stringify(file.size))

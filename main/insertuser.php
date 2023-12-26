@@ -83,6 +83,7 @@ if ($_SESSION['otp'] != $_POST['otp']) {
         $x['firstname'] = ucwords($_POST['firstname']);
         $x['lastname'] = ucwords($_POST['lastnme']);
         $x['email'] = $_POST['email'];
+        $x['mpin'] = $_POST['mpin'];
         $x['mobile'] = $_POST['mobileno'];
         $x['address'] = $_POST['address'];
         $x['dob'] = $_POST['dob'];
