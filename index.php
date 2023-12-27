@@ -267,6 +267,9 @@ switch ($request['path']) {
     case "$head/login";
         require __DIR__ . '/main/login.php';
         break;
+    case "$head/account-deletion";
+        require __DIR__ . '/main/accountdeletion.php';
+        break;
     case "$head/mailtemp";
         require __DIR__ . '/main/mailtemp.php';
         break;
