@@ -28,6 +28,9 @@ include "main/session.php";
         <label class="form-label" for="Quantity">IFSC</label>
         <input type="text" data-bvalidator="required" name="ifsc" class="form-control form-control-sm" id="">
     </div> -->
-    <button class="btn btn-success d-none" id="modalsubmit" onclick="event.preventDefault();sendForm('', '', 'insertbank', 'resultid2', 'addtax2')">Send For Approval</button>
+    <button class="btn btn-primary" id="modalsubmit" onclick="event.preventDefault();sendForm('', '', 'insertbank', 'resultid2', 'addtax2')">Send For Approval</button>
     <div class="col-md-12" id="resultid2"></div>
 </form>
+<script>
+    $("#modalfooterbtn").css('display', 'none')
+</script>

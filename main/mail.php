@@ -77,7 +77,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
 
 
                                                     <div class="email-list-item-content ms-2 ms-sm-0 me-2">
-                                                        <span class="email-list-item-username me-2 h6"><?= $obj->selectfieldwhere('users', 'name', 'id=' . $rowinbox['senderid'] . '') ?></span>
+                                                        <span class="email-list-item-username me-2 h6">Eagle Eye Trading</span>
                                                         <span class="email-list-item-subject d-xl-inline-block d-block"> <?= $rowinbox['message'] ?></span>
                                                     </div>
 

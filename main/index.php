@@ -866,8 +866,8 @@ if ($mainpagemaintanance) { ?>
                             </a>
                             <p class="footer-text footer-logo-description mb-4">
                                 Eagle Eye Tradings, your gateway to Smart Trading! Elevate your trading experience with Eagle Eye Tradings.<br>
-                                <div style="color:#fff;"><span style="font-weight:800;     text-decoration: underline;
-">Address:</span> <span>BS-955, C 1A, Sector 4, Greater Noida, Galaxy Diamond Plaza, uttar pradesh india post- 201009</span> </div>
+                            <div style="color:#fff;"><span style="font-weight:800;     text-decoration: underline;
+">Address:</span> <span><?= $rowinfo['address_1'] ?></span> </div>
                             </p>
                             <!-- <form class="footer-form">
               <label for="footer-email" class="small">Subscribe to newsletter</label>
