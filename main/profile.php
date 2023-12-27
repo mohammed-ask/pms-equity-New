@@ -1,6 +1,7 @@
 <?php
 include "main/session.php";
 $rowprofile = $obj->selectextrawhere("users", "id=" . $employeeid . "")->fetch_assoc();
+$rownominee = $obj->selectextrawhere("nominee", "userid=" . $employeeid . " and status = 1")->fetch_assoc();
 ob_start();
 ?>
 <!-- <h4 class="py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Account</h4> -->
@@ -22,13 +23,19 @@ ob_start();
                                     <i class="bx bx-upload d-block"></i>
                                     <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
                                 </label>
-
-                                <label for="upload" class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
+                        <?php if(isset($rownominee['name'])){ ?>
+                            <label for="upload" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "viewnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
+                                    <span class=" d-sm-block">View Nominee</span>
+                                    <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
+                                    <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                                </label>
+                        <?php }else{ ?>
+                                <label for="upload" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
                                     <span class=" d-sm-block">Add Nominee</span>
                                     <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
                                     <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
                                 </label>
-
+                        <?php } ?>
                                 <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 1MB</p>
                             </div>
                         </div>

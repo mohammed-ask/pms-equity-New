@@ -375,6 +375,15 @@ switch ($request['path']) {
     case "$head/insertresetmpin";
         require __DIR__ . '/main/insertresetmpin.php';
         break;
+    case "$head/addnominee";
+        require __DIR__ . '/main/addnominee.php';
+        break;
+    case "$head/insertnominee";
+        require __DIR__ . '/main/insertnominee.php';
+        break;
+    case "$head/viewnominee";
+        require __DIR__ . '/main/viewnominee.php';
+        break;
     case "$head/cron/settleamount";
         require __DIR__ . '/main/cron/tradesettlement.php';
         break;
