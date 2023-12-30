@@ -243,13 +243,14 @@ if ($portfoliomaintanance) {
         <h6 class="text-muted">Positions</h6>
         <div class="nav-align-top mb-4">
             <ul class="nav nav-pills mb-3" buttonole="tablist" style="gap:10px;">
-
-                <li class="nav-item">
-                    <button style="border: 1px solid #696cff;" type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
-                        AI Trades
-                    </button>
-                </li>
-
+                <?php
+                if ($usermail !== 'yashraj12@gmail.com') { ?>
+                    <li class="nav-item">
+                        <button style="border: 1px solid #696cff;" type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-aitrade" aria-controls="navs-pills-top-messages" aria-selected="false">
+                            AI Trades
+                        </button>
+                    </li>
+                <?php } ?>
                 <li class="nav-item">
                     <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#Today" aria-controls="navs-pills-top-home" aria-selected="true">
                         Indraday
@@ -265,13 +266,14 @@ if ($portfoliomaintanance) {
                         Close
                     </button>
                 </li>
-
-                <li class="nav-item">
-                    <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
-                        Advisor
-                    </button>
-                </li>
-
+                <?php
+                if ($usermail !== 'yashraj12@gmail.com') { ?>
+                    <li class="nav-item">
+                        <button style="border: 1px solid #696cff;" type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-advisor" aria-controls="navs-pills-top-messages" aria-selected="false">
+                            Advisor
+                        </button>
+                    </li>
+                <?php } ?>
 
 
             </ul>
@@ -284,41 +286,42 @@ if ($portfoliomaintanance) {
 
 
                 <!-- ---------------AI Trades Trades-------------- -->
+                <?php
+                if ($usermail !== 'yashraj12@gmail.com') { ?>
+                    <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
 
-                <div class="tab-pane fade show active" id="navs-pills-aitrade" role="tabpanel">
+                        <div>
+                            <?php
+                            if ($aistat === 'Yes') { ?>
+                                <img src="main/images/AI-is-Trading.gif" style="width: 100%;width: 100%;border-radius: 5px;" />
+                            <?php } else { ?>
+                                <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
 
-                    <div>
-                        <?php
-                        if ($aistat === 'Yes') { ?>
-                            <img src="main/images/AI-is-Trading.gif" style="width: 100%;width: 100%;border-radius: 5px;" />
-                        <?php } else { ?>
-                            <div class="table-responsive text-nowrap" style="height:450px; border-radius:5px;">
-
-                                <table id="example5" class="table table-hover mb-0">
-                                    <thead>
-                                        <tr class="sticky-table-header">
-                                            <th>Stocks</th>
-                                            <th>Open Time</th>
-                                            <th>Close Time</th>
-                                            <th>Lot</th>
-                                            <th>Qty.</th>
-                                            <th>Buy Price</th>
-                                            <th>Sell Price</th>
-                                            <th>Total</th>
-                                            <th>Buy/Sell</th>
-                                            <th>P&L%</th>
-                                            <th>P&L Amt</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-border-bottom-0">
-                                    </tbody>
-                                </table>
-                            </div>
-                        <?php } ?>
+                                    <table id="example5" class="table table-hover mb-0">
+                                        <thead>
+                                            <tr class="sticky-table-header">
+                                                <th>Stocks</th>
+                                                <th>Open Time</th>
+                                                <th>Close Time</th>
+                                                <th>Lot</th>
+                                                <th>Qty.</th>
+                                                <th>Buy Price</th>
+                                                <th>Sell Price</th>
+                                                <th>Total</th>
+                                                <th>Buy/Sell</th>
+                                                <th>P&L%</th>
+                                                <th>P&L Amt</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
-
+                <?php } ?>
 
 
                 <!-- ---------------Indraday Trades-------------- -->

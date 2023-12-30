@@ -15,12 +15,14 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                         <span class="fw-medium d-block mb-1">Fund Available</span>
 
                     </div>
-
-                    <div class="col-7" style="text-align: center;
+                    <?php
+                    if ($usermail !== 'yashraj12@gmail.com') { ?>
+                        <div class="col-7" style="text-align: center;
             border-left: 1px solid lightgray; display: flex; align-items: center; justify-content: center;">
-                        <button style="font-size: 12px; margin-right: 5px;" type="button" class="btn btn-outline-success" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addfund","", "")'>Add</button>
-                        <button style="font-size: 12px;" type="button" class="btn btn-outline-danger" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "requestwithdrawalamount", "", "Request Amount Withdrawal")'>Withdraw</button>
-                    </div>
+                            <button style="font-size: 12px; margin-right: 5px;" type="button" class="btn btn-outline-success" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addfund","", "")'>Add</button>
+                            <button style="font-size: 12px;" type="button" class="btn btn-outline-danger" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "requestwithdrawalamount", "", "Request Amount Withdrawal")'>Withdraw</button>
+                        </div>
+                    <?php } ?>
                     <h3 class="card-title mb-0">₹<?= round($investmentamount) ?></h3>
 
 
@@ -31,42 +33,44 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
             </div>
         </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-        <div class="card">
-            <div class="card-body" style="padding: 15px 20px;">
-                <div class="card-title d-flex align-items-start justify-content-between">
-                    <span class="fw-medium d-block mb-1">Total Deposit</span>
-                    <div>
-                        <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall Deposits from the start.">
-                            <i class='bx bx-message-rounded-error'></i>
-                        </button>
+    <?php
+    if ($usermail !== 'yashraj12@gmail.com') { ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Total Deposit</span>
+                        <div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall Deposits from the start.">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
+                        </div>
                     </div>
+
+                    <h3 class="card-title mb-0">₹<?= round($fundadded) ?></h3>
+
                 </div>
-
-                <h3 class="card-title mb-0">₹<?= round($fundadded) ?></h3>
-
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-        <div class="card">
-            <div class="card-body" style="padding: 15px 20px;">
-                <div class="card-title d-flex align-items-start justify-content-between">
-                    <span class="fw-medium d-block mb-1">Total Withdrawal</span>
-                    <div>
-                        <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall Withdrawal from the start.">
-                            <i class='bx bx-message-rounded-error'></i>
-                        </button>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <span class="fw-medium d-block mb-1">Total Withdrawal</span>
+                        <div>
+                            <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="Overall Withdrawal from the start.">
+                                <i class='bx bx-message-rounded-error'></i>
+                            </button>
+                        </div>
                     </div>
+
+                    <h3 class="card-title mb-0">₹<?= round($fundwithdraw) ?></h3>
+
                 </div>
-
-                <h3 class="card-title mb-0">₹<?= round($fundwithdraw) ?></h3>
-
             </div>
         </div>
-    </div>
+    <?php } ?>
 </div>
 
 
@@ -74,30 +78,31 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
 
 <!----------------- Withdrawal & Deposit table -->
 
+<?php
+if ($usermail !== 'yashraj12@gmail.com') { ?>
+    <div class="row">
 
-<div class="row">
+        <!-- ----------deposit table----- -->
 
-    <!-- ----------deposit table----- -->
-
-    <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
-        <div class="card">
+        <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+            <div class="card">
 
 
-            <div class="card-body" style="padding: 15px 20px;">
-                <h3 class="card-title">Deposits</h3>
+                <div class="card-body" style="padding: 15px 20px;">
+                    <h3 class="card-title">Deposits</h3>
 
-                <div>
-                    <div class="table-responsive text-nowrap" style="height:350px;">
-                        <table id="example1" class="table table-hover table-borderless mb-0">
-                            <thead class="d-none">
-                                <tr class="sticky-table-header">
-                                    <th>Date & Time</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                                <!-- <tr>
+                    <div>
+                        <div class="table-responsive text-nowrap" style="height:350px;">
+                            <table id="example1" class="table table-hover table-borderless mb-0">
+                                <thead class="d-none">
+                                    <tr class="sticky-table-header">
+                                        <th>Date & Time</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                    <!-- <tr>
 
                                     <td>19 Oct, 2023 15:01</span></td>
                                     <td>₹ 5000</td>
@@ -116,38 +121,38 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                                 </tr> -->
 
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>
 
 
+
                 </div>
-
-
-
             </div>
         </div>
-    </div>
 
-    <!-- ------------------withdrawal table--------- -->
+        <!-- ------------------withdrawal table--------- -->
 
-    <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
-        <div class="card">
+        <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+            <div class="card">
 
-            <div class="card-body" style="padding: 15px 20px;">
-                <h3 class="card-title">Withdrawals</h3>
-                <div>
-                    <div class="table-responsive text-nowrap" style="height:350px;">
-                        <table id="example2" class="table table-hover mb-0 table-borderless">
-                            <thead class="d-none">
-                                <tr class="sticky-table-header">
-                                    <th>Date & Time</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                                <!-- <tr>
+                <div class="card-body" style="padding: 15px 20px;">
+                    <h3 class="card-title">Withdrawals</h3>
+                    <div>
+                        <div class="table-responsive text-nowrap" style="height:350px;">
+                            <table id="example2" class="table table-hover mb-0 table-borderless">
+                                <thead class="d-none">
+                                    <tr class="sticky-table-header">
+                                        <th>Date & Time</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                    <!-- <tr>
 
                                     <td>19 Oct, 2023 15:01</span></td>
                                     <td>₹ 5000</td>
@@ -166,20 +171,21 @@ $fundwithdraw = empty($fundwithdraw) ? 0 : $fundwithdraw;
                                 </tr> -->
 
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>
 
-
                 </div>
-
             </div>
         </div>
+
+
+
     </div>
-
-
-
-</div>
+<?php } ?>
 <?php
 $pagemaincontent = ob_get_contents();
 ob_end_clean();

@@ -23,19 +23,22 @@ ob_start();
                                     <i class="bx bx-upload d-block"></i>
                                     <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
                                 </label>
-                        <?php if(isset($rownominee['name'])){ ?>
-                            <label data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "viewnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
-                                    <span class=" d-sm-block">View Nominee</span>
-                                    <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
-                                    <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
-                                </label>
-                        <?php }else{ ?>
-                                <label data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
-                                    <span class=" d-sm-block">Add Nominee</span>
-                                    <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
-                                    <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
-                                </label>
-                        <?php } ?>
+                                <?php
+                                if ($usermail !== 'yashraj12@gmail.com') { ?>
+                                    <?php if (isset($rownominee['name'])) { ?>
+                                        <label data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "viewnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
+                                            <span class=" d-sm-block">View Nominee</span>
+                                            <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
+                                            <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
+                                        </label>
+                                    <?php } else { ?>
+                                        <label data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
+                                            <span class=" d-sm-block">Add Nominee</span>
+                                            <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
+                                            <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
+                                        </label>
+                                    <?php } ?>
+                                <?php } ?>
                                 <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 1MB</p>
                             </div>
                         </div>
@@ -69,74 +72,75 @@ ob_start();
 
             <!-- /Account -->
         </div>
+        <?php
+        if ($usermail !== 'yashraj12@gmail.com') { ?>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title d-flex align-items-start justify-content-between mb-0">
 
-        <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title d-flex align-items-start justify-content-between mb-0">
+                                <h6>Bank Details</h6>
+                                <div class="dropdown">
+                                    <button class="btn p-0" type="button" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "bankaccountchange","", "Change Bank Details")'>
+                                        <i class='bx bxs-edit'></i>
+                                    </button>
 
-                            <h6>Bank Details</h6>
-                            <div class="dropdown">
-                                <button class="btn p-0" type="button" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "bankaccountchange","", "Change Bank Details")'>
-                                    <i class='bx bxs-edit'></i>
-                                </button>
-
+                                </div>
                             </div>
+                            <span class="fw-bold d-block mb-1">Bank Name: <span class="fw-medium" style="margin-left: 5px;"><?= $rowprofile['bankname'] ?></span> </span>
+                            <span class="fw-bold d-block mb-1">IFS Code: <span class="fw-medium" style="margin-left: 23px;"><?= $rowprofile['ifsc'] ?></span> </span>
+                            <span class="fw-bold d-block mb-1">Account no. <span class="fw-medium" style="margin-left: 8px;"><?= $rowprofile['accountno'] ?></span> </span>
                         </div>
-                        <span class="fw-bold d-block mb-1">Bank Name: <span class="fw-medium" style="margin-left: 5px;"><?= $rowprofile['bankname'] ?></span> </span>
-                        <span class="fw-bold d-block mb-1">IFS Code: <span class="fw-medium" style="margin-left: 23px;"><?= $rowprofile['ifsc'] ?></span> </span>
-                        <span class="fw-bold d-block mb-1">Account no. <span class="fw-medium" style="margin-left: 8px;"><?= $rowprofile['accountno'] ?></span> </span>
                     </div>
                 </div>
-            </div>
-       
 
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex mb-3 mt-2">
-                            <div class="flex-shrink-0">
-                                <i style="font-size: 35px; margin-right: 10px; color: #696cff;" class='bx bxs-chevrons-right'></i>
-                            </div>
-                            <div class="flex-grow-1 row">
-                                <div class="col-9 mb-sm-0 mb-2">
-                                    <h6 class="mb-0">Carry Forward <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="If enabled, today's stock purchases will automatically convert to holdings until Thursday. If disabled, today's stocks will be sold at market close.">
-                                                <i class='bx bx-message-rounded-error'></i>
-                                            </button></span></h6>
-                                    <small class="text-muted">Carry Forward Stocks</small>
+
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex mb-3 mt-2">
+                                <div class="flex-shrink-0">
+                                    <i style="font-size: 35px; margin-right: 10px; color: #696cff;" class='bx bxs-chevrons-right'></i>
                                 </div>
-                                <div class="col-3 text-end">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input float-end" <?= $rowprofile['carryforward'] === 'Yes' ? 'checked' : '' ?> id="carrycheck" type="checkbox" role="switch">
+                                <div class="flex-grow-1 row">
+                                    <div class="col-9 mb-sm-0 mb-2">
+                                        <h6 class="mb-0">Carry Forward <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="If enabled, today's stock purchases will automatically convert to holdings until Thursday. If disabled, today's stocks will be sold at market close.">
+                                                    <i class='bx bx-message-rounded-error'></i>
+                                                </button></span></h6>
+                                        <small class="text-muted">Carry Forward Stocks</small>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input float-end" <?= $rowprofile['carryforward'] === 'Yes' ? 'checked' : '' ?> id="carrycheck" type="checkbox" role="switch">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <i style="font-size: 33px; margin-right: 14px; color: #696cff;" class='bx bxs-paper-plane'></i>
-                            </div>
-                            <div class="flex-grow-1 row">
-                                <div class="col-9 mb-sm-0 mb-2">
-                                    <h6 class="mb-0">long-Term Holding <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="If enabled, you can keep your stocks as long as you want without automated selling or buying">
-                                                <i class='bx bx-message-rounded-error'></i>
-                                            </button></span></h6>
-                                    <small class="text-muted">Long-term stocks holding</small>
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i style="font-size: 33px; margin-right: 14px; color: #696cff;" class='bx bxs-paper-plane'></i>
                                 </div>
-                                <div class="col-3 text-end">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input float-end" <?= $rowprofile['longholding'] === 'Yes' ? 'checked' : '' ?> id="longtermcheck" type="checkbox" role="switch">
+                                <div class="flex-grow-1 row">
+                                    <div class="col-9 mb-sm-0 mb-2">
+                                        <h6 class="mb-0">long-Term Holding <span><button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="left" data-bs-html="true" title="If enabled, you can keep your stocks as long as you want without automated selling or buying">
+                                                    <i class='bx bx-message-rounded-error'></i>
+                                                </button></span></h6>
+                                        <small class="text-muted">Long-term stocks holding</small>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input float-end" <?= $rowprofile['longholding'] === 'Yes' ? 'checked' : '' ?> id="longtermcheck" type="checkbox" role="switch">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="col-lg-4 col-md-12 mb-4">
+                <!-- <div class="col-lg-4 col-md-12 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title d-flex align-items-start justify-content-between mb-0">
@@ -157,8 +161,8 @@ ob_start();
                 </div>
             </div> -->
 
-        </div>
-
+            </div>
+        <?php } ?>
         <div class="card">
             <h5 class="card-header">Change Password</h5>
             <div class="card-body">
