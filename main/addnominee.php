@@ -1,7 +1,7 @@
 <?php
 include "main/session.php";
 ?>
-<form class="row align-items-end" id="addfund">
+<form id="addfund">
     <div class="row">
         <div class="col-6">
             <label class="form-label mb-0" for="Price">Name</label>
