@@ -1,7 +1,7 @@
 <?php
 include "main/session.php";
 ?>
-<form class="row gy-2 gx-3 align-items-end" id="addfund">
+<form class="row align-items-end" id="addfund">
     <div class="row">
         <div class="col-6">
             <label class="form-label mb-0" for="Price">Name</label>
@@ -30,7 +30,7 @@ include "main/session.php";
             <input data-bvalidator="required,maxlength[12],minlength[12]" class="form-control form-control-sm" id="" name="adharno" placeholder="Aadhar No">
         </div>
     </div>
-    <button style="background-color: #057c7c;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertnominee', 'resultid', 'addfund')">Submit</button>
+    <button style="background-color: #696cff; box-shadow: none;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertnominee', 'resultid', 'addfund')">Submit</button>
     <div class="col-md-12" id="resultid"></div>
 </form>
 <script>
