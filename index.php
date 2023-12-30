@@ -267,6 +267,9 @@ switch ($request['path']) {
     case "$head/login";
         require __DIR__ . '/main/login.php';
         break;
+    case "$head/account-deletion";
+        require __DIR__ . '/main/accountdeletion.php';
+        break;
     case "$head/mailtemp";
         require __DIR__ . '/main/mailtemp.php';
         break;
@@ -371,6 +374,15 @@ switch ($request['path']) {
         break;
     case "$head/insertresetmpin";
         require __DIR__ . '/main/insertresetmpin.php';
+        break;
+    case "$head/addnominee";
+        require __DIR__ . '/main/addnominee.php';
+        break;
+    case "$head/insertnominee";
+        require __DIR__ . '/main/insertnominee.php';
+        break;
+    case "$head/viewnominee";
+        require __DIR__ . '/main/viewnominee.php';
         break;
     case "$head/cron/settleamount";
         require __DIR__ . '/main/cron/tradesettlement.php';
