@@ -30,7 +30,7 @@ include "main/session.php";
             <input data-bvalidator="required,maxlength[12],minlength[12]" class="form-control form-control-sm" id="" name="adharno" placeholder="Aadhar No">
         </div>
     </div>
-    <button style="background-color: #696cff; box-shadow: none;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertnominee', 'resultid', 'addfund')">Submit</button>
+    <button style="background-color: #696cff; box-shadow: none;     border: none;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertnominee', 'resultid', 'addfund')">Submit</button>
     <div class="col-md-12" id="resultid"></div>
 </form>
 <script>

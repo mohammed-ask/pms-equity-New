@@ -3,7 +3,7 @@ include "main/session.php";
 $id = $_GET['hakuna'];
 $rownominee = $obj->selectextrawhere('nominee', "userid=$id and status = 1")->fetch_assoc();
 ?>
-<form class="row gy-2 gx-3 align-items-end" id="addfund">
+<form id="addfund">
     <div class="row">
         <div class="col-6">
             <label class="form-label mb-0" for="Price">Name</label>
