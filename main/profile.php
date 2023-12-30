@@ -27,13 +27,13 @@ ob_start();
                             <label for="upload" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "viewnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
                                     <span class=" d-sm-block">View Nominee</span>
                                     <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
-                                    <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                                    <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
                                 </label>
                         <?php }else{ ?>
                                 <label for="upload" data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal("", "addnominee","", "")' class="btn btn-primary me-2 mb-4 p-1 px-2" tabindex="0">
                                     <span class=" d-sm-block">Add Nominee</span>
                                     <!-- <i class="bx bx-upload d-block d-sm-none"></i> -->
-                                    <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                                    <!-- <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" /> -->
                                 </label>
                         <?php } ?>
                                 <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 1MB</p>
