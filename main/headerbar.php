@@ -37,6 +37,7 @@ if (isset($_SESSION['adminid'])) {
             ?>
             <li class="nav-item lh-1 me-3">
                 <p class="mb-0"><?= $username ?></p>
+                
             </li>
 
             <!-- User -->
@@ -57,13 +58,13 @@ if (isset($_SESSION['adminid'])) {
                                 </div>
                                 <div class="flex-grow-1">
                                     <span class="fw-medium d-block"><?= $username ?></span>
-                                    <!-- <small class="text-muted">Mumbai</small> -->
+                                    <small><span>Client Id: </span><span>EE038176</span></small>
                                 </div>
                             </div>
                         </span>
                     </li>
                     <li>
-                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider m-0"></div>
                     </li>
                     <li>
                         <a class="dropdown-item" href="profile">
@@ -79,7 +80,7 @@ if (isset($_SESSION['adminid'])) {
                     </li> -->
 
                     <li>
-                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider m-0"></div>
                     </li>
                     <li>
                         <a class="dropdown-item" href="logout">

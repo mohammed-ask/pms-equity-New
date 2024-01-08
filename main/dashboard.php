@@ -85,7 +85,7 @@ if ($dashboardmaintanance) {
                         <div class="card-body">
                             <h5 class="card-title text-primary">Welcome back <?= $username ?>! 🎉</h5>
                             <p class="mb-4">
-                                Welcome back! to <span class="fw-bold">PMS Equity,</span> Let's grow those investments together."
+                                Welcome back! to <span class="fw-bold">Eagle Eye Tradings,</span> Let's grow those investments together."
                             </p>
 
                             <a href="profile" class="btn btn-sm btn-outline-primary">View Profile</a>
@@ -279,7 +279,7 @@ $pagemaincontent = ob_get_contents();
 ob_end_clean();
 
 $pagemeta = "";
-$pagetitle = "Your Dashboard- PMS Equity";
+$pagetitle = "Your Dashboard- Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 $watchliststocks = $wstocks;
