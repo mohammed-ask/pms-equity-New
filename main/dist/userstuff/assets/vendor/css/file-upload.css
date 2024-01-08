@@ -12,13 +12,14 @@
 }
 .uploader label {
   float: left;
+  font-size: 13px;
   clear: both;
   width: 100%;
   padding: 1rem;
   text-align: center;
   background: #fff;
   border-radius: 7px;
-  border: 3px solid #eee;
+  border: 2px solid #eee;
   transition: all 0.2s ease;
   -webkit-user-select: none;
      -moz-user-select: none;

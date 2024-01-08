@@ -124,6 +124,8 @@ table.dataTable th {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     padding-left: 1rem;
+    font-size: 12px;
+
 }
 
 table.dataTable td.dataTables_empty,

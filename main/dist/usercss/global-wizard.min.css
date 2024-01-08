@@ -2908,7 +2908,7 @@ progress {
 
 .markdown>table>:not(caption)>*>*,
 .table>:not(caption)>*>* {
-  padding: .75rem .75rem;
+  padding: .5rem .75rem;
   color: var(--tblr-table-color-state, var(--tblr-table-color-type, var(--tblr-table-color)));
   background-color: var(--tblr-table-bg);
   border-bottom-width: var(--tblr-border-width);
