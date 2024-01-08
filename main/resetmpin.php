@@ -104,7 +104,7 @@ $id = $_GET['hakuna'];
                             <label class="block text-sm" style="margin-bottom: 5px;position:relative">
                                 <span class="text-gray-700 dark:text-gray-400">New MPIN</span>
                                 <input style="border-color: #696cff; background-color: #f4f5ff;" type="password" data-bvalidator="required,minlength[6],maxlength[6],digit" id="password" name="mpin" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Enter Mpin" />
-                                <i id="eye" class="fa fa-eye" style="position: absolute;top:33px;right:10px" aria-hidden="true"></i>
+                                <i id="eye" class="fa fa-eye" style="position: absolute;top:32px;right:10px; font-size: 12px;" aria-hidden="true"></i>
                             </label>
                             <label class="block text-sm" style="margin-bottom: 5px;">
                                 <span class="text-gray-700 dark:text-gray-400">Confirm MPIN</span>
