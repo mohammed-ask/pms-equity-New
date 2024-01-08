@@ -35,6 +35,67 @@ $id = $_GET['hakuna'];
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
     <style>
+        /* --------------------alertify---------------- */
+
+        .alertify .ajs-header {
+            display: none;
+
+        }
+
+
+        .alertify .ajs-footer {
+            /* padding: 4px; */
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            min-height: 35px !important;
+            background-color: #00aaaa2e !important;
+            padding: 0px !important;
+        }
+
+        .alertify .ajs-dialog {
+
+            padding: 15px 0px 0 0px !important;
+            max-width: 400px !important;
+            border-radius: 5px !important;
+            top: 25%;
+        }
+
+        .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+            margin: 0px !important;
+        }
+
+        .alertify .ajs-commands {
+            margin: -12px 10px 0 0 !important;
+        }
+
+        .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+            color: #fff !important;
+            border: 1px dotted #fff;
+            border-radius: 5px;
+            /* margin-right: 10px !important; */
+            margin: 5px 6px 5px 10px !important;
+            background-color: #00aaaa;
+        }
+
+        .alertify .ajs-dimmer {
+
+            transition-timing-function: ease-in;
+            transition-duration: 500ms !important;
+        }
+
+        .alertify .ajs-modal {
+
+            transition-timing-function: ease-out;
+            transition-duration: 500ms !important;
+        }
+
+        @media (max-width: 600px) {
+            .d-app-none {
+                display: none;
+            }
+
+        }
+
         /*  ----------------------------------Browser alert start------------------------------------------ */
 
         .browser-d-none {
@@ -43,21 +104,23 @@ $id = $_GET['hakuna'];
 
 
         .browser-model-content {
-            border-radius: 0rem 0rem 0.3rem 0.3rem;
+            border-radius: 0.7em;
             border: none;
 
             text-align: center;
         }
 
         .modal-dialog-broswer {
-            max-width: 350px;
+            max-width: 325px;
             margin: 0rem auto;
+            top: 40%;
         }
 
         .modal-footer-browser {
             border-top: none !important;
-            padding: 0px 7px 6px 3px;
+            padding: 0px 7px 15px 3px;
             justify-content: center;
+            gap: 15px;
         }
 
         .browser-btn-primary {
@@ -68,9 +131,14 @@ $id = $_GET['hakuna'];
         }
 
         .browser-btn-secondary {
-            color: #0b0707;
+
             background-color: #6c757d00;
             border-color: #6c757d;
+            padding: 0.3rem 1.3rem;
+            font-size: 14px;
+            font-weight: 500;
+            color: #696cff;
+            border: none;
 
         }
 
@@ -79,7 +147,7 @@ $id = $_GET['hakuna'];
             padding: 0.3rem 1.3rem;
             font-size: 14px;
             font-weight: 500;
-            background-color: #048f83;
+            background-color: #696cff;
             color: white;
             border: none;
 
