@@ -92,27 +92,27 @@ $id = $_GET['hakuna'];
 
 <body>
     <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
-        <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+        <div class="flex-1 h-full max-w-xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
             <div>
               
-                <div class="items-center justify-center p-6">
+                <div class="py-5 items-center justify-center p-6">
                     <form onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'insertresetmpin', 'resultid', 'loginform');return 0;" id="loginform">
                         <div class="w-full">
-                            <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+                            <h1 style="font-size: 22px;" class="mb-4 font-semibold text-gray-700 dark:text-gray-200">
                                 Set MPIN
                             </h1>
                             <label class="block text-sm" style="margin-bottom: 5px;position:relative">
                                 <span class="text-gray-700 dark:text-gray-400">New MPIN</span>
-                                <input type="password" data-bvalidator="required,minlength[6],maxlength[6],digit" id="password" name="mpin" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="" />
+                                <input style="border-color: #696cff; background-color: #f4f5ff;" type="password" data-bvalidator="required,minlength[6],maxlength[6],digit" id="password" name="mpin" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Enter Mpin" />
                                 <i id="eye" class="fa fa-eye" style="position: absolute;top:33px;right:10px" aria-hidden="true"></i>
                             </label>
                             <label class="block text-sm" style="margin-bottom: 5px;">
                                 <span class="text-gray-700 dark:text-gray-400">Confirm MPIN</span>
-                                <input type="password" id="confirmpassword" data-bvalidator="required,matchconfirmpassword[password]" data-bvalidator-msg-matchconfirmpassword="Confirm Password Not Matched" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Confirm Password" />
+                                <input style="border-color: #696cff; background-color: #f4f5ff;" type="password" id="confirmpassword" data-bvalidator="required,matchconfirmpassword[password]" data-bvalidator-msg-matchconfirmpassword="Confirm Password Not Matched" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Confirm Mpin" />
                             </label>
                             <div id="resultid"></div>
                             <!-- You should use a button here, as the anchor is only used for the example  -->
-                            <button type="submit" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                            <button style="background-color: #696cff;" type="submit" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
                                 Reset
                             </button>
 
