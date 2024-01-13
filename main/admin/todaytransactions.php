@@ -10,7 +10,7 @@ ob_start();
 
         <div class="mb-3" style="text-align: right;">
 
-            <button data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("", "addstock", "", "Add Stock")' class="btn btn-primary py-2">
+            <button data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("advisor", "addstock", "", "Add Stock")' class="btn btn-primary py-2">
                 + Add Position
             </button>
         </div>

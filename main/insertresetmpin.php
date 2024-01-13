@@ -5,4 +5,4 @@ $id = $_POST['id'];
 $xx['mpin'] = $_POST['mpin'];
 $obj->update("users", $xx, $id);
 $obj->saveactivity("Password Reset", "", $id, $id, "User", "Password Reset");
-echo "Redirect : Password updated successfully.  URLindex";
+echo "Redirect : Password updated successfully.  URLforgotmpin";
