@@ -100,7 +100,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                                 <div class="p-0">
 
                                                     <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                                        <label for="email-subject" class="form-label mb-0 py-2">From: <span style="margin-left: 7px;"> Eagle Eye Trading Team</span></label>
+                                                        <label for="email-subject" class="form-label mb-0 py-2">From: <span style="margin-left: 7px;"> Eagle Eye Tradings</span></label>
 
                                                     </div>
 
