@@ -4,16 +4,17 @@ $id = $_GET['hakuna'];
 $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'updateuser', 'resultid', 'adduser');return 0;">
-    
-<div class="row">
-<label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Name</span>
-        <input name="username" data-bvalidator="required" class="form-control" value="<?= $rowuser['name'] ?>" placeholder="Client's Name" />
-    </label>
-    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Email</span>
-        <input name="email" data-bvalidator="required,email" class="form-control" value="<?= $rowuser['email'] ?>" placeholder="Client's Email ID" />
-    </label></div>
+
+    <div class="row">
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Name</span>
+            <input name="username" data-bvalidator="required" class="form-control" value="<?= $rowuser['name'] ?>" placeholder="Client's Name" />
+        </label>
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Email</span>
+            <input name="email" data-bvalidator="required,email" class="form-control" value="<?= $rowuser['email'] ?>" placeholder="Client's Email ID" />
+        </label>
+    </div>
 
     <div class="row">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
@@ -87,25 +88,30 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
             <span class="text-gray-700 dark:text-gray-400">Withdraw Limit</span>
             <input type="number" name="withdrawlimit" data-bvalidator="required" step="any" onfocus="this.select()" class="form-control" value="<?= $rowuser['withdrawlimit'] ?>" placeholder="Withdrawal Limit" /></label>
         </label>
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">MPIN</span>
+            <input type="number" name="mpin" data-bvalidator="required,minlength[6],maxlength[6]" onfocus="this.select()" class="form-control" value="<?= $rowuser['mpin'] ?>" placeholder="Withdrawal Limit" /></label>
+        </label>
     </div>
-   
-        
-   
+
+
+
     <div>
         <label class="col-12 block text-sm" style="margin-bottom: 5px;">
             <div class="row my-1"> <span class="col-6 text-gray-700 dark:text-gray-400"> Withdrawal Message</span>
                 <span id="switchtype" class="col-6 text-right text-gray-700 dark:text-gray-400" style="color:green;   text-align: right;">Custom Message</span>
-            </div></label>
-            <div id="stype">
-
-                <select data-bvalidator="required" name="message" class="select2 form-control">
-                    <option value="Withdrawal temporarily unavailable due to a technical problem. Our team is working to resolve it promptly. Thank you for your patience.">Withdrawal temporarily unavailable due to a technical problem. Our team is working to resolve it promptly. Thank you for your patience.</option>
-
-                    <option value="Withdrawal Restriction: You are currently unable to make a withdrawal for the next 24 hours. Please try again after the specified time has elapsed. Apologies for any inconvenience caused.">Withdrawal Restriction: You are currently unable to make a withdrawal for the next 24 hours. Please try again after the specified time has elapsed. Apologies for any inconvenience caused.</option>
-                    <option value="Withdrawal temporarily unavailable due to suspicious activity. Please re-verify your account to ensure security. To re-verify send your document(PAN, Aadhar & Bank Details) on mail. It will take 7 working days for verification.">Withdrawal temporarily unavailable due to suspicious activity. Please re-verify your account to ensure security. To re-verify send your document(PAN, Aadhar & Bank Details) on mail. It will take 7 working days for verification.</option>
-                    <option value="Withdrawal Limit: You can only withdraw once every 7 days. Please wait until the specified time period has passed to initiate a withdrawal.">Withdrawal Limit: You can only withdraw once every 7 days. Please wait until the specified time period has passed to initiate a withdrawal.</option>
-                </select>
             </div>
+        </label>
+        <div id="stype">
+
+            <select data-bvalidator="required" name="message" class="select2 form-control">
+                <option value="Withdrawal temporarily unavailable due to a technical problem. Our team is working to resolve it promptly. Thank you for your patience.">Withdrawal temporarily unavailable due to a technical problem. Our team is working to resolve it promptly. Thank you for your patience.</option>
+
+                <option value="Withdrawal Restriction: You are currently unable to make a withdrawal for the next 24 hours. Please try again after the specified time has elapsed. Apologies for any inconvenience caused.">Withdrawal Restriction: You are currently unable to make a withdrawal for the next 24 hours. Please try again after the specified time has elapsed. Apologies for any inconvenience caused.</option>
+                <option value="Withdrawal temporarily unavailable due to suspicious activity. Please re-verify your account to ensure security. To re-verify send your document(PAN, Aadhar & Bank Details) on mail. It will take 7 working days for verification.">Withdrawal temporarily unavailable due to suspicious activity. Please re-verify your account to ensure security. To re-verify send your document(PAN, Aadhar & Bank Details) on mail. It will take 7 working days for verification.</option>
+                <option value="Withdrawal Limit: You can only withdraw once every 7 days. Please wait until the specified time period has passed to initiate a withdrawal.">Withdrawal Limit: You can only withdraw once every 7 days. Please wait until the specified time period has passed to initiate a withdrawal.</option>
+            </select>
+        </div>
     </div>
     <!-- <label class="block text-md" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Withdrawel Request Start Time</span>
@@ -146,42 +152,45 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
             <input xdata-bvalidator="required" name="employeeref" class="form-control" value="<?= $rowuser['employeeref'] === '' ? '' : $rowuser['employeeref'] ?>" placeholder="Employee ID For Further Reference" /></label>
     </div>
     <p><strong>Documents</strong></p>
-<div class="row">
-    <label class="col-6 block text-sm " style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Aadhar Front Side</span>
-        <input hidden value="Aadhar Card Front" name="name[]">
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
-    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <input hidden value="Aadhar Card Back" name="name[]">
-        <span class="text-gray-700 dark:text-gray-400">Aadhar Back Side</span>
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label></div>
+    <div class="row">
+        <label class="col-6 block text-sm " style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Aadhar Front Side</span>
+            <input hidden value="Aadhar Card Front" name="name[]">
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <input hidden value="Aadhar Card Back" name="name[]">
+            <span class="text-gray-700 dark:text-gray-400">Aadhar Back Side</span>
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+    </div>
 
     <div class="row">
-    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Pan Card</span>
-        <input hidden value="PAN card" name="name[]">
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Pan Card</span>
+            <input hidden value="PAN card" name="name[]">
 
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
-    <label class="col-6 block text-sm" sty le="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Signature</span>
-        <input hidden value="Signature" name="name[]">
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label></div>
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+        <label class="col-6 block text-sm" sty le="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Signature</span>
+            <input hidden value="Signature" name="name[]">
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+    </div>
 
     <div class="row">
-    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Passport Size Photo</span>
-        <input hidden value="Passport Size Photo" name="name[]">
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label>
-    <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Passbook</span>
-        <input hidden value="Passbook" name="name[]">
-        <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
-    </label></div>
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Passport Size Photo</span>
+            <input hidden value="Passport Size Photo" name="name[]">
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Passbook</span>
+            <input hidden value="Passbook" name="name[]">
+            <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+        </label>
+    </div>
 
     <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium btn btn-primary d-none">
         Submit

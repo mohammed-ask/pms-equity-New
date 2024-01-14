@@ -27,7 +27,7 @@ if ($emailcount > 0) {
         $row4 = $obj->fetch_assoc($result4);
         $codegeneratorid = $row4['id'];
         $codenumber = $row4['number'] + 1;
-        $generatedcode = sprintf('%04d', $codenumber);
+        $generatedcode = sprintf('%02d', $codenumber);
         // $month = strtoupper(date("M", strtotime($date)));
         $uniqueid = str_replace(array("{prefix}", "{number}"), array($row4['prefix'], $generatedcode), $row4['pattern']);
     } else {

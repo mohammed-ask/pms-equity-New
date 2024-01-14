@@ -4,6 +4,17 @@
 
 <head>
     <?php include 'headincludes.php' ?>
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8) url(main/images/loader.gif) no-repeat center center;
+            z-index: 10000;
+        }
+    </style>
 </head>
 
 <body>
@@ -145,3 +156,9 @@
 </body>
 
 </html>
+<script>
+    addoverlay()
+    setTimeout(() => {
+        removeoverlay()
+    }, 1000);
+</script>
