@@ -71,7 +71,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                     <?php
                                     while ($rowinbox = $obj->fetch_assoc($resultinbox)) { ?>
                                         <ul class="list-unstyled m-0">
-                                            <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
+                                            <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd<?= $rowinbox['id'] ?>" aria-controls="offcanvasEnd<?= $rowinbox['id'] ?>">
 
                                                 <div class="d-flex align-items-center">
 
@@ -90,48 +90,47 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                                 </div>
                                             </li>
                                         </ul>
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowinbox['id'] ?>" aria-labelledby="offcanvasEndLabel<?= $rowinbox['id'] ?>">
+                                            <div class="offcanvas-header">
+                                                <h5 id="offcanvasEndLabel" class="offcanvas-title">Message</h5>
+                                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+
+                                                <div class="p-0">
+
+                                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                        <label for="email-subject" class="form-label mb-0 py-2">From: <span style="margin-left: 7px;"> PMS EQuity Team </span></label>
+
+                                                    </div>
+
+                                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                        <label for="email-subject" class="form-label mb-0">Subject:</label>
+                                                        <input type="text" value="<?= $rowinbox['subject'] ?>" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0" id="email-subject">
+                                                    </div>
+                                                    <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                        <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" placeholder="Message..." rows="8"><?= $rowinbox['message'] ?></textarea>
+                                                    </div>
+
+                                                    <label style="width: 100%;" for="View"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachments</label>
+                                                    <!-- <input type="file" name="file-input" class="d-none" id="attach-file"> -->
+                                                    <div class="email-compose-actions d-flex justify-content-between align-items-center my-2 py-1">
+
+                                                        <?php
+                                                        $rowmail = $obj->selectextrawhere("mail", "id=" . $rowinbox['id'] . "")->fetch_assoc();
+                                                        $attachment = $obj->selectextrawhere('maildocuments', "mailid=" . $rowinbox['id'] . "");
+                                                        while ($rowattachment = $obj->fetch_assoc($attachment)) {
+                                                            $path = $obj->selectfieldwhere("uploadfile", "path", "id=" . $rowattachment['path'] . "");
+                                                            $orgname = $obj->selectfieldwhere("uploadfile", "orgname", "id=" . $rowattachment['path'] . "");
+                                                        ?>
+                                                            <a target="_blank" class="w-full my-3 px-3 py-1 rounded-lg text-sm font-medium bg-theme-mail-attachments" href="<?= $path ?>"><?= $orgname ?></a>
+                                                        <?php } ?>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     <?php } ?>
-                                    <!-- <ul class="list-unstyled m-0">
-                                        <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
-
-                                            <div class="d-flex align-items-center">
-
-
-                                                <div class="email-list-item-content ms-2 ms-sm-0 me-2">
-                                                    <span class="email-list-item-username me-2 h6">Shubham K</span>
-                                                    <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
-                                                </div>
-
-                                                <div class="email-list-item-meta ms-auto d-flex align-items-center">
-
-                                                    <small class="email-list-item-time text-muted"> <span>12, Nov 23</span></small>
-
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-
-                                    <ul class="list-unstyled m-0">
-                                        <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
-
-                                            <div class="d-flex align-items-center">
-
-
-                                                <div class="email-list-item-content ms-2 ms-sm-0 me-2">
-                                                    <span class="email-list-item-username me-2 h6">Mohammed Husain</span>
-                                                    <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
-                                                </div>
-
-                                                <div class="email-list-item-meta ms-auto d-flex align-items-center">
-
-                                                    <small class="email-list-item-time text-muted"> <span>12, Nov 23</span></small>
-
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul> -->
 
 
                                 </div>
@@ -150,7 +149,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                         <?php
                                         while ($rowsent = $obj->fetch_assoc($resultsentmail)) { ?>
                                             <ul class="list-unstyled m-0">
-                                                <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
+                                                <li class="email-list-item email-marked-read" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd<?= $rowsent['id'] ?>" aria-controls="offcanvasEnd<?= $rowsent['id'] ?>">
                                                     <div class="d-flex align-items-center">
                                                         <div class="email-list-item-content ms-2 ms-sm-0 me-2">
                                                             <span class="email-list-item-username me-2 h6"><?= $obj->selectfieldwhere('users', 'name', 'id=' . $rowsent['senderid'] . '') ?></span>
@@ -162,27 +161,47 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                                     </div>
                                                 </li>
                                             </ul>
-                                        <?php } ?>
-                                        <!-- <ul class="list-unstyled m-0">
-                                            <li class="email-list-item email-marked-read" data-starred="true" data-bs-toggle="sidebar" data-target="#app-email-view">
+                                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowsent['id'] ?>" aria-labelledby="offcanvasEndLabel<?= $rowsent['id'] ?>">
+                                                <div class="offcanvas-header">
+                                                    <h5 id="offcanvasEndLabel" class="offcanvas-title">Message</h5>
+                                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
 
-                                                <div class="d-flex align-items-center">
+                                                    <div class="p-0">
 
+                                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                            <label for="email-subject" class="form-label mb-0 py-2">From: <span style="margin-left: 7px;"> You </span></label>
 
-                                                    <div class="email-list-item-content ms-2 ms-sm-0 me-2">
-                                                        <span class="email-list-item-username me-2 h6">Shubham Kumar</span>
-                                                        <span class="email-list-item-subject d-xl-inline-block d-block"> Focused impactful open issues from the project of GitHub</span>
-                                                    </div>
+                                                        </div>
 
-                                                    <div class="email-list-item-meta ms-auto d-flex align-items-center">
+                                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                            <label for="email-subject" class="form-label mb-0">Subject:</label>
+                                                            <input type="text" value="<?= $rowsent['subject'] ?>" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0" id="email-subject">
+                                                        </div>
+                                                        <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
+                                                            <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" placeholder="Message..." rows="8"><?= $rowsent['message'] ?></textarea>
+                                                        </div>
 
-                                                        <small class="email-list-item-time text-muted"> <span>12, Nov 23</span></small>
+                                                        <label style="width: 100%;" for="View"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachments</label>
+                                                        <!-- <input type="file" name="file-input" class="d-none" id="attach-file"> -->
+                                                        <div class="email-compose-actions d-flex justify-content-between align-items-center my-2 py-1">
 
+                                                            <?php
+                                                            $rowmail = $obj->selectextrawhere("mail", "id=" . $rowsent['id'] . "")->fetch_assoc();
+                                                            $attachment = $obj->selectextrawhere('maildocuments', "mailid=" . $rowsent['id'] . "");
+                                                            while ($rowattachment = $obj->fetch_assoc($attachment)) {
+                                                                $path = $obj->selectfieldwhere("uploadfile", "path", "id=" . $rowattachment['path'] . "");
+                                                                $orgname = $obj->selectfieldwhere("uploadfile", "orgname", "id=" . $rowattachment['path'] . "");
+                                                            ?>
+                                                                <a target="_blank" class="w-full my-3 px-3 py-1 rounded-lg text-sm font-medium bg-theme-mail-attachments" href="<?= $path ?>"><?= $orgname ?></a>
+                                                            <?php } ?>
 
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul> -->
+                                            </div>
+                                        <?php } ?>
 
                                     </div>
 
