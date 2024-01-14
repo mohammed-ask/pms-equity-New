@@ -37,7 +37,7 @@ if (isset($_SESSION['adminid'])) {
             ?>
             <li class="nav-item lh-1 me-3">
                 <p class="mb-0"><?= $username ?></p>
-                
+
             </li>
 
             <!-- User -->
@@ -58,7 +58,7 @@ if (isset($_SESSION['adminid'])) {
                                 </div>
                                 <div class="flex-grow-1">
                                     <span class="fw-medium d-block"><?= $username ?></span>
-                                    <small><span>Client Id: </span><span>EE038176</span></small>
+                                    <small><span>Client Id: </span><span><?= $obj->selectfieldwhere('users', 'usercode', "id=$employeeid") ?></span></small>
                                 </div>
                             </div>
                         </span>

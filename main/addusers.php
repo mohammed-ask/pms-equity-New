@@ -1047,7 +1047,7 @@
                 }
                 var email = $("#email").val()
                 var username = $("#username").val()
-                if ($("#password").val() === '' || $("#password").val() !== $("#comfirmpass").val()) {
+                if ($("#password").val() === '' || $("#mpin").val().length !== 6) {
                     return false
                 }
                 formnumber++;

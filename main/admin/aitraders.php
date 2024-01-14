@@ -11,7 +11,12 @@ ob_start();
     <!-- New Table -->
 
     <div class="container-xl">
+        <div class="mb-3" style="text-align: right;">
 
+            <button data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("ai", "addstock", "", "Add Stock")' class="btn btn-primary py-2">
+                + Add Position
+            </button>
+        </div>
         <div class="card card-default">
             <div class="card-header">
                 <h3>Today's AI Traders Details</h3>
