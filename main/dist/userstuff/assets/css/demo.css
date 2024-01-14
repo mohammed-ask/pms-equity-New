@@ -242,6 +242,7 @@ display: none !important;}
   .mobile-navbar ul li.active a i{
     opacity: 1;
     pointer-events: auto;
+    margin-bottom: 7px;
   }
   .mobile-navbar ul .mobile-indicator{
     position: absolute;
@@ -277,7 +278,7 @@ display: none !important;}
   }
   
   .app-navbar-name{
-    margin-top: 50px;
+    margin-top: 45px;
       font-size: 10px;
       font-weight: 500;
   }
