@@ -58,7 +58,7 @@
                             </li>
                             <li class="<?= $_SERVER['REQUEST_URI'] === '/market' ? 'active' : '' ?>">
                                 <a href="market">
-                                    <i class='bx bx-bar-chart-square' style="border: 1px solid; border-radius: 10px; padding: 5px; background: #7d2ae826;"></i>
+                                    <i class='bx bx-bar-chart-square'></i>
                                     <i class='bx bxs-bar-chart-square activeIcon'></i>
                                     <div class="app-navbar-name" style="margin-top: 50px;"><span>Market</span></div>
                                 </a>
