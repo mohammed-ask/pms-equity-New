@@ -27,10 +27,10 @@
           user-select: none;
 }
 .uploader label:hover {
-  border-color: #454cad;
+  border-color: #9799ff;
 }
 .uploader label.hover {
-  border: 3px solid #454cad;
+  border: 3px solid #abadff;
   box-shadow: inset 0 0 0 6px #eee;
 }
 .uploader label.hover #start i.fa {

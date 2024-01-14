@@ -272,6 +272,49 @@ if ($dashboardmaintanance) {
 
 
 
+    <!-------------------------------------Additional Popup if Required Start---------------- -->
+
+    <!-- <div class="modal fade" id="modalCenterSell" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div>
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+         <div>
+<img style="border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;" width="100%" src="main\dist\userstuff\assets\img\dashboard\web-warning.gif" alt="">
+
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var myModal = new bootstrap.Modal(document.getElementById('modalCenterSell'));
+
+        
+        document.querySelector('#modalCenterSell .btn-close').addEventListener('click', function() {
+          myModal.hide();
+        });
+
+        myModal.show();
+      }, 3000);
+    });
+  </script> -->
+
+    
+    <!-------------------------------------Additional Popup if Required End---------------- -->
+
+
+
+
 
 <?php
 }
