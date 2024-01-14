@@ -5783,8 +5783,8 @@ textarea.form-control-lg {
 .offcanvas {
   position: fixed;
   border-radius: 5px;
-  bottom: 10%;
-    top: 10% !important;
+  bottom: 5%;
+    top: 5% !important;
   z-index: var(--bs-offcanvas-zindex);
   display: flex;
   flex-direction: column;
