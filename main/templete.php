@@ -60,7 +60,7 @@
                                 <a href="market">
                                     <i class='bx bx-bar-chart-square'></i>
                                     <i class='bx bxs-bar-chart-square activeIcon'></i>
-                                    <div class="app-navbar-name" style="margin-top: 50px;"><span>Market</span></div>
+                                    <div class="app-navbar-name"><span>Market</span></div>
                                 </a>
                             </li>
                             <li class="<?= $_SERVER['REQUEST_URI'] === '/fund' ? 'active' : '' ?>">
