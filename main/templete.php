@@ -72,8 +72,8 @@
                             </li>
                             <li class="<?= $_SERVER['REQUEST_URI'] === '/mail' ? 'active' : '' ?>">
                                 <a href="mail">
-                                    <i class='bx bx-envelope-open icon'></i>
-                                    <i class='bx bxs-envelope-open activeIcon'></i>
+                                    <i class='bx bx-message-rounded-dots icon'></i>
+                                    <i class='bx bxs-message-rounded-dots activeIcon'></i>
                                     <div class="app-navbar-name"><span>Email</span></div>
                                     <span></span>
                                 </a>
