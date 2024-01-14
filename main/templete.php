@@ -74,7 +74,7 @@
                                 <a href="mail">
                                     <i class='bx bx-message-rounded-dots icon'></i>
                                     <i class='bx bxs-message-rounded-dots activeIcon'></i>
-                                    <div class="app-navbar-name"><span>Email</span></div>
+                                    <div class="app-navbar-name"><span>Message</span></div>
                                     <span></span>
                                 </a>
                             </li>
