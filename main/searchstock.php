@@ -76,11 +76,39 @@ include "main/session.php";
                         <label for="stock" class="form-label mb-0">Search & Add Stock</label>
                         <div class="input-group input-group-merge speech-to-text">
 
-                            <input type="text" class="form-control" id="symbol" placeholder="Enter or Say it" aria-describedby="text-to-speech-addon">
-                            <span class="input-group-text" id="text-to-speech-addon">
+                            <input style="text-transform: uppercase;" type="text" class="form-control" id="symbol" placeholder="Enter or Say it">
+                            <span class="input-group-text" id="startButton">
                                 <i class="bx bx-microphone cursor-pointer text-to-speech-toggle"></i>
                             </span>
                         </div>
+                        <script>
+        const startButton = document.getElementById('startButton');
+
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+        recognition.lang = 'en-IN';
+
+        recognition.onstart = () => {
+            // Change the button content to a spinning microphone icon
+            startButton.innerHTML = '<i style="transform: scaleX(-1);" class="bx bx-user-voice"></i>';
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            document.querySelector('input[type="text"]').value = transcript;
+        };
+
+        recognition.onend = () => {
+            // Restore the original microphone icon
+            startButton.innerHTML = '<i class="bx bx-microphone"></i>';
+        };
+
+        startButton.addEventListener('click', () => {
+            recognition.start();
+        });
+    </script>
+
+
+
                     </div>
                     <div class="col-2 mb-0 mt-0"> <label for="stock" class="form-label mb-0">Srch.</label><button onclick="searchsymbol()" type="button" class="btn btn-outline-primary" style="width: 100%;"><i class='bx bx-search-alt'></i></button></div>
 
@@ -94,6 +122,8 @@ include "main/session.php";
             </div>
         </div>
     </div>
+
+
 </form>
 <script>
     $(function() {

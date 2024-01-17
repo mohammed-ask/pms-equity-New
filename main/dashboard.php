@@ -90,6 +90,7 @@ if ($dashboardmaintanance) {
 
                             <a href="profile" class="btn btn-sm btn-outline-primary">View Profile</a>
                         </div>
+                        
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
@@ -216,6 +217,9 @@ if ($dashboardmaintanance) {
                 </div>
             </div>
         </div>
+
+       
+
         <!--/ Total Revenue -->
         <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
             <div class="row">
