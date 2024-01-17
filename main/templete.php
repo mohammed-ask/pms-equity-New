@@ -159,7 +159,9 @@
 <script>
     // Hide the preloader when the entire page has finished loading
     $(window).on('load', function() {
+        console.log('hellloooo')
         $('#overlay').fadeOut('slow', function() {
+            console.log('helllooooppppp')
             $(this).remove();
         });
     });
