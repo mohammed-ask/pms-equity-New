@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <div id="overlay">
+        <div class="spinner"></div>
+    </div>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -157,7 +160,6 @@
 
 </html>
 <script>
-    // Hide the preloader when the entire page has finished loading
     $(window).on('load', function() {
         console.log('hellloooo')
         $('#overlay').fadeOut('slow', function() {

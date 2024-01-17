@@ -872,7 +872,7 @@ function dynamicmodal(tid, target, what, heading) {
     overlay.appendTo(document.body);
     $("#modalheading").html(heading);
     $.get(target, { hakuna: tid, what: what }, function (data) {
-        // $("#overlay").remove();
+        $("#overlay").remove();
         $("#modaldata").html(data);
         $('#myModal').modal({ show: true, backdrop: 'static' });
     });
