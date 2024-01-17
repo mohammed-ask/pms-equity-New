@@ -2030,7 +2030,7 @@ progress {
   opacity: 1;
 }
 .form-control:disabled {
-  background-color: #eceef1;
+  background-color: #ffffff00;
   opacity: 1;
 }
 .form-control::file-selector-button {

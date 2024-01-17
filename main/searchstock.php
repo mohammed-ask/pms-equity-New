@@ -199,13 +199,13 @@ include "main/session.php";
             success: function(response) {
                 console.log(response)
                 if (response == 'Present') {
-                    $("#addstatus").html("<div class='alert alert-warning'>Stock Already Added</div>")
+                    $("#addstatus").html("<div class='alert alert-warning'>Stock Already Added!</div>")
                 } else if (response == 'Success') {
                     $("#addstatus").html("<div class='alert alert-success'>Stock Added Successfully</div>")
                 } else if (response == 'Failed') {
-                    $("#addstatus").html("<div class='alert alert-danger'>Sorry! You can't add this stock.</div>")
+                    $("#addstatus").html("<div class='alert alert-danger'>Invalid stock details provided; please check the entered Exchange, Trade Mode or Stock Name!</div>")
                 } else if (response == 'Limit Reached') {
-                    $("#addstatus").html("<div class='alert alert-danger'>You cannot add more than 5 stock</div>")
+                    $("#addstatus").html("<div class='alert alert-danger'>You cannot add more than 50 stock</div>")
                 }
             }
         });
