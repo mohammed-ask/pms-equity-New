@@ -139,9 +139,9 @@
                                 <button type="button" class="btn btn-primary">Save changes</button>
                               </div> -->
                     </div>
-                    <div class="p-0">
+                    <!-- <div class="p-0">
                         <button type="button" class="btn btn-success w-10 my-3" id="modalfooterbtn" onclick="$('#modalsubmit').click();">Submit</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
