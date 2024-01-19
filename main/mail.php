@@ -106,10 +106,10 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
 
                                                     <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
                                                         <label for="email-subject" class="form-label mb-0">Subject:</label>
-                                                        <input type="text" value="<?= $rowinbox['subject'] ?>" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0" id="email-subject">
+                                                        <input type="text" value="<?= $rowinbox['subject'] ?>" class="form-control border-0 shadow-none flex-grow-1 mx-2 px-0" id="email-subject" disabled>
                                                     </div>
                                                     <div class="email-compose-subject d-flex align-items-center my-1" style="border-bottom: 1px solid lightgray;">
-                                                        <textarea class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" placeholder="Message..." rows="8"><?= $rowinbox['message'] ?></textarea>
+                                                        <textarea disabled class="form-control border-0 shadow-none flex-grow-1 px-0" id="exampleFormControlTextarea1" placeholder="Message..." rows="8"><?= $rowinbox['message'] ?></textarea>
                                                     </div>
 
                                                     <label style="width: 100%;" for="View"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachments</label>
