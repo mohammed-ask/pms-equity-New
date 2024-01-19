@@ -28,28 +28,37 @@ if ($num4) {
 }
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertemployee', 'resultid', 'adduser');return 0;">
-    <label class="block text-sm mb-3" style="margin-bottom: 5px;">
+
+<div class="row">
+    <label class="col-6 block text-sm mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Employee ID</span>
         <input name="usercode" class="form-control" readonly value="<?= $uniqueid ?>" placeholder="Enter Employee ID" />
     </label>
-    <label class="block text-sm  mb-3" style="margin-bottom: 5px;">
+    <label class="col-6 block text-sm  mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Name</span>
         <input name="name" data-bvalidator="required" class="form-control" placeholder="Employee's Name" />
     </label>
-    <label class="block text-sm  mb-3" style="margin-bottom: 5px;">
+</div>
+
+<div class="row">
+
+    <label class="col-6 block text-sm  mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Mob No.</span>
         <input type="number" name="phone" data-bvalidator="minlength[10],maxlength[10]" class="form-control" placeholder="Employee Mobile No." />
     </label>
-    <label class="block text-sm mb-3" style="margin-bottom: 5px;">
+    <label class="col-6 block text-sm mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Email</span>
         <input name="email" data-bvalidator="required,email" class="form-control" placeholder="Employee's Email ID" />
     </label>
-    <label class="block text-sm  mb-3" style="margin-bottom: 5px;">
+</div>
+
+<div class="row">
+    <label class="col-4 block text-sm  mb-3" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Password</span>
-        <input type="password" data-bvalidator="required,minlength[6]" id="password" name="password" class="form-control" placeholder="Please Give Strong Password!" />
+        <input type="password" data-bvalidator="required,minlength[6]" id="password" name="password" class="form-control" placeholder="Strong Password!" />
     </label>
-    <label class="block text-md" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Employee Role</span>
+    <label class="col-4 block text-md" style="margin-bottom: 5px;">
+        <span class="text-gray-700 dark:text-gray-400">Select Role</span>
         <select data-bvalidator="required" class="form-control select2" name="role" id="role">
             <option value="">Select Role</option>
             <?php
@@ -60,15 +69,23 @@ if ($num4) {
             <?php
             } ?>
         </select>
-    </label><br>
-    <label class="block text-md" style="margin-bottom: 5px;">
+    </label>
+    <label class="col-4 block text-md" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Login Allowed</span>
         <select data-bvalidator="required" class="form-control select2" name="activate" id="login">
-            <option value="">Choose One</option>
+            <option value="">Login Allowed?</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select>
-    </label><br>
+    </label>
+
+
+</div>
+
+
+    
+
+
     <div>
         <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium d-none">
             Submit

@@ -1,4 +1,4 @@
-<form style="overflow-x: hidden;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertuserdirect', 'resultid', 'adduser');return 0;">
+<form style="overflow-x: hidden; padding: 5px;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertuserdirect', 'resultid', 'adduser');return 0;">
    <div class="row"> <label class="col-6 block text-sm" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Name</span>
         <input name="username" data-bvalidator="required" class="form-control" placeholder="Client's Name" />
@@ -57,7 +57,7 @@
 
     <div class="row">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-            <span class="text-gray-700 dark:text-gray-400">Stop Withdrawal- <span style="margin-left: 5px !important;">From</span></span>
+            <span class="text-gray-700 dark:text-gray-400">Stop Withdrawal
             <input name="starttime" id="starttime" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Start Time" />
         </label>
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">

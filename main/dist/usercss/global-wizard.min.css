@@ -5199,7 +5199,8 @@ fieldset:disabled .btn {
   }
 
   .navbar-expand-md .navbar-nav .dropdown-menu {
-    position: absolute
+    position: absolute;
+    width: 210px;
   }
 
   .navbar-expand-md .navbar-nav .nav-link {
@@ -7260,7 +7261,7 @@ body[data-bs-theme=dark] [data-bs-theme=light] .btn-close {
 .modal {
   --tblr-modal-zindex: 1055;
   --tblr-modal-width: 540px;
-  --tblr-modal-padding: 1.5rem;
+  --tblr-modal-padding: 0.5rem;
   --tblr-modal-margin: 0.5rem;
   --tblr-modal-bg: var(--tblr-bg-surface);
   --tblr-modal-border-color: transparent;
@@ -18379,8 +18380,8 @@ body {
 
 .navbar .navbar-nav .nav-link .badge {
   position: absolute;
-  top: .375rem;
-  right: .375rem;
+  top: 0.6rem;
+  right: 0.6rem;
   transform: translate(50%, -50%)
 }
 
@@ -28837,4 +28838,22 @@ img {
 display: none !important;
 
   }
+}
+
+
+
+
+/* ----------------------------------Norification Inline Alert --------------- */
+
+
+
+.norti-bell-no{
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: #ebebff;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #7e69fe;
+
 }

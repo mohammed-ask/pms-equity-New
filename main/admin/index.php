@@ -175,9 +175,9 @@ if (in_array(34, $permissions)) {
                                 <h3 class="card-title">Open Stock List</h3>
                             </div>
 
-                            <div class="table-responsive fixTableHead" style="height: 400px;">
+                            <div class="table-responsive fixTableHead" style="height: 500px;">
                                 <table id="example1" class="table w-full whitespace-no-wrap">
-                                    <thead>
+                                    <thead style="position: sticky; top: 0;">
                                         <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                             <th class="px-3 py-2">S.No.</th>
                                             <th class="px-3 py-2">Stock Name</th>
@@ -220,7 +220,7 @@ include "main/admin/templete.php";
         "ajax": "../main/admin/opentradedata.php",
         "processing": false,
         "serverSide": true,
-        "pageLength": 10,
+        "pageLength": 100,
         "paging": true,
         "lengthChange": false,
         "searching": false,

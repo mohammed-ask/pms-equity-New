@@ -14,7 +14,7 @@ ob_start();
         <div class="mb-3" style="text-align: right;">
 
             <button data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("ai", "addstock", "", "Add Stock")' class="btn btn-primary py-2">
-                + Add Position
+                Add AI Trade
             </button>
         </div>
         <div class="card card-default">

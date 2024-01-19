@@ -28,7 +28,7 @@ ob_start();
                                 <th class="px-3 py-3">Date</th>
                                 <th class="px-3 py-3">Amount</th>
                                 <!-- <th class="px-3 py-3">Remark</th> -->
-                                <th class="px-3 py-3">Pay Mode</th>
+                                <th class="px-3 py-3">Screenshot</th>
                                 <th class="px-3 py-3">Action</th>
                             </tr>
                         </thead>
@@ -52,12 +52,12 @@ ob_start();
                             <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                 <th class="px-3 py-3">S.No.</th>
                                 <th class="px-3 py-3">Client Name</th>
-                                <th class="px-3 py-3">Mobile No.</th>
-                                <th class="px-3 py-3">Transaction Id</th>
+                                <!-- <th class="px-3 py-3">Mobile No.</th>
+                                <th class="px-3 py-3">Transaction Id</th> -->
                                 <th class="px-3 py-3">Date</th>
                                 <th class="px-3 py-3">Amount</th>
                                 <!-- <th class="px-3 py-3">Remark</th> -->
-                                <th class="px-3 py-3">Pay Mode</th>
+                                <th class="px-3 py-3">Screenshot</th>
                                 <!-- <th class="px-3 py-3">Action</th> -->
                             </tr>
                         </thead>

@@ -60,8 +60,8 @@ $type = $_GET['hakuna'];
 </style>
 <form style="overflow-x: hidden; padding:10px;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertaddstock', 'resultid', 'adduser');return 0;">
 
-    <div class="row">
-        <div class=" col-6 mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
+   
+        <div class=" col-12 mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Select Client</span>
 
             </label>
@@ -76,6 +76,21 @@ $type = $_GET['hakuna'];
                 } ?>
             </select>
         </div>
+        <div class="row" id="getmargin">
+            <div class="col-6 mb-2">
+                <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
+                    <span class="text-gray-700 dark:text-gray-400"> Fund</span>
+                    <input class="disabled form-control" data-bvalidator='required' />
+                </label>
+            </div>
+            <div class="col-6 mb-2">
+                <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
+                    <span class="text-gray-700 dark:text-gray-400"> Margin</span>
+                    <input name="margin" class="form-control" data-bvalidator='required' />
+                </label>
+            </div>
+        </div>
+
         <!-- <div class=" col-6 mb-2"> <label for="Choose Client" class="block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Trade By</span>
 
@@ -160,20 +175,7 @@ $type = $_GET['hakuna'];
 
 
 
-        <div class="row" id="getmargin">
-            <div class="col-6 mb-2">
-                <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
-                    <span class="text-gray-700 dark:text-gray-400"> Fund</span>
-                    <input class="disabled form-control" data-bvalidator='required' />
-                </label>
-            </div>
-            <div class="col-6 mb-2">
-                <label class="block text-sm" style="margin-bottom: 5px; width: 100%;">
-                    <span class="text-gray-700 dark:text-gray-400"> Margin</span>
-                    <input name="margin" class="form-control" data-bvalidator='required' />
-                </label>
-            </div>
-        </div>
+       
         <div id="stockvalue" class="row">
 
             <label class=" col-6 block text-sm" for="Quantity">

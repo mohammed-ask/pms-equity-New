@@ -23,10 +23,10 @@ if (!in_array(4, $permissions)) {
 
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
-                <div class="w-full ">
+                <div class="w-full" style="    height: 500px; overflow: scroll;">
 
                     <table id="example2" class="table w-full whitespace-no-wrap">
-                        <thead>
+                        <thead style="position: sticky; top: 0;">
                             <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                                 <th class="px-3 py-2">S.No.</th>
                                 <th class="px-3 py-2">User Name</th>

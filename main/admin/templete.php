@@ -69,13 +69,13 @@
         <!-- Navbar -->
         <?php include 'sidebar.php'; ?>
         <!-- /.navbar -->
-        <header class="navbar navbar-expand-md d-none d-lg-flex d-print-none" style="position: sticky; top: 0; z-index: 1; background-color: #f6f8fb; box-shadow: none;">
+        <header class="navbar navbar-expand-md d-none d-lg-flex d-print-none" style="position: sticky; top: 0; z-index: 1; background-color: transparent; box-shadow: none;">
             <div class="container-xl">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-nav flex-row order-md-last">
-                    <div class="d-none d-md-flex" style="margin-right: 10px;">
+                    <div class="d-none d-md-flex" style="margin-top: 5px; margin-right:-5px;">
                         <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable dark mode" data-bs-original-title="Enable dark mode">
                             <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -93,9 +93,42 @@
                         </a>
 
                     </div>
+
+
+                    <div class="nav-item dropdown mx-2">
+                        <a href="#" class="nav-link d-flex lh-1 text-reset p-0 mt-1" data-bs-toggle="dropdown" aria-label="Open user menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z"></path></svg><span class="badge bg-red"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <a class="items-center dropdown-item" style="justify-content: space-between;" href="aitraders">
+                                <span>AI Traders</span>
+                                <span class="flex items-center justify-center norti-bell-no"> 0 </span>
+                            </a>
+
+                            <a class="items-center dropdown-item" style="justify-content: space-between;" href="pendingapproval">
+                                <span>User Approval</span>
+                                <span class="flex items-center justify-center norti-bell-no"> 0 </span>
+                            </a>
+                            <a class="items-center dropdown-item" style="justify-content: space-between;" href="viewinbox">
+                                <span>Payment Approval</span>
+                                <span class="flex items-center justify-center norti-bell-no"> 0 </span>
+                            </a>
+                            <a class="items-center dropdown-item" style="justify-content: space-between;" href="withdrawalrequest">
+                                <span>Withdrawal Request</span>
+                                <span class="flex items-center justify-center norti-bell-no"> 0 </span>
+                            </a>
+                            <a class="items-center dropdown-item" style="justify-content: space-between;" href="viewinbox">
+                                <span>Received Mail</span>
+                                <span class="flex items-center justify-center norti-bell-no"> 0 </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                            <span class="avatar avatar-sm" style="background-image: url(../main/images/user.jpeg)"></span>
+                            <span class="avatar avatar-sm" style="background-image: url(../main/images/user.png)"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <a data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "adminprofile", "", "Admin Profile")' class="dropdown-item">Profile</a>
@@ -119,7 +152,7 @@
     <?php //include 'footer.php';
     ?>
     <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalheading">New report</h5>

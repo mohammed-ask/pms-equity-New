@@ -3,7 +3,7 @@ include "main/session.php";
 $id = $_GET['hakuna'];
 $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
 ?>
-<form id="adduser" onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'updateuser', 'resultid', 'adduser');return 0;">
+<form id="adduser" class="p-2" onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'updateuser', 'resultid', 'adduser');return 0;">
 
     <div class="row">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
@@ -61,7 +61,7 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
     </div>
     <div class="row">
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
-            <span class="text-gray-700 dark:text-gray-400">Stop Withdrawal- <span style="margin-left: 5px !important;">From</span></span>
+            <span class="text-gray-700 dark:text-gray-400">Stop Withdrawal
             <input name="starttime" id="starttime" value="<?= changedateformatespecito($rowuser['startdatetime'], "Y-m-d H:i:s", "d/m/Y H:i:s") ?>" onfocus="datetimepicker(this.id)" class="form-control" placeholder="Select Start Time" />
         </label>
         <label class="col-6 block text-sm" style="margin-bottom: 5px;">
@@ -85,13 +85,10 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
             </select>
         </label>
         <label class="col-4 block text-sm" style="margin-bottom: 5px;">
-            <span class="text-gray-700 dark:text-gray-400">Withdraw Limit</span>
+            <span class="text-gray-700 dark:text-gray-400">Withdraw amt</span>
             <input type="number" name="withdrawlimit" data-bvalidator="required" step="any" onfocus="this.select()" class="form-control" value="<?= $rowuser['withdrawlimit'] ?>" placeholder="Withdrawal Limit" /></label>
         </label>
-        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
-            <span class="text-gray-700 dark:text-gray-400">MPIN</span>
-            <input type="number" name="mpin" data-bvalidator="required,minlength[6],maxlength[6]" onfocus="this.select()" class="form-control" value="<?= $rowuser['mpin'] ?>" placeholder="Withdrawal Limit" /></label>
-        </label>
+       
     </div>
 
 
@@ -141,13 +138,18 @@ $rowuser = $obj->selectextrawhere('users', 'id="' . $id . '"')->fetch_assoc();
     </label><br> -->
 
     <div class="row my-2">
-        <label class="col-6 block text-sm" style="margin-bottom: 5px;position:relative">
-            <span class="text-gray-700 dark:text-gray-400">Change Password</span>
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;position:relative">
+            <span class="text-gray-700 dark:text-gray-400">Password</span>
             <input type="password" id="password" value="<?= $rowuser['password'] ?>" name="password" class="form-control" placeholder="Please Give Strong Password!" />
             <i id="eye" class="fa fa-eye" style="position: absolute;top:34px;right:12px;z-index:50" aria-hidden="true"></i>
         </label>
 
-        <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">MPIN</span>
+            <input type="number" name="mpin" data-bvalidator="required,minlength[6],maxlength[6]" onfocus="this.select()" class="form-control" value="<?= $rowuser['mpin'] ?>" placeholder="Set Mpin" /></label>
+       
+
+        <label class="col-4 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Employee ID</span>
             <input xdata-bvalidator="required" name="employeeref" class="form-control" value="<?= $rowuser['employeeref'] === '' ? '' : $rowuser['employeeref'] ?>" placeholder="Employee ID For Further Reference" /></label>
     </div>
