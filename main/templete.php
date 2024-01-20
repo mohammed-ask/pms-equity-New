@@ -161,9 +161,7 @@
 </html>
 <script>
     $(window).on('load', function() {
-        console.log('hellloooo')
         $('#overlay').fadeOut('slow', function() {
-            console.log('helllooooppppp')
             $(this).remove();
         });
     });
