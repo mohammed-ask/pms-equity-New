@@ -204,7 +204,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "Profile- PMS Equity";
+$pagetitle = "Profile- Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 include "main/templete.php"; ?>

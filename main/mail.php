@@ -259,7 +259,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "E-Mail Support- PMS Equity";
+$pagetitle = "E-Mail Support- Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 include "main/templete.php"; ?>

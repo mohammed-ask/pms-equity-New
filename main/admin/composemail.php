@@ -74,7 +74,7 @@ if (isset($_POST['hakuna'])) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity:";
+$pagetitle = "Eagle Eye Tradings:";
 $contentheader = "";
 $pageheader = "";
 $extrajs = '

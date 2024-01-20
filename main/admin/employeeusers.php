@@ -56,7 +56,7 @@ if (!in_array(43, $permissions)) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity:Employee Users List";
+$pagetitle = "Eagle Eye Tradings:Employee Users List";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

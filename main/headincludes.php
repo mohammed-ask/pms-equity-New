@@ -8,7 +8,7 @@
  <!-- Shubham Template -->
  <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
- <title>PMS Equity- The Real Earning Start Here</title>
+ <title>Eagle Eye Tradings- The Real Earning Start Here</title>
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
  <meta content="" name="author">

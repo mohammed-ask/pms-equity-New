@@ -44,7 +44,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: User Login Detail";
+$pagetitle = "Eagle Eye Tradings: User Login Detail";
 $contentheader = "";
 $pageheader = "";
 include "main/admin/templete.php";

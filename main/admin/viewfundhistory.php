@@ -51,7 +51,7 @@ $id = $_GET['hakuna'];
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Investment Log";
+$pagetitle = "Eagle Eye Tradings: Investment Log";
 $contentheader = "";
 $pageheader = "";
 include "main/admin/templete.php";

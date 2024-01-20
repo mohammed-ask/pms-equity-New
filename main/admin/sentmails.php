@@ -43,7 +43,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Pending Approval";
+$pagetitle = "Eagle Eye Tradings: Pending Approval";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

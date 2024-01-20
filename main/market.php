@@ -119,7 +119,7 @@ if ($marketmaintanance) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "Live Market - PMS Equity";
+$pagetitle = "Live Market - Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 $watchliststocks = $wstocks;

@@ -190,7 +190,7 @@ if ($usermail !== 'yashraj12@gmail.com') { ?>
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "Fund- PMS Equity";
+$pagetitle = "Fund- Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 include "main/templete.php";

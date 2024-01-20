@@ -475,7 +475,7 @@ if ($portfoliomaintanance) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "Portfolio- PMS Equity";
+$pagetitle = "Portfolio- Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 $extrajs = "<script src='//cdn.datatables.net/plug-ins/1.13.1/api/fnReloadAjax.js'></script>";

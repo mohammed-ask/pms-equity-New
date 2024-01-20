@@ -43,7 +43,7 @@ include './main/conn.php';
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - PMS Equity</title>
+    <title>Login - Eagle Eye Tradings</title>
 
 
 
