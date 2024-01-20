@@ -235,7 +235,7 @@ $resultsentmail = $obj->selectextrawhereupdate("mail", "*", "status = 1 and send
                                             <div class="d-flex align-items-center">
                                                 <div class="btn-group">
                                                     <a href="#" class="btn btn-primary" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send</a>
-                                                    <div class="resultid"></div>
+                                                    <div id="resultid"></div>
                                                 </div>
                                                 <label for="attach-file"><i class="bx bx-paperclip cursor-pointer ms-2"></i> Attachment</label>
                                                 <input type="file" name="file-input" class="d-none" id="attach-file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed">
