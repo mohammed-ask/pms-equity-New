@@ -1,6 +1,11 @@
 <?php
 include '../session.php';
 /* @var $obj db */
+$empref = "";
+if (!in_array(45, $permissions)) {
+  $emprefid = $obj->selectfieldwhere('users', "usercode", "id=$employeeid");
+  $empref =  "and employeeref = '$emprefid'";
+}
 $limit = $_GET['length'];
 $start = $_GET['start'];
 $i = 1;
@@ -34,13 +39,13 @@ if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][
   $search .= " and users.description like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
 $join = "inner join users on users.id = fundrequest.userid";
-$return['recordsTotal'] = $obj->selectfieldwhere("fundrequest $join ", "count(fundrequest.id)", "fundrequest.status in (0) ");
-$return['recordsFiltered'] = $obj->selectfieldwhere("fundrequest $join", "count(fundrequest.id)", "fundrequest.status in (0) $search ");
+$return['recordsTotal'] = $obj->selectfieldwhere("fundrequest $join ", "count(fundrequest.id)", "fundrequest.status in (0) $empref");
+$return['recordsFiltered'] = $obj->selectfieldwhere("fundrequest $join", "count(fundrequest.id)", "fundrequest.status in (0) $empref $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
   "fundrequest $join",
   "fundrequest.id,name,userid,users.mobile,fundrequest.added_on,fundrequest.status,amount,paymentmethod,transactionid,investmentamount",
-  "fundrequest.status in (0) $search $order limit $start, $limit"
+  "fundrequest.status in (0) $empref $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();

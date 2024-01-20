@@ -99,7 +99,7 @@ if (in_array(34, $permissions)) {
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <span style="font-weight: 600;"><?= $totalinv ?></span>
+                                                <span style="font-weight: 600;"><?= round($totalinv, 2) ?></span>
                                             </div>
                                             <div class="" style="font-weight: 500;">
                                                 Total Investments

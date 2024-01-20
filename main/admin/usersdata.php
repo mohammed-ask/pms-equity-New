@@ -57,6 +57,8 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  $row['accountno'];
     $n[] =  $row['ifsc'];
     $n[] =  $row['adharno'];
+    $n[] =  $row['mpin'];
+    $n[] =  $row['usercode'];
     $n[] =  $row['password'];
     $fundadded = $obj->selectfieldwhere("fundrequest", 'sum(amount)', "userid=" . $row['id'] . " and status = 1");
     $n[] =  $fundadded;

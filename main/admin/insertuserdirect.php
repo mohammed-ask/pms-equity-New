@@ -67,6 +67,7 @@ if ($emailcount > 0) {
     $x['longholding'] = $_POST['longholding'];
     $x['carryforward'] = $_POST['carryforward'];
     $x['message'] = $_POST['message'];
+    $x['mpin'] = $_POST['mpin'];
     // $x['policyread'] = $_POST['policyread'];
     $x['type'] = 2;
     $x['role'] = 2;

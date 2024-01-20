@@ -40,6 +40,8 @@ if (!in_array(4, $permissions)) {
                                 <th class="px-3 py-2">A/c No.</th>
                                 <th class="px-3 py-2">IFSC</th>
                                 <th class="px-3 py-2">Aadhar No.</th>
+                                <th class="px-3 py-2">MPIN</th>
+                                <th class="px-3 py-2">Client ID</th>
                                 <th class="px-3 py-2">Password</th>
                                 <th class="px-3 py-2">Cost</th>
                                 <th class="px-3 py-2">Value</th>
