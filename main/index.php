@@ -923,8 +923,8 @@ if ($mainpagemaintanance) { ?>
                         </div>
                         <div class="col-lg-3 col-md-4">
                             <h6 class="footer-title mb-4">Download our app</h6>
-                            <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"><img src="main/dist/landingassets/img/apple-icon.png" alt="apple icon"></a>
-                            <a href="javascript:void(0);" class="d-block footer-link"><img src="main/dist/landingassets/img/google-play-icon.png" alt="google play icon"></a>
+                            <a href="main\dist\landingassets\app\Eagle-Eye-Tradings.apk" download="Eagle Eye Trading Apk" class="d-block footer-link mb-3 pb-2"><img src="main/dist/landingassets/img/apple-icon.png" alt="apple icon"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.eagleeyetrading" class="d-block footer-link" target="_blank"><img src="main/dist/landingassets/img/google-play-icon.png" alt="google play icon"></a>
                         </div>
                     </div>
                 </div>
