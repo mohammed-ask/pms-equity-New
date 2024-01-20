@@ -6,7 +6,7 @@ $unreadmail = $obj->selectfieldwhere("mail", "count(id)", "receiverid =" . $empl
     <div class="brand">
         <a class="logo">
 
-        <img src="main/images/logo/PMS Equity logo with black text svg.svg" width="100%" alt="logo-small" class="user-panel-logo">
+        <img src="main/images/logo/Eagle Eye Tradings logo with black text svg.svg" width="100%" alt="logo-small" class="user-panel-logo">
             </span>
             <!-- <span>
                 <img src="main/dist/userimages/logo-sm.png" alt="logo-small" class="logo-sm">

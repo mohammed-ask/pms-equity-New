@@ -75,7 +75,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: All Investment";
+$pagetitle = "Eagle Eye Tradings: All Investment";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

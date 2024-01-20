@@ -63,7 +63,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Approved Investment";
+$pagetitle = "Eagle Eye Tradings: Approved Investment";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

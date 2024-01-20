@@ -49,7 +49,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: All Transaction";
+$pagetitle = "Eagle Eye Tradings: All Transaction";
 $contentheader = "";
 $pageheader = "";
 include "main/admin/templete.php";

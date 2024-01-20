@@ -65,7 +65,7 @@ if (!in_array(4, $permissions)) {
     $pagemaincontent = ob_get_contents();
     ob_end_clean();
     $pagemeta = "";
-    $pagetitle = "PMS Equity: Users List";
+    $pagetitle = "Eagle Eye Tradings: Users List";
     $contentheader = "";
     $pageheader = "";
     include "templete.php";

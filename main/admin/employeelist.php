@@ -54,7 +54,7 @@ if (!in_array(12, $permissions)) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity";
+$pagetitle = "Eagle Eye Tradings";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

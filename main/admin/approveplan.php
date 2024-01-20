@@ -63,7 +63,7 @@ $mail->setFrom("$sendmailfrom", 'Global Wizard');
 $mail->addAddress($email);
 $mail->isHTML(true);
 $mail->addReplyTo("$sendmailfrom", 'Global Wizard');
-$mail->Subject = 'PMS Equity Fund Request';
+$mail->Subject = 'Eagle Eye Tradings Fund Request';
 ob_start();
 ?>
 <!DOCTYPE html>

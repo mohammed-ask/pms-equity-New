@@ -6,7 +6,7 @@ ob_start();
 <div class="page-body">
     <div class="card card-default">
         <div class="card-header">
-            <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Roles</h3>
+            <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Add Custom Contracts</h3>
             <div class="card-tools">
                 <?php if (in_array(46, $permissions)) { ?>
                     <a data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("none", "addstocklist", "", "Add New Stock")' class="btn btn-primary">
@@ -23,8 +23,8 @@ ob_start();
 
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Expire On</th>
+                            <th>Stock Name</th>
+                            <th>Expiry</th>
                             <!-- <th>Description/Symbol</th> -->
                             <th>Actions</th>
                         </tr>

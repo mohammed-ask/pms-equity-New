@@ -112,7 +112,7 @@
 
     <!-- start preheader -->
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Welcome to PMS Equity- Access Your Account with Your New Login and Password...
+        Welcome to Eagle Eye Tradings- Access Your Account with Your New Login and Password...
     </div>
     <!-- end preheader -->
 
@@ -131,7 +131,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                            <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -1px; line-height: 30px; word-spacing: 2px;">Welcome to PMS Equity,</h1><br>
+                            <h1 style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -1px; line-height: 30px; word-spacing: 2px;">Welcome to Eagle Eye Tradings,</h1><br>
                             <h2 style="margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -1px; word-spacing: 2px;">Your Account has been approved: Your Login ID & Password is here </h2>
                         </td>
                     </tr>
@@ -159,7 +159,7 @@
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px 24px 5px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
                             <p>Congratulations! Your account has been created successfully.</p>
-                            <p style="margin: 0;">Welcome to <a href="https://pms-equity.com/">PMS Equity</a> ! We are excited to have you as a new member of our community.</p>
+                            <p style="margin: 0;">Welcome to <a href="https://pms-equity.com/">Eagle Eye Tradings</a> ! We are excited to have you as a new member of our community.</p>
                             <p>Your login information is given below:
                                 <br><br>
                                 <b>Email:</b><?= $email ?>
@@ -198,7 +198,7 @@
 
                             </p>
                             <p>
-                                Thank you for choosing PMS Equity. We look forward to helping you achieve your investment goals.
+                                Thank you for choosing Eagle Eye Tradings. We look forward to helping you achieve your investment goals.
                             </p>
                         </td>
                     </tr>
@@ -207,7 +207,7 @@
                     <!-- start copy -->
                     <tr>
                         <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                            <p style="margin: 0;">Best regards,<br>PMS Equity Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
+                            <p style="margin: 0;">Best regards,<br>Eagle Eye Tradings Team</p><img width="145px" style=" margin-top: 20px;" src="https://pms-equity.com/main/images/pmslogo.png">
                         </td>
                     </tr>
                     <!-- end copy -->

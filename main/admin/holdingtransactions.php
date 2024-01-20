@@ -58,7 +58,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Holding Positions";
+$pagetitle = "Eagle Eye Tradings: Holding Positions";
 $contentheader = "";
 $pageheader = "";
 include "main/admin/templete.php";

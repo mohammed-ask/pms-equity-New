@@ -42,7 +42,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Pending Investment";
+$pagetitle = "Eagle Eye Tradings: Pending Investment";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";
