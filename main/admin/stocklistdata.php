@@ -34,13 +34,13 @@ if ((isset($_GET['columns'][0]["search"]["value"])) && (!empty($_GET['columns'][
 if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][1]["search"]["value"]))) {
     $search .= " and listedstocks.expiredate like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
-$return['recordsTotal'] = $obj->selectfieldwhere("listedstocks  ", "count(listedstocks.id)", "status=1  ");
-$return['recordsFiltered'] = $obj->selectfieldwhere("listedstocks ", "count(listedstocks.id)", "status=1  $search ");
+$return['recordsTotal'] = $obj->selectfieldwhere("listedstocks  ", "count(listedstocks.id)", "status=0  ");
+$return['recordsFiltered'] = $obj->selectfieldwhere("listedstocks ", "count(listedstocks.id)", "status=0  $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "listedstocks ",
     "`listedstocks`.`Symbol`, `listedstocks`.`expiredate`,`listedstocks`.`id` ",
-    "status=1 and type = 'Derivative' $search $order limit $start, $limit"
+    "status=0 and type = 'Derivative' $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();
