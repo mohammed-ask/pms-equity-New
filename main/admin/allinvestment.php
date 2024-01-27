@@ -58,6 +58,7 @@ ob_start();
                                 <th class="px-3 py-3">Amount</th>
                                 <!-- <th class="px-3 py-3">Remark</th> -->
                                 <th class="px-3 py-3">Screenshot</th>
+                                <th class="px-3 py-3">Status</th>
                                 <!-- <th class="px-3 py-3">Action</th> -->
                             </tr>
                         </thead>

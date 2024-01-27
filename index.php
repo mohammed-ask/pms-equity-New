@@ -207,6 +207,9 @@ switch ($request['path']) {
     case "$head/admin/deletestock";
         require __DIR__ . '/main/admin/deletestock.php';
         break;
+    case "$head/admin/showscreenshot";
+        require __DIR__ . '/main/admin/showscreenshot.php';
+        break;
     case "$head/admin/updateprofile";
         require __DIR__ . '/main/admin/updateprofile.php';    //admin Route close
         break;

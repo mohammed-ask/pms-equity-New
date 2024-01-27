@@ -99,10 +99,10 @@
                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                 <input type="password" data-bvalidator="required" id="password" name="password" class="form-control" placeholder="Enter Password!" />
             </label>
-            <label class="col-6 block text-sm" style="margin-bottom: 5px;">
+            <!-- <label class="col-6 block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Confirm Password</span>
                 <input type="password" id="confirmpassword" data-bvalidator="required,matchconfirmpassword[password]" data-bvalidator-msg-matchconfirmpassword="Confirm Password Not Matched" class="form-control" placeholder="Confirm Password" />
-            </label>
+            </label> -->
         </div>
         <div class="row">
             <label class="col-4 block text-sm" style="margin-bottom: 5px;">
