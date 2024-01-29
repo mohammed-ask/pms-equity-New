@@ -69,7 +69,7 @@ class db
         $datetimenow = date("Y-m-d H:i:s");
         $sql2 = "insert into `zquerylogs$da`(query,url,added_by,added_on,updated_by,updated_on,status) values('$sql1','$url','$employeeid','$datetimenow','$employeeid','$datetimenow',1)";
 
-        mysqli_query($this->con, $sql2) or die($sql2 . mysqli_error($this->con));
+        // mysqli_query($this->con, $sql2) or die($sql2 . mysqli_error($this->con));
 
         if ($print) {
             echo $sql;
