@@ -85,9 +85,9 @@ while ($row = $obj->fetch_assoc($result)) {
         $n[] = '';
     }
     $openstock = $obj->selectfieldwhere("stocktransaction", "count(id)", "userid=" . $row['id'] . " and tradestatus='Open' and status = 0");
-    $n[] = '<button class="btn" onclick="window.location.href=\'viewfundhistory?hakuna=' . $row['id'] . '\'">View Detail</button>';
+    $n[] = '<button style="font-size: 12px; padding: 3px 12px;" class="btn" onclick="window.location.href=\'viewfundhistory?hakuna=' . $row['id'] . '\'">View Detail</button>';
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button style='font-size: 12px; padding: 3px 12px;' class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
