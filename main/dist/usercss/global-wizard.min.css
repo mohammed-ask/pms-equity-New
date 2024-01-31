@@ -18711,7 +18711,7 @@ body {
   .navbar-expand-lg.navbar-vertical~.navbar,
   .navbar-expand-lg.navbar-vertical~.page-wrapper {
     margin-left: 15rem;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
   }
 
   .navbar-expand-lg.navbar-vertical.navbar-right~.navbar,
@@ -28858,3 +28858,31 @@ display: none !important;
   color: #7e69fe;
 
 }
+
+
+
+
+
+    /* ----------------------------custom scrollbar--------------- */
+
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar {
+      height: 4px !important; /* You can adjust the width */
+      width: 4px !important;
+    }
+    
+    /* Style the scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #696cff; /* Change this to the color you want */
+      border-radius: 6px; /* Adjust the radius to change the shape */
+    }
+    
+    /* Style the scrollbar track on hover */
+    ::-webkit-scrollbar:hover {
+      background-color: #696cff; /* Change this to the hover color you want */
+    }
+    
+    
+    
+    
