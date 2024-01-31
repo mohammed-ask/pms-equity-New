@@ -105,7 +105,7 @@ ob_start();
             <th class="px-3 py-2">Status</th>
           </tr>
         </thead>
-        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+        <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
           <tr class="text-gray-700 dark:text-gray-400">
             <td class=" px-3 py-2">1</td>
             <td class=" px-3 py-2  font-semibold">
@@ -164,7 +164,7 @@ ob_start();
             <th class="px-3 py-2">Status</th>
           </tr>
         </thead>
-        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+        <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
           <tr class="text-gray-700 dark:text-gray-400">
             <td class=" px-3 py-2">1</td>
             <td class=" px-3 py-2  font-semibold">

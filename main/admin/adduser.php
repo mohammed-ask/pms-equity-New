@@ -93,8 +93,7 @@
                 <input type="number" data-bvalidator="required,maxlength[6],minlength[6]" id="mpin" name="mpin" class="form-control" placeholder="Enter MPIN" />
             </label>
 
-        </div>
-        <div class="row mt-1">
+       
             <label class="col-6 block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                 <input type="password" data-bvalidator="required" id="password" name="password" class="form-control" placeholder="Enter Password!" />
@@ -132,12 +131,12 @@
             <label class="col-6 text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Aadhar Front Side</span>
                 <input hidden value="Aadhar Card Front" name="name[]">
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
             <label class="col-6 text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Aadhar Back Side</span>
                 <input hidden value="Aadhar Card Back" name="name[]">
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
         </div>
 
@@ -147,12 +146,12 @@
                 <span class="text-gray-700 dark:text-gray-400">Pan Card</span>
                 <input hidden value="PAN card" name="name[]">
 
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
             <label class="col-6 text-sm" sty le="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Signature</span>
                 <input hidden value="Signature" name="name[]">
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
         </div>
 
@@ -160,12 +159,12 @@
             <label class="col-6 text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Passport Size Photo</span>
                 <input hidden value="Passport Size Photo" name="name[]">
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
             <label class="col-6 text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Passbook</span>
                 <input hidden value="Passbook" name="name[]">
-                <input style="padding: 5px; border-color: #00aaaa; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
+                <input style="padding: 4px; border-color: #696cff; font-size: 14px;" xdata-bvalidator="required" class="form-control" type="file" name="path[]">
             </label>
         </div>
 

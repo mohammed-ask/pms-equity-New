@@ -78,141 +78,6 @@
             margin: 0;
         }
 
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8) url(main/images/loader.gif) no-repeat center center;
-            z-index: 10000;
-        }
-
-        .container-dabba {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #eee;
-        }
-
-        .container-dabba .card {
-            height: 500px;
-            width: 800px;
-            background-color: #fff;
-            position: relative;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            font-family: 'Poppins', sans-serif;
-            border-radius: 20px;
-        }
-
-        .container-dabba .card .form {
-            width: 100%;
-            height: 100%;
-
-            display: flex;
-        }
-
-        .container-dabba .card .left-side {
-            width: 35%;
-            background-color: #00AAAA;
-            height: 100%;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            padding: 20px 30px;
-            box-sizing: border-box;
-
-        }
-
-        /*left-side-start*/
-        .left-heading {
-            color: #fff;
-
-        }
-
-        .steps-content {
-            margin-top: 30px;
-            color: #fff;
-        }
-
-        .steps-content p {
-            font-size: 12px;
-            margin-top: 15px;
-        }
-
-        .progress-bar {
-            list-style: none;
-            /*color:#fff;*/
-            margin-top: -15px;
-            font-size: 13px;
-            font-weight: 700;
-            counter-reset: container-dabba 0;
-            background-color: transparent;
-            text-align: left;
-        }
-
-        .progress-bar li {
-            position: relative;
-            margin-left: 40px;
-            margin-top: 40px;
-            counter-increment: container-dabba 1;
-            color: #065b5b;
-        }
-
-        .progress-bar li::before {
-            content: counter(container-dabba);
-            line-height: 25px;
-            text-align: center;
-            position: absolute;
-            height: 25px;
-            width: 25px;
-            border: 1px solid #048e8e;
-            border-radius: 50%;
-            left: -40px;
-            top: -5px;
-            z-index: 10;
-            background-color: #00AAAA;
-
-
-        }
-
-
-        .progress-bar li::after {
-            content: '';
-            position: absolute;
-            height: 80px;
-            width: 2px;
-            background-color: #048e8e;
-            z-index: 1;
-            left: -27px;
-            top: -60px;
-        }
-
-
-        .progress-bar li.active::after {
-            background-color: #fff;
-
-        }
-
-        .progress-bar li:first-child:after {
-            display: none;
-        }
-
-        /*.progress-bar li:last-child:after{*/
-        /*  display:none;  */
-        /*}*/
-        .progress-bar li.active::before {
-            color: #fff;
-            border: 1px solid #fff;
-        }
-
-        .progress-bar li.active {
-            color: #fff;
-        }
-
-        .d-none {
-            display: none;
-        }
 
         /*left-side-end*/
         .container-dabba .card .right-side {
@@ -316,64 +181,140 @@
             }
         }
 
-        /* --------------------alertify---------------- */
+       
+       
+              /* --------------------alertify---------------- */
 
-        .alertify .ajs-header {
-            display: none;
+              .alertify .ajs-header {
+                display: none;
+    
+            }
+    
+    
+            .alertify .ajs-footer {
+              margin-left: 0px !important;
+              margin-right: 0px !important;
+              min-height: 35px !important;
+              background-color: #696cff !important;
+              padding: 0px !important;
+              border-radius: 0px 30px 10px 30px !important;
+            }
+    
+            .alertify .ajs-dialog {
+    
+                padding: 15px 0px 0 0px !important;
+                max-width: 400px !important;
+                border-radius: 10px 31px 12px 31px !important;
+                top: 25%;
+            }
+    
+            .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+                margin: 0px !important;
+            }
+    
+            .alertify .ajs-commands {
+                margin: -12px 10px 0 0 !important;
+            }
+    
+            .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+              color: #fff !important;
+              border: 1px solid #fff;
+              border-radius: 15px !important;
+              /* margin-right: 10px !important; */
+              margin: 5px 20px 5px 10px !important;
+              font-size: 12px;
+              font-weight: 700;
+            }
+    
+            .alertify .ajs-dimmer {
+    
+                transition-timing-function: ease-in;
+                transition-duration: 500ms !important;
+            }
+    
+            .alertify .ajs-modal {
+    
+                transition-timing-function: ease-out;
+                transition-duration: 500ms !important;
+            }
+    
+            @media (max-width: 600px) {
+                .d-app-none {
+                    display: none;
+                }
+    
+            }
 
-        }
+            /* .alertify .ajs-commands button {
+            
+              border: 1px solid #696cff !important;
+              border-radius: 10px 10px 10px 2px !important;} */
+    
+
+              
+        /*  ----------------------------------Browser alert start------------------------------------------ */
+
+        .browser-d-none {
+          display: none !important;
+      }
 
 
-        .alertify .ajs-footer {
-            /* padding: 4px; */
-            margin-left: 0px !important;
-            margin-right: 0px !important;
-            min-height: 35px !important;
-            background-color: #00aaaa2e !important;
-            padding: 0px !important;
-        }
+      .browser-model-content {
+          border-radius: 0.7em;
+          border: none;
 
-        .alertify .ajs-dialog {
+          text-align: center;
+      }
 
-            padding: 15px 0px 0 0px !important;
-            max-width: 400px !important;
-            border-radius: 5px !important;
-        }
+      .modal-dialog-broswer {
+          max-width: 325px;
+          margin: 0rem auto;
+          top: 40%;
+      }
 
-        .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
-            margin: 0px !important;
-        }
+      .modal-footer-browser {
+          border-top: none !important;
+          padding: 0px 7px 15px 3px;
+          justify-content: center;
+          gap: 15px;
+      }
 
-        .alertify .ajs-commands {
-            margin: -12px 10px 0 0 !important;
-        }
+      .browser-btn-primary {
+          color: #231515;
+          background-color: #ffffff;
+          border-color: #070809;
 
-        .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
-            color: #fff !important;
-            border: 1px dotted #fff;
-            border-radius: 5px;
-            /* margin-right: 10px !important; */
-            margin: 5px 6px 5px 10px !important;
-            background-color: #00aaaa;
-        }
+      }
 
-        .alertify .ajs-dimmer {
+      .browser-btn-secondary {
 
-            transition-timing-function: ease-in;
-            transition-duration: 500ms !important;
-        }
+          background-color: #6c757d00;
+          border-color: #6c757d;
+          padding: 0.3rem 1.3rem;
+          font-size: 14px;
+          font-weight: 500;
+          color: #696cff;
+          border: none;
 
-        .alertify .ajs-modal {
+      }
 
-            transition-timing-function: ease-out;
-            transition-duration: 500ms !important;
-        }
+      .browser-btn {
+
+          padding: 0.3rem 1.3rem;
+          font-size: 14px;
+          font-weight: 500;
+          background-color: #696cff;
+          color: white;
+          border: none;
+
+      }
+
+
+        /*  ----------------------------------Browser alert End------------------------------------------ */
 
 
 
-        .form-control[type=file]:not(:disabled):not([readonly]) {
-            cursor: pointer;
-        }
+
 
 
 
@@ -381,7 +322,7 @@
         /* file upload css */
 
 
-        .file-input {
+        /* .file-input {
             display: inline-block;
             text-align: left;
             padding: 0;
@@ -466,82 +407,13 @@
                 margin-bottom: 20px;
             }
 
-        }
+        } */
 
 
 
-        /*  ----------------------------------Browser alert start------------------------------------------ */
-
-        .browser-d-none {
-            display: none !important;
-        }
-
-
-        .browser-model-content {
-            border-radius: 0.7em;
-            border: none;
-
-            text-align: center;
-        }
-
-        .modal-dialog-broswer {
-            max-width: 325px;
-            margin: 0rem auto;
-            top: 40%;
-        }
-
-        .modal-footer-browser {
-            border-top: none !important;
-            padding: 0px 7px 15px 3px;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .browser-btn-primary {
-            color: #231515;
-            background-color: #ffffff;
-            border-color: #070809;
-
-        }
-
-        .browser-btn-secondary {
-
-            background-color: #6c757d00;
-            border-color: #6c757d;
-            padding: 0.3rem 1.3rem;
-            font-size: 14px;
-            font-weight: 500;
-            color: #696cff;
-            border: none;
-
-        }
-
-        .browser-btn {
-
-            padding: 0.3rem 1.3rem;
-            font-size: 14px;
-            font-weight: 500;
-            background-color: #696cff;
-            color: white;
-            border: none;
-
-        }
-
-
-        /*  ----------------------------------Browser alert End------------------------------------------ */
+        
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9108ZJ253"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-P9108ZJ253');
-    </script>
+ 
 
 </head>
 
@@ -646,9 +518,9 @@
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                                         </div>
                                         <div class="col-sm-6 form-password-toggle fv-plugins-icon-container">
-                                            <label class="form-label" for="multiStepsConfirmPass">Set MPIN</label>
+                                            <label class="form-label" for="multiStepsConfirmPass">Set 6 Digit MPIN for App</label>
                                             <div class="input-group input-group-merge has-validation">
-                                                <input type="password" id="mpin" name="mpin" class="form-control" placeholder="············" aria-describedby="multiStepsConfirmPass2">
+                                                <input  type="password" id="mpin" name="mpin" class="form-control" placeholder="······" aria-describedby="multiStepsConfirmPass2">
                                                 <span class="input-group-text cursor-pointer" id="multiStepsConfirmPass2"><i class="bx bx-hide"></i></span>
                                             </div>
                                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
@@ -812,10 +684,10 @@
                                 <div class="main">
                                     <div class="content-header mb-3">
                                         <h3 class="mb-1">Two Step Verification 💬</h3>
-                                        <span>We sent a verification code to your given mail ID. Enter the code in the field below.</span>
+                                        <span>We sent a verification code to your given <b> Email ID </b>. Enter the code in the field below.</span>
                                     </div>
                                     <div class="row g-3">
-                                        <div class="auth-input-wrapper d-flex align-items-center justify-content-sm-between numeral-mask-wrapper">
+                                        <div class="auth-input-wrapper d-flex align-items-center numeral-mask-wrapper">
                                             <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1" autofocus="">
                                             <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
                                             <input type="tel" name="otp[]" id="otp" required class="form-control auth-input h-px-50 text-center numeral-mask mx-1 my-2" maxlength="1">
@@ -1096,7 +968,7 @@
                             })
                         } else if (response === 'Failed') {
                             removeoverlay()
-                            alertify.alert('result', 'Sorry! OTP did not match', function() {
+                            alertify.alert('result', 'Invalid OTP', function() {
                                 // window.location.href = 'login'
                             })
                         } else if (response === 'Already Exists') {

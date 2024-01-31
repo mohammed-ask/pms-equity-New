@@ -13,7 +13,7 @@ $docs = $obj->selectextrawhere("userdocuments", "status = 1 and userid =" . $id 
                     <th class="px-3 py-2">Image</th>
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                 <?php while ($data = $obj->fetch_assoc($docs)) { ?>
                     <tr class="text-gray-700 dark:text-gray-400">
 

@@ -39,7 +39,7 @@ if (!in_array(12, $permissions)) {
                                 <th class="px-3 py-2">Clients</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                         </tbody>
                     </table>
 

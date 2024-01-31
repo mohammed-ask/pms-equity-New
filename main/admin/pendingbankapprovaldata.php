@@ -50,9 +50,9 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = $row['bankname'];
     $n[] =  $row['accountno'];
     $n[] =  $row['ifsc'];
-    $n[] =  "<button class='btn' aria-label='view'>
+    $n[] =  "<span style='border: none; background-color:transparent ; border-radius: 0px; padding: 0px; font-weight: 600; color: #d3b803;' aria-label='view'>
     <span>Pending</span>
-</button>";
+</span>";
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y H:i");
     $appdata = "";
     if (in_array(36, $permissions)) {

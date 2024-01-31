@@ -8,16 +8,16 @@ $id = $_GET['hakuna'];
 <div class="page-body">
     <div class="container-xl">
 
-        <div class="flex" style="text-align: right">
+        <!-- <div class="flex" style="text-align: right">
             <buttonv data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("<?= $id ?>", "addinvestmentamount", "", "Add Fund")' class="btn btn-primary py-2">
                 + Add Fund
                 </button>
 
-        </div>
+        </div> -->
 
         <div class="card card-default">
             <div class="card-header">
-                <h3>Users List</h3>
+                <h3>Fund History</h3>
 
             </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
@@ -37,7 +37,7 @@ $id = $_GET['hakuna'];
                                 <!-- <th class="px-4 py-3">Action</th> -->
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody class=" divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
                         </tbody>
                     </table>
                 </div>

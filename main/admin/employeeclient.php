@@ -18,7 +18,7 @@ $cust = $obj->selectextrawhere('users', "employeeref = '" . $empcode . "'");
 
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+            <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                 <?php
                 $i = 1;
                 while ($rowcust = $obj->fetch_assoc($cust)) { ?>

@@ -59,19 +59,19 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  "<strong>" . $currencysymbol . $row['amount'] . "</strong>";
     // $n[] =  $row['remark'];
     // $n[] =  $row['paymentmethod'];
-    $n[] = "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['paymentmethod'] . "\", \"showscreenshot\", \"\", \"\")'  aria-label='Go'>
+    $n[] = "<button style='font-size: 12px; padding: 5px 11px;' class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['paymentmethod'] . "\", \"showscreenshot\", \"\", \"\")'  aria-label='Go'>
     <span>Show Screenshot</span>
 </button>";
     if ($row['status'] == 0) {
-        $n[] =    "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-yellow-100 dark:bg-red-700' aria-label='view'>
+        $n[] =    "<button class='border: none; background-color: #fffdf0; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #d3b803;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Pending</span>
     </button>";
     } elseif ($row['status'] == 1 && in_array(37, $permissions)) {
-        $n[] =    "<button class='px-4 py-2 leading-tight text-green-700 bg-green-100 rounded-full dark:text-green-100 dark:bg-red-700' aria-label='view'>
+        $n[] =    "<button class='border: none; background-color: #f0fff6; border-radius: 5px; padding: 3px 10px; font-weight: 600; color:#1cbe01;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Approved</span>
     </button>";
     } elseif ($row['status'] == 91 && in_array(37, $permissions)) {
-        $n[] =    "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700' aria-label='view'>
+        $n[] =    "<button class='border: none; background-color: #ffe7e7; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #f10101;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Rejected</span>
     </button>";
     } else {

@@ -33,7 +33,7 @@ ob_start();
 
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                     <tr class="text-gray-700 dark:text-gray-400">
                         <td class=" px-4 py-3">1</td>
                         <td class=" px-4 py-3 text-sm font-semibold">

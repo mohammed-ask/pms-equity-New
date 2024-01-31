@@ -18710,7 +18710,8 @@ body {
 
   .navbar-expand-lg.navbar-vertical~.navbar,
   .navbar-expand-lg.navbar-vertical~.page-wrapper {
-    margin-left: 15rem
+    margin-left: 15rem;
+    margin-right: 1rem;
   }
 
   .navbar-expand-lg.navbar-vertical.navbar-right~.navbar,

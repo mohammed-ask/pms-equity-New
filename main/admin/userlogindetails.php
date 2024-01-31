@@ -31,7 +31,7 @@ ob_start();
 
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                         </tbody>
                     </table>
                 </div>

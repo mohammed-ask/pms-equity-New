@@ -30,7 +30,7 @@ ob_start();
                         <th class="px-4 py-3">Action</th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class=" divide-y dark:divide-gray-700 dark:bg-gray-800">
                     <tr class="text-gray-700 dark:text-gray-400">
                         <td class=" px-4 py-3">01</td>
                         <td class=" px-4 py-3 font-semibold">Suresh Yadav</td>

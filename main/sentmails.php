@@ -34,7 +34,7 @@ ob_start();
                         <th class="px-4 py-3">View Message</th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                <tbody class=" divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
 
                 </tbody>
             </table>
