@@ -63,15 +63,15 @@ while ($row = $obj->fetch_assoc($result)) {
     <span>Show Screenshot</span>
 </button>";
     if ($row['status'] == 0) {
-        $n[] =    "<button class='border: none; background-color: #fffdf0; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #d3b803;' aria-label='view'>
+        $n[] =    "<button style='border: none; background-color: #fffdf0; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #d3b803;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Pending</span>
     </button>";
     } elseif ($row['status'] == 1 && in_array(37, $permissions)) {
-        $n[] =    "<button class='border: none; background-color: #f0fff6; border-radius: 5px; padding: 3px 10px; font-weight: 600; color:#1cbe01;' aria-label='view'>
+        $n[] =    "<button style='border: none; background-color: #f0fff6; border-radius: 5px; padding: 3px 10px; font-weight: 600; color:#1cbe01;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Approved</span>
     </button>";
     } elseif ($row['status'] == 91 && in_array(37, $permissions)) {
-        $n[] =    "<button class='border: none; background-color: #ffe7e7; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #f10101;' aria-label='view'>
+        $n[] =    "<button style='border: none; background-color: #ffe7e7; border-radius: 5px; padding: 3px 10px; font-weight: 600; color: #f10101;' aria-label='view'>
         <span class='w-5 h-5' fill='currentColor'>Rejected</span>
     </button>";
     } else {
