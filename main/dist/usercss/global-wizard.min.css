@@ -18265,9 +18265,9 @@ body {
   }
 }
 
-* {
+/* * {
   scrollbar-color: rgba(var(--tblr-scrollbar-color, var(--tblr-body-color-rgb)), .16) transparent
-}
+} */
 
 ::-webkit-scrollbar {
   width: 1rem;
@@ -28866,23 +28866,22 @@ display: none !important;
     /* ----------------------------custom scrollbar--------------- */
 
 
-    /* Style the scrollbar track */
-    ::-webkit-scrollbar {
-      height: 4px !important; /* You can adjust the width */
-      width: 4px !important;
-    }
-    
-    /* Style the scrollbar thumb (the draggable part) */
-    ::-webkit-scrollbar-thumb {
-      background-color: #696cff; /* Change this to the color you want */
-      border-radius: 6px; /* Adjust the radius to change the shape */
-    }
-    
-    /* Style the scrollbar track on hover */
-    ::-webkit-scrollbar:hover {
-      background-color: #696cff; /* Change this to the hover color you want */
-    }
-    
-    
+   /* Style the scrollbar track */
+body::-webkit-scrollbar {
+  height: 4px !important;
+  width: 4px!important;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+  background-color: #696cff !important;
+  border-radius: 6px !important;
+}
+
+/* Style the scrollbar track on hover */
+body::-webkit-scrollbar:hover {
+  background-color: #696cff !important;
+}
+
     
     
