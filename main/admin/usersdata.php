@@ -119,7 +119,7 @@ while ($row = $obj->fetch_assoc($result)) {
     //      </button><div id='redirect'></div>";
     // }
     if (in_array(32, $permissions)) {
-        $a .= "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"addinvestmentamount\", \"\", \"Add Fund\")'  aria-label='Go'>
+        $a .= "<button style='font-size: 12px; padding: 3px 12px;' class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"addinvestmentamount\", \"\", \"Add Fund\")'  aria-label='Go'>
              <span>+ Add Fund</span>
          </button>";
     }
