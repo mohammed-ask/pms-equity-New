@@ -125,7 +125,7 @@ table.dataTable th {
     box-sizing: content-box;
     padding-left: 1rem;
     font-size: 12px;
-
+    white-space: nowrap;
 }
 
 table.dataTable td.dataTables_empty,
@@ -205,7 +205,9 @@ table.dataTable>thead>tr>td:active {
 
 table.dataTable>thead>tr>th:not(.sorting_disabled),
 table.dataTable>thead>tr>td:not(.sorting_disabled) {
-    padding-right: 30px
+    padding-right: 30px;
+    font-size: 10px;
+    /* padding: 8px !important; */
 }
 
 table.dataTable>thead .sorting,

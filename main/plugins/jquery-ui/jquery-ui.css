@@ -403,7 +403,12 @@ button.ui-button::-moz-focus-inner {
 
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
-	margin: 1px 0;
+    margin: 3px;
+    padding: 2px 4px;
+    border-color: #696cff;
+    border-radius: 5px;
+    color: #0205af;
+    font-weight: 600;
 }
 
 .ui-datepicker select.ui-datepicker-month,
@@ -449,11 +454,15 @@ button.ui-button::-moz-focus-inner {
 
 .ui-datepicker .ui-datepicker-buttonpane button {
 	float: right;
-	margin: .5em .2em .4em;
-	cursor: pointer;
-	padding: .2em .6em .3em .6em;
-	width: auto;
-	overflow: visible;
+    margin: 0.5em 0.2em 0.4em;
+    cursor: pointer;
+    padding: 0.2em 0.6em 0.3em 0.6em;
+    width: auto;
+    overflow: visible;
+    border: none;
+    width: 40%;
+    font-weight: 600;
+    color: #070bc2;
 }
 
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
@@ -1046,6 +1055,9 @@ body .ui-tooltip {
 
 .ui-widget.ui-widget-content {
 	border: none;
+    box-shadow: 0px 0px 6px #0000ff4f;
+    border-radius: 5px;
+	top: 10% !important;
 }
 
 .ui-widget-content {
@@ -1081,9 +1093,11 @@ works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
 	
-	background: #f6f6f6;
-	font-weight: normal;
-	color: #454545;
+	padding: 5px 6px;
+    background: #696cff38;
+    font-weight: 500;
+    color: #696cff;
+    border-radius: 2px;
 }
 
 .ui-state-default a,
@@ -1093,7 +1107,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #454545;
+	color: #f7f7f7;
 	text-decoration: none;
 }
 
@@ -1105,10 +1119,11 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
-	background: #ededed;
-	font-weight: normal;
-	color: #2b2b2b;
+	padding: 5px 6px;
+    background: #696cff;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 2px;
 }
 
 .ui-state-hover a,
@@ -1160,9 +1175,10 @@ a.ui-button:active,
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-	color: #777620;
+	border: none;
+    background: #696cff;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .ui-state-checked {

@@ -7261,7 +7261,7 @@ body[data-bs-theme=dark] [data-bs-theme=light] .btn-close {
 .modal {
   --tblr-modal-zindex: 1055;
   --tblr-modal-width: 540px;
-  --tblr-modal-padding: 0.5rem;
+  --tblr-modal-padding: 1rem;
   --tblr-modal-margin: 0.5rem;
   --tblr-modal-bg: var(--tblr-bg-surface);
   --tblr-modal-border-color: transparent;
@@ -19437,7 +19437,7 @@ body {
 
 @media (min-width:992px) {
   .navbar-vertical.navbar-expand-lg {
-    width: 15.2rem;
+    width: 15.4rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -28882,6 +28882,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar:hover {
   background-color: #696cff !important;
 }
+
+
+
+
 
     
     

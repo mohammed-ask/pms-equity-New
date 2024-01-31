@@ -71,7 +71,7 @@ if ($employeeid != $adminid) {
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="px-4 py-2  text-sm  bg-blue  rounded-lg">Save</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                     <div id="resultid" class="form-result"></div>
                 </div>
             </form>

@@ -279,7 +279,7 @@
                     </a>
                   <?php }
                   ?>
-                  <?php if (in_array(45, $permissions)) {
+                  <!-- <?php if (in_array(45, $permissions)) {
                   ?>
                     <a class="dropdown-item" href="pendingactivation">
                       Pending Activiation
@@ -292,7 +292,7 @@
                       Pending Plan Membership
                     </a>
                   <?php }
-                  ?>
+                  ?> -->
                 </div>
               </div>
             </div>

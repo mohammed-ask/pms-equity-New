@@ -17,7 +17,7 @@ if (!in_array(4, $permissions)) {
         </div>
         <div class="card card-default">
             <div class="card-header">
-                <h3>Users List</h3>
+                <h3 class="m-0">Users List</h3>
 
             </div>
 
