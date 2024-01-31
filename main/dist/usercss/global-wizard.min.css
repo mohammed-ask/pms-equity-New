@@ -28976,6 +28976,8 @@ body::-webkit-scrollbar:hover {
           max-width: 325px;
           margin: 0rem auto;
           top: 40%;
+          box-shadow: 0px 0px 6px #0000ff80;
+          border-radius: 10px;
       }
 
       .modal-footer-browser {
@@ -28983,6 +28985,7 @@ body::-webkit-scrollbar:hover {
           padding: 0px 7px 15px 3px;
           justify-content: center;
           gap: 15px;
+          
       }
 
       .browser-btn-primary {
