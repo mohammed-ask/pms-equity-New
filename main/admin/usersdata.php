@@ -124,7 +124,7 @@ while ($row = $obj->fetch_assoc($result)) {
          </button>";
     }
     if (in_array(32, $permissions)) {
-        $a .= "<button class='btn d-app-none' onclick='redir(\"" . $row['email'] . "\",\"" . $row['password'] . "\",\"$employeeid\",\"email\",\"password\",\"byadmin\",\"$redirecturl/checklogin\",\"\")'  aria-label='Go'>
+        $a .= "<button style='font-size: 12px; padding: 3px 12px;' class='btn d-app-none' onclick='redir(\"" . $row['email'] . "\",\"" . $row['password'] . "\",\"$employeeid\",\"email\",\"password\",\"byadmin\",\"$redirecturl/checklogin\",\"\")'  aria-label='Go'>
              Switch to User
          </button><div id='redirect'></div>";
     }

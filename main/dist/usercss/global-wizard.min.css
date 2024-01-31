@@ -28889,3 +28889,129 @@ body::-webkit-scrollbar:hover {
 
     
     
+              /* --------------------alertify---------------- */
+
+              .alertify .ajs-header {
+                display: none;
+    
+            }
+    
+    
+            .alertify .ajs-footer {
+              margin-left: 0px !important;
+              margin-right: 0px !important;
+              min-height: 35px !important;
+              background-color: #696cff !important;
+              padding: 0px !important;
+              border-radius: 0px 30px 10px 30px !important;
+            }
+    
+            .alertify .ajs-dialog {
+    
+                padding: 15px 0px 0 0px !important;
+                max-width: 400px !important;
+                border-radius: 10px 31px 12px 31px !important;
+                top: 25%;
+            }
+    
+            .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+                margin: 0px !important;
+            }
+    
+            .alertify .ajs-commands {
+                margin: -12px 10px 0 0 !important;
+            }
+    
+            .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+              color: #fff !important;
+              border: 1px solid #fff;
+              border-radius: 15px !important;
+              /* margin-right: 10px !important; */
+              margin: 5px 20px 5px 10px !important;
+              font-size: 12px;
+              font-weight: 700;
+            }
+    
+            .alertify .ajs-dimmer {
+    
+                transition-timing-function: ease-in;
+                transition-duration: 500ms !important;
+            }
+    
+            .alertify .ajs-modal {
+    
+                transition-timing-function: ease-out;
+                transition-duration: 500ms !important;
+            }
+    
+            /* @media (max-width: 600px) {
+                .d-app-none {
+                    display: none;
+                }
+    
+            } */
+
+            /* .alertify .ajs-commands button {
+            
+              border: 1px solid #696cff !important;
+              border-radius: 10px 10px 10px 2px !important;} */
+    
+
+              
+        /*  ----------------------------------Browser alert start------------------------------------------ */
+
+        .browser-d-none {
+          display: none !important;
+      }
+
+
+      .browser-model-content {
+          border-radius: 0.7em;
+          border: none;
+
+          text-align: center;
+      }
+
+      .modal-dialog-broswer {
+          max-width: 325px;
+          margin: 0rem auto;
+          top: 40%;
+      }
+
+      .modal-footer-browser {
+          border-top: none !important;
+          padding: 0px 7px 15px 3px;
+          justify-content: center;
+          gap: 15px;
+      }
+
+      .browser-btn-primary {
+          color: #231515;
+          background-color: #ffffff;
+          border-color: #070809;
+
+      }
+
+      .browser-btn-secondary {
+
+          background-color: #6c757d00;
+          border-color: #6c757d;
+          padding: 0.3rem 1.3rem;
+          font-size: 14px;
+          font-weight: 500;
+          color: #696cff;
+          border: none;
+
+      }
+
+      .browser-btn {
+
+          padding: 0.3rem 1.3rem;
+          font-size: 14px;
+          font-weight: 500;
+          background-color: #696cff;
+          color: white;
+          border: none;
+      }
+
+      /* -----------------------------browser end End----------------- */
