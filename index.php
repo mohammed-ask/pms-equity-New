@@ -256,10 +256,10 @@ switch ($request['path']) {
         require __DIR__ . '/main/index.php';
         break;
     case "$head/register";
-        require __DIR__ . '/main/demoregister.php';
+        require __DIR__ . '/main/addusers.php';
         break;
-    case "$head/insertdemoregister";
-        require __DIR__ . '/main/insertdemoregister.php';
+    case "$head/insertregister";
+        require __DIR__ . '/main/insertaddusers.php';
         break;
     case "$head/dummyregister":                                    //User Routes
         require __DIR__ . '/main/dummyregister.php';
