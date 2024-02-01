@@ -2,7 +2,7 @@
 session_start();
 include './function.php';
 include './conn.php';
-$username = $_POST['username'];
+// $username = $_POST['username'];
 $email = trim($_POST['email']);
 
 use PHPMailer\PHPMailer\PHPMailer;

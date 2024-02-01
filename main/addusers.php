@@ -926,10 +926,10 @@
                     },
 
                     function(data) {
-                        // if (data === "Success") {
+                        if (data === "Success") {
                         removeoverlay()
                         startTimer()
-                        // }
+                        }
                     },
                 );
 
