@@ -1,5 +1,10 @@
 <?php
 include "main/session.php";
+$samesymbol = $obj->selectfieldwhere("listedstocks", "count(id)", "Symbol = '" . $_POST['Symbol'] . "'");
+if (!empty($samesymbol)) {
+    echo "<div class='alert alert-warning'>Symbol Already found</div>";
+    die;
+}
 $xx['added_on'] = date('Y-m-d H:i:s');
 // $xx['added_by'] = $employeeid;
 // $xx['updated_on'] = date('Y-m-d H:i:s');

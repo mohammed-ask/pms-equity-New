@@ -7,7 +7,7 @@ include "main/session.php";
       <label class="form-label" for="Quantity">What is the maximum capital from your fund that AI can use for trading?</label>
       <input type="number" data-bvalidator="required,number" class="form-control form-control-sm" id="" name="aifund" placeholder="₹">
     </div>
-    <button style="background-color: #057c7c;" class="btn btn-success w-100 my-3 d-none" onclick="event.preventDefault();sendForm('', '', 'insertaifund', 'resultid', 'addfund')" id="modalsubmit"></button>
+
     <div class="col-md-12" id="resultid"></div>
     <h6>Profitability And Risk Analysis</h6>
     <select class="AI-percentage-dropdown" name="riskprct" id="dropdown" data-bvalidator="required">
@@ -23,6 +23,7 @@ include "main/session.php";
       <option value="85">80-90%</option>
       <option value="100">90-100%</option>
     </select>
+    <button class="btn btn-success" onclick="event.preventDefault();sendForm('', '', 'insertaifund', 'resultid', 'addfund')">Submit</button>
   </form>
 
   <div id="indicator">
