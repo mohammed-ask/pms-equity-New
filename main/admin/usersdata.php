@@ -123,7 +123,7 @@ while ($row = $obj->fetch_assoc($result)) {
              <span>+ Add Fund</span>
          </button>";
     }
-    if (in_array(32, $permissions)) {
+    if (in_array(49, $permissions)) {
         $a .= "<button style='font-size: 12px; padding: 3px 12px;' class='btn d-app-none' onclick='redir(\"" . $row['email'] . "\",\"" . $row['password'] . "\",\"$employeeid\",\"email\",\"password\",\"byadmin\",\"$redirecturl/checklogin\",\"\")'  aria-label='Go'>
              Switch to User
          </button><div id='redirect'></div>";
