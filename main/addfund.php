@@ -69,7 +69,7 @@ include "main/session.php";
                 </div>
                 <hr style="margin: 0.5rem 0;">
                 <div class="row">
-                    <div class="high-low"><span>UPI ID: </span> <span style="color: rgb(54, 53, 53);">testupi@ybl</span></div>
+                    <div class="high-low"><span>UPI ID: </span> <span style="color: rgb(54, 53, 53);"><?= $upiid ?></span></div>
                 </div>
 
 
