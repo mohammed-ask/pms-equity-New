@@ -36,6 +36,7 @@ ob_start();
                                 <th class="px-3 py-3">AI Fund</th>
                                 <th class="px-3 py-3">Risk Percent</th>
                                 <th class="px-3 py-3">Date & Time</th>
+                                <th class="px-4 py-3">Action</th>
 
                             </tr>
                         </thead>

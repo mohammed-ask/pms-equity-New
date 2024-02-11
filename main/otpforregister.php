@@ -2,7 +2,7 @@
 session_start();
 include './function.php';
 include './conn.php';
-$username = $_POST['username'];
+// $username = $_POST['username'];
 $email = trim($_POST['email']);
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -12,7 +12,7 @@ require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 
-$code = rand(1000, 9999);
+$code = rand(100000, 999999);
 $_SESSION['otp'] = $code;
 $mail = new PHPMailer(true);
 

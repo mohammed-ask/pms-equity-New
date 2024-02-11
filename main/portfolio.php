@@ -182,7 +182,7 @@ if ($portfoliomaintanance) {
                         </div>
                     </div>
 
-                    <h3 class="card-title mb-0">₹<?= round($todayprofit, 2) ?> <span> <small <?= $todayprofit >= 0 ? "class='text-danger fw-medium'" : "class='text-success fw-medium'" ?> class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i>
+                    <h3 class="card-title mb-0">₹<?= round($todayprofit, 2) ?> <span> <small <?= $todayprofit >= 0 ? "class='text-success fw-medium'" : "class='text-danger fw-medium'" ?> class="text-danger fw-medium"><i class="bx bx-down-arrow-alt"></i>
                                 <span> (<?= round($todayprofitpercent, 2) ?>%)</span></small></span></h3>
 
                 </div>

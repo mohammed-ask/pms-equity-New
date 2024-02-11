@@ -52,9 +52,9 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  "<p class='m-0' style='font-weight: 500; color: #e89f12;' aria-label='view'>
     <span>Pending</span>
 </p>";
-    $n[] =  "<button class='btn' @click=''  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
+    $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='btn' @click=''  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
@@ -81,4 +81,3 @@ while ($row = $obj->fetch_assoc($result)) {
 }
 $return['data'] = $data;
 echo json_encode($return);
-
