@@ -57,7 +57,7 @@ include "main/session.php";
             <div>
                 <div class="row">
 
-                    <div class="col-6 high-low"><span>Bank Name<br></span> <span style="color: rgb(54, 53, 53);"><?= "Bank: " . $bankname ?></span></div>
+                    <div class="col-6 high-low"><span>Bank Name<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankname ?></span></div>
 
                     <div class="col-6 high-low"><span>Holder Name<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankaccountname ?></span></div>
 
