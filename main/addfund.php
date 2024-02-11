@@ -65,7 +65,6 @@ include "main/session.php";
 
                     <div class="col-6 high-low mt-2"><span>IFSC<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankifsccode ?></span></div>
 
-
                 </div>
                 <hr style="margin: 0.5rem 0;">
                 <div class="row">
