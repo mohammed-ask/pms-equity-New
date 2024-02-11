@@ -61,9 +61,9 @@ include "main/session.php";
 
                     <div class="col-6 high-low"><span>Holder Name<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankaccountname ?></span></div>
 
-                    <div class="col-6 high-low mt-2"><span>IFSC<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankaccountno ?></span></div>
+                    <div class="col-6 high-low mt-2"><span>Account no.<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankaccountno ?></span></div>
 
-                    <div class="col-6 high-low mt-2"><span>Account no.<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankifsccode ?></span></div>
+                    <div class="col-6 high-low mt-2"><span>IFSC<br></span> <span style="color: rgb(54, 53, 53);"><?= $bankifsccode ?></span></div>
 
 
                 </div>
