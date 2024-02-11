@@ -49,7 +49,7 @@ $stockdata = $stockdata[0];
                             <span>₹<?= $stockdata['Chg'] ?> (<?= round($stockdata['ChgPcnt'], 2) ?>%)</span></small></span></h3>
 
             </div>
-            <div class="mt-3" style="font-size: 14px;"> <span style="font-weight: 700; margin-right: 5px;">Default Lot:</span> <?= $lot ?> </div>
+            <div class="mt-3" style="font-size: 14px;"> <span style="font-weight: 700; margin-right: 5px;">Default Lot:</span><span style="border-bottom: 1.5px dotted lightgrey; padding: 2px 5px;"> <?= $lot ?> </span></div>
             <form class="row" id="buystock">
                 <input type="hidden" name="symbol" value="<?= $stockdata['Symbol'] ?>" id="">
                 <input type="hidden" name="exchange" value="<?= $stockdata['Exch'] ?>" id="">
