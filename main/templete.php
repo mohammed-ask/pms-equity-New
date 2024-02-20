@@ -160,13 +160,55 @@
 
 </html>
 <script>
-    $(window).on('load', function() {
-        $('#overlay').fadeOut('slow', function() {
-            $(this).remove();
-        });
-    });
+    // $(window).on('load', function() {
+    //     $('#overlay').fadeOut('slow', function() {
+    //         $(this).remove();
+    //     });
+        
+    // });
     // addoverlay()
     // setTimeout(() => {
     //     removeoverlay()
     // }, 1000);
+
+// Function to remove the overlay
+function removeoverlay() {
+    $('#overlay').fadeOut('slow', function() {
+        $(this).remove();
+    });
+}
+
+// Function to add the overlay
+function addoverlay() {
+    // Code to add overlay goes here
+}
+
+// Event listener for when the window has finished loading
+$(window).on('load', function() {
+    // Fade out the overlay instantly when the window has loaded
+    $('#overlay').fadeOut(0, function() {
+        $(this).remove();
+    });
+});
+
+// Function to handle button click event
+function handleButtonClick() {
+    // Add overlay when button is clicked
+    addoverlay();
+
+    // Remove overlay after a certain delay (1000 milliseconds)
+    setTimeout(() => {
+        removeoverlay();
+    }, 1000);
+}
+
+// Event listener for button click
+$('#yourButtonID').on('click', function() {
+    // Call the function to handle button click
+    handleButtonClick();
+});
+
+
+
+    
 </script>
