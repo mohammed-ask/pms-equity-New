@@ -115,7 +115,7 @@ define("REQUEST_TOKEN", $requesttoken); //right
 define("APP_NAME", "5P50442723"); //right
 define("CLIENT_CODE", "50442723"); //right
 define("APP_VERSION", "1.0"); //right
-define("KEY", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN"); //right
+define("KEY", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN99"); //right
 define("OS_NAME", "WEB"); //right
 define("USER_ID", "wuxNCXWR30t"); //right
 define("PASSWORD", "fSBMTdpZPWA"); //right
@@ -123,6 +123,6 @@ define("PASSWORD", "fSBMTdpZPWA"); //right
 // Market API Details
 define("APP_NAME2", "5P50442723"); //right
 define("CLIENT_CODE2", "50442723"); //right
-define("KEY2", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN"); //right
+define("KEY2", "h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN99"); //right
 define("USER_ID2", "wuxNCXWR30t"); //right
 define("PASSWORD2", "fSBMTdpZPWA"); //right
