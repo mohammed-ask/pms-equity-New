@@ -59,6 +59,7 @@ if ($empcode != 1 && !empty($_POST['employeeref'])) {
     $x['ifsc'] = $_POST['ifsc'];
     $x['message'] = $_POST['message'];
     $x['employeeref'] = $_POST['employeeref'];
+    $x['mpin'] = $_POST['mpin'];
     $x['password'] = $_POST['password'];
     $x['type'] = 2;
     $x['carryforward'] = $_POST['carryforward'];
