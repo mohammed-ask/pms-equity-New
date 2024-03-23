@@ -1057,7 +1057,7 @@ body .ui-tooltip {
 	border: none;
     box-shadow: 0px 0px 6px #0000ff4f;
     border-radius: 5px;
-	top: 10% !important;
+	/* top: 10% !important; */
 }
 
 .ui-widget-content {
