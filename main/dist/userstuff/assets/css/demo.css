@@ -507,3 +507,15 @@ width: 45%;
           border: none;
 
       }
+
+      
+/* =-----------------------------high chart----------------------- */
+
+.highcharts-container{
+  border-radius: 0.5rem !important;
+}
+
+.highcharts-background{
+
+  fill: #0000 !important;
+}
