@@ -927,8 +927,8 @@
 
                     function(data) {
                         if (data === "Success") {
-                        removeoverlay()
-                        startTimer()
+                            removeoverlay()
+                            startTimer()
                         }
                     },
                 );
@@ -951,7 +951,7 @@
                 var form = $("#fdata")[0]; // Replace 'yourForm' with your actual form ID
                 var formData = new FormData(form);
                 $.post({
-                    url: "main/insertuser.php",
+                    url: "main/",
                     data: formData,
                     mimeType: "multipart/form-data",
                     processData: false,

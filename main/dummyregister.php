@@ -33,7 +33,7 @@
                         <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
                             Create account
                         </h1>
-                        <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertuser', 'resultid', 'adduser');return 0;">
+                        <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', '', 'resultid', 'adduser');return 0;">
                             <label class="block text-sm" style="margin-bottom: 5px;">
                                 <span class="text-gray-700 dark:text-gray-400">Name</span>
                                 <input data-bvalidator="required" name="username" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Enter your name" autocomplete="off" />

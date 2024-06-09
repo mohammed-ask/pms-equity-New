@@ -39,7 +39,7 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     }
     $host = "localhost";
     $database_Username = "u477898878_eagleeye";
-    $database_Password = "3oD|BvKe*Z[";
+    $database_Password = "3oD|BvKe*Z[j";
     $database_Name = "u477898878_eagleeye";
     $siteurl = "https://eagleeyetradings.com/";
     $port = 3306;

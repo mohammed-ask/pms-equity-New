@@ -1,4 +1,4 @@
-<form style="overflow-x: hidden; padding: 5px;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertuserdirect', 'resultid', 'adduser');return 0;">
+<form style="overflow-x: hidden; padding: 5px;" id="adduser" onsubmit="event.preventDefault();sendForm('', '', '', 'resultid', 'adduser');return 0;">
     <div class="row"> <label class="col-6 block text-sm" style="margin-bottom: 5px;">
             <span class="text-gray-700 dark:text-gray-400">Name</span>
             <input name="username" data-bvalidator="required" class="form-control" placeholder="Client's Name" />
@@ -93,7 +93,7 @@
                 <input type="number" data-bvalidator="required,maxlength[6],minlength[6]" id="mpin" name="mpin" class="form-control" placeholder="Enter MPIN" />
             </label>
 
-       
+
             <label class="col-6 block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                 <input type="password" data-bvalidator="required" id="password" name="password" class="form-control" placeholder="Enter Password!" />
