@@ -1,6 +1,8 @@
 <?php
 date_default_timezone_set('Asia/Kolkata');
 ini_set('memory_limit', '-1');
+die;
+
 $platform = "Production";
 $host = "localhost";
 $database_Username = "root";
