@@ -1,8 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Kolkata');
 ini_set('memory_limit', '-1');
-die;
-
 $platform = "Production";
 $host = "localhost";
 $database_Username = "root";
@@ -30,7 +28,7 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     }
     $host = "localhost";
     $database_Username = "id20083609_root";
-    $database_Password = "^yv3Z(G([N7{qrxW";
+    $database_Password = "^yv3Z(G([N7{qrx";
     $database_Name = "id20083609_indiastock";
     $siteurl = "https://" . $_SERVER['HTTP_HOST'] . "/";
     $port = 3306;
