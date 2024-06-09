@@ -43,8 +43,8 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     $database_Name = "u477898878_eagleeye";
     $siteurl = "https://eagleeyetradings.com/";
     $port = 3306;
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
+    // ini_set('display_errors', 1);
+    // error_reporting(E_ALL);
 
     $platform = "Production";
 }
