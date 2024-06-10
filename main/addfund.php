@@ -34,7 +34,7 @@ include "main/session.php";
             <div class="row">
 
                 <div class="col-6">
-                    <div><img style="border: 1px solid lightgrey; border-radius: 5px;" width="100%" src="<?= $qrimage ?>" alt="qr"></div>
+                    <!-- <div><img style="border: 1px solid lightgrey; border-radius: 5px;" width="100%" src="<?= $qrimage ?>" alt="qr"></div> -->
 
                 </div>
                 <div class="col-6">
