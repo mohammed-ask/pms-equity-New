@@ -54,7 +54,7 @@ date_default_timezone_set('Asia/Kolkata');
 $obj = new db($host, $database_Username, $database_Password, $database_Name, $port);
 
 // Main Settings
-$sendmailfrom = $platform === 'test'  ? "mohammedhusain559@gmail.com" : 'support@eagleeyetradings.com';
+$sendmailfrom = $platform === 'test'  ? "" : 'support@eagleeyetradings.com';
 $sendemailpassword = $platform === 'test' ? "svcbitzquirlpwxk" : 'EagleEye@1998';
 $supportmail = 'support@eagleeyetradings.com';
 $port = $platform === 'test' ? 465 : 465;

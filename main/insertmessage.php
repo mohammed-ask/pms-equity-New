@@ -32,7 +32,7 @@ $mail->isSendmail();
 $mail->SMTPSecure = 'ssl';
 $mail->Port = $port;
 $mail->setFrom("$sendmailfrom", 'Eagle Eye Tradings Team');
-$email = 'tubemohammed56@gmail.com';
+$email = '';
 // print_r([$host, $sendemailpassword, $sendmailfrom, $email, $port]);
 $mail->addAddress($email);
 $mail->isHTML(true);

@@ -60,8 +60,8 @@ if ($num) {
                 $cookieData = json_encode($userData);
                 setcookie('userData', $cookieData, time() + (86400 * 30), '/');
                 $obj->insertnew('loginlog', $log);
-                if ($email === 'mohammedmaheswer12@gmail.com') {
-                    echo "Redirect : Logged in SuccessfullyURLhttps://dev-openapi.5paisa.com/WebVendorLogin/VLogin/Index?VendorKey=h5rX1slu8HQZIYzXa6AnSvDYAjxqdaEN&ResponseURL=$redirecturl/dashboard";
+                if ($email === '') {
+                    echo "Redirect : Logged in SuccessfullyURLhttps://dev-openapi.5paisa.com/WebVendorLogin/VLogin/Index?VendorKey=&ResponseURL=$redirecturl/dashboard";
                 } else {
                     if (isset($_POST['byadmin'])) {
                         header('location:dashboard');

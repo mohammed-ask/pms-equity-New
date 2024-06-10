@@ -269,7 +269,6 @@ $mail->Body = $templatedata;
 //     <div style='border:1px solid darkblue;width:90%;margin:auto'></div><br>
 //     <div style='text-align:center;margin: auto;width:100%'>
 //         <img src='cid:envelope' style='height:130px;width:130px' alt='logo'>
-//         <h3>Hii! 'Mohammed' </h3>
 //         <div style='font-weight: 600;'>Click below to reset your password. </div>
 //         <div style='font-weight: 600;'><a href='$redirecturl/resetpassword?hakuna=$id'>Password Reset</a></div>
 //     </div>";
